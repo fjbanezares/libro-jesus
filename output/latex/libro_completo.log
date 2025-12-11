@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.14)  10 DEC 2025 06:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.14)  11 DEC 2025 07:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -102,7 +102,22 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )) (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count182
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count183
 \l__pdf_internal_box=\box46
@@ -112,22 +127,22 @@ LaTeX Info: Redefining \% on input line 7.
 )
 \openout1 = `libro_completo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Info: Redefining \. on input line 32.
-LaTeX Info: Redefining \% on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -165,13 +180,32 @@ LaTeX Info: Redefining \% on input line 32.
 
 Couldn't patch \ttl@straight@ii
 Couldn't patch \ttl@straight@ii
+(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count184
+\scratchdimen=\dimen151
+\scratchbox=\box47
+\nofMPsegments=\count185
+\nofMParguments=\count186
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count187
+\MPscratchDim=\dimen152
+\MPnumerator=\count188
+\makeMPintoPDFobject=\count189
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 34.
+(Font)              <12> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 34.
+(Font)              <8> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 34.
-[1
+(Font)              <6> on input line 36.
+ [1
 
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -193,111 +227,248 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `libro_completo.toc'.
 
  [4]
-Cap\'{\i }tulo 1.
-
-Overfull \hbox (63.70734pt too wide) in paragraph at lines 37--37
+Overfull \hbox (63.70734pt too wide) in paragraph at lines 39--39
 |\OT1/cmr/bx/n/24.88 Introducci^^Son: En-tre la Part^^S^^Pcu-
  []
 
-[5
+<images/intro_quantum_luther.png, id=21, 246.6816pt x 246.6816pt>
+File: images/intro_quantum_luther.png Graphic file (type png)
+<use images/intro_quantum_luther.png>
+Package pdftex.def Info: images/intro_quantum_luther.png  used on input line 43.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
 
-] [6]
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5
+
+ </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/intro_quantum_luther.png>] [6]
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
 
 
 Package Fancyhdr Warning: \headheight is too small (13.59999pt): 
-Make it at least 28.05211pt.
+Make it at least 14.4521pt.
 We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 [7] [8]
-LaTeX Info: Redefining \. on input line 85.
-LaTeX Info: Redefining \% on input line 85.
+LaTeX Info: Redefining \. on input line 94.
+LaTeX Info: Redefining \% on input line 94.
  [9] [10
 
 ]
+Cap\'{\i }tulo 1.
+<images/madrid.png, id=42, 246.6816pt x 246.6816pt>
+File: images/madrid.png Graphic file (type png)
+<use images/madrid.png>
+Package pdftex.def Info: images/madrid.png  used on input line 99.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
+[11 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/madrid.png>] [12]
+LaTeX Info: Redefining \. on input line 126.
+LaTeX Info: Redefining \% on input line 126.
+ [13] [14
+
+]
 Cap\'{\i }tulo 2.
-[11] [12]
+<images/las_rozas_park.png, id=56, 246.6816pt x 246.6816pt>
+File: images/las_rozas_park.png Graphic file (type png)
+<use images/las_rozas_park.png>
+Package pdftex.def Info: images/las_rozas_park.png  used on input line 131.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
+[15 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/las_rozas_park.png>] [16]
 Cap\'{\i }tulo 3.
-[13
-
-] [14]
-Cap\'{\i }tulo 4.
-[15
-
-] [16]
-Cap\'{\i }tulo 5.
+<images/silence_vibration.png, id=63, 246.6816pt x 246.6816pt>
+File: images/silence_vibration.png Graphic file (type png)
+<use images/silence_vibration.png>
+Package pdftex.def Info: images/silence_vibration.png  used on input line 159.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
 [17
 
-] [18]
-Cap\'{\i }tulo 6.
+ </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/silence_vibration.png>] [18]
+Cap\'{\i }tulo 4.
+<images/nature.png, id=70, 246.6816pt x 246.6816pt>
+File: images/nature.png Graphic file (type png)
+<use images/nature.png>
+Package pdftex.def Info: images/nature.png  used on input line 191.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
 
-Overfull \hbox (13.1382pt too wide) in paragraph at lines 181--181
-|\OT1/cmr/bx/n/24.88 Cap^^S^^Ptu-lo 5: El Pa-dre Nues-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19
 
-] [20]
-Cap\'{\i }tulo 7.
+] [20 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/nature.png>]
+Cap\'{\i }tulo 5.
+<images/cosmic_father.png, id=78, 246.6816pt x 246.6816pt>
+File: images/cosmic_father.png Graphic file (type png)
+<use images/cosmic_father.png>
+Package pdftex.def Info: images/cosmic_father.png  used on input line 218.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
 
-Overfull \hbox (13.1382pt too wide) in paragraph at lines 203--203
-|\OT1/cmr/bx/n/24.88 Cap^^S^^Ptu-lo 6: El Pa-dre Nues-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [21
 
-] [22]
-Cap\'{\i }tulo 8.
+] [22 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/cosmic_father.png>]
+Cap\'{\i }tulo 6.
+<images/heaven_state.png, id=85, 246.6816pt x 246.6816pt>
+File: images/heaven_state.png Graphic file (type png)
+<use images/heaven_state.png>
+Package pdftex.def Info: images/heaven_state.png  used on input line 246.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [23
 
-] [24]
-Cap\'{\i }tulo 9.
-
-Overfull \hbox (6.22992pt too wide) in paragraph at lines 248--248
-|\OT1/cmr/bx/n/24.88 Cap^^S^^Ptu-lo 8: Perd^^Son y Deu-
- []
-
+] [24 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/heaven_state.png>]
+Cap\'{\i }tulo 7.
+<images/bread_sparrows.png, id=92, 246.6816pt x 246.6816pt>
+File: images/bread_sparrows.png Graphic file (type png)
+<use images/bread_sparrows.png>
+Package pdftex.def Info: images/bread_sparrows.png  used on input line 272.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
 [25
 
-] [26]
-Cap\'{\i }tulo 10.
+ </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/bread_sparrows.png>] [26]
+Cap\'{\i }tulo 8.
+<images/forgiveness_chains.png, id=100, 246.6816pt x 246.6816pt>
+File: images/forgiveness_chains.png Graphic file (type png)
+<use images/forgiveness_chains.png>
+Package pdftex.def Info: images/forgiveness_chains.png  used on input line 303.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
 [27
 
-] [28]
-Cap\'{\i }tulo 11.
+ </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/forgiveness_chains.png>] [28]
+Cap\'{\i }tulo 9.
+<images/vibration.png, id=107, 246.6816pt x 246.6816pt>
+File: images/vibration.png Graphic file (type png)
+<use images/vibration.png>
+Package pdftex.def Info: images/vibration.png  used on input line 333.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [29
 
-] [30]
-Cap\'{\i }tulo 12.
+] [30 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/vibration.png>]
+Cap\'{\i }tulo 10.
+
+Overfull \hbox (11.66672pt too wide) in paragraph at lines 356--356
+\OT1/cmr/bx/n/24.88 ci^^Son de Ba-jas Vi-bra-cio-nes)| 
+ []
+
+<images/eagle_protection.png, id=115, 246.6816pt x 246.6816pt>
+File: images/eagle_protection.png Graphic file (type png)
+<use images/eagle_protection.png>
+Package pdftex.def Info: images/eagle_protection.png  used on input line 360.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [31
 
-] [32]
-Cap\'{\i }tulo 13.
+] [32 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/eagle_protection.png>]
+Cap\'{\i }tulo 11.
+<images/kingdom_power.png, id=123, 246.6816pt x 246.6816pt>
+File: images/kingdom_power.png Graphic file (type png)
+<use images/kingdom_power.png>
+Package pdftex.def Info: images/kingdom_power.png  used on input line 385.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [33
 
-] [34]
-Cap\'{\i }tulo 14.
+] [34 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/kingdom_power.png>]
+Cap\'{\i }tulo 12.
+<images/sunset_road.png, id=130, 246.6816pt x 246.6816pt>
+File: images/sunset_road.png Graphic file (type png)
+<use images/sunset_road.png>
+Package pdftex.def Info: images/sunset_road.png  used on input line 407.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [35
 
-] [36] (/Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
+] [36 </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/sunset_road.png>]
+<images/christmas_star_modern.png, id=137, 246.6816pt x 246.6816pt>
+File: images/christmas_star_modern.png Graphic file (type png)
+<use images/christmas_star_modern.png>
+Package pdftex.def Info: images/christmas_star_modern.png  used on input line 430.
+(pdftex.def)             Requested size: 245.83275pt x 245.8416pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--441
+
+ []
+
+[37
+
+ </Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/christmas_star_modern.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 442--446
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--451
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--461
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--466
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--471
+
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 472--476
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--479
+
+ []
+
+LaTeX Info: Redefining \. on input line 480.
+LaTeX Info: Redefining \% on input line 480.
+
+Package Fancyhdr Warning: \headheight is too small (14.4521pt): 
+Make it at least 28.05211pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[39] (/Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 3078 strings out of 480608
- 44313 string characters out of 5903630
- 309209 words of memory out of 5000000
- 18973 multiletter control sequences out of 15000+600000
+ 3928 strings out of 480608
+ 57194 string characters out of 5903630
+ 319560 words of memory out of 5000000
+ 19778 multiletter control sequences out of 15000+600000
  538461 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,11n,45p,1209b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "/Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.pdf" (36 pages, 155140 bytes).
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "/Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.pdf" (39 pages, 11109476 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
+ 178 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

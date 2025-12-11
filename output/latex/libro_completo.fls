@@ -41,11 +41,27 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
 OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
+INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
@@ -68,12 +84,53 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.toc
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/intro_quantum_luther.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/intro_quantum_luther.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/intro_quantum_luther.png
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/madrid.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/madrid.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/madrid.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/las_rozas_park.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/las_rozas_park.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/las_rozas_park.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/silence_vibration.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/silence_vibration.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/silence_vibration.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/nature.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/nature.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/nature.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/cosmic_father.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/cosmic_father.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/cosmic_father.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/heaven_state.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/heaven_state.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/heaven_state.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/bread_sparrows.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/bread_sparrows.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/bread_sparrows.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/forgiveness_chains.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/forgiveness_chains.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/forgiveness_chains.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/vibration.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/vibration.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/vibration.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/eagle_protection.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/eagle_protection.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/eagle_protection.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/kingdom_power.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/kingdom_power.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/kingdom_power.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/sunset_road.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/sunset_road.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/sunset_road.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/christmas_star_modern.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/christmas_star_modern.png
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/christmas_star_modern.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb

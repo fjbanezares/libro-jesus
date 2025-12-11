@@ -51,23 +51,45 @@ def get_image_for_chapter(filename, title):
         return 'images/forgiveness_chains.png'
     elif 'líbranos' in lower_title or 'libranos' in lower_title or 'mal' in lower_title:
         return 'images/eagle_protection.png'
-    elif 'madrid' in lower_title or 'rozas' in lower_title or 'ciudad' in lower_title or 'encuentro' in lower_title:
+    elif 'madrid' in lower_title or 'encuentro' in lower_title:
         return 'images/madrid.png'
-    elif 'naturaleza' in lower_title or 'colmenarejo' in lower_title or 'silencio' in lower_title:
-        return 'images/nature.png'
-    elif 'vibrar' in lower_title or 'padre' in lower_title or 'reino' in lower_title or 'luz' in lower_title:
+    elif 'rozas' in lower_title:
+        return 'images/las_rozas_park.png'
+    elif 'vibración' in lower_title or 'vibracion' in lower_title:
+        # Check context, if it's chapter 3 use silence/vibration
+        if 'silencio' in lower_title:
+            return 'images/silence_vibration.png'
+        # If it's chapter 9 (tentación / vibrar alto) reuse vibration or fog/light
+        if 'tentación' in lower_title or 'tentacion' in lower_title:
+            return 'images/fog_light.png'
         return 'images/vibration.png'
+    elif 'naturaleza' in lower_title or 'colmenarejo' in lower_title:
+        return 'images/nature.png'
+    elif 'cielo' in lower_title:
+        return 'images/heaven_state.png'
+    elif 'padre' in lower_title:
+        return 'images/cosmic_father.png'
+    elif 'reino' in lower_title or 'poder' in lower_title or 'gloria' in lower_title:
+        return 'images/kingdom_power.png'
+    elif 'epílogo' in lower_title or 'epilogo' in lower_title:
+        return 'images/sunset_road.png'
     else:
-        # Default rotation
+        # Default rotation or generic
         return 'images/vibration.png'
 
 def md_to_html(md_content, title, menu_html, image_path):
     html_body = markdown.markdown(md_content)
+    
+    # Append image to the end of the body
+    html_body += f'\n<div class="image-container-footer"><img src="{image_path}" alt="Ilustración del capítulo" class="footer-image"></div>'
+    
     template = read_file(TEMPLATE_HTML)
     
     output = template.replace('{{TITLE}}', title)
     output = output.replace('{{CONTENT}}', html_body)
     output = output.replace('{{MENU_ITEMS}}', menu_html)
+    # Still replace IMAGE_PATH for the hero if we keep it, but user complained about cropping.
+    # We will keep the hero image but user asked to ALSO insert at the end "so they see it whole".
     output = output.replace('{{IMAGE_PATH}}', image_path)
     
     return output
@@ -91,8 +113,9 @@ def md_to_latex(md_content, title, image_path):
         elif "Apéndice" in full_line:
             is_intro = True # Treat appendix like intro (unnumbered)
         else:
-            # Regex to strip "Capítulo \d+: "
-            clean_title = re.sub(r'^Capítulo \d+[:\.]\s*', '', full_line, flags=re.IGNORECASE)
+            # Regex to strip "Capítulo \d+: " or just "Capítulo \d+ "
+            # Handles optional colon and varying spacing
+            clean_title = re.sub(r'^Capítulo\s+\d+[:\.]?\s*', '', full_line, flags=re.IGNORECASE)
         
         if is_intro:
             return f'\\chapter*{{{clean_title}}}\n\\addcontentsline{{toc}}{{chapter}}{{{clean_title}}}'
@@ -101,8 +124,23 @@ def md_to_latex(md_content, title, image_path):
 
     latex_body = re.sub(r'^# (.*)', title_replacer, latex_body, flags=re.MULTILINE)
     
+    latex_body = re.sub(r'^# (.*)', title_replacer, latex_body, flags=re.MULTILINE)
+    
     # 2. Handle Sections
-    latex_body = re.sub(r'^## (.*)', r'\\section{\1}', latex_body, flags=re.MULTILINE)
+    # Determine if we should use unnumbered sections
+    # 'title' variable is passed to this function. We can check it.
+    is_unnumbered_chapter = "introducción" in title.lower() or "introduccion" in title.lower() or "apéndice" in title.lower() or "apendice" in title.lower()
+
+    def section_replacer(match):
+        sec_title = match.group(1)
+        # Add needspace to prevent orphaned headers
+        prefix = r'\needspace{5\baselineskip}' + '\n'
+        if is_unnumbered_chapter:
+            return f'{prefix}\\section*{{{sec_title}}}'
+        else:
+            return f'{prefix}\\section{{{sec_title}}}'
+
+    latex_body = re.sub(r'^## (.*)', section_replacer, latex_body, flags=re.MULTILINE)
     
     # 3. Handle Formatting
     latex_body = re.sub(r'\*\*(.*?)\*\*', r'\\textbf{\1}', latex_body)
@@ -158,6 +196,8 @@ def build():
     menu_html = ""
     for chap in chapters:
         html_filename = chap['filename'].replace('.md', '.html')
+        if chap['filename'] == '01_capitulo.md':
+            html_filename = 'index.html'
         menu_html += f'<li><a href="{html_filename}">{chap["title"]}</a></li>\n'
 
     # Pass 2: Generate Content
@@ -173,11 +213,16 @@ def build():
         image_path = get_image_for_chapter(filename, title)
         
         # HTML
-        current_menu = menu_html.replace(f'href="{filename.replace(".md", ".html")}"', f'href="{filename.replace(".md", ".html")}" class="active"')
+        # HTML
+        if filename == '01_capitulo.md':
+            target_html = 'index.html'
+        else:
+            target_html = filename.replace('.md', '.html')
+            
+        current_menu = menu_html.replace(f'href="{target_html}"', f'href="{target_html}" class="active"')
         html_content = md_to_html(content, title, current_menu, image_path)
-        html_filename = filename.replace('.md', '.html')
-        write_file(os.path.join(OUTPUT_HTML_DIR, html_filename), html_content)
-        print(f"Generated HTML: {html_filename}")
+        write_file(os.path.join(OUTPUT_HTML_DIR, target_html), html_content)
+        print(f"Generated HTML: {target_html}")
         
         # LaTeX
         full_latex_content += md_to_latex(content, title, image_path) + "\n\\newpage\n"
