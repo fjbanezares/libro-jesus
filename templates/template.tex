@@ -1,0 +1,40 @@
+\documentclass[11pt,a5paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{graphicx}
+
+% Geometry
+\geometry{
+    top=2cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm
+}
+
+% Styling
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{Mi amigo Jesucristo}}
+\fancyhead[LO]{\textit{\leftmark}}
+
+\title{Mi amigo Jesucristo}
+\author{Francisco J. Bañezares}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+{{CONTENT}}
+
+\end{document}

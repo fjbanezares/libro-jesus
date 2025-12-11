@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 4: Colmenarejo y la Naturaleza | Mi amigo Jesucristo</title>
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            /* Vibrant Coral */
+            --secondary: #4ECDC4;
+            /* Vibrant Teal */
+            --bg: #F7FFF7;
+            /* Off-white */
+            --text: #292F36;
+            /* Dark Slate */
+            --accent: #FFE66D;
+            /* Vibrant Yellow */
+            --sidebar-width: 250px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        #sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        #sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sidebar nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        #sidebar nav a {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+        }
+
+        #sidebar nav a:hover,
+        #sidebar nav a.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        #content-wrapper {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            /* For image radius */
+        }
+
+        .chapter-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-body {
+            padding: 3rem;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        h2,
+        h3 {
+            color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .vibrar-alto {
+            background-color: var(--accent);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            #sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+            }
+
+            #content-wrapper {
+                margin-left: 0;
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .chapter-image {
+                height: 200px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <aside id="sidebar">
+        <h2>Mi amigo Jesucristo</h2>
+        <nav>
+            <ul>
+                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
+<li><a href="01_capitulo.html">Capítulo 1: El Encuentro en Madrid</a></li>
+<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
+<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
+<li><a href="04_capitulo.html" class="active">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
+<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
+<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
+<li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
+<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
+<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
+<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
+<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
+<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
+<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
+
+            </ul>
+        </nav>
+    </aside>
+    <div id="content-wrapper">
+        <main>
+            <img src="images/nature.png" alt="Ilustración del capítulo" class="chapter-image">
+            <div class="content-body">
+                <h1>Capítulo 4: Colmenarejo y la Naturaleza</h1>
+<p>Llegamos a Colmenarejo al atardecer. El pueblo tenía ese encanto de lo que está a medio camino entre la urbe y el campo. Fuimos hacia la zona de la Universidad, donde hay grandes espacios abiertos y se respira otro aire.</p>
+<p>—Aquí se siente mejor —dijo Jesús, inspirando profundamente—. La naturaleza es la gran maestra de la vibración. Ella nunca se equivoca. Un pino no intenta ser una encina. Un río no intenta fluir hacia arriba.</p>
+<p>Nos sentamos cerca de la ermita. El cielo se teñía de naranjas y violetas.
+—Padre Nuestro que estás en los cielos... —empezó a recitar suavemente—. ¿Sabes dónde está el cielo, Francisco?</p>
+<p>—¿Arriba? —señalé.</p>
+<p>Él negó con la cabeza sonriendo.
+—El cielo es un estado de conciencia. Es ese lugar interno donde todo está bien, donde hay paz absoluta. "Que estás en los cielos" significa que la Fuente de todo reside en esa alta vibración. Y tú tienes un acceso directo ahí. Tienes wifi directo con el Creador, pero a veces se te olvida la contraseña.</p>
+<p>—¿Cuál es la contraseña?</p>
+<p>—La rendición. Dejar de luchar contra lo que es. Aceptar. Fluir. Cuando te rindes a la vida, dejas de nadar contracorriente. Y entonces, la corriente te lleva. Y la corriente de la vida siempre te lleva hacia el bien, hacia el mar.</p>
+<p>En Colmenarejo, bajo las primeras estrellas, entendí que rezar no era pedir cosas como quien hace la lista de la compra. Rezar era sintonizar. Era volver a poner el dial en la frecuencia correcta para escuchar la música que siempre está sonando, aunque nosotros estemos demasiado ocupados haciendo ruido para oírla.</p>
+            </div>
+            <footer>
+                <p>Escrito con amor y alta vibración.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

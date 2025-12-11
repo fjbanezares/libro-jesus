@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 7: El Pan de Cada Día | Mi amigo Jesucristo</title>
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            /* Vibrant Coral */
+            --secondary: #4ECDC4;
+            /* Vibrant Teal */
+            --bg: #F7FFF7;
+            /* Off-white */
+            --text: #292F36;
+            /* Dark Slate */
+            --accent: #FFE66D;
+            /* Vibrant Yellow */
+            --sidebar-width: 250px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar Navigation */
+        #sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        #sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sidebar nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        #sidebar nav a {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+        }
+
+        #sidebar nav a:hover,
+        #sidebar nav a.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        #content-wrapper {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            /* For image radius */
+        }
+
+        .chapter-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-body {
+            padding: 3rem;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        h2,
+        h3 {
+            color: var(--secondary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .vibrar-alto {
+            background-color: var(--accent);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            #sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+            }
+
+            #content-wrapper {
+                margin-left: 0;
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .chapter-image {
+                height: 200px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <aside id="sidebar">
+        <h2>Mi amigo Jesucristo</h2>
+        <nav>
+            <ul>
+                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
+<li><a href="01_capitulo.html">Capítulo 1: El Encuentro en Madrid</a></li>
+<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
+<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
+<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
+<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
+<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
+<li><a href="07_capitulo.html" class="active">Capítulo 7: El Pan de Cada Día</a></li>
+<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
+<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
+<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
+<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
+<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
+<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
+
+            </ul>
+        </nav>
+    </aside>
+    <div id="content-wrapper">
+        <main>
+            <img src="images/bread_sparrows.png" alt="Ilustración del capítulo" class="chapter-image">
+            <div class="content-body">
+                <h1>Capítulo 7: El Pan de Cada Día</h1>
+<p>Estábamos comiendo un bocadillo de calamares en la Plaza Mayor. Jesús lo disfrutaba como si fuera el manjar más exquisito del mundo.
+—Esto es sagrado —dijo con la boca llena.</p>
+<p>—¿El bocadillo?</p>
+<p>—El acto de nutrirse. "Danos hoy nuestro pan de cada día".</p>
+<p>Se limpió con una servilleta de papel.
+—La gente vive con miedo a la escasez. Acumulan, guardan, temen perder. Eso es vibración de carencia. Cuando pides el pan de "hoy", estás confiando en que mañana también habrá.</p>
+<p>—Pero hay que ser previsor...</p>
+<p>—Ser previsor está bien. Vivir angustiado por el futuro es falta de fe en la Vida. Mira a los gorriones —señaló a unos pájaros que picoteaban migas—. No tienen graneros, y sin embargo, comen. La Vida sostiene a la Vida.</p>
+<p>—¿Y qué pasa con la gente que no tiene para comer?</p>
+<p>Su rostro se ensombreció un poco.
+—Eso no es porque falte pan. Es porque sobra egoísmo. Si todos vibraran en la generosidad, si todos entendieran que somos uno, nadie pasaría hambre. El problema es la distribución, no la provisión. El Universo es abundante. La mente humana es la que crea la escasez.</p>
+<p>Dio el último bocado.
+—El "pan" también es la información, el conocimiento, el amor. Todo lo que te nutre. Pide lo que necesitas para hoy, para ser tu mejor versión hoy. No pidas para acumular y sentirte seguro. La única seguridad real es tu conexión con la Fuente.</p>
+            </div>
+            <footer>
+                <p>Escrito con amor y alta vibración.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>
