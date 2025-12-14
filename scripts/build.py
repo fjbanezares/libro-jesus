@@ -4,14 +4,16 @@ import shutil
 import markdown
 
 # Configuration
-CONTENT_DIR = 'content'
-IMAGES_DIR = 'content/images'
-OUTPUT_HTML_DIR = 'output/html'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONTENT_DIR = os.path.join(BASE_DIR, 'content')
+IMAGES_DIR = os.path.join(BASE_DIR, 'content/images')
+OUTPUT_HTML_DIR = os.path.join(BASE_DIR, 'output/html')
 OUTPUT_HTML_IMAGES_DIR = 'output/html/images'
 OUTPUT_LATEX_DIR = 'output/latex'
 OUTPUT_LATEX_IMAGES_DIR = 'output/latex/images'
-TEMPLATE_HTML = 'templates/template.html'
-TEMPLATE_LATEX = 'templates/template.tex'
+TEMPLATE_HTML = os.path.join(BASE_DIR, 'templates', 'template.html')
+TEMPLATE_LATEX = os.path.join(BASE_DIR, 'templates', 'template.tex')
+TEMPLATE_KDP_LATEX = os.path.join(BASE_DIR, 'templates', 'template_kdp.tex')
 
 def ensure_dirs():
     os.makedirs(OUTPUT_HTML_DIR, exist_ok=True)
@@ -158,22 +160,25 @@ def md_to_latex(md_content, title, image_path):
     new_lines = []
     image_inserted = False
     
-    latex_image_code = f"""
+    latex_image_block = f"""
 \\begin{{figure}}[h]
     \\centering
     \\includegraphics[width=0.8\\textwidth]{{{image_path}}}
 \\end{{figure}}
 """
+    # Force page break after the image for the Appendix so the poem starts on a new page
+    if "apéndice" in title.lower() or "apendice" in title.lower():
+         latex_image_block += '\\clearpage\n'
     
     for line in lines:
         new_lines.append(line)
         # Check for both numbered and unnumbered chapters
         if (line.startswith(r'\chapter{') or line.startswith(r'\chapter*{')) and not image_inserted:
-            new_lines.append(latex_image_code)
+            new_lines.append(latex_image_block)
             image_inserted = True
             
     if not image_inserted:
-        new_lines.insert(0, latex_image_code)
+        new_lines.insert(0, latex_image_block) # Corrected variable name
         
     return '\n'.join(new_lines)
 
@@ -213,7 +218,6 @@ def build():
         image_path = get_image_for_chapter(filename, title)
         
         # HTML
-        # HTML
         if filename == '01_capitulo.md':
             target_html = 'index.html'
         else:
@@ -228,10 +232,23 @@ def build():
         full_latex_content += md_to_latex(content, title, image_path) + "\n\\newpage\n"
 
     # Write Full Book LaTeX
-    master_template = read_file(TEMPLATE_LATEX)
-    final_latex_book = master_template.replace('{{TITLE}}', "Mi amigo Jesucristo").replace('{{CONTENT}}', full_latex_content)
-    write_file(os.path.join(OUTPUT_LATEX_DIR, 'libro_completo.tex'), final_latex_book)
-    print("Generated LaTeX: libro_completo.tex")
+    book_title = "Mi amigo Jesucristo" # Define once for consistency
+
+    # Standard LaTeX
+    template = read_file(TEMPLATE_LATEX)
+    output = template.replace('{{TITLE}}', book_title).replace('{{CONTENT}}', full_latex_content)
+    
+    with open(os.path.join(OUTPUT_LATEX_DIR, 'libro_completo.tex'), 'w', encoding='utf-8') as f:
+        f.write(output)
+    print(f"Generated LaTeX: libro_completo.tex")
+
+    # KDP LaTeX
+    template_kdp = read_file(TEMPLATE_KDP_LATEX)
+    output_kdp = template_kdp.replace('{{TITLE}}', book_title).replace('{{CONTENT}}', full_latex_content)
+    
+    with open(os.path.join(OUTPUT_LATEX_DIR, 'libro_kdp.tex'), 'w', encoding='utf-8') as f:
+        f.write(output_kdp)
+    print(f"Generated LaTeX: libro_kdp.tex")
 
 if __name__ == "__main__":
     build()

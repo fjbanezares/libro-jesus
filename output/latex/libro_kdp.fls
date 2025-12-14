@@ -2,8 +2,8 @@ PWD /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.tex
-OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.log
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.tex
+OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.log
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/bk11.clo
@@ -53,45 +53,84 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/needspace/needspace.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/needspace/needspace.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/mathpazo.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/mathpazo.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
-INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
-OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.aux
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.aux
+OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.aux
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.pdf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omlzplm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omlzplm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7m.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7m.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7m.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omszplm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omszplm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7y.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7y.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7y.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omxzplm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/omxzplm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7v.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7v.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7v.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/mathpazo/zplmr7t.tfm
+OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.pdf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.toc
-INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.toc
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.toc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplri7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplri7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplbi7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplbi7t.tfm
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.toc
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.toc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplbi7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplbi8r.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+OUTPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.toc
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/intro_quantum_luther.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/intro_quantum_luther.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/intro_quantum_luther.png
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplb7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/madrid.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/madrid.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/madrid.png
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplbi7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplbi8r.tfm
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/las_rozas_park.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/las_rozas_park.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/las_rozas_park.png
@@ -116,6 +155,9 @@ INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/for
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/vibration.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/vibration.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/vibration.png
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr7t.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/vf/adobe/palatino/pplr7t.vf
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/eagle_protection.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/eagle_protection.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/eagle_protection.png
@@ -128,12 +170,9 @@ INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/sun
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/christmas_star_modern.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/christmas_star_modern.png
 INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/images/christmas_star_modern.png
-INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_completo.aux
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /Users/fjbanezares/libro sobre mi amigo Jesucristo/output/latex/libro_kdp.aux
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb

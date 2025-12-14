@@ -9,17 +9,21 @@
 \graphicspath{ {images/} }
 \usepackage{needspace}
 
-% Geometry
+% Serif font for book feel (choose one that is standard in latex distributions or stick to default serif if packages differ, but mathpazo is reliable)
+\usepackage{mathpazo} 
+
+% KDP Geometry (Binding Offset)
 \geometry{
+    paper=a5paper,
     top=2cm,
     bottom=2cm,
-    left=2cm,
-    right=2cm
+    inner=2.5cm, % Gutter for binding
+    outer=1.5cm
 }
 
 % Styling
 \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+  {\normalfont\huge\bfseries\itshape}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
 
 % Header/Footer
 \pagestyle{fancy}
