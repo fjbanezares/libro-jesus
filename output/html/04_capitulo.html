@@ -18,6 +18,7 @@
             --accent: #FFE66D;
             /* Vibrant Yellow */
             --sidebar-width: 250px;
+            --header-height: 60px;
         }
 
         body {
@@ -31,6 +32,42 @@
             min-height: 100vh;
         }
 
+        /* Mobile Header */
+        #mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: white;
+            padding: 0 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #mobile-header h1 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: var(--primary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
         /* Sidebar Navigation */
         #sidebar {
             width: var(--sidebar-width);
@@ -41,6 +78,8 @@
             height: 100vh;
             overflow-y: auto;
             box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: transform 0.3s ease;
         }
 
         #sidebar h2 {
@@ -55,6 +94,8 @@
         #sidebar nav ul {
             list-style: none;
             padding: 0;
+            padding-bottom: 5rem;
+            /* Extra space for the last items */
         }
 
         #sidebar nav li {
@@ -82,9 +123,11 @@
         #content-wrapper {
             margin-left: var(--sidebar-width);
             width: calc(100% - var(--sidebar-width));
-            padding: 2rem;
+            padding: 2.5rem;
             display: flex;
             justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
 
         main {
@@ -94,18 +137,20 @@
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             overflow: hidden;
-            /* For image radius */
+            display: flex;
+            flex-direction: column;
         }
 
         .chapter-image {
             width: 100%;
-            height: 300px;
+            height: 350px;
             object-fit: cover;
             display: block;
         }
 
         .content-body {
             padding: 3rem;
+            flex-grow: 1;
         }
 
         h1 {
@@ -118,11 +163,12 @@
         h2,
         h3 {
             color: var(--secondary);
+            margin-top: 2rem;
         }
 
         p {
             margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
 
         .vibrar-alto {
@@ -138,31 +184,83 @@
             color: #666;
             font-size: 0.9rem;
             border-top: 1px solid #eee;
-            margin-top: 2rem;
+            margin-top: auto;
+        }
+
+        /* Overlay for mobile */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
+        @media (max-width: 1024px) {
+            #mobile-header {
+                display: flex;
             }
 
             #sidebar {
-                position: relative;
-                width: 100%;
-                height: auto;
-                padding: 1rem;
+                transform: translateX(-100%);
+            }
+
+            #sidebar.open {
+                transform: translateX(0);
+            }
+
+            #sidebar.open+#overlay {
+                display: block;
             }
 
             #content-wrapper {
                 margin-left: 0;
                 width: 100%;
                 padding: 1rem;
+                padding-top: calc(var(--header-height) + 1rem);
             }
 
-            .chapter-image {
-                height: 200px;
+            .content-body {
+                padding: 2rem;
             }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chapter-image {
+                height: 250px;
+            }
+
+            .content-body {
+                padding: 1.5rem;
+            }
+        }
+
+        .image-container-footer {
+            margin-top: 3rem;
+            padding: 0 3rem 3rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container-footer {
+                padding: 0 1.5rem 2rem;
+            }
+        }
+
+        .footer-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .image-container-footer {
@@ -182,8 +280,16 @@
 </head>
 
 <body>
+    <header id="mobile-header">
+        <h1>Capítulo 4: Colmenarejo y la Naturaleza</h1>
+        <button class="menu-toggle" id="menu-open">☰</button>
+    </header>
+
     <aside id="sidebar">
-        <h2>Mi amigo Jesucristo</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2>Mi amigo Jesucristo</h2>
+            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        </div>
         <nav>
             <ul>
                 <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
@@ -204,6 +310,9 @@
             </ul>
         </nav>
     </aside>
+
+    <div id="overlay"></div>
+
     <div id="content-wrapper">
         <main>
             <img src="images/nature.png" alt="Ilustración del capítulo" class="chapter-image">
@@ -226,6 +335,33 @@
             </footer>
         </main>
     </div>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const btnOpen = document.getElementById('menu-open');
+        const btnClose = document.getElementById('menu-close');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('open');
+            const isOpen = sidebar.classList.contains('open');
+            if (window.innerWidth <= 1024) {
+                btnClose.style.display = isOpen ? 'block' : 'none';
+            }
+        }
+
+        btnOpen.addEventListener('click', toggleMenu);
+        btnClose.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Resize handler for button visibility
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                btnClose.style.display = 'none';
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
 </body>
 
 </html>
