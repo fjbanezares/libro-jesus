@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const languageSelect = document.getElementById('language-select');
     const languages = document.querySelectorAll('.language');
 
-    function setLanguage(lang) {
+    window.setLanguage = function (lang) {
         languages.forEach(el => {
             if (el.classList.contains(lang)) {
                 el.style.display = 'block';

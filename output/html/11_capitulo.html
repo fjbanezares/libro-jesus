@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 11: El Reino, el Poder y la Gloria | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #FF6B6B;
@@ -263,52 +266,364 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .language.spanish {
+            display: block;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+        </select>
+    </div>
+
     <header id="mobile-header">
-        <h1>Capítulo 11: El Reino, el Poder y la Gloria</h1>
+        <div class="spanish language">
+            <h1>Capítulo 11: El Reino, el Poder y la Gloria</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 11: The Kingdom, the Power, and the Glory</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 11 : Le Règne, la Puissance et la Gloire</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 11: Il Regno, la Potenza e la Gloria</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 11 章：国度、权柄和荣耀</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل الحادي عشر: الملك والقدرة والمجد</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 11: Царство, Сила и Слава</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 11: Vương quốc, Quyền năng và Vinh quang</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
     <aside id="sidebar">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Mi amigo Jesucristo</h2>
-            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html" class="active">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-<li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-<li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
-<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
-<li><a href="11_capitulo.html" class="active">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
-
-            </ul>
-        </nav>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html" class="active">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html" class="active">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html" class="active">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天空）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html" class="active">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html" class="active">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html" class="active">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html" class="active">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <div id="overlay"></div>
@@ -317,8 +632,9 @@
         <main>
             <img src="images/kingdom_power.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
-                <h1>Capítulo 11: El Reino, el Poder y la Gloria</h1>
-<p>El viaje llegaba a su fin. Estábamos sentados en un banco de la Plaza de Oriente, frente al Palacio Real.
+                <div class="spanish language">
+                    <h1>Capítulo 11: El Reino, el Poder y la Gloria</h1>
+                    <p>El viaje llegaba a su fin. Estábamos sentados en un banco de la Plaza de Oriente, frente al Palacio Real.
 —Tuyo es el Reino, el Poder y la Gloria —dijo Jesús, mirando el imponente edificio—. Pero no ese reino de piedras y guardias.</p>
 <p>—¿Cuál entonces?</p>
 <p>—El Reino es tu paz interior. El Poder es tu capacidad de elegir tu vibración en cada momento, pase lo que pase fuera. Y la Gloria... la Gloria es la alegría de ser quien eres. De ser un hijo del Universo.</p>
@@ -326,7 +642,86 @@
 —No busques el poder fuera. No busques que te aplaudan. El verdadero poder es silencioso. Es la certeza de que nunca estás solo, de que la Vida te sostiene. Cuando entiendes eso, cuando lo sientes en tus células, ya estás en el Reino. Aquí y ahora. Entre Madrid, Las Rozas y Colmenarejo. El Reino está donde tú estás, si tú estás despierto.</p>
 <p>Me miró con una intensidad que me atravesó el alma.
 —No olvides esto, Francisco. Tienes el poder. Úsalo para vibrar alto. Úsalo para iluminar tu rincón del mundo. Esa es tu única tarea.</p>
-<div class="image-container-footer"><img src="images/kingdom_power.png" alt="Ilustración del capítulo" class="footer-image"></div>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 11: The Kingdom, the Power, and the Glory</h1>
+                    <p>The journey was coming to an end. We were sitting on a bench in Plaza de Oriente, in front of the Royal Palace.
+—Yours is the Kingdom, the Power, and the Glory —Jesus said, looking at the imposing building—. But not that kingdom of stones and guards.</p>
+<p>—Which one then?</p>
+<p>—The Kingdom is your inner peace. The Power is your ability to choose your vibration in every moment, whatever happens outside. And the Glory... the Glory is the joy of being who you are. Of being a child of the Universe.</p>
+<p>He got up and stretched out his arms, as if embracing the world.
+—Do not look for power outside. Do not look for people to applaud you. True power is silent. It is the certainty that you are never alone, that Life sustains you. When you understand that, when you feel it in your cells, you are already in the Kingdom. Here and now. Between Madrid, Las Rozas and Colmenarejo. The Kingdom is where you are, if you are awake.</p>
+<p>He looked at me with an intensity that pierced my soul.
+—Do not forget this, Francisco. You have the power. Use it to vibrate high. Use it to illuminate your corner of the world. That is your only task.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 11 : Le Règne, la Puissance et la Gloire</h1>
+                    <p>Le voyage touchait à sa fin. Nous étions assis sur un banc de la Plaza de Oriente, face au Palais Royal.
+—À toi le Règne, la Puissance et la Gloire —dit Jésus, en regardant l'imposant édifice—. Mais pas ce règne de pierres et de gardes.</p>
+<p>—Lequel alors ?</p>
+<p>—Le Royaume, c'est ta paix intérieure. La Puissance, c'est ta capacité à choisir ta vibration à chaque instant, quoi qu'il se passe à l'extérieur. Et la Gloire... la Gloire, c'est la joie d'être qui tu es. D'être un enfant de l'Univers.</p>
+<p>Il se leva et écarta les bras, comme pour embrasser le monde.
+—Ne cherche pas le pouvoir à l'extérieur. Ne cherche pas les applaudissements. Le vrai pouvoir est silencieux. C'est la certitude que tu n'es jamais seul, que la Vie te soutient. Quand tu comprends cela, quand tu le ressens dans tes cellules, tu es déjà dans le Royaume. Ici et maintenant. Entre Madrid, Las Rozas et Colmenarejo. Le Royaume est là où tu es, si tu es éveillé.</p>
+<p>Il me regarda avec une intensité qui me transperça l'âme.
+—N'oublie pas cela, Francisco. Tu as le pouvoir. Utilise-le pour vibrer haut. Utilise-le pour illuminer ton coin du monde. C'est ta seule tâche.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 11: Il Regno, la Potenza e la Gloria</h1>
+                    <p>Il viaggio stava giungendo al termine. Stavamo seduti su una panchina in Plaza de Oriente, di fronte al Palazzo Reale.
+—Tuo è il Regno, la Potenza e la Gloria —disse Gesù, guardando l'imponente edificio—. Ma non quel regno di pietre e guardie.</p>
+<p>—Quale allora?</p>
+<p>—Il Regno è la tua pace interiore. La Potenza è la tua capacità di scegliere la tua vibrazione in ogni momento, qualunque cosa accada fuori. E la Gloria... la Gloria è la gioia di essere chi sei. Di essere un figlio dell'Universo.</p>
+<p>Si alzò e allargò le braccia, come per abbracciare il mondo.
+—Non cercare il potere fuori. Non cercare gli applausi. Il vero potere è silenzioso. È la certezza che non sei mai solo, che la Vita ti sostiene. Quando capisci questo, quando lo senti nelle tue cellule, sei già nel Regno. Qui e ora. Tra Madrid, Las Rozas e Colmenarejo. Il Regno è dove sei tu, se sei sveglio.</p>
+<p>Mi guardò con un'intensità che mi attraversò l'anima.
+—Non dimenticare questo, Francisco. Hai il potere. Usalo per vibrare alto. Usalo per illuminare il tuo angolo di mondo. Questo è il tuo unico compito.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 11 章：国度、权柄和荣耀</h1>
+                    <p>旅程即将结束。我们坐在东方广场的一个长凳上，面对着皇宫。
+“国度、权柄、荣耀全是你的，”耶稣看着壮丽的建筑说，“但不是那个由石头和守卫组成的国度。”</p>
+<p>“那是什么呢？”</p>
+<p>“国度就是你内心的平静。权柄就是无论外界发生什么，你在每一刻选择自己振动的能力。而荣耀……荣耀就是作为你自己的喜悦。作为宇宙之子的喜悦。”</p>
+<p>他站起来，伸开双臂，仿佛在拥抱世界。
+“不要去外面寻找权力。不要指望别人为你鼓掌。真正的力量是沉默的。它是你永远不孤独、生命在支持着你的确信。当你明白这一点，当你的每个细胞都感受到这一点时，你就已经身处国度之中了。此时此刻。在马德里、拉斯罗萨斯和科尔梅纳雷霍之间。如果你是清醒的，国度就在你所在的地方。”</p>
+<p>他用一种能穿透我灵魂的强度看着我。
+“不要忘记这一点，弗朗西斯科。你拥有力量。用它来保持高频振动。用它来照亮世界的一角。那是你唯一的任务。”</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل الحادي عشر: الملك والقدرة والمجد</h1>
+                    <p>كانت الرحلة تقترب من نهايتها. كنا نجلس على مقعد في ساحة الشرق، أمام القصر الملكي.
+— لك الملك والقدرة والمجد — قال يسوع وهو ينظر إلى المبنى المهيب —. ولكن ليس ذلك الملك المكون من الحجارة والحراس.</p>
+<p>— أي واحد إذاً؟</p>
+<p>— الملك هو سلامك الداخلي. القدرة هي قدرتك على اختيار اهتزازك في كل لحظة، مهما حدث في الخارج. والمجد... المجد هو فرحة كونك من أنت. كونك ابناً للكون.</p>
+<p>نهض وبسط ذراعيه، وكأنه يعانق العالم.
+— لا تبحث عن السلطة في الخارج. لا تبحث عن تصفيق الناس. القدرة الحقيقية صامتة. إنها اليقين بأنك لست وحدك أبداً، وأن الحياة تعيلك. عندما تفهم ذلك، عندما تشعر به في خلاياك، ستكون بالفعل في الملكوت. هنا والآن. بين مدريد ولاس روزاس وكولميناريجو. الملكوت يكون حيثما تكون أنت، إذا كنت مستيقظاً.</p>
+<p>نظر إليّ بكثافة اخترقت روحي.
+— لا تنسَ هذا يا فرانسيسكو. أنت تملك القدرة. استخدمها لتهتز عالياً. استخدمها لتنير ركنك الخاص من العالم. تلك هي مهمتك الوحيدة.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 11: Царство, Сила и Слава</h1>
+                    <p>Путешествие подходило к концу. Мы сидели на скамейке на Пласа-де-Ориенте перед Королевским дворцом.
+— Твое есть Царство, и Сила, и Слава, — сказал Иисус, глядя на внушительное здание. — Но не то царство из камней и стражи.</p>
+<p>— Какое же тогда?</p>
+<p>— Царство — это твой внутренний покой. Сила — это твоя способность выбирать свою вибрацию в каждый момент, что бы ни происходило снаружи. А Слава... Слава — это радость быть тем, кто ты есть. Быть ребенком Вселенной.</p>
+<p>Он встал и широко развел руки, словно обнимая весь мир.
+— Не ищи власти вовне. Не ищи аплодисментов. Истинная сила безмолвна. Это уверенность в том, что ты никогда не одинок, что Жизнь поддерживает тебя. Когда ты это поймешь, когда почувствуешь это каждой клеткой, ты уже в Царстве. Здесь и сейчас. В Мадриде, Лас-Росас и Кольменарехо. Царство там, где ты, если ты проснулся.</p>
+<p>Он посмотрел на меня с такой силой, что это пронзило мою душу.
+— Не забывай об этом, Франсиско. В тебе есть сила. Используй ее, чтобы вибрировать высоко. Используй ее, чтобы осветить свой уголок мира. В этом твоя единственная задача.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 11: Vương quốc, Quyền năng và Vinh quang</h1>
+                    <p>Cuộc hành trình sắp kết thúc. Chúng tôi đang ngồi trên một chiếc ghế đá ở Quảng trường Oriente, đối diện với Cung điện Hoàng gia.
+—Vương quốc, Quyền năng và Vinh quang là của Cha —Chúa Giê-su nói, tay chỉ về phía tòa nhà uy nghi—. Nhưng không phải vương quốc của gạch đá và lính canh đâu.</p>
+<p>—Vậy thì là vương quốc nào ạ?</p>
+<p>—Vương quốc chính là sự bình an nội tại của con. Quyền năng là khả năng con lựa chọn rung động của mình trong mỗi khoảnh khắc, bất kể điều gì đang xảy ra bên ngoài. Và Vinh quang... Vinh quang là niềm vui được là chính mình. Được làm một người con của Vũ trụ.</p>
+<p>Ngài đứng dậy và dang rộng vòng tay, như thể đang ôm trọn cả thế giới.
+—Đừng tìm kiếm quyền lực ở bên ngoài. Đừng mong đợi người khác vỗ tay tán thưởng mình. Sức mạnh thực sự luôn tĩnh lặng. Đó là sự chắc chắn rằng con không bao giờ đơn độc, rằng Sự sống luôn nâng đỡ con. Khi con hiểu được điều đó, khi con cảm nhận được nó trong từng tế bào, con đã ở trong Vương quốc rồi. Ngay tại đây và bây giờ. Giữa Madrid, Las Rozas và Colmenarejo. Vương quốc ở ngay nơi con ở, nếu con tỉnh thức.</p>
+<p>Ngài nhìn tôi với một cái nhìn sâu sắc thấu tận tâm hồn.
+—Đừng quên điều này nhé, Francisco. Con có sức mạnh. Hãy dùng nó để rung động cao. Hãy dùng nó để thắp sáng góc nhỏ của mình trên thế giới này. Đó là nhiệm vụ duy nhất của con.</p>
+                </div>
+                <div class="image-container-footer"><img src="images/kingdom_power.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>
             <footer>
                 <p>Escrito con amor y alta vibración.</p>
@@ -334,28 +729,43 @@
         </main>
     </div>
 
+    <script src="base.js"></script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
-        const btnClose = document.getElementById('menu-close');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
 
         function toggleMenu() {
             sidebar.classList.toggle('open');
             const isOpen = sidebar.classList.contains('open');
             if (window.innerWidth <= 1024) {
-                btnClose.style.display = isOpen ? 'block' : 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
             }
         }
 
         btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
-                btnClose.style.display = 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
                 sidebar.classList.remove('open');
             }
         });

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 7: El Pan de Cada Día | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #FF6B6B;
@@ -263,52 +266,364 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .language.spanish {
+            display: block;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+        </select>
+    </div>
+
     <header id="mobile-header">
-        <h1>Capítulo 7: El Pan de Cada Día</h1>
+        <div class="spanish language">
+            <h1>Capítulo 7: El Pan de Cada Día</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 7: Our Daily Bread</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 7 : Le pain de chaque jour</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 7: Il pane quotidiano</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 7 章：我们日用的饮食</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل السابع: خبزنا كفافنا</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 7: Хлеб наш насущный</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 7: Lương thực hằng ngày</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
     <aside id="sidebar">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Mi amigo Jesucristo</h2>
-            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html" class="active">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-<li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-<li><a href="07_capitulo.html" class="active">Capítulo 7: El Pan de Cada Día</a></li>
-<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
-<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
-<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
-
-            </ul>
-        </nav>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html" class="active">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html" class="active">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html" class="active">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天空）</a>
+                    </li>
+                    <li><a href="07_capitulo.html" class="active">第 7 章：日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html" class="active">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html" class="active">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html" class="active">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <div id="overlay"></div>
@@ -317,8 +632,9 @@
         <main>
             <img src="images/bread_sparrows.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
-                <h1>Capítulo 7: El Pan de Cada Día</h1>
-<p>Estábamos comiendo un bocadillo de calamares en la Plaza Mayor. Jesús lo disfrutaba como si fuera el manjar más exquisito del mundo.
+                <div class="spanish language">
+                    <h1>Capítulo 7: El Pan de Cada Día</h1>
+                    <p>Estábamos comiendo un bocadillo de calamares en la Plaza Mayor. Jesús lo disfrutaba como si fuera el manjar más exquisito del mundo.
 —Esto es sagrado —dijo con la boca llena.</p>
 <p>—¿El bocadillo?</p>
 <p>—El acto de nutrirse. "Danos hoy nuestro pan de cada día".</p>
@@ -331,7 +647,121 @@
 —Eso no es porque falte pan. Es porque sobra egoísmo. Si todos vibraran en la generosidad, si todos entendieran que somos uno, nadie pasaría hambre. El problema es la distribución, no la provisión. El Universo es abundante. La mente humana es la que crea la escasez.</p>
 <p>Dio el último bocado.
 —El "pan" también es la información, el conocimiento, el amor. Todo lo que te nutre. Pide lo que necesitas para hoy, para ser tu mejor versión hoy. No pidas para acumular y sentirte seguro. La única seguridad real es tu conexión con la Fuente.</p>
-<div class="image-container-footer"><img src="images/bread_sparrows.png" alt="Ilustración del capítulo" class="footer-image"></div>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 7: Our Daily Bread</h1>
+                    <p>We were eating a calamari sandwich in Plaza Mayor. Jesus enjoyed it as if it were the most exquisite delicacy in the world.
+—This is sacred —he said with his mouth full.</p>
+<p>—The sandwich?</p>
+<p>—The act of nourishing oneself. "Give us this day our daily bread".</p>
+<p>He wiped himself with a paper napkin.
+—People live with fear of scarcity. They accumulate, they store, they fear losing. That is a vibration of lack. When you ask for "today's" bread, you are trusting that tomorrow there will also be some.</p>
+<p>—But one must be far-sighted...</p>
+<p>—Being far-sighted is fine. Living distressed by the future is a lack of faith in Life. Look at the sparrows —he pointed to some birds pecking at crumbs—. They don't have granaries, and yet, they eat. Life sustains Life.</p>
+<p>—And what about the people who have nothing to eat?</p>
+<p>His face darkened a bit.
+—That is not because bread is lacking. It is because selfishness is overflowing. If everyone vibrated in generosity, if everyone understood that we are one, no one would go hungry. The problem is distribution, not provision. The Universe is abundant. The human mind is what creates scarcity.</p>
+<p>He took the last bite.
+—The "bread" is also information, knowledge, love. Everything that nourishes you. Ask for what you need for today, to be your best version today. Do not ask to accumulate and feel secure. The only real security is your connection to the Source.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 7 : Le pain de chaque jour</h1>
+                    <p>Nous mangions un sandwich aux calamars sur la Plaza Mayor. Jésus le savourait comme s'il s'agissait du mets le plus exquis au monde.
+—Ceci est sacré —dit-il la bouche pleine.</p>
+<p>—Le sandwich ?</p>
+<p>—L'acte de se nourrir. « Donne-nous aujourd'hui notre pain de ce jour ».</p>
+<p>Il s'essuya avec une serviette en papier.
+—Les gens vivent dans la peur du manque. Ils accumulent, ils gardent, ils ont peur de perdre. C'est une vibration de manque. Quand tu demandes le pain d'« aujourd'hui », tu as l'assurance que demain il y en aura aussi.</p>
+<p>—Mais il faut être prévoyant...</p>
+<p>—Être prévoyant est une bonne chose. Vivre angoissé par l'avenir est un manque de foi en la Vie. Regarde les moineaux —il désigna des oiseaux qui picoraient des miettes—. Ils n'ont pas de greniers, et pourtant, ils mangent. La Vie soutient la Vie.</p>
+<p>—Et qu'en est-il des gens qui n'ont rien à manger ?</p>
+<p>Son visage s'assombrit un peu.
+—Ce n'est pas par manque de pain. C'est par excès d'égoïsme. Si tout le monde vibrait dans la générosité, si tout le monde comprenait que nous ne faisons qu'un, personne ne souffrirait de la faim. Le problème est la répartition, pas la provision. L'Univers est abondant. C'est l'esprit humain qui crée la rareté.</p>
+<p>Il prit la dernière bouchée.
+—Le « pain », c'est aussi l'information, la connaissance, l'amour. Tout ce qui te nourrit. Demande ce dont tu as besoin pour aujourd'hui, pour être la meilleure version de toi-même aujourd'hui. Ne demande pas pour accumuler et te sentir en sécurité. La seule sécurité réelle est ta connexion avec la Source.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 7: Il pane quotidiano</h1>
+                    <p>Stavamo mangiando un panino con i calamari in Plaza Mayor. Gesù lo gustava come se fosse la prelibatezza più squisita del mondo.
+—Questo è sacro —disse con la bocca piena.</p>
+<p>—Il panino?</p>
+<p>—L'atto di nutrirsi. "Dacci oggi il nostro pane quotidiano".</p>
+<p>Si pulì con un tovagliolo di carta.
+—La gente vive con la paura della scarsità. Accumulano, conservano, temono di perdere. Questa è vibrazione di mancanza. Quando chiedi il pane di "oggi", stai confidando nel fatto che anche domani ce ne sarà.</p>
+<p>—Ma bisogna essere previdenti...</p>
+<p>—Essere previdenti va bene. Vivere angosciati per il futuro è mancanza di fede nella Vita. Guarda i passeri —indicò degli uccelli che beccavano briciole—. Non hanno granai, eppure mangiano. La Vita sostiene la Vita.</p>
+<p>—E che dire della gente che non ha da mangiare?</p>
+<p>Il suo volto si oscurò un po'.
+—Questo non è perché manchi il pane. È perché abbonda l'egoismo. Se tutti vibrassero nella generosità, se tutti capissero che siamo uno, nessuno soffrirebbe la fame. Il problema è la distribuzione, non la provvigione. L'Universo è abbondante. La mente umana è quella che crea la scarsità.</p>
+<p>Diede l'ultimo morso.
+—Il "pane" è anche l'informazione, la conoscenza, l'amore. Tutto ciò che ti nutre. Chiedi ciò di cui hai bisogno per oggi, per essere la tua versione migliore oggi. Non chiedere per accumulare e sentirti sicuro. L'unica sicurezza reale è la tua connessione con la Fonte.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 7 章：我们日用的饮食</h1>
+                    <p>我们正在马约尔广场吃鱿鱼三明治。耶稣吃得津津有味，仿佛那是世界上最精致的美食。
+“这是神圣的，”他满嘴塞着食物说。</p>
+<p>“三明治吗？”</p>
+<p>“获取营养的行为。‘我们日用的饮食，今日赐给我们’。”</p>
+<p>他用纸巾擦了擦嘴。
+“人们生活在对稀缺的恐惧中。他们积累、储存、害怕失去。那是匮乏的振动。当你请求‘今日’的饮食时，你是在相信明天也会有。”</p>
+<p>“但人必须有远见……”</p>
+<p>“有远见没错。但为未来感到焦虑是缺乏对生命的信心。看那些麻雀，”他指着几只正在啄食碎屑的小鸟，“它们没有粮仓，然而它们有得吃。生命养育着生命。”</p>
+<p>“那那些没饭吃的人呢？”</p>
+<p>他的脸色暗淡了一些。
+“那不是因为缺乏食物。而是因为自私自利。如果每个人都在慷慨中振动，如果每个人都明白我们是合一的，就不会有人挨饿。问题在于分配，而不在于供应。宇宙是丰盛的。人类的大脑才是创造稀缺的源头。”</p>
+<p>他吃下了最后一口。
+“‘日用的饮食’也是信息、知识、爱。一切滋养你的东西。祈求你今天所需的东西，让你今天成为最好的自己。不要为了积累和寻找安全感而祈求。唯一真正的安全感是你与源头的连接。”</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل السابع: خبزنا كفافنا</h1>
+                    <p>كنا نأكل شطيرة حبار في ساحة بلازا مايور. كان يسوع يستمتع بها وكأنها أشهى مأكولات العالم.
+— هذا مقدّس — قال وفمه ممتلئ.</p>
+<p>— الشطيرة؟</p>
+<p>— فعل التغذية. "خبزنا كفافنا أعطنا اليوم".</p>
+<p>مسح فمه بمنديل ورقي.
+— الناس يعيشون في خوف من الندرة. يجمعون، يخزنون، يخشون الخسارة. ذلك هو اهتزاز النقص. عندما تطلب خبز "اليوم"، فإنك تثق في أنه غداً سيكون هناك أيضاً.</p>
+<p>— ولكن يجب أن يكون المرء بعيد النظر...</p>
+<p>— بعد النظر أمر جيد. العيش في قلق بشأن المستقبل هو نقص في الإيمان بالحياة. انظر إلى العصافير — أشار إلى بعض الطيور التي تنقر الفتات —. ليس لديها أهراء، ومع ذلك تأكل. الحياة تعيل الحياة.</p>
+<p>— وماذا عن الناس الذين ليس لديهم ما يأكلونه؟</p>
+<p>أظلم وجهه قليلاً.
+— هذا ليس بسبب نقص الخبز. بل بسبب فيض الأنانية. إذا اهتز الجميع بالكرم، إذا فهم الجميع أننا واحد، فلن يجوع أحد. المشكلة في التوزيع لا في التوفير. الكون وفير. العقل البشري هو من يخلق الندرة.</p>
+<p>أخذ اللقمة الأخيرة.
+— "الخبز" هو أيضاً المعلومات، المعرفة، الحب. كل ما يغديك. اطلب ما تحتاجه لليوم، لتكون أفضل نسخة من نفسك اليوم. لا تطلب لتجمع وتشعر بالأمان. الأمان الحقيقي الوحيد هو اتصالك بالمصدر.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 7: Хлеб наш насущный</h1>
+                    <p>Мы ели бутерброд с кальмарами на Пласа-Майор. Иисус наслаждался им так, словно это был самый изысканный деликатес в мире.
+— Это священно, — сказал он с набитым ртом.</p>
+<p>— Бутерброд?</p>
+<p>— Сам акт питания. «Хлеб наш насущный дай нам на сей день».</p>
+<p>Он вытерся бумажной салфеткой.
+— Люди живут в страхе перед нехваткой. Они копят, хранят, боятся потерять. Это вибрация дефицита. Когда ты просишь хлеба на «сей день», ты доверяешь тому, что и завтра он тоже будет.</p>
+<p>— Но нужно же быть предусмотрительным...</p>
+<p>— Быть предусмотрительным — это хорошо. Но жить в тревоге за будущее — значит не верить в саму Жизнь. Посмотри на воробьев, — он указал на птиц, клюющих крошки. — У них нет амбаров, и всё же они едят. Жизнь поддерживает Жизнь.</p>
+<p>— А как же люди, которым нечего есть?</p>
+<p>Его лицо немного омрачилось.
+— Это не потому, что хлеба не хватает. Это потому, что эгоизма слишком много. Если бы все вибрировали на частоте щедрости, если бы все понимали, что мы едины, никто бы не голодал. Проблема в распределении, а не в наличии провизии. Вселенная изобильна. Именно человеческий разум создает нехватку.</p>
+<p>Он проглотил последний кусок.
+— «Хлеб» — это также информация, знания, любовь. Всё, что тебя питает. Проси то, что тебе нужно на сегодня, чтобы быть лучшей версией себя сегодня. Не проси, чтобы накопить и почувствовать себя в безопасности. Единственная реальная безопасность — это твоя связь с Источником.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 7: Lương thực hằng ngày</h1>
+                    <p>Chúng tôi đang ăn bánh mì mực ở Plaza Mayor. Chúa Giê-su thưởng thức nó như thể đó là món cao lương mỹ vị nhất thế giới.
+—Điều này thật thiêng liêng —Ngài nói khi miệng vẫn còn đầy thức ăn.</p>
+<p>—Cái bánh mì sao ạ?</p>
+<p>—Hành động nuôi dưỡng bản thân. "Xin cho chúng con hôm nay lương thực hằng ngày".</p>
+<p>Ngài lau miệng bằng một chiếc khăn giấy.
+—Mọi người sống trong nỗi sợ hãi về sự khan hiếm. Họ tích trữ, họ cất giữ, họ sợ mất mát. Đó là rung động của sự thiếu thốn. Khi con cầu xin lương thực cho "hôm nay", con đang tin tưởng rằng ngày mai cũng sẽ có.</p>
+<p>—Nhưng mình cũng phải biết lo xa chứ ạ...</p>
+<p>—Lo xa là tốt. Nhưng sống lo âu về tương lai là thiếu niềm tin vào Sự sống. Hãy nhìn những con chim sẻ —Ngài chỉ vào mấy con chim đang mổ bánh vụn—. Chúng không có kho lẫm, thế mà chúng vẫn có ăn. Sự sống nuôi dưỡng Sự sống.</p>
+<p>—Vậy còn những người không có gì để ăn thì sao ạ?</p>
+<p>Gương mặt Ngài thoáng buồn.
+—Đó không phải là vì thiếu bánh. Mà là vì sự ích kỷ quá nhiều. Nếu mọi người cùng rung động trong sự hào phóng, nếu mọi người hiểu rằng chúng ta là một, thì sẽ không ai phải chịu đói. Vấn đề nằm ở sự phân phối, chứ không phải nguồn cung. Vũ trụ này dồi dào lắm. Chính tâm trí con người mới tạo ra sự khan hiếm.</p>
+<p>Ngài cắn miếng cuối cùng.
+—"Lương thực" cũng chính là thông tin, kiến thức, tình yêu. Tất cả những gì nuôi dưỡng con. Hãy cầu xin những gì con cần cho ngày hôm nay, để trở thành phiên bản tốt nhất của chính mình hôm nay. Đừng cầu xin để tích trữ và cảm thấy an toàn. Sự an toàn thực sự duy nhất chính là sự kết nối của con với Nguồn.</p>
+                </div>
+                <div class="image-container-footer"><img src="images/bread_sparrows.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>
             <footer>
                 <p>Escrito con amor y alta vibración.</p>
@@ -339,28 +769,43 @@
         </main>
     </div>
 
+    <script src="base.js"></script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
-        const btnClose = document.getElementById('menu-close');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
 
         function toggleMenu() {
             sidebar.classList.toggle('open');
             const isOpen = sidebar.classList.contains('open');
             if (window.innerWidth <= 1024) {
-                btnClose.style.display = isOpen ? 'block' : 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
             }
         }
 
         btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
-                btnClose.style.display = 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
                 sidebar.classList.remove('open');
             }
         });

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 3: La Vibración y el Silencio | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #FF6B6B;
@@ -263,52 +266,364 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .language.spanish {
+            display: block;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+        </select>
+    </div>
+
     <header id="mobile-header">
-        <h1>Capítulo 3: La Vibración y el Silencio</h1>
+        <div class="spanish language">
+            <h1>Capítulo 3: La Vibración y el Silencio</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 3: Vibration and Silence</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 3 : La vibration et le silence</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 3: La vibrazione e il silenzio</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 3 章：振动与静默</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل الثالث: الاهتزاز والصمت</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 3: Вибрация и тишина</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 3: Rung động và Im lặng</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
     <aside id="sidebar">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Mi amigo Jesucristo</h2>
-            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html" class="active">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-<li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-<li><a href="03_capitulo.html" class="active">Capítulo 3: La Vibración y el Silencio</a></li>
-<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-<li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
-<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
-<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
-
-            </ul>
-        </nav>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html" class="active">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html" class="active">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html" class="active">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html" class="active">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天空）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html" class="active">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html" class="active">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html" class="active">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <div id="overlay"></div>
@@ -317,8 +632,9 @@
         <main>
             <img src="images/silence_vibration.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
-                <h1>Capítulo 3: La Vibración y el Silencio</h1>
-<p>Tomamos el autobús hacia la sierra. El paisaje iba cambiando, volviéndose más verde, más salvaje. Jesús miraba por la ventana como un niño en su primera excursión.</p>
+                <div class="spanish language">
+                    <h1>Capítulo 3: La Vibración y el Silencio</h1>
+                    <p>Tomamos el autobús hacia la sierra. El paisaje iba cambiando, volviéndose más verde, más salvaje. Jesús miraba por la ventana como un niño en su primera excursión.</p>
 <p>—El ruido —dijo de repente—. Es la gran enfermedad de este siglo. No el ruido de los coches, sino el ruido de las pantallas, de las notificaciones, de las opiniones constantes.</p>
 <p>Llegamos a un punto intermedio antes de Colmenarejo. Nos bajamos en un camino de tierra.
 —Vamos a practicar el silencio —propuso.</p>
@@ -331,7 +647,121 @@
 <p>—Eso es —dijo él, como si pudiera leer mi sensación—. Eso es vibrar alto. Es la frecuencia del Amor. No el amor romántico de las películas, sino el Amor que sostiene los átomos unidos. Cuando estás ahí, nada puede tocarte. "Líbranos del mal" no es pedir que no existan los malos. Es pedir estar en una frecuencia donde la maldad no te alcance, donde no resuene contigo.</p>
 <p>Abrí los ojos. El mundo parecía más brillante.
 —Si vibras alto, el bajo no te ve —concluyó—. Es como si fueras invisible para la oscuridad.</p>
-<div class="image-container-footer"><img src="images/silence_vibration.png" alt="Ilustración del capítulo" class="footer-image"></div>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 3: Vibration and Silence</h1>
+                    <p>We took the bus towards the mountains. The landscape was changing, becoming greener, wilder. Jesus looked out the window like a child on his first excursion.</p>
+<p>—The noise —he said suddenly—. It is the great disease of this century. Not the noise of cars, but the noise of screens, of notifications, of constant opinions.</p>
+<p>We arrived at an intermediate point before Colmenarejo. We got off on a dirt road.
+—Let's practice silence —he proposed.</p>
+<p>—Stay quiet?</p>
+<p>—Not just shut your mouth. Shut your mind. I want you to listen to the vibration of the universe.</p>
+<p>We walked in silence for an hour. At first, my mind was a washing machine spinning thoughts: 'What am I doing here walking with Jesus Christ?', 'Have I gone crazy?', 'I have to call my mother...'. But little by little, the rhythm of my steps and the calm breathing of my companion calmed me down.</p>
+<p>We stopped at a high point from where the horizon could be seen.
+—Close your eyes —he whispered to me—. Feel.</p>
+<p>I did it. And for the first time in a long time, I didn't feel fear. I felt a kind of soft, warm hum. As if the air were hugging me.</p>
+<p>—That's it —he said, as if he could read my feeling—. That is to vibrate high. It is the frequency of Love. Not the romantic love of the movies, but the Love that holds atoms together. When you are there, nothing can touch you. 'Deliver us from evil' is not asking that evil ones do not exist. It is asking to be at a frequency where evil does not reach you, where it does not resonate with you.</p>
+<p>I opened my eyes. The world seemed brighter.
+—If you vibrate high, the low frequency doesn't see you —he concluded—. It's as if you were invisible to the darkness.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 3 : La vibration et le silence</h1>
+                    <p>Nous avons pris le bus vers la sierra. Le paysage changeait, devenait plus vert, plus sauvage. Jésus regardait par la fenêtre comme un enfant lors de sa première excursion.</p>
+<p>—Le bruit —dit-il soudain—. C'est la grande maladie de ce siècle. Pas le bruit des voitures, mais le bruit des écrans, des notifications, des opinions constantes.</p>
+<p>Nous sommes arrivés à un point intermédiaire avant Colmenarejo. Nous sommes descendus sur un chemin de terre.
+—On va pratiquer le silence —proposa-t-il.</p>
+<p>—Se taire ?</p>
+<p>—Pas seulement fermer la bouche. Faire taire l'esprit. Je veux que tu écoutes la vibration de l'univers.</p>
+<p>Nous avons marché en silence pendant une heure. Au début, mon esprit était une machine à laver essorant des pensées : « Qu'est-ce que je fais ici à marcher avec Jésus-Christ ? », « Est-ce que je suis devenu fou ? », « Je dois appeler ma mère... ». Mais peu à peu, le rythme de mes pas et la respiration tranquille de mon compagnon ont fini par me calmer.</p>
+<p>Nous nous sommes arrêtés sur une hauteur d'où l'on voyait l'horizon.
+—Ferme les yeux —me murmura-t-il—. Ressens.</p>
+<p>C'est ce que je fis. Et pour la première fois depuis longtemps, je n'éprouvai pas de peur. Je sentis une sorte de bourdonnement doux, chaleureux. Comme si l'air m'enlaçait.</p>
+<p>—C'est ça —dit-il, comme s'il pouvait lire mon sentiment—. C'est ça vibrer haut. C'est la fréquence de l'Amour. Pas l'amour romantique des films, mais l'Amour qui maintient les atomes unis. Quand tu es là, rien ne peut t'atteindre. « Délivre-nous du mal » ne consiste pas à demander que les méchants n'existent pas. C'est demander d'être à une fréquence où la méchanceté ne t'atteint pas, où elle ne résonne pas en toi.</p>
+<p>J'ouvris les yeux. Le monde semblait plus brillant.
+—Si tu vibres haut, le bas ne te voit pas —conclut-il—. C'est comme si tu étais invisible pour l'obscurité.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 3: La vibrazione e il silenzio</h1>
+                    <p>Prendemmo l'autobus verso la sierra. Il paesaggio andava cambiando, diventando più verde, più selvaggio. Gesù guardava dal finestrino come un bambino alla sua prima gita.</p>
+<p>—Il rumore —disse improvvisamente—. È la grande malattia di questo secolo. Non il rumore delle auto, ma il rumore degli schermi, delle notifiche, delle opinioni costanti.</p>
+<p>Arrivammo a un punto intermedio prima di Colmenarejo. Scendemmo in un sentiero di terra.
+—Pratichiamo il silenzio —propose.</p>
+<p>—Stare zitti?</p>
+<p>—Non solo tacere la bocca. Tacere la mente. Voglio che ascolti la vibrazione dell'universo.</p>
+<p>Camminammo in silenzio per un'ora. All'inizio, la mia mente era una lavatrice che centrifugava pensieri: «Cosa ci faccio qui a camminare con Gesù Cristo?», «Sarò impazzito?», «Devo chiamare mia madre...». Ma a poco a poco, il ritmo dei miei passi e la respirazione tranquilla del mio compagno mi andarono calmando.</p>
+<p>Ci fermammo su un'altura da dove si vedeva l'orizzonte.
+—Chiudi gli occhi —mi sussurrò—. Senti.</p>
+<p>Lo feci. E per la prima volta dopo molto tempo, non sentii paura. Sentii una specie di ronzio lieve, caldo. Come se l'aria mi abbracciasse.</p>
+<p>—Ecco cos'è —disse lui, come se potesse leggere la mia sensazione—. Questo è vibrare alto. È la frequenza dell'Amore. Non l'amore romantico dei film, ma l'Amore che tiene uniti gli atomi. Quando sei lì, niente può toccarti. "Liberaci dal male" non è chiedere che non esistano i malvagi. È chiedere di essere in una frequenza dove la malvagità non ti raggiunga, dove non risuoni con te.</p>
+<p>Aprii gli occhi. Il mondo sembrava più luminoso.
+—Se vibri alto, il basso non ti vede —concluse—. È come se fossi invisibile per l'oscurità.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 3 章：振动与静默</h1>
+                    <p>我们乘公共汽车去山区。风景在变化，变得更绿、更原始。耶稣像第一次出游的孩子一样望着窗外。</p>
+<p>“噪音，”他突然说，“是这个世纪的一大顽疾。不是汽车的噪音，而是屏幕的噪音、通知的噪音、不断的意见的噪音。”</p>
+<p>我们在科尔梅纳雷霍之前的一个中间点下了车。我们走在一条土路上。
+“我们来练习静默吧，”他提议道。</p>
+<p>“闭嘴不说话吗？”</p>
+<p>“不仅是闭上嘴。还要让大脑安静下来。我要你倾听宇宙的振动。”</p>
+<p>我们静静地走了一个小时。起初，我的大脑像一台正在甩干思绪的洗衣机：“我在这里和耶稣基督一起散步是在干什么？”、“我是不是疯了？”、“我得给我妈打个电话……”但渐渐地，我脚步的节奏和同伴平静的呼吸让我平静下来。</p>
+<p>我们停在一个高处，从那里可以看到地平线。
+“闭上眼睛，”他对我耳语道，“去感受。”</p>
+<p>我照做了。很久以来第一次，我没有感到恐惧。我感到一种轻柔、温暖的嗡嗡声。仿佛空气在拥抱我。</p>
+<p>“就是这样，”他说，仿佛能读懂我的感受，“这就是高频振动。这是爱的频率。不是电影里的浪漫爱情，而是保持原子结合在一起的爱。当你处于那种状态时，没有什么是能触碰到你的。‘救我们脱离凶恶’不是请求恶人不存在。而是请求处于一种恶意无法触及你、无法与你产生共鸣的频率。”</p>
+<p>我睁开眼睛。世界似乎变得更明亮了。
+“如果你在高频振动，低频就看不见你，”他总结道，“仿佛你在黑暗中是隐身的。”</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل الثالث: الاهتزاز والصمت</h1>
+                    <p>استقلينا الحافلة باتجاه الجبال. كانت المناظر الطبيعية تتغير، وتصبح أكثر خضرة وبرية. كان يسوع ينظر من النافذة كطفل في رحلته الأولى.</p>
+<p>— الضوضاء — قال فجأة —. إنها المرض العظيم لهذا القرن. ليس ضجيج السيارات، بل ضجيج الشاشات، والتنبيهات، والآراء المستمرة.</p>
+<p>وصلنا إلى نقطة وسيطة قبل كولميناريجو. نزلنا في طريق ترابي.
+— لنمارس الصمت — اقترح.</p>
+<p>— هل نصمت؟</p>
+<p>— ليس فقط صمت الفم. صمت العقل. أريدك أن تستمع إلى اهتزاز الكون.</p>
+<p>مشينا في صمت لمدة ساعة. في البداية، كان عقلي مثل غسالة تدور فيها الأفكار: "ماذا أفعل هنا أسير مع يسوع المسيح؟"، "هل جننت؟"، "يجب أن أتصل بوالدتي...". ولكن شيئاً فشيئاً، بدأ إيقاع خطواتي وتنفس رفيقي الهادئ يهدئان من روعي.</p>
+<p>توقفنا عند نقطة عالية حيث يمكن رؤية الأفق.
+— أغمض عينيك — همس لي —. اشعر.</p>
+<p>فعلت ذلك. ولأول مرة منذ وقت طويل، لم أشعر بالخوف. شعرت بنوع من الطنين الناعم والدافئ. كما لو كان الهواء يعانقني.</p>
+<p>— هذا هو — قال، وكأنه يستطيع قراءة شعوري —. هذا هو الاهتزاز العالي. إنه تردد الحب. ليس الحب الرومانسي في الأفلام، بل الحب الذي يحافظ على ترابط الذرات. عندما تكون هناك، لا يمكن لشيء أن يلمسك. "نجنا من الشرير" ليس طلباً لعدم وجود الأشرار. إنه طلب للتواجد في تردد لا يصل فيه الشر إليك، حيث لا يتردد صداه معك.</p>
+<p>فتحت عيني. بدا العالم أكثر إشراقاً.
+— إذا كنت تهتز عالياً، فإن التردد المنخفض لا يراك — اختتم —. الأمر كما لو كنت غير مرئي للظلام.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 3: Вибрация и тишина</h1>
+                    <p>Мы сели в автобус, идущий в горы. Пейзаж менялся, становясь более зеленым, более диким. Иисус смотрел в окно, как ребенок в своей первой поездке.</p>
+<p>— Шум, — сказал он вдруг. — Это великая болезнь этого века. Не шум машин, а шум экранов, уведомлений, постоянных мнений.</p>
+<p>Мы доехали до промежуточного пункта перед Кольменарехо. Вышли на грунтовую дорогу.
+— Давай попрактикуем тишину, — предложил он.</p>
+<p>— Молчать?</p>
+<p>— Не просто закрыть рот. Заставить замолчать ум. Я хочу, чтобы ты услышал вибрацию вселенной.</p>
+<p>Мы шли в тишине целый час. Сначала мой ум был похож на стиральную машину, прокручивающую мысли: «Что я здесь делаю, гуляя с Иисусом Христом?», «Я что, с ума сошел?», «Надо позвонить маме...». Но постепенно ритм моих шагов и спокойное дыхание моего спутника успокоили меня.</p>
+<p>Мы остановились на возвышенности, откуда был виден горизонт.
+— Закрой глаза, — прошептал он мне. — Почувствуй.</p>
+<p>Я так и сделал. И впервые за долгое время я не почувствовал страха. Я ощутил какое-то мягкое, теплое жужжание. Как будто воздух обнимал меня.</p>
+<p>— Вот оно, — сказал он, словно читая мои чувства. — Это и есть вибрировать высоко. Это частота Любви. Не романтической любви из фильмов, а Любви, которая удерживает атомы вместе. Когда ты там, ничто не может тебя коснуться. «Избавь нас от лукавого» — это не просьба о том, чтобы злых людей не существовало. Это просьба быть на такой частоте, где зло до тебя не доходит, где оно не резонирует с тобой.</p>
+<p>Я открыл глаза. Мир казался ярче.
+— Если ты вибрируешь высоко, низкое тебя не видит, — заключил он. — Ты словно становишься невидимым для тьмы.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 3: Rung động và Im lặng</h1>
+                    <p>Chúng tôi bắt xe buýt hướng về phía núi. Cảnh quan đang thay đổi, trở nên xanh hơn, hoang dã hơn. Chúa Giê-su nhìn ra ngoài cửa sổ như một đứa trẻ trong chuyến du ngoạn đầu tiên.</p>
+<p>—Tiếng ồn —Ngài đột nhiên nói—. Đó là căn bệnh lớn của thế kỷ này. Không phải tiếng ồn của xe cộ, mà là tiếng ồn của màn hình, của các thông báo, của những ý kiến không ngừng nghỉ.</p>
+<p>Chúng tôi đến một điểm trung gian trước Colmenarejo. Chúng tôi xuống xe trên một con đường đất.
+—Chúng ta hãy thực hành sự im lặng —Ngài đề nghị.</p>
+<p>—Giữ im lặng sao?</p>
+<p>—Không chỉ là ngậm miệng lại. Mà là làm im lặng tâm trí. Ta muốn con lắng nghe rung động của vũ trụ.</p>
+<p>Chúng tôi đi bộ trong im lặng suốt một giờ. Lúc đầu, tâm trí tôi như một chiếc máy giặt đang quay cuồng với những suy nghĩ: 'Mình đang làm gì ở đây khi đi dạo cùng Chúa Giê-su?', 'Mình bị điên rồi sao?', 'Phải gọi cho mẹ thôi...'. Nhưng dần dần, nhịp bước chân và hơi thở bình thản của người đồng hành đã làm tôi dịu lại.</p>
+<p>Chúng tôi dừng lại ở một điểm cao, nơi có thể nhìn thấy đường chân trời.
+—Hãy nhắm mắt lại —Ngài thì thầm với tôi—. Hãy cảm nhận.</p>
+<p>Tôi đã làm theo. Và lần đầu tiên sau một thời gian dài, tôi không cảm thấy sợ hãi. Tôi cảm thấy một loại âm thanh êm dịu, ấm áp. Như thể không khí đang ôm lấy tôi.</p>
+<p>—Đúng rồi —Ngài nói, như thể có thể đọc được cảm xúc của tôi—. Đó chính là rung động cao. Đó là tần số của Tình yêu. Không phải tình yêu lãng mạn trong phim ảnh, mà là Tình yêu giữ cho các nguyên tử liên kết với nhau. Khi con ở đó, không gì có thể chạm vào con. 'Cứu chúng con cho khỏi sự dữ' không phải là cầu xin cho những kẻ xấu không tồn tại. Mà là cầu xin được ở một tần số nơi sự dữ không thể chạm tới con, nơi nó không còn cộng hưởng với con.</p>
+<p>Tôi mở mắt ra. Thế giới dường như tươi sáng hơn.
+—Nếu con rung động cao, tần số thấp sẽ không nhìn thấy con —Ngài kết luận—. Giống như con trở nên vô hình trước bóng tối vậy.</p>
+                </div>
+                <div class="image-container-footer"><img src="images/silence_vibration.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>
             <footer>
                 <p>Escrito con amor y alta vibración.</p>
@@ -339,28 +769,43 @@
         </main>
     </div>
 
+    <script src="base.js"></script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
-        const btnClose = document.getElementById('menu-close');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
 
         function toggleMenu() {
             sidebar.classList.toggle('open');
             const isOpen = sidebar.classList.contains('open');
             if (window.innerWidth <= 1024) {
-                btnClose.style.display = isOpen ? 'block' : 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
             }
         }
 
         btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
-                btnClose.style.display = 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
                 sidebar.classList.remove('open');
             }
         });

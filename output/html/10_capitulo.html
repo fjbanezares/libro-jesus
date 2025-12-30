@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones) | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #FF6B6B;
@@ -263,52 +266,364 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .language.spanish {
+            display: block;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+        </select>
+    </div>
+
     <header id="mobile-header">
-        <h1>Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</h1>
+        <div class="spanish language">
+            <h1>Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 10: Deliver us from evil (Protection from Low Vibrations)</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 10: Liberaci dal male (Protezione dalle basse vibrazioni)</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 10 章：救我们脱离凶恶（远离低频振动）</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi những rung động thấp)</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
     <aside id="sidebar">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Mi amigo Jesucristo</h2>
-            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html" class="active">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-<li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-<li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
-<li><a href="10_capitulo.html" class="active">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
-<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
-
-            </ul>
-        </nav>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html" class="active">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html" class="active">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html" class="active">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天空）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html" class="active">第 10 章：救我们脱离凶恶（防止低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html" class="active">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html" class="active">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html" class="active">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <div id="overlay"></div>
@@ -317,8 +632,9 @@
         <main>
             <img src="images/eagle_protection.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
-                <h1>Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</h1>
-<p>La última noche en Madrid, fuimos a una terraza con vistas a la ciudad. Las luces parpadeaban abajo como un mar de estrellas eléctricas.
+                <div class="spanish language">
+                    <h1>Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</h1>
+                    <p>La última noche en Madrid, fuimos a una terraza con vistas a la ciudad. Las luces parpadeaban abajo como un mar de estrellas eléctricas.
 —Líbranos del mal —susurré, mirando el caos de tráfico.</p>
 <p>—El mal no es un monstruo con cuernos —dijo Jesús, tomando un zumo de naranja—. El mal es simplemente la ausencia de luz. Es la inconsciencia. Es la gente que vibra tan bajo, tan denso, que solo puede proyectar dolor.</p>
 <p>—¿Y cómo nos libramos de eso?</p>
@@ -327,7 +643,93 @@
 —Imagina que eres un águila. Si hay una serpiente en el suelo, y bajas a pelear con ella, te puede morder. Pero si vuelas alto, la serpiente no te alcanza. "Líbranos del mal" es pedir las alas para volar alto, donde la vibración del odio, la envidia y el miedo no pueden tocarte.</p>
 <p>—¿Y si alguien viene a atacarme?</p>
 <p>—Si tú estás vibrando en amor puro, en paz absoluta, tu sola presencia puede desarmar al otro. O simplemente, la vida te moverá de lugar para que no te cruces con él. La sincronicidad te protege. Cuando vibras alto, te vuelves invisible para el radar del conflicto. Los que vibran bajo no te "ven", porque no resuenas en su frecuencia. Pasan de largo.</p>
-<div class="image-container-footer"><img src="images/eagle_protection.png" alt="Ilustración del capítulo" class="footer-image"></div>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 10: Deliver us from evil (Protection from Low Vibrations)</h1>
+                    <p>On the last night in Madrid, we went to a terrace with views of the city. The lights flickered below like a sea of electric stars.
+—Deliver us from evil —I whispered, looking at the traffic chaos.</p>
+<p>—Evil is not a monster with horns —Jesus said, drinking an orange juice—. Evil is simply the absence of light. It is unconsciousness. It is the people who vibrate so low, so dense, that they can only project pain.</p>
+<p>—And how do we free ourselves from that?</p>
+<p>—By not fighting against it. If you fight against darkness, you stain yourself with darkness. You free yourself by rising above it.</p>
+<p>He made a gesture with his hand, encompassing the city.
+—Imagine you are an eagle. If there is a snake on the ground, and you go down to fight with it, it can bite you. But if you fly high, the snake doesn't reach you. "Deliver us from evil" is asking for wings to fly high, where the vibration of hate, envy, and fear cannot touch you.</p>
+<p>—And if someone comes to attack me?</p>
+<p>—If you are vibrating in pure love, in absolute peace, your mere presence can disarm the other. Or simply, life will move you from that place so that you don't cross paths with them. Synchronicity protects you. When you vibrate high, you become invisible to the radar of conflict. Those who vibrate low do not "see" you, because you don't resonate at their frequency. They pass you by.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</h1>
+                    <p>La dernière nuit à Madrid, nous sommes allés sur une terrasse avec vue sur la ville. Les lumières scintillaient en bas comme une mer d'étoiles électriques.
+—Délivre-nous du mal —murmurai-je, en regardant le chaos du trafic.</p>
+<p>—Le mal n'est pas un monstre avec des cornes —dit Jésus, en buvant un jus d'orange—. Le mal est simplement l'absence de lumière. C'est l'inconscience. Ce sont les gens qui vibrent si bas, si dense, qu'ils ne peuvent projeter que la douleur.</p>
+<p>—Et comment se libère-t-on de cela ?</p>
+<p>—En ne luttant pas contre cela. Si tu luttes contre l'obscurité, tu te taches d'obscurité. Tu te libères en t'élevant au-dessus d'elle.</p>
+<p>Il fit un geste de la main, englobant la ville.
+—Imagine que tu es un aigle. S'il y a un serpent au sol et que tu descends pour te battre avec lui, il peut te mordre. Mais si tu voles haut, le serpent ne t'atteint pas. « Délivre-nous du mal » consiste à demander des ailes pour voler haut, là où les vibrations de la haine, de l'envie et de la peur ne peuvent t'atteindre.</p>
+<p>—Et si quelqu'un vient m'attaquer ?</p>
+<p>—Si tu vibres dans l'amour pur, dans la paix absolue, ta seule présence peut désarmer l'autre. Ou simplement, la vie te déplacera pour que tu ne croises pas son chemin. La synchronicité te protège. Quand tu vibres haut, tu deviens invisible pour le radar du conflit. Ceux qui vibrent bas ne te « voient » pas, parce que tu ne résonnes pas à leur fréquence. Ils passent leur chemin.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 10: Liberaci dal male (Protezione dalle basse vibrazioni)</h1>
+                    <p>L'ultima notte a Madrid, andammo in una terrazza con vista sulla città. Le luci tremolavano sotto come un mare di stelle elettriche.
+—Liberaci dal male —sussurrai, guardando il caos del traffico.</p>
+<p>—Il male non è un mostro con le corna —disse Gesù, bevendo una spremuta d'arancia—. Il male è semplicemente l'assenza di luce. È l'incoscienza. È la gente che vibra così basso, così denso, che può solo proiettare dolore.</p>
+<p>—E come ci liberiamo da questo?</p>
+<p>—Non lottando contro di esso. Se lotti contro l'oscurità, ti macchi di oscurità. Ti liberi elevandoti al di sopra di essa.</p>
+<p>Fece un gesto con la mano, abbracciando la città.
+—Immagina di essere un'aquila. Se c'è un serpente a terra e tu scendi a combattere con lui, ti può mordere. Ma se voli alto, il serpente non ti raggiunge. "Liberaci dal male" è chiedere le ali per volare alto, dove la vibrazione dell'odio, dell'invidia e della paura non possono toccarti.</p>
+<p>—E se qualcuno viene ad attaccarmi?</p>
+<p>—Se tu stai vibrando in amore puro, in pace assoluta, la tua sola presenza può disarmare l'altro. O semplicemente, la vita ti sposterà di luogo affinché tu non lo incroci. La sincronicità ti protegge. Quando vibri alto, diventi invisibile al radar del conflitto. Coloro che vibrano basso non ti "vedono", perché non risuoni nella loro frequenza. Passano oltre.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 10 章：救我们脱离凶恶（远离低频振动）</h1>
+                    <p>在马德里的最后一个夜晚，我们去了一个可以俯瞰全城的露台。下面的灯光闪烁，宛如一片电星之海。
+“救我们脱离凶恶，”我看着混乱的交通低声说道。</p>
+<p>“恶不是长着角的小鬼，”耶稣边喝橙汁边说，“恶仅仅是光的缺失。是无意识。是那些振动非常低、非常沉重的人，他们只能投射出痛苦。”</p>
+<p>“那我们如何从中获得解脱呢？”</p>
+<p>“不要与之对抗。如果你与黑暗对抗，你自己就会沾染黑暗。你要通过超越它来获得解脱。”</p>
+<p>他做了一个手势，指着整个城市。
+“想象你是一只老鹰。如果地上有一条蛇，你飞下去与它搏斗，它可能会咬到你。但如果你飞得很高，蛇就够不到你。‘救我们脱离凶恶’是请求获得高飞的翅膀，高飞到仇恨、嫉妒和恐惧的振动无法触及你的地方。”</p>
+<p>“要是有人来袭击我怎么办？”</p>
+<p>“如果你处于纯粹的爱和绝对的平静中振动，仅仅是你的存在就足以解除对方的武装。或者简单地说，生活会把你从那个地方移开，让你不再与他相遇。同步性会保护你。当你处于高频振动时，你在冲突的雷达上就是不可见的。那些处于低频振动的人‘看不见’你，因为你不在他们的频率上产生共鸣。他们会与你擦肩而过。”</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</h1>
+                    <p>في الليلة الأخيرة في مدريد، ذهبنا إلى شرفة تطل على المدينة. كانت الأضواء تومض في الأسفل مثل بحر من النجوم الكهربائية.
+— نجنا من الشرير — همست وأنا أنظر إلى فوضى المرور.</p>
+<p>— الشر ليس وحشاً بقرون — قال يسوع وهو يشرب عصير برتقال —. الشر هو ببساطة غياب النور. إنه عدم الوعي. إنهم الأشخاص الذين يهتزون بشكل منخفض جداً وكثيف جداً، بحيث لا يمكنهم إلا عرض الألم.</p>
+<p>— وكيف نتخلص من ذلك؟</p>
+<p>— بعدم محاربته. إذا حاربت الظلام، فستتلطخ بالظلام. أنت تتحرر بالارتقاء فوقه.</p>
+<p>قام بإيماءة بيده شملت المدينة بأكملها.
+— تخيل أنك نسر. إذا كانت هناك أفعى على الأرض، ونزلت لقتالها، فقد تلدغك. لكن إذا طرت عالياً، فلن تصل إليك الأفعى. "نجنا من الشرير" هي طلب لأجنحة للطيران عالياً، حيث لا يمكن لاهتزازات الكراهية والحسد والخوف أن تمسك بك.</p>
+<p>— وماذا لو جاء شخص لمهاجمتي؟</p>
+<p>— إذا كنت تهتز بحب نقي بسلام مطلق، فإن مجرد حضورك يمكن أن ينزع سلاح الآخر. أو ببساطة، ستحركك الحياة من مكانك حتى لا تتقاطع معه. التزامن يحميك. عندما تهتز عالياً، تصبح غير مرئي لرادار الصراع. أولئك الذين يهتزون بشكل منخفض لا "يرونك"، لأنك لا تتردد في ترددهم. يمرون بجانبك.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</h1>
+                    <p>В последнюю ночь в Мадриде мы отправились на террасу с видом на город. Огни внизу мерцали, как море электрических звезд.
+— Избавь нас от лукавого, — прошептал я, глядя на хаос на дорогах.</p>
+<p>— Зло — это не рогатый монстр, — сказал Иисус, попивая апельсиновый сок. — Зло — это просто отсутствие света. Это неосознанность. Это люди, которые вибрируют так низко, так плотно, что могут проецировать только боль.</p>
+<p>— И как же нам от этого избавиться?</p>
+<p>— Не борясь с ним. Если ты борешься с тьмой, ты сам пачкаешься в тьме. Ты избавляешься от нее, поднимаясь выше.</p>
+<p>Он сделал жест рукой, охватывая весь город.
+— Представь, что ты орел. Если на земле змея и ты спустишься, чтобы сразиться с ней, она может тебя укусить. Но если ты летишь высоко, змея тебя не достанет. «Избавь нас от лукавого» — это просьба о крыльях, чтобы взлететь высоко, где вибрации ненависти, зависти и страха не смогут тебя коснуться.</p>
+<p>— А если кто-то нападет на меня?</p>
+<p>— Если ты вибрируешь в чистой любви, в абсолютном покое, то само твое присутствие может обезоружить другого. Или просто жизнь переставит тебя так, что вы не встретитесь. Синхронистичность защищает тебя. Когда ты вибрируешь высоко, ты становишься невидимым для «радара» конфликта. Те, кто вибрирует низко, не «видят» тебя, потому что ты не резонируешь на их частоте. Они проходят мимо.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi những rung động thấp)</h1>
+                    <p>Đêm cuối cùng ở Madrid, chúng tôi đến một sân thượng có thể nhìn ra toàn thành phố. Những ánh đèn lấp lánh bên dưới như một biển sao điện.
+—Cứu chúng con cho khỏi sự dữ —tôi thì thầm, nhìn vào sự hỗn loạn của giao thông.</p>
+<p>—Sự dữ không phải là một con quái vật có sừng đâu —Chúa Giê-su nói, tay cầm ly nước cam—. Sự dữ đơn giản là sự thiếu vắng ánh sáng. Đó là sự vô minh. Đó là những người rung động quá thấp, quá dày đặc, đến mức họ chỉ có thể phóng chiếu ra sự đau đớn.</p>
+<p>—Và làm thế nào chúng ta thoát khỏi điều đó ạ?</p>
+<p>—Bằng cách không chiến đấu chống lại nó. Nếu con chiến đấu chống lại bóng tối, con sẽ bị bóng tối vấy bẩn. Con tự giải thoát mình bằng cách vươn lên trên nó.</p>
+<p>Ngài đưa tay ra một vòng, bao quát cả thành phố.
+—Hãy tưởng tượng con là một con đại bàng. Nếu có một con rắn trên mặt đất, và con sà xuống để đánh nhau với nó, nó có thể cắn con. Nhưng nếu con bay cao, con rắn sẽ không thể chạm tới con được. 'Cứu chúng con cho khỏi sự dữ' là cầu xin đôi cánh để bay cao, nơi mà rung động của sự hận thù, đố kỵ và sợ hãi không thể chạm tới con.</p>
+<p>—Và nếu có ai đó đến tấn công con thì sao?</p>
+<p>—Nếu con đang rung động trong tình yêu thuần khiết, trong sự bình an tuyệt đối, thì sự hiện diện của con cũng đủ để giải giới đối phương. Hoặc đơn giản là cuộc sống sẽ di chuyển con đến một vị trí khác để con không phải đối đầu với họ. Sự đồng bộ sẽ bảo vệ con. Khi con rung động cao, con trở nên vô hình trước radar của sự xung đột. Những kẻ rung động thấp không 'nhìn thấy' con, bởi vì con không cùng tần số với họ. Họ sẽ đi lướt qua con.</p>
+                </div>
+                <div class="image-container-footer"><img src="images/eagle_protection.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>
             <footer>
                 <p>Escrito con amor y alta vibración.</p>
@@ -335,28 +737,43 @@
         </main>
     </div>
 
+    <script src="base.js"></script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
-        const btnClose = document.getElementById('menu-close');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
 
         function toggleMenu() {
             sidebar.classList.toggle('open');
             const isOpen = sidebar.classList.contains('open');
             if (window.innerWidth <= 1024) {
-                btnClose.style.display = isOpen ? 'block' : 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
             }
         }
 
         btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
-                btnClose.style.display = 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
                 sidebar.classList.remove('open');
             }
         });

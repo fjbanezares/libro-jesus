@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apéndice: Poema de Navidad | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #FF6B6B;
@@ -263,52 +266,364 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .language.spanish {
+            display: block;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+        </select>
+    </div>
+
     <header id="mobile-header">
-        <h1>Apéndice: Poema de Navidad</h1>
+        <div class="spanish language">
+            <h1>Apéndice: Poema de Navidad</h1>
+        </div>
+        <div class="english language">
+            <h1>Appendix: Christmas Poem</h1>
+        </div>
+        <div class="french language">
+            <h1>Appendice : Poème de Noël</h1>
+        </div>
+        <div class="italian language">
+            <h1>Appendice: Poesia di Natale</h1>
+        </div>
+        <div class="chinese language">
+            <h1>附录：圣诞诗歌</h1>
+        </div>
+        <div class="arabic language">
+            <h1>ملحق: قصيدة عيد الميلاد</h1>
+        </div>
+        <div class="russian language">
+            <h1>Приложение: Рождественское стихотворение</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Phụ lục: Bài thơ Giáng sinh</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
     <aside id="sidebar">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Mi amigo Jesucristo</h2>
-            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html" class="active">Apéndice: Poema de Navidad</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-<li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-<li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
-<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
-<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-<li><a href="13_apendice_poema.html" class="active">Apéndice: Poema de Navidad</a></li>
-
-            </ul>
-        </nav>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html" class="active">Appendix: Christmas Poem</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html" class="active">Appendice : Poème de Noël</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html" class="active">Appendice: Poema di Natale</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天空）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html" class="active">附录：圣诞诗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html" class="active">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html" class="active">Приложение: Рождественское стихотворение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html" class="active">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <div id="overlay"></div>
@@ -317,8 +632,9 @@
         <main>
             <img src="images/christmas_star_modern.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
-                <h1>Apéndice: Poema de Navidad</h1>
-<p><strong>Navidad de Alta Frecuencia</strong></p>
+                <div class="spanish language">
+                    <h1>Apéndice: Poema de Navidad</h1>
+                    <p><strong>Navidad de Alta Frecuencia</strong></p>
 <p>No busques al Niño en la paja fría de un tiempo remoto,<br />
 ni en el eco de un villancico que el viento ha roto.<br />
 No lo busques en la Gran Vía, bajo luces de neón,<br />
@@ -353,7 +669,275 @@ Vibra alto, muy alto, que el mundo lo sienta,<br />
 que tu luz sea el faro en la gran tormenta.  </p>
 <p>Esta es la Navidad: no un cuento pasado,<br />
 sino el milagro eterno de haber despertado.  </p>
-<div class="image-container-footer"><img src="images/christmas_star_modern.png" alt="Ilustración del capítulo" class="footer-image"></div>
+
+                </div>
+                <div class="english language">
+                    <h1>Appendix: Christmas Poem</h1>
+                    <p><strong>High Frequency Christmas</strong></p>
+<p>Do not look for the Child in the cold straw of a remote time,<br />
+nor in the echo of a carol that the wind has broken.<br />
+Do not look for him on Gran Vía, under neon lights,<br />
+where the soul sells itself cheap in every corner.  </p>
+<p>Look for him in the silence that vibrates in your chest,<br />
+in the sacred temple that Love has made.<br />
+Because Jesus does not wear a crown, nor gold, nor mantle,<br />
+he wears worn-out jeans and dries your tears.  </p>
+<p>He walks through Madrid, among rush and noise,<br />
+an eternal traveler, feared by no one.<br />
+He sits in Callao, looks at you and smiles:<br />
+"Why do you run so much? Stop and laugh."  </p>
+<p>"Christmas is not a date, nor dinner, nor gift,<br />
+it is to vibrate so high that you forget the bad.<br />
+It is to know that the manger is not wood or hay,<br />
+it is your own heart, full of hope."  </p>
+<p>If you vibrate in fear, if you vibrate in anger,<br />
+the Child is not born, the star does not shine.<br />
+But if you forgive, if you hug, if you love,<br />
+you ignite in yourself the purest flames.  </p>
+<p>Lead us not into the temptation of sadness,<br />
+look up, contemplate the beauty.<br />
+From Las Rozas to the sky, from Colmenarejo to the sea,<br />
+the only mission is to learn to Love.  </p>
+<p>Deliver us from the weight of vibrating on the ground,<br />
+and give us the wings to take flight.<br />
+Because the Kingdom is now, the Glory is today,<br />
+and in every heartbeat, I am with you.  </p>
+<p>So celebrate, friend, not the marked day,<br />
+but the living Christ who is by your side.<br />
+Vibrate high, very high, let the world feel it,<br />
+let your light be the lighthouse in the great storm.  </p>
+<p>This is Christmas: not a past tale,<br />
+but the eternal miracle of having awakened.  </p>
+                </div>
+                <div class="french language">
+                    <h1>Appendice : Poème de Noël</h1>
+                    <p><strong>Noël de haute fréquence</strong></p>
+<p>Ne cherche pas l'Enfant dans la paille froide d'un temps lointain,<br />
+ni dans l'écho d'un chant de Noël que le vent a brisé.<br />
+Ne le cherche pas sur la Gran Vía, sous les néons,<br />
+où l'âme se vend à bas prix à chaque coin de rue.  </p>
+<p>Cherche-le dans le silence qui vibre dans ta poitrine,<br />
+dans le temple sacré que l'Amour a bâti.<br />
+Car Jésus ne porte ni couronne, ni or, ni manteau,<br />
+il porte un jean usé et sèche tes larmes.  </p>
+<p>Il marche dans Madrid, entre hâte et bruit,<br />
+voyageur éternel, craint par personne.<br />
+Il s'assoit à Callao, te regarde et sourit :<br />
+« Pourquoi cours-tu tant ? Arrête-toi et ris. »  </p>
+<p>« Noël n'est pas une date, ni un dîner, ni un cadeau,<br />
+c'est vibrer si haut que tu en oublies le mal.<br />
+C'est savoir que la crèche n'est ni bois ni foin,<br />
+c'est ton propre cœur, rempli d'espérance. »  </p>
+<p>Si tu vibres dans la peur, si tu vibres dans la colère,<br />
+l'Enfant ne naît pas, l'étoile ne brille pas.<br />
+Mais si tu pardonnes, si tu embrasses, si tu aimes,<br />
+tu allumes en toi les flammes les plus pures.  </p>
+<p>Ne nous laisse pas tomber dans la tentation de la tristesse,<br />
+lève les yeux, contemple la beauté.<br />
+De Las Rozas au ciel, de Colmenarejo à la mer,<br />
+la seule mission est d'apprendre à aimer.  </p>
+<p>Délivre-nous du poids de vibrer au sol,<br />
+et donne-nous des ailes pour prendre notre envol.<br />
+Car le Royaume est maintenant, la Gloire est aujourd'hui,<br />
+et dans chaque battement de cœur, je suis avec toi.  </p>
+<p>Alors fête, mon ami, non pas le jour marqué,<br />
+mais le Christ vivant qui est à tes côtés.<br />
+Vibre haut, très haut, que le monde le ressente,<br />
+que ta lumière soit le phare dans la tourmente.  </p>
+<p>C'est cela Noël : non pas un conte passé,<br />
+mais le miracle éternel d'être éveillé.  </p>
+                </div>
+                <div class="italian language">
+                    <h1>Appendice: Poesia di Natale</h1>
+                    <p><strong>Natale ad Alta Frequenza</strong></p>
+<p>Non cercare il Bambino nella paglia fredda di un tempo remoto,<br />
+né nell'eco di un canto natalizio che il vento ha spezzato.<br />
+Non cercarlo sulla Gran Vía, sotto luci al neon,<br />
+dove l'anima si vende a poco prezzo in ogni angolo.  </p>
+<p>Cercalo nel silenzio che vibra nel tuo petto,<br />
+nel tempio sacro che l'Amore ha costruito.<br />
+Perché Gesù non porta corona, né oro, né mantello,<br />
+porta jeans consumati e asciuga il tuo pianto.  </p>
+<p>Cammina per Madrid, tra fretta e rumore,<br />
+un viaggiatore eterno, da nessuno temuto.<br />
+Si siede a Callao, ti guarda e sorride:<br />
+"Perché corri così tanto? Fermati e ridi".  </p>
+<p>"Il Natale non è una data, né una cena, né un regalo,<br />
+è vibrare così alto da dimenticare il male.<br />
+È sapere che il presepe non è legno né fieno,<br />
+è il tuo stesso cuore, pieno di speranza".  </p>
+<p>Se vibri nella paura, se vibri nell'ira,<br />
+il Bambino non nasce, la stella non brilla.<br />
+Ma se perdoni, se abbracci, se ami,<br />
+accendi in te le fiamme più pure.  </p>
+<p>Non ci indurre nella tentazione della tristezza,<br />
+alza lo sguardo, contempla la bellezza.<br />
+Da Las Rozas al cielo, da Colmenarejo al mare,<br />
+l'unica missione è imparare ad Amare.  </p>
+<p>Liberaci dal peso di vibrare a terra,<br />
+e dacci le ali per spiccare il volo.<br />
+Perché il Regno è ora, la Gloria è oggi,<br />
+e in ogni battito, con te io sono.  </p>
+<p>Quindi festeggia, amico, non il giorno segnato,<br />
+ma il Cristo vivente che hai accanto.<br />
+Vibra alto, molto alto, che il mondo lo senta,<br />
+che la tua luce sia il faro nella grande tempesta.  </p>
+<p>Questo è il Natale: non un racconto passato,<br />
+ma il miracolo eterno di essersi risvegliato.  </p>
+                </div>
+                <div class="chinese language">
+                    <h1>附录：圣诞诗歌</h1>
+                    <p><strong>高频次圣诞</strong></p>
+<p>不要在遥远时代的冰冷稻草中寻找圣婴，<br />
+也不要在被风吹散的颂歌回声中寻找。<br />
+不要在格兰大道的霓虹灯下寻找他，<br />
+那里每个角落都在廉价出卖灵魂。</p>
+<p>在你胸中振动的寂静中寻找他，<br />
+在爱所建造的神圣殿堂中寻找。<br />
+因为耶稣不戴皇冠，没有黄金，也不穿斗篷，<br />
+他穿着磨损的牛仔裤，为你擦干眼泪。</p>
+<p>他在马德里的匆忙与嘈杂中穿行，<br />
+一位永恒的旅者，不被任何人畏惧。<br />
+他坐在卡亚俄，看着你微笑：<br />
+“你为什么跑得这么快？停下来，笑一笑。”</p>
+<p>“圣诞节不是日期、晚餐或礼物，<br />
+而是保持高频振动，直到忘记忧愁。<br />
+是要知道马厩里没有木头或干草，<br />
+那是你自己的心，充满了希望。”</p>
+<p>如果你在恐惧中振动，如果你在愤怒中振动，<br />
+圣婴就不会诞生，星辰也不会闪耀。<br />
+但如果你宽恕、拥抱、去爱，<br />
+你就会在心中点燃最纯净的火焰。 </p>
+<p>不叫我们陷入悲伤的诱惑，<br />
+抬起头，注视这份美丽。<br />
+从拉斯罗萨斯到天空，从科尔梅纳雷霍到海洋，<br />
+唯一的任务就是学会爱。</p>
+<p>让我们摆脱在地面振动的重担，<br />
+给我们展翅高飞的翅膀。<br />
+因为国度就是现在，荣耀就是今天，<br />
+在每一次心跳中，我都与你同在。</p>
+<p>所以，朋友，庆祝吧，不是庆祝那个被标记的日子，<br />
+而是庆祝就在你身边的活着的基督。<br />
+高频振动，极高地振动，让世界感受到它，<br />
+让你的光成为大风暴中的灯塔。</p>
+<p>这就是圣诞节：不是一个过去的故事，<br />
+而是觉醒后永恒的奇迹。</p>
+                </div>
+                <div class="arabic language">
+                    <h1>ملحق: قصيدة عيد الميلاد</h1>
+                    <p><strong>عيد ميلاد التردد العالي</strong></p>
+<p>لا تبحث عن الطفل في القش البارد لزمن بعيد،<br />
+ولا في صدى ترنيمة حطمته الرياح.<br />
+لا تبحث عنه في شارع غران فيا، تحت أضواء النيون،<br />
+حيث تبيع الروح نفسها رخيصة في كل ركن.  </p>
+<p>ابحث عنه في الصمت الذي يهتز في صدرك،<br />
+في الهيكل المقدس الذي بناه الحب.<br />
+لأن يسوع لا يرتدي تاجاً، ولا ذهباً، ولا رداءً،<br />
+يرتدي بنطال جينز بالياً ويمسح دمعك.  </p>
+<p>يمشي في مدريد، بين الزحام والضجيج،<br />
+مسافر أبدي، لا يخشاه أحد.<br />
+يجلس في كاياو، ينظر إليك ويبتسم:<br />
+"لماذا تركض هكذا؟ توقف واضحك".  </p>
+<p>"عيد الميلاد ليس تاريخاً، ولا عشاءً، ولا هدية،<br />
+إنه الاهتزاز عالياً جداً لدرجة أن تنسى السوء.<br />
+إنه أن تعلم أن المذود ليس خشباً ولا تبناً،<br />
+إنه قلبك الخاص، المليء بالأمل".  </p>
+<p>إذا اهتززت بالخوف، إذا اهتززت بالغضب،<br />
+فلن يولد الطفل، ولن تلمع النجمة.<br />
+لكن إذا غفرت، إذا عانقت، إذا أحببت،<br />
+ستشعل في داخلك أصفى النيران.  </p>
+<p>لا تدخلنا في تجربة الحزن،<br />
+ارفع بصرك، وتأمل الجمال.<br />
+من لاس روزاس إلى السماء، ومن كولميناريجو إلى البحر،<br />
+المهمة الوحيدة هي تعلم الحب.  </p>
+<p>نجنا من ثقل الاهتزاز على الأرض،<br />
+وأعطنا الأجنحة للتحليق عالياً.<br />
+لأن الملكوت هو الآن، والمجد هو اليوم،<br />
+وفي كل نبضة قلب، أنا معك.  </p>
+<p>لذا احتفل يا صديقي، ليس باليوم المحدد،<br />
+بل بالمسيح الحي الذي بجانبك.<br />
+اهتز عالياً، عالياً جداً، ليدرك العالم ذلك،<br />
+وليكن نورك هو المنارة في العاصفة العظيمة.  </p>
+<p>هذا هو عيد الميلاد: ليس قصة من الماضي،<br />
+بل هي المعجزة الأبدية للاستيقاظ.  </p>
+                </div>
+                <div class="russian language">
+                    <h1>Приложение: Рождественское стихотворение</h1>
+                    <p><strong>Высокочастотное Рождество</strong></p>
+<p>Не ищи Младенца в холодной соломе далеких времен,<br />
+ни в эхе рождественского гимна, что ветром разбит.<br />
+Не ищи его на Гран-Виа под неоновым светом,<br />
+где душа на каждом углу продается за бесценок.  </p>
+<p>Ищи его в тишине, что вибрирует в твоей груди,<br />
+в священном храме, который создала Любовь.<br />
+Ведь на Иисусе нет ни короны, ни злата, ни мантии —<br />
+на нем старые джинсы, и он осушает твои слезы.  </p>
+<p>Он идет по Мадриду сквозь спешку и шум,<br />
+вечный странник, которого никто не боится.<br />
+Он присаживается на Кальяо, смотрит на тебя и улыбается:<br />
+«Зачем ты так бежишь? Остановись и посмейся».  </p>
+<p>«Рождество — это не дата, не ужин и не подарок,<br />
+это умение вибрировать так высоко, чтобы забыть о зле.<br />
+Это знание того, что ясли — не из дерева и сена,<br />
+это твое сокровенное сердце, полное надежды».  </p>
+<p>Если ты вибрируешь в страхе, если вибрируешь в гневе —<br />
+Младенец не родится, звезда не засияет.<br />
+Но если ты прощаешь, если обнимаешь, если любишь —<br />
+ты зажигаешь в себе чистейшее пламя.  </p>
+<p>Не введи нас в искушение печалью,<br />
+подними глаза, созерцай красоту.<br />
+От Лас-Росас до небес, от Кольменарехо до моря —<br />
+единственная задача — научиться Любить.  </p>
+<p>Избавь нас от тяжести вибраций на земле<br />
+и дай нам крылья, чтобы взлететь.<br />
+Ибо Царство — сейчас, и Слава — сегодня,<br />
+и в каждом биении сердца я с тобой.  </p>
+<p>Так празднуй же, друг, не отмеченный день,<br />
+а живого Христа, что стоит рядом с тобой.<br />
+Вибрируй высоко, очень высоко, пусть мир это почувствует,<br />
+пусть твой свет станет маяком в великой буре.  </p>
+<p>Это и есть Рождество: не сказка из прошлого,<br />
+а вечное чудо твоего пробуждения.  </p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Phụ lục: Bài thơ Giáng sinh</h1>
+                    <p><strong>Giáng sinh Tần số cao</strong></p>
+<p>Đừng tìm Hài Nhi trong máng cỏ lạnh lẽo của một thời xa xôi,<br />
+cũng đừng tìm trong những khúc nhạc Giáng sinh đã tan biến theo làn gió.<br />
+Đừng tìm Ngài trên đường Gran Vía, dưới những ánh đèn neon,<br />
+nơi linh hồn bị bán rẻ ở mọi ngõ ngách.  </p>
+<p>Hãy tìm Ngài trong sự tĩnh lặng đang rung động nơi lồng ngực con,<br />
+trong tòa đền thánh thiêng mà Tình yêu đã tạo dựng.<br />
+Bởi Chúa Giê-su không đội vương miện, không mang vàng bạc hay cẩm bào,<br />
+Ngài mặc chiếc quần jeans cũ và lau đi giọt lệ cho con.  </p>
+<p>Ngài rảo bước qua Madrid, giữa dòng đời hối hả và ồn ã,<br />
+một lữ khách vĩnh hằng, chẳng ai phải khiếp sợ.<br />
+Ngài ngồi ở Callao, nhìn con và mỉm cười:<br />
+"Sao con chạy vội thế? Hãy dừng lại và cười lên đi."  </p>
+<p>"Giáng sinh không phải là một ngày, một bữa tiệc hay một món quà,<br />
+mà chính là rung động thật cao để quên đi mọi điều xấu xa.<br />
+Nó là niềm thấu hiểu rằng máng cỏ không phải bằng gỗ hay rơm rạ,<br />
+mà chính là trái tim con, đang tràn đầy hy vọng."  </p>
+<p>Nếu con rung động trong sợ hãi, nếu con rung động trong giận hờn,<br />
+Hài Nhi sẽ không chào đời, và ngôi sao cũng chẳng thể tỏa sáng.<br />
+Nhưng nếu con biết tha thứ, biết ôm ấp, biết yêu thương,<br />
+con đang thắp sáng trong chính mình những ngọn lửa thuần khiết nhất.  </p>
+<p>Chớ để chúng con sa vào cơn cám dỗ của nỗi buồn,<br />
+hãy ngước nhìn lên và chiêm ngưỡng vẻ đẹp.<br />
+Từ Las Rozas đến bầu trời, từ Colmenarejo đến biển cả,<br />
+sứ mệnh duy nhất chính là học cách Yêu thương.  </p>
+<p>Xin cứu chúng con khỏi sức nặng của những rung động thấp kém,<br />
+và ban cho chúng con đôi cánh để tung bay.<br />
+Vì Vương quốc là ngay lúc này, Vinh quang là ngày hôm nay,<br />
+và trong mỗi nhịp tim, Ta luôn ở bên con.  </p>
+<p>Vậy nên hãy ăn mừng đi bạn của Ta, không phải vì một ngày trên lịch,<br />
+mà vì Đấng Kitô hằng sống đang ở ngay cạnh bên con.<br />
+Hãy rung động thật cao, thật cao, để cả thế giới cùng cảm nhận,<br />
+để ánh sáng của con là ngọn hải đăng giữa cơn bão tố cuộc đời.  </p>
+<p>Đây mới chính là Giáng sinh: không phải một câu chuyện cổ tích đã qua,<br />
+mà là một phép màu vĩnh cửu của việc được thức tỉnh.  </p>
+                </div>
+                <div class="image-container-footer"><img src="images/christmas_star_modern.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>
             <footer>
                 <p>Escrito con amor y alta vibración.</p>
@@ -361,28 +945,43 @@ sino el milagro eterno de haber despertado.  </p>
         </main>
     </div>
 
+    <script src="base.js"></script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
-        const btnClose = document.getElementById('menu-close');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
 
         function toggleMenu() {
             sidebar.classList.toggle('open');
             const isOpen = sidebar.classList.contains('open');
             if (window.innerWidth <= 1024) {
-                btnClose.style.display = isOpen ? 'block' : 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
             }
         }
 
         btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
-                btnClose.style.display = 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
                 sidebar.classList.remove('open');
             }
         });

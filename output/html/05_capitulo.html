@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 5: El Padre Nuestro (Parte 1: Padre) | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #FF6B6B;
@@ -263,52 +266,364 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .language.spanish {
+            display: block;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+        </select>
+    </div>
+
     <header id="mobile-header">
-        <h1>Capítulo 5: El Padre Nuestro (Parte 1: Padre)</h1>
+        <div class="spanish language">
+            <h1>Capítulo 5: El Padre Nuestro (Parte 1: Padre)</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 5: The Lord's Prayer (Part 1: Father)</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 5 : Le Notre Père (Partie 1 : Père)</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 5: Il Padre Nostro (Parte 1: Padre)</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 5 章：主祷文（第一部分：父亲）</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 5: Отче наш (Часть 1: Отче)</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 5: Kinh Lạy Cha (Phần 1: Cha)</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
     <aside id="sidebar">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Mi amigo Jesucristo</h2>
-            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html" class="active">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-<li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-<li><a href="05_capitulo.html" class="active">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-<li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
-<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
-<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
-
-            </ul>
-        </nav>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html" class="active">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html" class="active">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html" class="active">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html" class="active">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天空）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html" class="active">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html" class="active">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html" class="active">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <div id="overlay"></div>
@@ -317,8 +632,9 @@
         <main>
             <img src="images/cosmic_father.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
-                <h1>Capítulo 5: El Padre Nuestro (Parte 1: Padre)</h1>
-<p>Regresamos a Madrid, pero esta vez fuimos al Retiro. Nos sentamos cerca del Palacio de Cristal.
+                <div class="spanish language">
+                    <h1>Capítulo 5: El Padre Nuestro (Parte 1: Padre)</h1>
+                    <p>Regresamos a Madrid, pero esta vez fuimos al Retiro. Nos sentamos cerca del Palacio de Cristal.
 —Hablemos de tu padre —dijo Jesús de repente.</p>
 <p>Me tensé. Mi relación con mi padre no siempre había sido fácil.
 —¿Por qué?</p>
@@ -329,7 +645,107 @@
 <p>—¡Claro que no! —exclamó—. ¿Juzga el sol a las flores? ¿Les dice "tú sí floreces, te doy luz; tú no, te quedas a oscuras"? El sol brilla para todas. Dios es Amor incondicional. Si tú te cierras en una cueva, no es culpa del sol que estés a oscuras. Es tu elección.</p>
 <p>—¿Y por qué "Nuestro"?</p>
 <p>—Porque no es "Mío". No es propiedad privada de ninguna religión, ni de ninguna persona. Es de todos. Del cristiano, del budista, del ateo, del árbol y del perro. Todos venimos de la misma Fuente. Reconocer eso es el primer paso para vibrar alto: la Unidad. Si te ves separado de los demás, bajas tu vibración. Si te ves unido, subes.</p>
-<div class="image-container-footer"><img src="images/cosmic_father.png" alt="Ilustración del capítulo" class="footer-image"></div>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 5: The Lord's Prayer (Part 1: Father)</h1>
+                    <p>We returned to Madrid, but this time we went to Retiro. We sat near the Crystal Palace.
+—Let's talk about your father —Jesus said suddenly.</p>
+<p>I tensed up. My relationship with my father had not always been easy.
+—Why?</p>
+<p>—Because the prayer starts with "Our Father". And many people get stuck there. If your earthly father was harsh, or absent, or critical, you project that image onto God. You believe that God is a gentleman with a beard who watches you to punish you if you make a mistake.</p>
+<p>He picked up a stone from the ground and threw it into the pond. The ripples expanded.
+—The word "Father" in Aramaic, <em>Abwoon</em>, has a much broader meaning. It is the Source, the Origin, the Breath of Life. It's not a gentleman. It's an Energy. It's the original vibration from which we all come.</p>
+<p>—So, he's not a judge?</p>
+<p>—Of course not! —he exclaimed—. Does the sun judge the flowers? Does it say to them "you do bloom, I give you light; you do not, you stay in the dark"? The sun shines for all. God is unconditional Love. If you close yourself in a cave, it's not the sun's fault that you're in the dark. It's your choice.</p>
+<p>—And why "Our"?</p>
+<p>—Because it's not "Mine". It's not the private property of any religion, nor of any person. It belongs to everyone. To the Christian, the Buddhist, the atheist, the tree and the dog. We all come from the same Source. Recognizing that is the first step to vibrate high: Unity. If you see yourself as separate from others, you lower your vibration. If you see yourself as united, you go up.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 5 : Le Notre Père (Partie 1 : Père)</h1>
+                    <p>Nous sommes retournés à Madrid, mais cette fois-ci nous sommes allés au Retiro. Nous nous sommes assis près du Palais de Cristal.
+—Parlons de ton père —dit Jésus soudainement.</p>
+<p>Je me suis tendu. Ma relation avec mon père n'avait pas toujours été facile.
+—Pourquoi ?</p>
+<p>—Parce que la prière commence par « Notre Père ». Et beaucoup de gens restent bloqués là. Si ton père terrestre a été dur, ou absent, ou critique, tu projettes cette image sur Dieu. Tu crois que Dieu est un monsieur avec une barbe qui te surveille pour te punir si tu te trompes.</p>
+<p>Il ramassa une pierre par terre et la jeta dans l'étang. Les ondes se propagèrent.
+—Le mot « Père » en araméen, <em>Abwoon</em>, a une signification beaucoup plus large. C'est la Source, l'Origine, le Souffle de la Vie. Ce n'est pas un monsieur. C'est une Énergie. C'est la vibration originelle d'où nous sommes tous issus.</p>
+<p>—Alors, ce n'est pas un juge ?</p>
+<p>—Bien sûr que non ! —s'exclama-t-il—. Est-ce que le soleil juge les fleurs ? Est-ce qu'il leur dit « toi tu fleuris, je te donne de la lumière ; toi non, tu restes dans l'obscurité » ? Le soleil brille pour toutes. Dieu est Amour inconditionnel. Si tu t'enfermes dans une grotte, ce n'est pas la faute du soleil si tu es dans le noir. C'est ton choix.</p>
+<p>—Et pourquoi « Notre » ?</p>
+<p>—Parce que ce n'est pas « Mon ». Ce n'est pas la propriété privée d'aucune religion, ni d'aucune personne. C'est à tout le monde. Au chrétien, au bouddhiste, à l'athée, à l'arbre et au chien. Nous venons tous de la même Source. Reconnaître cela est le premier pas pour vibrer haut : l'Unité. Si tu te vois séparé des autres, tu baisses ta vibration. Si tu te vois uni, tu montes.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 5: Il Padre Nostro (Parte 1: Padre)</h1>
+                    <p>Tornammo a Madrid, ma questa volta andammo al Retiro. Ci sedemmo vicino al Palazzo di Cristallo.
+—Parliamo di tuo padre —disse Gesù all'improvviso.</p>
+<p>Mi irrigidii. Il mio rapporto con mio padre non era sempre stato facile.
+—Perché?</p>
+<p>—Perché la preghiera inizia con "Padre Nostro". E molta gente si blocca lì. Se tuo padre terreno è stato duro, o assente, o critico, proietti quell'immagine su Dio. Credi che Dio sia un signore con la barba che ti sorveglia per punirti se sbagli.</p>
+<p>Prese un sasso da terra e lo lanciò nello stagno. Le onde si espansero.
+—La parola "Padre" in aramaico, <em>Abwoon</em>, ha un significato molto più ampio. È la Fonte, l'Origine, il Respiro della Vita. Non è un signore. È un'Energia. È la vibrazione originale da cui tutti siamo usciti.</p>
+<p>—Quindi, non è un giudice?</p>
+<p>—Certo che no! —esclamò—. Il sole forse giudica i fiori? Forse dice loro "tu sì che fiorisci, ti do luce; tu no, resti al buio"? Il sole brilla per tutti. Dio è Amore incondizionato. Se tu ti chiudi in una grotta, non è colpa del sole se sei al buio. È una tua scelta.</p>
+<p>—E perché "Nostro"?</p>
+<p>—Perché non è "Mio". Non è proprietà privata di nessuna religione, né di nessuna persona. È di tutti. Del cristiano, del buddista, dell'ateo, dell'albero e del cane. Tutti veniamo dalla stessa Fonte. Riconoscere questo è il primo passo per vibrare alto: l'Unità. Se ti vedi separato dagli altri, abbassi la tua vibrazione. Se ti vedi unito, sali.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 5 章：主祷文（第一部分：父亲）</h1>
+                    <p>我们回到了马德里，但这次去了丽池公园。我们坐在水晶宫附近。
+“谈谈你的父亲吧，”耶稣突然说。</p>
+<p>我紧张起来。我与父亲的关系并不总是一帆风顺。
+“为什么？”</p>
+<p>“因为祷告是以‘我们在天上的父’开始的。很多人卡在那儿。如果你世俗的父亲曾对你严厉、或缺席、或苛刻，你就会把这种形象投射到上帝身上。你相信上帝是一位留着胡子、时刻盯着你并在你犯错时惩罚你的先生。”</p>
+<p>他从地上捡起一块石头扔进池塘里。波纹扩散开来。
+“亚兰语中的‘父亲’一词，<em>Abwoon</em>，意义要广泛得多。它是源头、起源、生命之息。它不是一位先生。它是一种能量。它是我们所有人出身的原始振动。”</p>
+<p>“那么，他不是法官吗？”</p>
+<p>“当然不是！”他惊呼道，“太阳会评判花朵吗？它会说‘你开花了，我给你光；你不开，你就待在黑暗中’吗？太阳为所有人闪耀。上帝是无条件的爱。如果你把自己关在洞穴里，你处于黑暗中并不是太阳的错。那是你的选择。”</p>
+<p>“那为什么是‘我们的’？”</p>
+<p>“因为不是‘我的’。它不是任何宗教或任何人的私有财产。它属于每个人。属于基督徒、佛教徒、无神论者、树木和狗。我们都来自同一个源头。意识到这一点是高频振动的第一步：合一。如果你认为自己与他人是分离的，你就会降低振动。如果你认为自己是合一的，你就会上升。”</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</h1>
+                    <p>عدنا إلى مدريد، لكن هذه المرة توجهنا إلى حديقة ريتيرو. جلسنا بالقرب من القصر الكريستالي.
+— لنتحدث عن والدك — قال يسوع فجأة.</p>
+<p>تشنجت. لم تكن علاقتي بوالدي سهلة دائماً.
+— لماذا؟</p>
+<p>— لأن الصلاة تبدأ بـ "أبانا". والكثير من الناس يعلقون هناك. إذا كان والدك الأرضي قاسيًا، أو غائبًا، أو منتقدًا، فإنك تسقط تلك الصورة على الله. تعتقد أن الله سيد ذو لحية يراقبك ليعاقبك إذا أخطأت.</p>
+<p>التقط حجراً من الأرض وألقى به في البركة. توسعت الأمواج.
+— كلمة "أب" في اللغة الآرامية، <em>Abwoon</em>، لها معنى أوسع بكثير. إنها المصدر، الأصل، أنفاس الحياة. ليس سيداً. إنها طاقة. إنها الاهتزاز الأصلي الذي خرجنا منه جميعاً.</p>
+<p>— إذاً، ليس قاضياً؟</p>
+<p>— بالطبع لا! — هتف —. هل تحاكم الشمس الزهور؟ هل تقول لهن "أنتِ تزهرين، أعطيكِ نوراً؛ وأنتِ لا، تبقين في الظلام"؟ الشمس تشرق للجميع. الله هو حب غير مشروط. إذا أغلقت على نفسك في كهف، فليس ذنب الشمس أنك في الظلام. هذا اختيارك.</p>
+<p>— ولماذا "أبانا"؟</p>
+<p>— لأنه ليس "أبي". ليس ملكاً خاصاً لأي دين، ولا لأي شخص. إنه للجميع. للمسيحي، والبوذي، والملحد، وللشجرة وللكلب. جميعنا نأتي من نفس المصدر. إدراك ذلك هو الخطوة الأولى للاهتزاز عالياً: الوحدة. إذا رأيت نفسك منفصلاً عن الآخرين، فإنك تخفض اهتزازك. إذا رأيت نفسك متحداً، فإنك ترتفع.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 5: Отче наш (Часть 1: Отче)</h1>
+                    <p>Мы вернулись в Мадрид, но на этот раз отправились в парк Ретиро. Сели возле Стеклянного дворца.
+— Давай поговорим о твоем отце, — внезапно сказал Иисус.</p>
+<p>Я напрягся. Мои отношения с отцом не всегда были простыми.
+— Почему?</p>
+<p>— Потому что молитва начинается со слов «Отче наш». И многие люди застревают на этом. Если твой земной отец был суров, отсутствовал или был критичен, ты проецируешь этот образ на Бога. Ты веришь, что Бог — это господин с бородой, который следит за тобой, чтобы наказать, если ты ошибешься.</p>
+<p>Он поднял с земли камень и бросил его в пруд. Пошли круги по воде.
+— Слово «Отец» на арамейском, <em>Abwoon</em>, имеет гораздо более широкое значение. Это Источник, Начало, Дыхание Жизни. Это не господин. Это Энергия. Это изначальная вибрация, из которой мы все вышли.</p>
+<p>— Значит, он не судья?</p>
+<p>— Конечно нет! — воскликнул он. — Разве солнце судит цветы? Разве оно говорит им: «ты расцветаешь — я даю тебе свет, а ты нет — оставайся во тьме»? Солнце светит всем. Бог — это безусловная Любовь. Если ты закрываешься в пещере, это не вина солнца, что ты в темноте. Это твой выбор.</p>
+<p>— А почему «Наш»?</p>
+<p>— Потому что не «Мой». Это не частная собственность какой-либо религии или какого-либо человека. Это принадлежит всем. Христианину, буддисту, атеисту, дереву и собаке. Мы все вышли из одного Источника. Признание этого — первый шаг к тому, чтобы вибрировать высоко: Единство. Если ты видишь себя отделенным от других, ты снижаешь свою вибрацию. Если видишь себя единым со всем — поднимаешь.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 5: Kinh Lạy Cha (Phần 1: Cha)</h1>
+                    <p>Chúng tôi quay trở lại Madrid, nhưng lần này chúng tôi đến công viên Retiro. Chúng tôi ngồi gần Cung điện Thủy tinh.
+—Chúng ta hãy nói về cha của con —Chúa Giê-su đột nhiên nói.</p>
+<p>Tôi căng thẳng. Mối quan hệ của tôi với cha không phải lúc nào cũng dễ dàng.
+—Tại sao ạ?</p>
+<p>—Bởi vì lời cầu nguyện bắt đầu bằng "Lạy Cha chúng con". Và nhiều người bị mắc kẹt ở đó. Nếu người cha trần thế của con khắc nghiệt, vắng mặt, hoặc hay chỉ trích, con sẽ phóng chiếu hình ảnh đó lên Thượng đế. Con tin rằng Thượng đế là một quý ông có râu, người luôn theo dõi con để trừng phạt nếu con mắc lỗi.</p>
+<p>Ngài nhặt một hòn đá dưới đất và ném xuống ao. Những gợn sóng lan tỏa.
+—Từ "Cha" trong tiếng Aram, <em>Abwoon</em>, có ý nghĩa rộng hơn nhiều. Đó là Nguồn, là Gốc gác, là Hơi thở của Sự sống. Không phải là một quý ông. Đó là một Năng lượng. Đó là rung động nguyên thủy mà tất cả chúng ta đều từ đó mà ra.</p>
+<p>—Vậy, Ngài không phải là một quan tòa sao?</p>
+<p>—Tất nhiên là không! —Ngài thốt lên—. Mặt trời có phán xét những bông hoa không? Nó có nói với chúng rằng "ngươi nở hoa, ta cho ngươi ánh sáng; ngươi không nở, ngươi ở trong bóng tối" không? Mặt trời tỏa sáng cho tất cả. Thượng đế là Tình yêu vô điều kiện. Nếu con tự nhốt mình trong hang, đó không phải lỗi của mặt trời khi con ở trong bóng tối. Đó là lựa chọn của con.</p>
+<p>—Và tại sao lại là "của chúng con"?</p>
+<p>—Bởi vì không phải là "của Ta". Đó không phải là tài sản riêng của bất kỳ tôn giáo nào, hay của bất kỳ cá nhân nào. Nó thuộc về tất cả mọi người. Từ người Kitô hữu, người Phật tử, người vô thần, cho đến cái cây và con chó. Tất cả chúng ta đều đến từ cùng một Nguồn. Nhận ra điều đó là bước đầu tiên để rung động cao: Sự Thống nhất. Nếu con thấy mình tách biệt với những người khác, con hạ thấp rung động của mình. Nếu con thấy mình thống nhất, con sẽ đi lên.</p>
+                </div>
+                <div class="image-container-footer"><img src="images/cosmic_father.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>
             <footer>
                 <p>Escrito con amor y alta vibración.</p>
@@ -337,28 +753,43 @@
         </main>
     </div>
 
+    <script src="base.js"></script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
-        const btnClose = document.getElementById('menu-close');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
 
         function toggleMenu() {
             sidebar.classList.toggle('open');
             const isOpen = sidebar.classList.contains('open');
             if (window.innerWidth <= 1024) {
-                btnClose.style.display = isOpen ? 'block' : 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
             }
         }
 
         btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
-                btnClose.style.display = 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
                 sidebar.classList.remove('open');
             }
         });

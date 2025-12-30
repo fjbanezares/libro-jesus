@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 2: Paseo por Las Rozas | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #FF6B6B;
@@ -263,52 +266,364 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .language.spanish {
+            display: block;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+        </select>
+    </div>
+
     <header id="mobile-header">
-        <h1>Capítulo 2: Paseo por Las Rozas</h1>
+        <div class="spanish language">
+            <h1>Capítulo 2: Paseo por Las Rozas</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 2: A Walk through Las Rozas</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 2 : Promenade à Las Rozas</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 2: Passeggiata per Las Rozas</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 2 章：拉斯罗萨斯散步</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل الثاني: نزهة في لاس روزاس</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 2: Прогулка по Лас-Росас</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 2: Đi dạo qua Las Rozas</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
     <aside id="sidebar">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Mi amigo Jesucristo</h2>
-            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html" class="active">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-<li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-<li><a href="02_capitulo.html" class="active">Capítulo 2: Paseo por Las Rozas</a></li>
-<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-<li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-<li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
-<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
-<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
-
-            </ul>
-        </nav>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html" class="active">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html" class="active">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html" class="active">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html" class="active">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天空）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html" class="active">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html" class="active">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html" class="active">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <div id="overlay"></div>
@@ -317,8 +632,9 @@
         <main>
             <img src="images/las_rozas_park.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
-                <h1>Capítulo 2: Paseo por Las Rozas</h1>
-<p>Al día siguiente, decidimos alejarnos un poco del centro. Fuimos a Las Rozas. Jesús quería ver cómo vivía la gente en las afueras, en esas urbanizaciones donde parece que todo está ordenado pero donde a veces el caos se esconde detrás de las puertas blindadas.</p>
+                <div class="spanish language">
+                    <h1>Capítulo 2: Paseo por Las Rozas</h1>
+                    <p>Al día siguiente, decidimos alejarnos un poco del centro. Fuimos a Las Rozas. Jesús quería ver cómo vivía la gente en las afueras, en esas urbanizaciones donde parece que todo está ordenado pero donde a veces el caos se esconde detrás de las puertas blindadas.</p>
 <p>Caminábamos por el parque París. Él se detenía a oler las flores, a tocar la corteza de los árboles.
 —¿Ves esto? —me dijo, señalando un roble—. Él no se preocupa por si mañana lloverá o si hará sol. Simplemente es. Está en su centro. Vibra en la frecuencia de la vida.</p>
 <p>—Es fácil para un árbol —repliqué—. No tiene hipoteca.</p>
@@ -329,7 +645,107 @@
 <p>—¿Y cómo se sube la vibración? —pregunté, sintiendo que empezaba a entender.</p>
 <p>—Agradeciendo —dijo él, mirando el lago artificial—. El agradecimiento es el ascensor del alma. Si agradeces este sol, este aire, este momento... subes. Si te quejas de lo que te falta... bajas. Es física espiritual básica.</p>
 <p>En Las Rozas, entre chalets y coches de alta gama, aprendí que la verdadera riqueza no estaba en lo que poseíamos, sino en la capacidad de disfrutar lo que ya estaba ahí, gratis, para todos.</p>
-<div class="image-container-footer"><img src="images/las_rozas_park.png" alt="Ilustración del capítulo" class="footer-image"></div>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 2: A Walk through Las Rozas</h1>
+                    <p>The next day, we decided to get away from the center a bit. We went to Las Rozas. Jesus wanted to see how people lived in the outskirts, in those developments where everything seems orderly, but where chaos sometimes hides behind armored doors.</p>
+<p>We were walking through Paris Park. He stopped to smell the flowers, to touch the bark of the trees.
+—Do you see this? —he told me, pointing to an oak—. He doesn't worry about whether it will rain tomorrow or if it will be sunny. He simply is. He is in his center. He vibrates at the frequency of life.</p>
+<p>—It's easy for a tree —I replied—. It doesn't have a mortgage.</p>
+<p>Jesus laughed out loud. A clean, infectious laugh.
+—The mortgage... the great modern monster. Look, Francisco, the problem isn't the bank debt. The problem is the debt you think you have with the future. You live paying in advance with your anxiety for a time that doesn't yet exist.</p>
+<p>We sat on the grass. A dog came running and licked his hand. He petted it tenderly.
+—"Give us this day our daily bread" —he whispered—. People think I only talk about food. I'm talking about the energy needed for the <em>now</em>. When you worry about next month, you are spending today's energy on an imaginary problem. You lower your vibration. You weaken yourself.</p>
+<p>—And how do you raise the vibration? —I asked, feeling that I was beginning to understand.</p>
+<p>—By being grateful —he said, looking at the artificial lake—. Gratitude is the elevator of the soul. If you are grateful for this sun, this air, this moment... you go up. If you complain about what you lack... you go down. It's basic spiritual physics.</p>
+<p>In Las Rozas, between villas and high-end cars, I learned that true wealth was not in what we possessed, but in the ability to enjoy what was already there, free, for everyone.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 2 : Promenade à Las Rozas</h1>
+                    <p>Le lendemain, nous avons décidé de nous éloigner un peu du centre. Nous sommes allés à Las Rozas. Jésus voulait voir comment les gens vivaient en banlieue, dans ces lotissements où tout semble ordonné mais où le chaos se cache parfois derrière des portes blindées.</p>
+<p>Nous marchions dans le parc Paris. Il s'arrêtait pour sentir les fleurs, toucher l'écorce des arbres.
+—Tu vois ça ? —m'a-t-il dit, en désignant un chêne—. Il ne s'inquiète pas de savoir s'il pleuvra demain ou s'il fera beau. Il est, tout simplement. Il est dans son centre. Il vibre à la fréquence de la vie.</p>
+<p>—C'est facile pour un arbre —ai-je répliqué—. Il n'a pas d'hypothèque.</p>
+<p>Jésus a éclaté de rire. Un rire clair, contagieux.
+—L'hypothèque... le grand monstre moderne. Regarde, Francisco, le problème n'est pas la dette bancaire. Le problème est la dette que tu crois avoir envers l'avenir. Tu vis en payant d'avance avec ton anxiété pour un temps qui n'existe pas encore.</p>
+<p>Nous nous sommes assis sur l'herbe. Un chien est arrivé en courant et lui a léché la main. Il l'a caressé avec tendresse.
+—« Donne-nous aujourd'hui notre pain de ce jour » —a-t-il murmuré—. Les gens pensent que je ne parle que de nourriture. Je parle de l'énergie nécessaire pour le <em>maintenant</em>. Quand tu t'inquiètes pour le mois prochain, tu dépenses l'énergie d'aujourd'hui pour un problème imaginaire. Tu baisses ta vibration. Tu t'affaiblis.</p>
+<p>—Et comment on monte la vibration ? —ai-je demandé, sentant que je commençais à comprendre.</p>
+<p>—En étant reconnaissant —a-t-il dit, en regardant le lac artificiel—. La gratitude est l'ascenseur de l'âme. Si tu es reconnaissant pour ce soleil, cet air, ce moment... tu montes. Si tu te plains de ce qui te manque... tu descends. C'est de la physique spirituelle de base.</p>
+<p>À Las Rozas, entre les villas et les voitures de luxe, j'ai appris que la vraie richesse n'était pas dans ce que nous possédions, mais dans la capacité de profiter de ce qui était déjà là, gratuitement, pour tous.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 2: Passeggiata per Las Rozas</h1>
+                    <p>Il giorno dopo, decidemmo di allontanarci un po' dal centro. Andammo a Las Rozas. Gesù voleva vedere come viveva la gente in periferia, in quelle urbanizzazioni dove tutto sembra ordinato ma dove a volte il caos si nasconde dietro le porte blindate.</p>
+<p>Camminavamo per il parco Parigi. Lui si fermava ad annusare i fiori, a toccare la corteccia degli alberi.
+—Vedi questo? —mi disse, indicando una quercia—. Lui non si preoccupa se domani pioverà o se ci sarà il sole. Semplicemente è. È nel suo centro. Vibra nella frequenza della vita.</p>
+<p>—È facile per un albero —replicai—. Non ha il mutuo.</p>
+<p>Gesù scoppiò a ridere. Una risata pulita, contagiosa.
+—Il mutuo... il grande mostro moderno. Guarda, Francisco, il problema non è il debito con la banca. Il problema è il debito che credi di avere con il futuro. Vivi pagando in anticipo con la tua ansia un tempo che ancora non esiste.</p>
+<p>Ci sedemmo sull'erba. Un cane arrivò correndo e gli leccò la mano. Lui lo accarezzò con tenerezza.
+—"Dacci oggi il nostro pane quotidiano" —sussurrò—. La gente crede che io parli solo di cibo. Parlo dell'energia necessaria per l'<em>adesso</em>. Quando ti preoccupi per il mese prossimo, stai spendendo l'energia di oggi per un problema immaginario. Abbassi la tua vibrazione. Ti indebolisci.</p>
+<p>—E come si alza la vibrazione? —chiesi, sentendo che cominciavo a capire.</p>
+<p>—Ringraziando —disse lui, guardando il lago artificiale—. Il ringraziamento è l'ascensore dell'anima. Se ringrazi per questo sole, quest'aria, questo momento... sali. Se ti lamenti di ciò che ti manca... scendi. È fisica spirituale di base.</p>
+<p>A Las Rozas, tra ville e auto di lusso, imparai che la vera ricchezza non era in ciò che possedevamo, ma nella capacità di godere di ciò che era già lì, gratis, per tutti.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 2 章：拉斯罗萨斯散步</h1>
+                    <p>第二天，我们决定稍微离开市中心。我们去了拉斯罗萨斯。耶稣想看看郊区人们的生活，在那些看起来一切井然有序，但混乱有时隐藏在防盗门后的住宅区。</p>
+<p>我们在巴黎公园散步。他停下来闻花香，触摸树皮。
+“你看这个？”他指着一棵橡树对我说，“它不担心明天会下雨还是出太阳。它只是存在。它在自己的中心。它以生命的频率振动。”</p>
+<p>“对一棵树来说这很容易，”我回答道，“它没有房贷。”</p>
+<p>耶稣放声大笑。那笑声清脆且富有感染力。
+“房贷……伟大的现代怪物。听着，弗朗西斯科，问题不在于银行债务。问题在于你认为自己欠未来的债。你用焦虑为一段尚不存在的时间提前买单。”</p>
+<p>我们坐在草地上。一只狗跑过来舔他的手。他温柔地抚摸着它。
+“‘我们日用的饮食，今日赐给我们’，”他低声说，“人们以为我只在谈论食物。我说的是‘当下’所需的能量。当你担心下个月时，你是在把今天的能量花在一个虚构的问题上。你降低了你的振动。你削弱了自己。”</p>
+<p>“那怎么提高振动呢？”我问道，感觉自己开始明白了。</p>
+<p>“通过感恩，”他说，看着人造湖，“感恩是灵魂的电梯。如果你感恩这阳光、这空气、这一刻……你就上升了。如果你抱怨你所缺乏的……你就下降了。这是基础的精神物理学。”</p>
+<p>在拉斯罗萨斯，在别墅和豪车之间，我明白了真正的财富不在于我们拥有什么，而在于能够享受那些已经存在、对所有人都是免费的事物。</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل الثاني: نزهة في لاس روزاس</h1>
+                    <p>في اليوم التالي، قررنا الابتعاد قليلاً عن المركز. ذهبنا إلى لاس روزاس. أراد يسوع أن يرى كيف يعيش الناس في الضواحي، في تلك المجمعات السكنية حيث يبدو كل شيء منظمًا ولكن حيث يختبئ الفوضى أحيانًا خلف الأبواب المصفحة.</p>
+<p>كنا نسير في حديقة باريس. كان يتوقف لشم الزهور ولمس لحاء الأشجار.
+— هل ترى هذا؟ — قال لي، مشيرًا إلى شجرة بلوط —. هي لا تقلق بشأن ما إذا كانت ستمطر غدًا أو إذا كانت الشمس ستشرق. هي ببساطة موجودة. هي في مركزها. تهتز بتردد الحياة.</p>
+<p>— هذا سهل بالنسبة لشجرة — أجبت —. ليس لديها رهن عقاري.</p>
+<p>ضحك يسوع بصوت عالٍ. ضحكة صافية ومعدية.
+— الرهن العقاري... الوحش الحديث العظيم. انظر يا فرانسيسكو، المشكلة ليست في ديون البنك. المشكلة هي الدين الذي تعتقد أنك مدين به للمستقبل. أنت تعيش تدفع مقدمًا بقلقك مقابل وقت لم يوجد بعد.</p>
+<p>جلسنا على العشب. جاء كلب يركض ولعق يده. داعبه بحنان.
+— "خبزنا كفافنا أعطنا اليوم" — همس —. يعتقد الناس أنني أتحدث فقط عن الطعام. أنا أتحدث عن الطاقة اللازمة لـ <em>الآن</em>. عندما تقلق بشأن الشهر القادم، فإنك تنفق طاقة اليوم على مشكلة خيالية. تخفض اهتزازك. تضعف نفسك.</p>
+<p>— وكيف يرتفع الاهتزاز؟ — سألت، شاعراً أنني بدأت أفهم.</p>
+<p>— بالامتنان — قال وهو ينظر إلى البحيرة الاصطناعية —. الامتنان هو مصعد الروح. إذا شكرت على هذه الشمس، وهذا الهواء، وهذه اللحظة... فإنك ترتفع. إذا اشتكيت مما ينقصك... فإنك تنخفض. إنها فيزياء روحية أساسية.</p>
+<p>في لاس روزاس، بين الفيلات والسيارات الفاخرة، تعلمت أن الثروة الحقيقية لم تكن فيما نملكه، بل في القدرة على الاستمتاع بما كان موجوداً بالفعل، مجاناً للجميع.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 2: Прогулка по Лас-Росас</h1>
+                    <p>На следующий день мы решили немного отъехать от центра. Поехали в Лас-Росас. Иисус хотел посмотреть, как живут люди на окраинах, в этих жилых комплексах, где всё кажется упорядоченным, но где хаос порой прячется за бронированными дверями.</p>
+<p>Мы гуляли по парку Париж. Он останавливался, чтобы понюхать цветы, потрогать кору деревьев.
+— Видишь это? — сказал он мне, указывая на дуб. — Он не беспокоится о том, пойдет ли завтра дождь или будет светить солнце. Он просто есть. Он в своем центре. Он вибрирует на частоте жизни.</p>
+<p>— Дереву легко, — возразил я. — У него нет ипотеки.</p>
+<p>Иисус рассмеялся в голос. Чистым, заразительным смехом.
+— Ипотека... великий современный монстр. Послушай, Франсиско, проблема не в банковском долге. Проблема в долге, который, как ты думаешь, у тебя есть перед будущим. Ты живешь, заранее оплачивая своей тревогой время, которого еще не существует.</p>
+<p>Мы сели на траву. Подбежала собака и лизнула ему руку. Он нежно погладил ее.
+— «Хлеб наш насущный дай нам на сей день», — прошептал он. — Люди думают, что я говорю только о еде. Я говорю об энергии, необходимой для <em>сейчас</em>. Когда ты беспокоишься о следующем месяце, ты тратишь сегодняшнюю энергию на воображаемую проблему. Ты снижаешь свою вибрацию. Ты слабеешь.</p>
+<p>— А как поднять вибрацию? — спросил я, чувствуя, что начинаю понимать.</p>
+<p>— Благодарностью, — сказал он, глядя на искусственное озеро. — Благодарность — это лифт для души. Если ты благодарен за это солнце, этот воздух, этот момент... ты поднимаешься. Если ты жалуешься на то, чего тебе не хватает... ты опускаешься. Это базовая духовная физика.</p>
+<p>В Лас-Росас, среди вилл и элитных автомобилей, я понял, что истинное богатство не в том, чем мы владеем, а в способности наслаждаться тем, что уже есть, бесплатно для всех.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 2: Đi dạo qua Las Rozas</h1>
+                    <p>Ngày hôm sau, chúng tôi quyết định rời xa trung tâm một chút. Chúng tôi đi đến Las Rozas. Chúa Giê-su muốn xem cách mọi người sống ở vùng ngoại ô, trong những khu đô thị nơi mọi thứ dường như trật tự nhưng đôi khi sự hỗn loạn vẫn ẩn nấp sau những cánh cửa bọc thép.</p>
+<p>Chúng tôi đi dạo qua công viên Paris. Ngài dừng lại để ngửi hoa, chạm vào vỏ cây.
+—Con có thấy điều này không? —Ngài nói với tôi, chỉ vào một cây sồi—. Nó không lo lắng về việc ngày mai trời sẽ mưa hay nắng. Nó đơn giản là chính nó. Nó đang ở trung tâm của mình. Nó rung động ở tần số của sự sống.</p>
+<p>—Đối với một cái cây thì dễ rồi —tôi đáp—. Nó không có khoản vay thế chấp.</p>
+<p>Chúa Giê-su cười lớn. Một điệu cười trong trẻo, dễ lây lan.
+—Thế chấp... con quái vật hiện đại vĩ đại. Nhìn này, Francisco, vấn đề không phải là nợ ngân hàng. Vấn đề là món nợ mà con nghĩ rằng con có với tương lai. Con đang sống bằng cách trả trước bằng sự lo lắng của mình cho một khoảng thời gian chưa tồn tại.</p>
+<p>Chúng tôi ngồi trên thảm cỏ. Một chú chó chạy đến và liếm tay Ngài. Ngài âu yếm vuốt ve nó.
+—"Xin cho chúng con hôm nay lương thực hằng ngày" —Ngài thì thầm—. Mọi người nghĩ rằng Ta chỉ nói về thức ăn. Ta đang nói về năng lượng cần thiết cho <em>hiện tại</em>. Khi con lo lắng về tháng sau, con đang dùng năng lượng của ngày hôm nay cho một vấn đề tưởng tượng. Con hạ thấp rung động của mình. Con làm mình yếu đi.</p>
+<p>—Và làm thế nào để nâng cao rung động? —tôi hỏi, cảm thấy mình bắt đầu hiểu ra.</p>
+<p>—Bằng lòng biết ơn —Ngài nói, nhìn ra hồ nhân tạo—. Lòng biết ơn là chiếc thang máy của linh hồn. Nếu con biết ơn ánh nắng này, bầu không khí này, khoảnh khắc này... con sẽ đi lên. Nếu con phàn nàn về những gì mình thiếu thốn... con sẽ đi xuống. Đó là vật lý tâm linh cơ bản.</p>
+<p>Ở Las Rozas, giữa những căn biệt thự và những chiếc xe sang trọng, tôi đã học được rằng sự giàu có thực sự không nằm ở những gì chúng ta sở hữu, mà ở khả năng tận hưởng những gì đã có sẵn, miễn phí cho tất cả mọi người.</p>
+                </div>
+                <div class="image-container-footer"><img src="images/las_rozas_park.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>
             <footer>
                 <p>Escrito con amor y alta vibración.</p>
@@ -337,28 +753,43 @@
         </main>
     </div>
 
+    <script src="base.js"></script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
-        const btnClose = document.getElementById('menu-close');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
 
         function toggleMenu() {
             sidebar.classList.toggle('open');
             const isOpen = sidebar.classList.contains('open');
             if (window.innerWidth <= 1024) {
-                btnClose.style.display = isOpen ? 'block' : 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
             }
         }
 
         btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
-                btnClose.style.display = 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
                 sidebar.classList.remove('open');
             }
         });

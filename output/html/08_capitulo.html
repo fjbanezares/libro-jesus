@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 8: Perdón y Deudas | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #FF6B6B;
@@ -263,52 +266,364 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        .language.spanish {
+            display: block;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+        </select>
+    </div>
+
     <header id="mobile-header">
-        <h1>Capítulo 8: Perdón y Deudas</h1>
+        <div class="spanish language">
+            <h1>Capítulo 8: Perdón y Deudas</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 8: Forgiveness and Debts</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 8 : Pardon et dettes</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 8: Perdono e debiti</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 8 章：宽恕与债务</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل الثامن: المغفرة والديون</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 8: Прощение и долги</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 8: Tha thứ và Nợ nần</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
     <aside id="sidebar">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Mi amigo Jesucristo</h2>
-            <button class="menu-toggle" id="menu-close" style="color: white; display: none;">✕</button>
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-<li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-<li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-<li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-<li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-<li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-<li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-<li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-<li><a href="08_capitulo.html" class="active">Capítulo 8: Perdón y Deudas</a></li>
-<li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
-<li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a></li>
-<li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-<li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-<li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
-
-            </ul>
-        </nav>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天空）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <div id="overlay"></div>
@@ -317,8 +632,9 @@
         <main>
             <img src="images/forgiveness_chains.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
-                <h1>Capítulo 8: Perdón y Deudas</h1>
-<p>Volvimos a Las Rozas, a una zona tranquila. Jesús quería hablar de algo pesado.
+                <div class="spanish language">
+                    <h1>Capítulo 8: Perdón y Deudas</h1>
+                    <p>Volvimos a Las Rozas, a una zona tranquila. Jesús quería hablar de algo pesado.
 —"Perdona nuestras deudas, como también nosotros perdonamos a nuestros deudores".</p>
 <p>—Esa es la parte difícil —admití—. Perdonar a quien te ha hecho daño...</p>
 <p>—Es difícil porque lo ves como un favor que le haces al otro. "Yo, que soy tan bueno, te perdono a ti, que eres tan malo". Eso es ego. Eso no sirve.</p>
@@ -330,7 +646,114 @@
 <p>—El dolor es inevitable, el sufrimiento es opcional. Si sigues repasando la ofensa en tu mente, la estás reviviendo una y otra vez. Te estás haciendo daño tú mismo ahora, no el otro. "Líbranos del mal" empieza por librarte del mal que tú mismo generas al no perdonar.</p>
 <p>Me puso la mano en el hombro.
 —Perdonar es vibrar tan alto que la ofensa ya no te alcanza. Es entender que el otro actuó desde su propia inconsciencia, desde su propio dolor. "No saben lo que hacen". Si supieran el daño que se hacen a sí mismos al dañar a otro, no lo harían.</p>
-<div class="image-container-footer"><img src="images/forgiveness_chains.png" alt="Ilustración del capítulo" class="footer-image"></div>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 8: Forgiveness and Debts</h1>
+                    <p>We returned to Las Rozas, to a quiet area. Jesus wanted to talk about something heavy.
+—"Forgive us our debts, as we also forgive our debtors".</p>
+<p>—That's the difficult part —I admitted—. Forgiving someone who has hurt you...</p>
+<p>—It's difficult because you see it as a favor you do for the other person. "I, who am so good, forgive you, who are so bad". That is ego. That is useless.</p>
+<p>—Then?</p>
+<p>—Forgiveness is an act of personal hygiene. It is letting go of a burning coal that you were holding, waiting to throw it at someone else. The only one who gets burned is you.</p>
+<p>He sat on a stone bench.
+—When you hold a grudge, you vibrate very low. You tie yourself to that person and to 그 painful moment with an invisible chain. You can't fly. You can't move forward. Forgiving is cutting the chain. It is saying: "I release you and I release myself. I no longer owe you anything, and you owe me nothing".</p>
+<p>—And if what they did was very serious?</p>
+<p>—Pain is inevitable, suffering is optional. If you keep reviewing the offense in your mind, you are reliving it over and over again. You are hurting yourself now, not the other person. "Deliver us from evil" starts by delivering yourself from the evil you yourself generate by not forgiving.</p>
+<p>He put his hand on my shoulder.
+—Forgiving is vibrating so high that the offense no longer reaches you. It is understanding that the other person acted from their own unconsciousness, from their own pain. "They know not what they do". If they knew the damage they do to themselves by damaging another, they would not do it.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 8 : Pardon et dettes</h1>
+                    <p>Nous sommes retournés à Las Rozas, dans un quartier calme. Jésus voulait parler de quelque chose de pesant.
+—« Pardonne-nous nos offenses, comme nous pardonnons aussi à ceux qui nous ont offensés ».</p>
+<p>—C'est la partie difficile —avouai-je—. Pardonner à quelqu'un qui t'a fait du mal...</p>
+<p>—C'est difficile parce que tu le vois comme une faveur que tu fais à l'autre. « Moi, qui suis si bon, je te pardonne, toi qui es si méchant ». C'est de l'ego. Ça ne sert à rien.</p>
+<p>—Alors ?</p>
+<p>—Le pardon est un acte d'hygiène personnelle. C'est lâcher un charbon ardent que tu tenais à la main en attendant de le jeter sur quelqu'un d'autre. Le seul qui se brûle, c'est toi.</p>
+<p>Il s'assit sur un banc de pierre.
+—Quand tu gardes rancune, tu vibres très bas. Tu t'attaches à cette personne et à ce moment douloureux avec une chaîne invisible. Tu ne peux pas voler. Tu ne peux pas avancer. Pardonner, c'est couper la chaîne. C'est dire : « Je te libère et je me libère. Je ne te dois plus rien, et tu ne me dois rien ».</p>
+<p>—Et si ce qu'ils ont fait était très grave ?</p>
+<p>—La douleur est inévitable, la souffrance est facultative. Si tu continues à ressasser l'offense dans ton esprit, tu la revivras encore et encore. Tu te fais du mal à toi-même maintenant, pas à l'autre. « Délivre-nous du mal » commence par te délivrer du mal que tu génères toi-même en ne pardonnant pas.</p>
+<p>Il posa sa main sur mon épaule.
+—Pardonner, c'est vibrer si haut que l'offense ne t'atteint plus. C'est comprendre que l'autre a agi à partir de sa propre inconscience, de sa propre douleur. « Ils ne savent pas ce qu'ils font ». S'ils savaient le mal qu'ils se font à eux-mêmes en faisant du mal à autrui, ils ne le feraient pas.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 8: Perdono e debiti</h1>
+                    <p>Tornammo a Las Rozas, in una zona tranquilla. Gesù voleva parlare di un argomento pesante.
+—"Rimetti a noi i nostri debiti, come anche noi li rimettiamo ai nostri debitori".</p>
+<p>—Questa è la parte difficile —ammisi—. Perdonare chi ti ha fatto del male...</p>
+<p>—È difficile perché lo vedi come un favore che fai all'altro. «Io, che sono tanto buono, perdono te, che sei tanto cattivo». Questo è ego. Non serve a nulla.</p>
+<p>—Quindi?</p>
+<p>—Il perdono è un atto di igiene personale. È mollare un carbone ardente che tenevi in mano aspettando di tirarlo a qualcun altro. L'unico che si scotta sei tu.</p>
+<p>Si sedette su una panchina di pietra.
+—Quando porti rancore, vibri molto basso. Ti leghi a quella persona e a quel momento doloroso con una catena invisibile. Non puoi volare. Non puoi andare avanti. Perdonare è spezzare la catena. È dire: «Ti libero e mi libero. Io non ti devo più nulla e tu non mi devi nulla».</p>
+<p>—E se quello che hanno fatto è stato molto grave?</p>
+<p>—Il dolore è inevitabile, la sofferenza è facoltativa. Se continui a ripassare l'offesa nella tua mente, la stai rivivendo più e più volte. Ti stai facendo del male tu stesso adesso, non l'altro. «Liberaci dal male» comincia dal liberarti dal male che tu stesso generi non perdonando.</p>
+<p>Mi mise la mano sulla spalla.
+—Perdonare è vibrare così alto che l'offesa non ti raggiunge più. È capire che l'altro ha agito partendo dalla propria incoscienza, dal proprio dolore. «Non sanno quello che fanno». Se sapessero il danno che fanno a se stessi danneggiando un altro, non lo farebbero.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 8 章：宽恕与债务</h1>
+                    <p>我们回到了拉斯罗萨斯一个安静的地方。耶稣想谈谈一些沉重的话题。
+“‘免我们的债，如同我们免了人的债。’”</p>
+<p>“那是很难的部分，”我承认道，“原谅那个伤害过你的人……”</p>
+<p>“这很难，是因为你把它看作是你给对方的一个恩惠。‘我，这么一个好人，原谅了你这个坏人。’那是自我，那没有用。”</p>
+<p>“那该怎么办呢？”</p>
+<p>“宽恕是一种个人卫生的行为。就像是丢掉你手心里攥着的、正准备扔向别人的火红煤块。唯一被烫伤的人是你自己。”</p>
+<p>他坐在一张石凳上。
+“当你心怀怨恨时，你的振动就会非常低。你用一条无形的链条伸向那个人，并把自己锁在那个痛苦的时刻。你无法飞翔，也无法前进。宽恕就是切断这条链条。它是说：‘我释放你，也释放我自己。我不再欠你任何东西，你也不再欠我任何东西。’”</p>
+<p>“如果他们做的错事非常严重呢？”</p>
+<p>“痛苦是不可避免的，但受苦是可选的。如果你一直在脑海中重温那次冒犯，你就是在一次又一次地经历它。此时此刻伤害你的是你自己，而不是对方。‘救我们脱离凶恶’首先要救自己脱离因不宽恕而产生的恶。”</p>
+<p>他把手放在我的肩膀上。
+“宽恕是保持如此高频的振动，以至于冒犯再也触及不到你。是明白对方是出于他们自己的无意识、出于他们自己的痛苦而行事的。‘他们所做的，他们不晓得。’如果他们知道伤害他人会对自己造成多大的伤害，他们就不会那样做了。”</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل الثامن: المغفرة والديون</h1>
+                    <p>عدنا إلى لاس روزاس، إلى منطقة هادئة. أراد يسوع أن يتحدث عن موضوع ثقيل.
+— "واغفر لنا ذنوبنا كما نغفر نحن أيضاً للمذنبين إلينا".</p>
+<p>— هذا هو الجزء الصعب — اعترفت —. أن تغفر لمن آذاك...</p>
+<p>— الأمر صعب لأنك تراه كفضل تقدمه للآخر. "أنا، الطيب جداً، أغفر لك، أنت الشرير جداً". هذا هو الأنا. هذا لا يجدي نفعاً.</p>
+<p>— إذاً؟</p>
+<p>— الغفران هو فعل من أفعال النظافة الشخصية. إنه التخلي عن جمرة ملتهبة كنت تمسك بها منتظراً إلقاءها على شخص آخر. الوحيد الذي يحترق هو أنت.</p>
+<p>جلس على مقعد حجري.
+— عندما تحمل ضغينة، فإنك تهتز بشكل منخفض جداً. تربط نفسك بذلك الشخص وتلك اللحظة المؤلمة بسلسلة غير مرئية. لا يمكنك الطيران. لا يمكنك المضي قدماً. الغفران هو قطع السلسلة. هو قول: "أحررك وأحرر نفسي. لم أعد مديناً لك بشيء، وأنت لست مديناً لي بشيء".</p>
+<p>— وماذا لو كان ما فعلوه خطيراً جداً؟</p>
+<p>— الألم لا مفر منه، والمعاناة اختيارية. إذا واصلت مراجعة الإساءة في عقلك، فإنك تعيد عيشها مراراً وتكراراً. أنت تؤذي نفسك الآن، وليس الآخر. "نجنا من الشرير" يبدأ بتخليص نفسك من الشر الذي تولده أنت بنفسك بعدم الغفران.</p>
+<p>وضع يده على كتفي.
+— الغفران هو الاهتزاز عالياً جداً لدرجة أن الإساءة لم تعد تصل إليك. إنه فهم أن الآخر تصرف من منطلق عدم وعيه، ومن منطلق ألمه الخاص. "إنهم لا يعلمون ماذا يفعلون". لو علموا الضرر الذي يلحقونه بأنفسهم بإلحاق الضرر بآخر، لما فعلوا ذلك.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 8: Прощение и долги</h1>
+                    <p>Мы вернулись в Лас-Росас, в тихий район. Иисус хотел поговорить о чем-то серьезном.
+— «И остави нам долги наша, яко и мы оставляем должником нашим».</p>
+<p>— Это самая сложная часть, — признался я. — Простить того, кто причинил тебе боль...</p>
+<p>— Это трудно, потому что ты видишь в этом одолжение другому. «Я такой хороший, прощаю тебя, такого плохого». Это эго. Это бесполезно.</p>
+<p>— А как тогда?</p>
+<p>— Прощение — это акт личной гигиены. Это как бросить раскаленный уголь, который ты держал в руках, собираясь кинуть в другого. Обжигаешься-то только ты сам.</p>
+<p>Он сел на каменную скамью.
+— Когда ты таишь обиду, ты вибрируешь очень низко. Ты привязываешь себя к этому человеку и к тому болезненному моменту невидимой цепью. Ты не можешь летать. Не можешь двигаться вперед. Простить — значит разорвать цепь. Это значит сказать: «Я освобождаю тебя и освобождаю себя. Я тебе больше ничего не должен, и ты мне ничего не должен».</p>
+<p>— А если то, что они сделали, было очень серьезным?</p>
+<p>— Боль неизбежна, но страдание — это выбор. Если ты продолжаешь прокручивать обиду в уме, ты проживаешь ее снова и снова. Ты причиняешь боль себе сейчас сам, а не тот человек. «Избавь нас от лукавого» начинается с того, чтобы избавить себя от зла, которое ты сам генерируешь, не прощая.</p>
+<p>Он положил руку мне на плечо.
+— Простить — значит вибрировать так высоко, что обида больше не долетает до тебя. Это понимание того, что другой человек действовал исходя из своего собственного невежества, своей собственной боли. «Не ведают, что творят». Если бы они знали, какой вред они причиняют сами себе, причиняя боль другому, они бы этого не делали.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 8: Tha thứ và Nợ nần</h1>
+                    <p>Chúng tôi quay lại Las Rozas, đến một khu vực yên tĩnh. Chúa Giê-su muốn nói về một chủ đề khá nặng nề.
+—"Xin tha nợ cho chúng con, như chúng con cũng tha kẻ có nợ chúng con".</p>
+<p>—Đó là phần khó nhất —tôi thú nhận—. Tha thứ cho người đã làm tổn thương mình...</p>
+<p>—Nó khó vì con coi đó là một ơn huệ mà con dành cho người khác. 'Ta, người tốt thế này, tha thứ cho ngươi, kẻ xấu xa thế kia'. Đó là cái tôi. Điều đó chẳng ích gì.</p>
+<p>—Vậy thì sao ạ?</p>
+<p>—Sự tha thứ là một hành động vệ sinh cá nhân. Giống như việc con buông bỏ một hòn than nóng mà con đang cầm trên tay để chờ ném vào người khác. Người duy nhất bị bỏng chính là con.</p>
+<p>Ngài ngồi xuống một chiếc ghế đá.
+—Khi con nuôi lòng hận thù, rung động của con xuống rất thấp. Con tự trói mình vào người đó và khoảnh khắc đau đớn đó bằng một sợi xích vô hình. Con không thể bay. Con không thể tiến về phía trước. Tha thứ là chặt đứt sợi xích đó. Đó là nói rằng: 'Tôi giải phóng bạn và tôi giải phóng chính mình. Tôi không còn nợ bạn gì cả, và bạn cũng không nợ tôi gì hết'.</p>
+<p>—Và nếu những gì họ làm là rất nghiêm trọng thì sao ạ?</p>
+<p>—Nỗi đau là không thể tránh khỏi, nhưng đau khổ là một sự lựa chọn. Nếu con cứ tiếp tục lặp lại sự xúc phạm đó trong tâm trí, con đang sống lại nó hết lần này đến lần khác. Con đang tự làm tổn thương mình lúc này, chứ không phải người kia. 'Cứu chúng con cho khỏi sự dữ' bắt đầu bằng việc cứu chính mình khỏi sự dữ mà con tự tạo ra khi không chịu tha thứ.</p>
+<p>Ngài đặt tay lên vai tôi.
+—Tha thứ là rung động cao đến mức sự xúc phạm không còn chạm tới con được nữa. Đó là hiểu rằng người kia đã hành động từ chính sự vô minh, từ chính nỗi đau của họ. 'Họ không biết việc họ làm'. Nếu họ biết được tác hại mà họ tự gây ra cho chính mình khi làm hại người khác, họ sẽ không làm như vậy đâu.</p>
+                </div>
+                <div class="image-container-footer"><img src="images/forgiveness_chains.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>
             <footer>
                 <p>Escrito con amor y alta vibración.</p>
@@ -338,28 +761,43 @@
         </main>
     </div>
 
+    <script src="base.js"></script>
     <script>
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
-        const btnClose = document.getElementById('menu-close');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
 
         function toggleMenu() {
             sidebar.classList.toggle('open');
             const isOpen = sidebar.classList.contains('open');
             if (window.innerWidth <= 1024) {
-                btnClose.style.display = isOpen ? 'block' : 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
             }
         }
 
         btnOpen.addEventListener('click', toggleMenu);
-        btnClose.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {
             if (window.innerWidth > 1024) {
-                btnClose.style.display = 'none';
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
                 sidebar.classList.remove('open');
             }
         });
