@@ -103,12 +103,7 @@ CSS_STYLES = """
         }
 
         #mobile-header h1 {
-            font-size: 1.2rem;
-            margin: 0;
-            color: var(--primary);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            display: none;
         }
 
         .menu-toggle {
