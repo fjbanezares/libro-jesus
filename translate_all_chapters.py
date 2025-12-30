@@ -324,6 +324,10 @@ CSS_STYLES = """
         .language.spanish {
             display: block;
         }
+        .arabic {
+            direction: rtl;
+            text-align: right;
+        }
     </style>
 """
 
