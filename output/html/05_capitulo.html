@@ -270,12 +270,48 @@
         .language {
             display: none;
         }
-        .language.spanish {
-            display: block;
-        }
         .arabic {
             direction: rtl;
             text-align: right;
+        }
+
+        /* Spotify Button Styles */
+        .spotify-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1DB954; /* Spotify Green */
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 20px auto;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .spotify-button:hover {
+            background-color: #1ed760;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+            color: white; /* Ensure text remains white */
+        }
+
+        .spotify-button svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        /* RTL specific adjustments for button icon */
+        .arabic .spotify-button svg {
+            margin-right: 0;
+            margin-left: 10px;
         }
     </style>
 
