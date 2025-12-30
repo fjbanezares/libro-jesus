@@ -628,7 +628,21 @@ def generate_multilingual_html(filename, translations, spanish_content):
     
     # Special addition for Introduction as requested by user
     if filename == "00_introduccion.html":
-        html += f'                <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_of_light.png" alt="Mi Amigo Jesucristo - A Glimpse of Light" class="footer-image"></div>\n'
+        # Map to specific localized image files
+        glimpse_img = f"images/glimpse_{lang_code}.png"
+        alt_texts = {
+            'es': "Mi Amigo Jesucristo - Un destello de luz",
+            'en': "My Friend Jesus Christ - A Glimpse of Light",
+            'fr': "Mon Ami Jésus-Christ - Un aperçu de lumière",
+            'it': "Il Mio Amico Gesù Cristo - Un barlume di luce",
+            'zh': "我的朋友耶稣基督 - 一道微光",
+            'ar': "صديقي يسوع المسيح - لمحة từ n-nūr",
+            'ru': "Мой друг Иисус Христос - Проблеск света",
+            'vi': "Người bạn Giê-su của tôi - Một tia sáng"
+        }
+        alt_val = alt_texts.get(lang_code, "Mi Amigo Jesucristo - A Glimpse of Light")
+        # Use localized image with fallback to the original Spanish version via onerror
+        html += f'                <div class="image-container-footer" style="margin-top: 1rem;"><img src="{glimpse_img}" alt="{alt_val}" class="footer-image" onerror="this.src=\'images/glimpse_of_light.png\'"></div>\n'
     
     html += """            </div>
             <footer>
