@@ -600,15 +600,42 @@ def generate_multilingual_html(filename, translations, spanish_content):
             
         html += f'                <div class="{lang_name} language">\n'
         html += f'                    <h1>{h1_text}</h1>\n'
+        
+        # Special case: Credit line for the poem
+        if filename == "13_apendice_poema.html":
+            poem_credits = {
+                'es': "con María Paz Arés Osset, la Artist",
+                'en': "with María Paz Arés Osset, the Artist",
+                'fr': "avec María Paz Arés Osset, l'Artiste",
+                'it': "con María Paz Arés Osset, l'Artista",
+                'zh': "与艺术家 María Paz Arés Osset 合作",
+                'ar': "مع ماريا باز أريس أوسيت، الفنانة",
+                'ru': "с Марией Пас Арес Оссет, художницей",
+                'vi': "với María Paz Arés Osset, Nghệ sĩ"
+            }
+            credit_text = poem_credits.get(lang_code, poem_credits['es'])
+            html += f'                    <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">{credit_text}</p>\n'
+            
         html += f'                    {body_text}\n'
         html += '                </div>\n'
 
     if footer_img:
         html += f'                <div class="image-container-footer"><img src="{footer_img}" alt="Ilustración del capítulo" class="footer-image"></div>\n'
     
+    # Special addition for Introduction as requested by user
+    if filename == "00_introduccion.html":
+        html += f'                <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_of_light.png" alt="Mi Amigo Jesucristo - A Glimpse of Light" class="footer-image"></div>\n'
+    
     html += """            </div>
             <footer>
-                <p>Escrito con amor y alta vibración.</p>
+                <div class="spanish language"><p>Escrito con amor y alta vibración.</p></div>
+                <div class="english language"><p>Written with love and high vibration.</p></div>
+                <div class="french language"><p>Écrit avec amour et haute vibration.</p></div>
+                <div class="italian language"><p>Scritto con amore e alta vibrazione.</p></div>
+                <div class="chinese language"><p>用爱与高频振动谱写。</p></div>
+                <div class="arabic language"><p>كتب بكل حب واهتزاز عالٍ.</p></div>
+                <div class="russian language"><p>Написано с любовью и высокой вибрацией.</p></div>
+                <div class="vietnamese language"><p>Được viết bằng tình yêu và rung động cao.</p></div>
             </footer>
         </main>
     </div>
@@ -667,8 +694,9 @@ def main():
     with open(SPANISH_CONTENT_FILE, 'r') as f:
         all_spanish = json.load(f)
 
-    # Process files 02-13
+    # Process all chapters including intro and index
     targets = [
+        "00_introduccion.html", "index.html",
         "02_capitulo.html", "03_capitulo.html", "04_capitulo.html", "05_capitulo.html",
         "06_capitulo.html", "07_capitulo.html", "08_capitulo.html", "09_capitulo.html",
         "10_capitulo.html", "11_capitulo.html", "12_epilogo.html", "13_apendice_poema.html"
