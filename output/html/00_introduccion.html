@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introducción: Entre la Partícula y la Vibración | Mi amigo Jesucristo</title>
     <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -260,25 +261,55 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
         .arabic {
             direction: rtl;
             text-align: right;
         }
+
+        /* Spotify Button Styles */
+        .spotify-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1DB954; /* Spotify Green */
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 20px auto;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .spotify-button:hover {
+            background-color: #1ed760;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+            color: white; /* Ensure text remains white */
+        }
+
+        .spotify-button svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        /* RTL specific adjustments for button icon */
+        .arabic .spotify-button svg {
+            margin-right: 0;
+            margin-left: 10px;
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -292,6 +323,7 @@
             <option value="arabic">العربية 🇸🇦</option>
             <option value="russian">Русский 🇷🇺</option>
             <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+            <option value="korean">한국어 🇰🇷</option>
         </select>
     </div>
 
@@ -320,6 +352,9 @@
         <div class="vietnamese language">
             <h1>Giới thiệu: Giữa Hạt và Rung động</h1>
         </div>
+        <div class="korean language">
+            <h1>서문: 입자와 진동 사이에서</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
@@ -331,26 +366,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html" class="active">Introducción: Entre la Partícula y la
-                            Vibración</a></li>
-                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a></li>
-                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
+                    <li><a href="00_introduccion.html" class="active">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
                     <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
                     </li>
-                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="english language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>My friend Jesus Christ</h2>
@@ -360,24 +406,35 @@
                 <ul>
                     <li><a href="00_introduccion.html" class="active">Introduction: Between Particle and Vibration</a>
                     </li>
-                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a></li>
-                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a></li>
-                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a></li>
-                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a></li>
-                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a></li>
-                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a></li>
-                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a></li>
-                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a></li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
                     <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
                     </li>
-                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a></li>
-                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a></li>
-                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a></li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="french language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>Mon ami Jésus-Christ</h2>
@@ -385,27 +442,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html" class="active">Introduction : Entre la particule et la
-                            vibration</a></li>
-                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a></li>
-                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a></li>
-                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a></li>
-                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a></li>
-                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a></li>
-                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a></li>
-                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a></li>
-                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer
-                            haut)</a></li>
-                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations
-                            basses)</a></li>
-                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a></li>
-                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a></li>
-                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a></li>
+                    <li><a href="00_introduccion.html" class="active">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="italian language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>Il mio amico Gesù Cristo</h2>
@@ -413,26 +480,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html" class="active">Introduzione: Tra la particella e la
-                            vibrazione</a></li>
-                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a></li>
-                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a></li>
-                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a></li>
-                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a></li>
-                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a></li>
-                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a></li>
-                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a></li>
-                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a></li>
-                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni
-                            basse)</a></li>
-                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a></li>
-                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a></li>
-                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a></li>
+                    <li><a href="00_introduccion.html" class="active">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="chinese language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>我的朋友耶稣基督</h2>
@@ -440,24 +518,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html" class="active">引言：粒子与振动之间</a></li>
-                    <li><a href="index.html">第 1 章：马德里相遇</a></li>
-                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a></li>
-                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a></li>
-                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a></li>
-                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a></li>
-                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天堂）</a></li>
-                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a></li>
-                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a></li>
-                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a></li>
-                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a></li>
-                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a></li>
-                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a></li>
-                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a></li>
+                    <li><a href="00_introduccion.html" class="active">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天上）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：我们日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（远离低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗歌</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="arabic language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>صديقي يسوع المسيح</h2>
@@ -465,25 +556,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html" class="active">مقدمة: بين الجسيم والاهتزاز</a></li>
-                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a></li>
-                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a></li>
-                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a></li>
-                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a></li>
-                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a></li>
-                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a></li>
-                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a></li>
-                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a></li>
-                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a></li>
+                    <li><a href="00_introduccion.html" class="active">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
                     <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
                     </li>
-                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a></li>
-                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a></li>
-                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a></li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="russian language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>Мой друг Иисус Христос</h2>
@@ -491,24 +594,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html" class="active">Введение: Между частицей и вибрацией</a></li>
-                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a></li>
-                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a></li>
-                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a></li>
-                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a></li>
-                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a></li>
-                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a></li>
-                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a></li>
-                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a></li>
-                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a></li>
-                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a></li>
-                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a></li>
-                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a></li>
-                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a></li>
+                    <li><a href="00_introduccion.html" class="active">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="vietnamese language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>Người bạn Giê-su của tôi</h2>
@@ -516,21 +632,72 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html" class="active">Giới thiệu: Giữa Hạt và Rung động</a></li>
-                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a></li>
-                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a></li>
-                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a></li>
-                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a></li>
-                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a></li>
-                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a></li>
-                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a></li>
-                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a></li>
-                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động
-                            thấp)</a></li>
-                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a></li>
-                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a></li>
-                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a></li>
+                    <li><a href="00_introduccion.html" class="active">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="korean language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>나의 친구 예수 그리스도</h2>
+                <button class="menu-toggle" id="menu-close-ko" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html" class="active">서문: 입자와 진동 사이에서</a>
+                    </li>
+                    <li><a href="index.html">제1장: 마드리드에서의 만남</a>
+                    </li>
+                    <li><a href="02_capitulo.html">제2장: 라스 로사스 산책</a>
+                    </li>
+                    <li><a href="03_capitulo.html">제3장: 진동과 침묵</a>
+                    </li>
+                    <li><a href="04_capitulo.html">제4장: 콜메나레호와 자연</a>
+                    </li>
+                    <li><a href="05_capitulo.html">제5장: 주기도문 (제1부: 아버지)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">제6장: 주기도문 (제2부: 하늘)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">제7장: 우리에게 일용할 양식</a>
+                    </li>
+                    <li><a href="08_capitulo.html">제8장: 용서와 빚</a>
+                    </li>
+                    <li><a href="09_capitulo.html">제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">제11장: 나라와 권능과 영광</a>
+                    </li>
+                    <li><a href="12_epilogo.html">에필로그: 마지막 모험과 작별</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">부록: 크리스마스 시</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -540,749 +707,242 @@
 
     <div id="content-wrapper">
         <main>
-            <img src="images/intro_quantum_luther.png" alt="Ilustración del capítulo" class="chapter-image">
+            <img src="images/default.png" alt="Ilustración del capítulo" class="chapter-image">
             <div class="content-body">
                 <div class="spanish language">
                     <h1>Introducción: Entre la Partícula y la Vibración</h1>
                     <h2>I. La Inquietud del Alma</h2>
-                    <p>Desde que tengo uso de razón, he sentido una especie de vibración disonante cuando me acercaba a
-                        los grandes templos de piedra. No era falta de fe; al contrario, siempre he intuido que detrás
-                        del velo de la realidad existe una Fuente inagotable de amor. Mi conflicto, mi tormento
-                        silencioso, nacía del contraste entre esa intuición de un Dios infinito y la pequeñez de las
-                        cajas en las que intentábamos meterlo.</p>
-                    <p>Crecí en el seno del catolicismo, respirando el incienso y admirando la liturgia, pero muy
-                        pronto, esa belleza se vio empañada por una sensación incómoda: la soberbia. Me dolía en el alma
-                        escuchar, implícita o explícitamente, que nosotros teníamos "la verdad" y los demás no. ¿Cómo
-                        podía ser que el Creador de un universo de cien mil millones de galaxias tuviera preferencia por
-                        un código postal espiritual concreto? Sentía que pecábamos de una arrogancia terrible al no
-                        reconocer la salvación para otros credos, al mirar con lástima o superioridad a quien buscaba la
-                        luz por otro camino. Esa exclusividad me parecía, paradoxalmente, el acto más irreligioso de
-                        todos: limitar la misericordia de Dios a nuestras propias fronteras humanas.</p>
+                    <p>Desde que tengo uso de razón, he sentido una especie de vibración disonante cuando me acercaba a los grandes templos de piedra. No era falta de fe; al contrario, siempre he intuido que detrás del velo de la realidad existe una Fuente inagotable de amor. Mi conflicto, mi tormento silencioso, nacía del contraste entre esa intuición de un Dios infinito y la pequeñez de las cajas en las que intentábamos meterlo.</p>
+                    <p>Crecí en el seno del catolicismo, respirando el incienso y admirando la liturgia, pero muy pronto, esa belleza se vio empañada por una sensación incómoda: la soberbia. Me dolía en el alma escuchar, implícita o explícitamente, que nosotros teníamos "la verdad" y los demás no. ¿Cómo podía ser que el Creador de un universo de cien mil millones de galaxias tuviera preferencia por un código postal espiritual concreto? Sentía que pecábamos de una arrogancia terrible al no reconocer la salvación para otros credos, al mirar con lástima o superioridad a quien buscaba la luz por otro camino. Esa exclusividad me parecía, paradoxalmente, el acto más irreligioso de todos: limitar la misericordia de Dios a nuestras propias fronteras humanas.</p>
                     <h2>II. Las Sombras en los Centros de Poder</h2>
-                    <p>Pero mi tormento iba más allá de la teología. Al estudiar la historia, me topaba con muros
-                        manchados de sangre. La Inquisición, las cruzadas, las excomuniones... No podía evitar pensar:
-                        ¿Cómo hemos llegado de "ama a tu prójimo" a "quémalo si no piensa como tú"?</p>
-                    <p>Durante años, esto me alejó. Sentía rabia. Veía la institución y solo veía las sombras. Sin
-                        embargo, con el tiempo y la madurez, entendí algo fundamental: la Iglesia, como cualquier
-                        estructura humana, está compuesta de personas. Y las personas somos antenas. Cuando el miedo se
-                        instala en los centros de poder, cuando la necesidad de control supera a la necesidad de servir,
-                        la vibración colectiva desciende.</p>
-                    <p>La Inquisición no fue obra de Dios, ni siquiera fue obra de "la religión" en abstracto. Fue la
-                        consecuencia inevitable de una <strong>baja vibración</strong> instalada en la cúpula. El miedo
-                        a perder el poder, el miedo a lo diferente, el odio disfrazado de celo... todo eso son
-                        frecuencias densas, pesadas. Y cuando esa densidad se apodera de una jerarquía, el resultado es
-                        el sufrimiento. Obviamente, es algo que el propio Cristo, mi amigo Jesús, jamás hubiera
-                        permitido. Él, que detuvo las piedras contra la adúltera, jamás hubiera encendido una hoguera.
-                    </p>
-                    <p>Entender esto me permitió perdonar. Entendí que no era "la Iglesia" la que fallaba, sino la
-                        vibración de los hombres que, en momentos oscuros, la dirigían. Y que, por debajo de esa cúpula
-                        de poder, siempre hubo miles de curas, monjas y laicos vibrando alto, dando de comer al
-                        hambriento, consolando al triste, manteniendo encendida la luz a pesar de la oscuridad de sus
-                        líderes.</p>
+                    <p>Pero mi tormento iba más allá de la teología. Al estudiar la historia, me topaba con muros manchados de sangre. La Inquisición, las cruzadas, las excomuniones... No podía evitar pensar: ¿Cómo hemos llegado de "ama a tu prójimo" a "quémalo si no piensa como tú"?</p>
+                    <p>Durante años, esto me alejó. Sentía rabia. Veía la institución y solo veía las sombras. Sin embargo, con el tiempo y la madurez, entendí algo fundamental: la Iglesia, como cualquier estructura humana, está compuesta de personas. Y las personas somos antenas. Cuando el miedo se instala en los centros de poder, cuando la necesidad de control supera a la necesidad de servir, la vibración colectiva desciende.</p>
+                    <p>La Inquisición no fue obra de Dios, ni siquiera fue obra de "la religión" en abstracto. Fue la consecuencia inevitable de una <strong>baja vibración</strong> instalada en la cúpula. El miedo a perder el poder, el miedo a lo diferente, el odio disfrazado de celo... todo eso son frecuencias densas, pesadas. Y cuando esa densidad se apodera de una jerarquía, el resultado es el sufrimiento. Obviamente, es algo que el propio Cristo, mi amigo Jesús, jamás hubiera permitido. Él, que detuvo las piedras contra la adúltera, jamás hubiera encendido una hoguera.</p>
+                    <p>Entender esto me permitió perdonar. Entendí que no era "la Iglesia" la que fallaba, sino la vibración de los hombres que, en momentos oscuros, la dirigían. Y que, por debajo de esa cúpula de poder, siempre hubo miles de curas, monjas y laicos vibrando alto, dando de comer al hambriento, consolando al triste, manteniendo encendida la luz a pesar de la oscuridad de sus líderes.</p>
                     <h2>III. La Física Cuántica del Espíritu</h2>
-                    <p>Mi reconciliación definitiva llegó de la mano de la ciencia. Siempre me ha fascinado la física
-                        cuántica, esa rama del saber que nos dice que la realidad no es tan sólida como parece. Nos
-                        enseña que toda partícula subatomicca es, a la vez, materia y onda. Es algo concreto y, al mismo
-                        tiempo, es pura vibración, pura posibilidad.</p>
-                    <p>Ahí fue donde todo hizo clic. El Padre Nuestro, las enseñanzas de Jesús... no eran normas morales
-                        rígidas, ¡eran instrucciones de física cuántica!</p>
-                    <p>Cuando Jesús nos dice "no temáis", no nos está dando una orden psicológica, nos está diciendo:
-                        "No bajéis vuestra frecuencia". El miedo es una vibración lenta, densa, que contrae la realidad.
-                        El amor, la paz, la seguridad... son vibraciones rápidas, expansivas, que crean luz.</p>
-                    <p>Entendí que "caer en la tentación" no es comerse un pastel en cuaresma. Es la tentación de
-                        dejarse arrastrar por la gravedad de las bajas vibraciones: el odio, la venganza, l'envidia, la
-                        soberbia. Cuando odias, te densificas. Te conviertes en "partícula" pesada, aislada,
-                        desconectada del todo. Cuando amas, te conviertes en "onda", te expandes, te conectas con el
-                        campo cuántico universal, con el Padre.</p>
+                    <p>Mi reconciliación definitiva llegó de la mano de la ciencia. Siempre me ha fascinado la física cuántica, esa rama del saber que nos dice que la realidad no es tan sólida como parece. Nos enseña que toda partícula subatomicca es, a la vez, materia y onda. Es algo concreto y, al mismo tiempo, es pura vibración, pura posibilidad.</p>
+                    <p>Ahí fue donde todo hizo clic. El Padre Nuestro, las enseñanzas de Jesús... no eran normas morales rígidas, ¡eran instrucciones de física cuántica!</p>
+                    <p>Cuando Jesús nos dice "no temáis", no nos está dando una orden psicológica, nos está diciendo: "No bajéis vuestra frecuencia". El miedo es una vibración lenta, densa, que contrae la realidad. El amor, la paz, la seguridad... son vibraciones rápidas, expansivas, que crean luz.</p>
+                    <p>Entendí que "caer en la tentación" no es comerse un pastel en cuaresma. Es la tentación de dejarse arrastrar por la gravedad de las bajas vibraciones: el odio, la venganza, l'envidia, la soberbia. Cuando odias, te densificas. Te conviertes en "partícula" pesada, aislada, desconectada del todo. Cuando amas, te conviertes en "onda", te expandes, te conectas con el campo cuántico universal, con el Padre.</p>
                     <h2>IV. Un Café con Lutero</h2>
-                    <p>En este viaje de comprensión, a menudo me he imaginado tomando un café con Martín Lutero en el
-                        siglo XVI. Creo que habríamos sido buenos amigos. Él vio esa misma soberbia que a mí me
-                        atormentaba. Vio cómo la estructura se había vuelto tan densa, tan preocupada por vender bulas y
-                        construir basílicas de mármol, que se había olvidado de la vibración del Evangelio.</p>
-                    <p>Lutero tuvo la valentía de decir: "La salvación no está en Roma, está en tu fe". Y yo añadiría,
-                        desde mi perspectiva del siglo XXI: "La salvación no depende de seguir al Papa, sino de la
-                        frecuencia de tu corazón".</p>
-                    <p>Si tus obras, si tu vida diaria, están hechas desde la alta vibración del amor, no cabe duda de
-                        que estás salvado. Porque "estar salvado" no es un ticket para entrar en un club VIP después de
-                        morir. Estar salvado es vivir, aquí y ahora, en la frecuencia del Paraíso. Es estar en sintonía
-                        con la Fuente.</p>
-                    <p>Si un budista, un ateo o un cristiano vibran en el amor incondicional, están en la misma
-                        frecuencia. Están "en Dios". Y ninguna bula, ningún decreto, puede cambiar esa realidad física y
-                        espiritual. La salvación es una cuestión de resonancia, no de burocrazia.</p>
+                    <p>En este viaje de comprensión, a menudo me he imaginado tomando un café con Martín Lutero en el siglo XVI. Creo que habríamos sido buenos amigos. Él vio esa misma soberbia que a mí me atormentaba. Vio cómo la estructura se había vuelto tan densa, tan preocupada por vender bulas y construir basílicas de mármol, que se había olvidado de la vibración del Evangelio.</p>
+                    <p>Lutero tuvo la valentía de decir: "La salvación no está en Roma, está en tu fe". Y yo añadiría, desde mi perspectiva del siglo XXI: "La salvación no depende de seguir al Papa, sino de la frecuencia de tu corazón".</p>
+                    <p>Si tus obras, si tu vida diaria, están hechas desde la alta vibración del amor, no cabe duda de que estás salvado. Porque "estar salvado" no es un ticket para entrar en un club VIP después de morir. Estar salvado es vivir, aquí y ahora, en la frecuencia del Paraíso. Es estar en sintonía con la Fuente.</p>
+                    <p>Si un budista, un ateo o un cristiano vibran en el amor incondicional, están en la misma frecuencia. Están "en Dios". Y ninguna bula, ningún decreto, puede cambiar esa realidad física y espiritual. La salvación es una cuestión de resonancia, no de burocrazia.</p>
                     <h2>V. La Luz que Prevalece</h2>
-                    <p>Por eso escribo este libro. No para atacar a la religión, sino para rescatar su esencia
-                        vibracional. Escribo desde el amor, habiendo sanado esa lástima que sentía por la soberbia
-                        institucional. He dejado de mirar la oscuridad de la Inquisición para mirar la luz de los
-                        místicos, de los santos anónimos, de la gente buena que, en nombre de esa misma fe, ha vibrado
-                        tan alto que ha cambiado el mundo.</p>
-                    <p>Este libro es una invitación a caminar con Jesús, no como un juez severo, sino como un maestro de
-                        vibración. Un amigo que nos enseña a navegar entre Madrid, Las Rozas y Colmenarejo sin perder la
-                        sintonía. Un guía que nos recuerda, una y otra vez, que somos luz, que somos onda, y que nuestro
-                        único deber es mantener la frecuencia alta, pase lo que pase a nuestro alrededor.</p>
-                    <p>Así que, querido lector, olvida por un momento los dogmas, las culpas y los miedos heredados.
-                        Abre tu mente a la posibilidad de que todo, absolutamente todo, es música. Y que tú tienes el
-                        instrumento en tus manos para tocar la melodía más hermosa.</p>
+                    <p>Por eso escribo este libro. No para atacar a la religión, sino para rescatar su esencia vibracional. Escribo desde el amor, habiendo sanado esa lástima que sentía por la soberbia institucional. He dejado de mirar la oscuridad de la Inquisición para mirar la luz de los místicos, de los santos anónimos, de la gente buena que, en nombre de esa misma fe, ha vibrado tan alto que ha cambiado el mundo.</p>
+                    <p>Este libro es una invitación a caminar con Jesús, no como un juez severo, sino como un maestro de vibración. Un amigo que nos enseña a navegar entre Madrid, Las Rozas y Colmenarejo sin perder la sintonía. Un guía que nos recuerda, una y otra vez, que somos luz, que somos onda, y que nuestro único deber es mantener la frecuencia alta, pase lo que pase a nuestro alrededor.</p>
+                    <p>Así que, querido lector, olvida por un momento los dogmas, las culpas y los miedos heredados. Abre tu mente a la posibilidad de que todo, absolutamente todo, es música. Y que tú tienes el instrumento en tus manos para tocar la melodía más hermosa.</p>
                     <p>Bienvenido a "Mi amigo Jesucristo".</p>
                 </div>
-
+                <div class="english language">
+                    <h1>Introduction: Between Particle and Vibration</h1>
+                    <h2>I. The Soul's Unrest</h2>
+                    <p>For as long as I can remember, I have felt a kind of dissonant vibration whenever I approached the great temples of stone. It wasn't a lack of faith; on the contrary, I have always sensed that behind the veil of reality exists an inexhaustible Source of love. My conflict, my silent torment, was born from the contrast between that intuition of an infinite God and the smallness of the boxes into which we tried to fit Him.</p>
+                    <p>I grew up in the heart of Catholicism, breathing the incense and admiring the liturgy, but very soon, that beauty was clouded by an uncomfortable sensation: pride. It pained my soul to hear, implicitly or explicitly, that we had "the truth" and others did not. How could it be that the Creator of a universe of a hundred billion galaxies had a preference for a specific spiritual zip code? I felt we were guilty of a terrible arrogance by not recognizing salvation for other creeds, by looking with pity or superiority at those who sought the light by another path. That exclusivity seemed to me, paradoxically, the most irreligious act of all: limiting God's mercy to our own human borders.</p>
+                    <h2>II. The Shadows in the Centers of Power</h2>
+                    <p>But my torment went beyond theology. Studying history, I ran into blood-stained walls. The Inquisition, the crusades, the excommunications... I couldn't help thinking: How have we gone from "love your neighbor" to "burn him if he doesn't think like you"?</p>
+                    <p>For years, this pushed me away. I felt rage. I saw the institution and saw only the shadows. However, with time and maturity, I understood something fundamental: the Church, like any human structure, is composed of people. And people are antennas. When fear settles in the centers of power, when the need for control exceeds the need to serve, the collective vibration descends.</p>
+                    <p>The Inquisition was not the work of God, nor was it even the work of "religion" in the abstract. It was the inevitable consequence of a <strong>low vibration</strong> installed at the top. The fear of losing power, the fear of the different, hatred disguised as zeal... all those are dense, heavy frequencies. And when that density takes over a hierarchy, the result is suffering. Obviously, it is something that Christ himself, my friend Jesus, would never have allowed. He, who stopped the stones against the adulteress, would never have lit a bonfire.</p>
+                    <p>Understanding this allowed me to forgive. I understood that it wasn't "the Church" that failed, but the vibration of the men who, in dark moments, led it. And that, below that dome of power, there were always thousands of priests, nuns, and laypeople vibrating high, feeding the hungry, comforting the sad, keeping the light burning despite the darkness of their leaders.</p>
+                    <h2>III. The Quantum Physics of the Spirit</h2>
+                    <p>My definitive reconciliation came from science. I have always been fascinated by quantum physics, that branch of knowledge that tells us that reality is not as solid as it seems. It teaches us that every subatomic particle is, at the same time, matter and wave. It is something concrete and, at the same time, it is pure vibration, pure possibility.</p>
+                    <p>That's where everything clicked. The Lord's Prayer, the teachings of Jesus... they weren't rigid moral rules, they were quantum physics instructions!</p>
+                    <p>When Jesus tells us "fear not," he is not giving us a psychological order, he is telling us: "Do not lower your frequency." Fear is a slow, dense vibration that contracts reality. Love, peace, security... are fast, expansive vibrations that create light.</p>
+                    <p>I understood that "falling into temptation" is not eating a cake during Lent. It is the temptation to be dragged down by the gravity of low vibrations: hatred, revenge, envy, pride. When you hate, you become dense. You become a heavy "particle," isolated, disconnected from the whole. When you love, you become a "wave," you expand, you connect with the universal quantum field, with the Father.</p>
+                    <h2>IV. A Coffee with Luther</h2>
+                    <p>On this journey of understanding, I have often imagined having a coffee with Martin Luther in the 16th century. I think we would have been good friends. He saw that same pride that tormented me. He saw how the structure had become so dense, so concerned with selling indulgences and building marble basilicas, that it had forgotten the vibration of the Gospel.</p>
+                    <p>Luther had the courage to say: "Salvation is not in Rome, it is in your faith." And I would add, from my 21st-century perspective: "Salvation does not depend on following the Pope, but on the frequency of your heart."</p>
+                    <p>If your works, if your daily life, are done from the high vibration of love, there is no doubt that you are saved. Because "being saved" is not a ticket to join a VIP club after you die. Being saved is living, here and now, in the frequency of Paradise. It is being in tune with the Source.</p>
+                    <p>If a Buddhist, an atheist, or a Christian vibrates in unconditional love, they are on the same frequency. They are "in God." And no bull, no decree, can change that physical and spiritual reality. Salvation is a matter of resonance, not bureaucracy.</p>
+                    <h2>V. The Light that Prevails</h2>
+                    <p>That is why I am writing this book. Not to attack religion, but to rescue its vibrational essence. I write from love, having healed that pity I felt for institutional pride. I have stopped looking at the darkness of the Inquisition to look at the light of the mystics, of the anonymous saints, of the good people who, in the name of that same faith, have vibrated so high that they have changed the world.</p>
+                    <p>This book is an invitation to walk with Jesus, not as a severe judge, but as a master of vibration. A friend who teaches us to navigate between Madrid, Las Rozas and Colmenarejo without losing the tune. A guide who reminds us, again and again, that we are light, that we are waves, and that our only duty is to keep the frequency high, no matter what happens around us.</p>
+                    <p>So, dear reader, forget for a moment the dogmas, the guilts, and the inherited fears. Open your mind to the possibility that everything, absolutely everything, is music. And that you have the instrument in your hands to play the most beautiful melody.</p>
+                    <p>Welcome to "My friend Jesus Christ."</p>
+                </div>
                 <div class="french language">
                     <h1>Introduction : Entre la particule et la vibration</h1>
                     <h2>I. L'inquiétude de l'âme</h2>
-                    <p>Depuis que j'ai l'âge de raison, j'ai ressenti une sorte de vibration dissonante chaque fois que
-                        je m'approchais des grands temples de pierre. Ce n'était pas un manque de foi ; au contraire,
-                        j'ai toujours pressenti que derrière le voile de la réalité existe une Source inépuisable
-                        d'amour. Mon conflit, mon tourment silencieux, naissait du contraste entre cette intuition d'un
-                        Dieu infini et la petitesse des boîtes dans lesquelles nous essayions de l'enfermer.</p>
-                    <p>J'ai grandi au sein du catholicisme, respirant l'encens et admirant la liturgie, mais très vite,
-                        cette beauté a été entachée par une sensation inconfortable : la superbe. Cela me faisait mal à
-                        l'âme d'entendre, implicitement ou explicitement, que nous détenions "la vérité" et les autres
-                        non. Comment se pouvait-il que le Créateur d'un univers de cent milliards de galaxies ait une
-                        préférence pour un code postal spirituel concret ? Je sentais que nous péchions par une
-                        arrogance terrible en ne reconnaissant pas le salut pour les autres religions, en regardant avec
-                        pitié ou supériorité celui qui cherchait la lumière par un autre chemin. Cette exclusivité me
-                        semblait, paradoxalement, l'acte le plus irréligieux de tous : limiter la miséricorde de Dieu à
-                        nos propres frontières humaines.</p>
+                    <p>Depuis que j'ai l'âge de raison, j'ai ressenti une sorte de vibration dissonante chaque fois que je m'approchais des grands temples de pierre. Ce n'était pas un manque de foi ; au contraire, j'ai toujours pressenti que derrière le voile de la réalité existe une Source inépuisable d'amour. Mon conflit, mon tourment silencieux, naissait du contraste entre cette intuition d'un Dieu infini et la petitesse des boîtes dans lesquelles nous essayions de l'enfermer.</p>
+                    <p>J'ai grandi au sein du catholicisme, respirant l'encens et admirant la liturgie, mais très vite, cette beauté a été entachée par une sensation inconfortable : la superbe. Cela me faisait mal à l'âme d'entendre, implicitement ou explicitement, que nous détenions "la vérité" et les autres non. Comment se pouvait-il que le Créateur d'un univers de cent milliards de galaxies ait une préférence pour un code postal spirituel concret ? Je sentais que nous péchions par une arrogance terrible en ne reconnaissant pas le salut pour les autres religions, en regardant avec pitié ou supériorité celui qui cherchait la lumière par un autre chemin. Cette exclusivité me semblait, paradoxalement, l'acte le plus irréligieux de tous : limiter la miséricorde de Dieu à nos propres frontières humaines.</p>
                     <h2>II. Les ombres au centre du pouvoir</h2>
-                    <p>Mais mon tourment n'était pas seulement théologique. En étudiant l'histoire, je me suis heurté à
-                        des murs tachés de sang. L'Inquisition, les Croisades, les excommunications... Je ne pouvais
-                        m'empêcher de penser : comment sommes-nous passés du "aime ton prochain" au "brûle-le s'il ne
-                        pense pas comme toi" ?</p>
-                    <p>Pendant des années, cela m'a éloigné. J'ai ressenti de la colère. J'ai regardé l'institution et
-                        je n'ai vu que des ombres. Cependant, avec le temps et la maturité, j'ai compris quelque chose
-                        de fondamental : l'Église, comme toute structure humaine, est faite d'hommes. Et les hommes sont
-                        des antennes. Quand la peur s'installe dans les centres de pouvoir, quand le besoin de contrôle
-                        dépasse le besoin de service, la vibration collective descend.</p>
-                    <p>L'Inquisition n'était pas l'œuvre de Dieu, elle n'était même pas l'œuvre de la "religion" au sens
-                        abstrait. C'était la conséquence inévitable d'une <strong>basse vibration</strong> installée au
-                        sommet. La peur de perdre le pouvoir, la peur de la différence, la haine déguisée en zèle...
-                        tout cela sont des fréquences denses, lourdes. Et quand cette densité s'empare d'une hiérarchie,
-                        le résultat est la souffrance. Il est clair que c'est quelque chose que le Christ lui-même, mon
-                        ami Jésus, n'aurait jamais autorisé. Lui, qui a arrêté les pierres contre la femme adultère,
-                        n'aurait jamais allumé un bûcher.</p>
-                    <p>Comprendre cela m'a permis de pardonner. J'ai compris que ce n'était pas "l'Église" qui avait
-                        échoué, mais la vibration des hommes qui, dans des moments d'obscurité, l'ont dirigée. And that
-                        beneath that dome of power, there were always thousands of priests, religious, and laity of high
-                        vibration who fed the hungry, comforted the sad, keeping the light burning despite the darkness
-                        of their leaders.</p>
+                    <p>Mais mon tourment n'était pas seulement théologique. En étudiant l'histoire, je me suis heurté à des murs tachés de sang. L'Inquisition, les Croisades, les excommunications... Je ne pouvais m'empêcher de penser : comment sommes-nous passés du "aime ton prochain" au "brûle-le s'il ne pense pas comme toi" ?</p>
+                    <p>Pendant des années, cela m'a éloigné. J'ai ressenti de la colère. J'ai regardé l'institution et je n'ai vu que des ombres. Cependant, avec le temps et la maturité, j'ai compris quelque chose de fondamental : l'Église, comme toute structure humaine, est faite d'hommes. Et les hommes sont des antennes. Quand la peur s'installe dans les centres de pouvoir, quand le besoin de contrôle dépasse le besoin de service, la vibration collective descend.</p>
+                    <p>L'Inquisition n'était pas l'œuvre de Dieu, elle n'était même pas l'œuvre de la "religion" au sens abstrait. C'était la conséquence inévitable d'une <strong>basse vibration</strong> installée au sommet. La peur de perdre le pouvoir, la peur de la différence, la haine déguisée en zèle... tout cela sont des fréquences denses, lourdes. Et quand cette densité s'empare d'une hiérarchie, le résultat est la souffrance. Il est clair que c'est quelque chose que le Christ lui-même, mon ami Jésus, n'aurait jamais autorisé. Lui, qui a arrêté les pierres contre la femme adultère, n'aurait jamais allumé un bûcher.</p>
+                    <p>Comprendre cela m'a permis de pardonner. J'ai compris que ce n'était pas "l'Église" qui avait échoué, mais la vibration des hommes qui, dans des moments d'obscurité, l'ont dirigée. And that beneath that dome of power, there were always thousands of priests, religious, and laity of high vibration who fed the hungry, comforted the sad, keeping the light burning despite the darkness of their leaders.</p>
                     <h2>III. La physique quantique de la spiritualité</h2>
-                    <p>Ma réconciliation définitive est venue de la science. J'ai toujours été fasciné par la physique
-                        quantique, cette branche du savoir qui nous dit que la réalité n'est pas aussi solide qu'elle en
-                        a l'air. Elle nous enseigne que toute particule subatomique est à la fois matière et onde. C'est
-                        quelque chose de concret et, en même temps, c'est une vibration pure, une possibilité pure.</p>
-                    <p>C'est là que tout s'est mis en place. Le Notre Père, les enseignements de Jésus... ce n'étaient
-                        pas des règles morales rigides, c'étaient des manuels de physique quantique !</p>
-                    <p>Quand Jésus nous dit "n'ayez pas peur", il ne donne pas un ordre psychologique, il nous dit :
-                        "n'abaissez pas votre fréquence". La peur est une vibration lente, dense, qui contracte la
-                        réalité. L'amour, la paix, l'assurance... sont des vibrations rapides, expansives, qui créent de
-                        la lumière.</p>
-                    <p>J'ai compris que "tomber dans la tentation" n'était pas de manger un gâteau pendant le Carême.
-                        C'était la tentation de se laisser entraîner par la gravité des basses vibrations : la haine, la
-                        vengeance, l'envie, la superbe. Quand on hait, on se densifie. On devient une "particule"
-                        lourde, isolée, déconnectée du tout. Quand on aime, on devient "onde", on s'étend, on se
-                        connecte au champ quantique universel, au Père.</p>
+                    <p>Ma réconciliation définitive est venue de la science. J'ai toujours été fasciné par la physique quantique, cette branche du savoir qui nous dit que la réalité n'est pas aussi solide qu'elle en a l'air. Elle nous enseigne que toute particule subatomique est à la fois matière et onde. C'est quelque chose de concret et, en même temps, c'est une vibration pure, une possibilité pure.</p>
+                    <p>C'est là que tout s'est mis en place. Le Notre Père, les enseignements de Jésus... ce n'étaient pas des règles morales rigides, c'étaient des manuels de physique quantique !</p>
+                    <p>Quand Jésus nous dit "n'ayez pas peur", il ne donne pas un ordre psychologique, il nous dit : "n'abaissez pas votre fréquence". La peur est une vibration lente, dense, qui contracte la réalité. L'amour, la paix, l'assurance... sont des vibrations rapides, expansives, qui créent de la lumière.</p>
+                    <p>J'ai compris que "tomber dans la tentation" n'était pas de manger un gâteau pendant le Carême. C'était la tentation de se laisser entraîner par la gravité des basses vibrations : la haine, la vengeance, l'envie, la superbe. Quand on hait, on se densifie. On devient une "particule" lourde, isolée, déconnectée du tout. Quand on aime, on devient "onde", on s'étend, on se connecte au champ quantique universel, au Père.</p>
                     <h2>IV. Un café avec Luther</h2>
-                    <p>Dans ce voyage de compréhension, je me suis often imaginé prenant un café avec Martin Luther au
-                        XVIe siècle. Je pense que nous aurions été de bons amis. Il a vu cette même superbe qui me
-                        tourmentait. Il a vu comment la structure était devenue si dense, si préoccupée par la vente
-                        d'indulgences et la construction de basiliques de marbre, qu'elle en avait oublié la vibration
-                        de l'Évangile.</p>
-                    <p>Luther a eu le courage de dire : "Le salut n'est pas à Rome, il est dans ta foi". Et
-                        j'ajouterais, de ma perspective du XXIe siècle : "Le salut ne dépend pas du fait de suivre le
-                        Pape, mais de la fréquence de ton cœur".</p>
-                    <p>Si tes œuvres, si ta vie quotidienne, sont faites à partir de la haute vibration de l'amour, il
-                        ne fait aucun doute que tu es sauvé. Parce qu'"être sauvé" n'est pas un ticket pour entrer dans
-                        un club VIP après la mort. Être sauvé, c'est vivre, ici et maintenant, dans la fréquence du
-                        Paradis. C'est être en harmonie avec la Source.</p>
-                    <p>Si un bouddhiste, un athée ou un chrétien vibre dans l'amour inconditionnel, ils sont sur la même
-                        fréquence. Ils sont "en Dieu". Et aucune bulle, aucun décret, ne peut changer cette réalité
-                        physique et spirituelle. Le salut est une question de résonance, pas de bureaucratie.</p>
+                    <p>Dans ce voyage de compréhension, je me suis often imaginé prenant un café avec Martin Luther au XVIe siècle. Je pense que nous aurions été de bons amis. Il a vu cette même superbe qui me tourmentait. Il a vu comment la structure était devenue si dense, si préoccupée par la vente d'indulgences et la construction de basiliques de marbre, qu'elle en avait oublié la vibration de l'Évangile.</p>
+                    <p>Luther a eu le courage de dire : "Le salut n'est pas à Rome, il est dans ta foi". Et j'ajouterais, de ma perspective du XXIe siècle : "Le salut ne dépend pas du fait de suivre le Pape, mais de la fréquence de ton cœur".</p>
+                    <p>Si tes œuvres, si ta vie quotidienne, sont faites à partir de la haute vibration de l'amour, il ne fait aucun doute que tu es sauvé. Parce qu'"être sauvé" n'est pas un ticket pour entrer dans un club VIP après la mort. Être sauvé, c'est vivre, ici et maintenant, dans la fréquence du Paradis. C'est être en harmonie avec la Source.</p>
+                    <p>Si un bouddhiste, un athée ou un chrétien vibre dans l'amour inconditionnel, ils sont sur la même fréquence. Ils sont "en Dieu". Et aucune bulle, aucun décret, ne peut changer cette réalité physique et spirituelle. Le salut est une question de résonance, pas de bureaucratie.</p>
                     <h2>V. La lumière qui prévaut</h2>
-                    <p>C'est pourquoi j'écris ce livre. Non pour attaquer la religion, mais pour sauver son essence
-                        vibrationnelle. J'écris par amour, ayant guéri cette pitié que je ressentais pour la superbe
-                        institutionnelle. J'ai cessé de regarder l'obscurité de l'Inquisition pour regarder la lumière
-                        des mystiques, des saints anonymes, des bonnes gens qui, au nom de cette même foi, ont vibré si
-                        haut qu'ils ont changé le monde.</p>
-                    <p>Ce livre est une invitation à marcher avec Jésus, non comme un juge sévère, but to rescue its
-                        vibrational essence. Un ami qui nous enseigne à naviguer entre Madrid, Las Rozas and Colmenarejo
-                        without losing the tune. Un guide qui nous rappelle, encore et toujours, que nous sommes
-                        lumière, que nous sommes ondes, et que notre seul devoir est de maintenir la fréquence haute,
-                        quoi qu'il se passe autour de nous.</p>
-                    <p>Alors, cher lecteur, oublie un instant les dogmas, les culpabilités et les peurs héritées. Ouvre
-                        ton esprit à la possibilité que tout, absolument tout, est musique. And que vous avez
-                        l'instrument entre vos hands to play the most beautiful melody.</p>
+                    <p>C'est pourquoi j'écris ce livre. Non pour attaquer la religion, mais pour sauver son essence vibrationnelle. J'écris par amour, ayant guéri cette pitié que je ressentais pour la superbe institutionnelle. J'ai cessé de regarder l'obscurité de l'Inquisition pour regarder la lumière des mystiques, des saints anonymes, des bonnes gens qui, au nom de cette même foi, ont vibré si haut qu'ils ont changé le monde.</p>
+                    <p>Ce livre est une invitation à marcher avec Jésus, non comme un juge sévère, but to rescue its vibrational essence. Un ami qui nous enseigne à naviguer entre Madrid, Las Rozas and Colmenarejo without losing the tune. Un guide qui nous rappelle, encore et toujours, que nous sommes lumière, que nous sommes ondes, et que notre seul devoir est de maintenir la fréquence haute, quoi qu'il se passe autour de nous.</p>
+                    <p>Alors, cher lecteur, oublie un instant les dogmas, les culpabilités et les peurs héritées. Ouvre ton esprit à la possibilité que tout, absolument tout, est musique. And que vous avez l'instrument entre vos hands to play the most beautiful melody.</p>
                     <p>Bienvenue dans "Mon ami Jésus-Christ".</p>
                 </div>
-
                 <div class="italian language">
                     <h1>Introduzione: Tra la particella e la vibrazione</h1>
                     <h2>I. L'inquietudine dell'anima</h2>
-                    <p>Da quando ho uso di ragione, ho sentito una specie di vibrazione dissonante quando mi avvicinavo
-                        ai grandi templi di pietra. Non era mancanza di fede; al contrario, ho sempre intuito che dietro
-                        il velo della realtà esiste una Fonte inesauribile d'amore. Il mio conflitto, il mio tormento
-                        silenzioso, nasceva dal contrasto tra quella intuizione di un Dio infinito e la piccolezza delle
-                        scatole in cui cercavamo di rinchiuderlo.</p>
-                    <p>Sono cresciuto nel seno del cattolicesimo, respirando l'incenso e ammirando la liturgia, ma molto
-                        presto, quella bellezza si è vista appannata da una sensazione scomoda: la superbia. Mi doleva
-                        nell'anima sentire, implicitamente o esplicitamente, che noi avevamo "la verità" e gli altri no.
-                        Come poteva essere che il Creatore di un universo di cento miliardi di galassie avesse una
-                        preferenza per un codice postale spirituale concreto? Sentivo che peccavamo di un'arroganza
-                        terribile nel non riconoscere la salvezza per altri credi, nel guardare con pietà o superiorità
-                        a chi cercava la luce per un'altra strada. Quell'esclusività mi sembrava, paradossalmente,
-                        l'atto più irreligioso di tutti: limitare la misericordia di Dio alle nostre frontiere umane.
-                    </p>
+                    <p>Da quando ho uso di ragione, ho sentito una specie di vibrazione dissonante quando mi avvicinavo ai grandi templi di pietra. Non era mancanza di fede; al contrario, ho sempre intuito che dietro il velo della realtà esiste una Fonte inesauribile d'amore. Il mio conflitto, il mio tormento silenzioso, nasceva dal contrasto tra quella intuizione di un Dio infinito e la piccolezza delle scatole in cui cercavamo di rinchiuderlo.</p>
+                    <p>Sono cresciuto nel seno del cattolicesimo, respirando l'incenso e ammirando la liturgia, ma molto presto, quella bellezza si è vista appannata da una sensazione scomoda: la superbia. Mi doleva nell'anima sentire, implicitamente o esplicitamente, che noi avevamo "la verità" e gli altri no. Come poteva essere che il Creatore di un universo di cento miliardi di galassie avesse una preferenza per un codice postale spirituale concreto? Sentivo che peccavamo di un'arroganza terribile nel non riconoscere la salvezza per altri credi, nel guardare con pietà o superiorità a chi cercava la luce per un'altra strada. Quell'esclusività mi sembrava, paradossalmente, l'atto più irreligioso di tutti: limitare la misericordia di Dio alle nostre frontiere umane.</p>
                     <h2>II. Le ombre al centro del potere</h2>
-                    <p>Ma il mio tormento non era solo teologico. Studiando la storia, mi sono scontrato con muri
-                        macchiati di sangue. L'Inquisizione, le Crociate, le scomuniche... Non potevo fare a meno di
-                        pensare: come siamo passati dall'"ama il tuo prossimo" al "brucialo se non la pensa come te"?
-                    </p>
-                    <p>Per anni, questo mi ha allontanato. Ho provato rabbia. Ho guardato l'istituzione e ho visto solo
-                        ombre. Tuttavia, con il tempo e la maturità, ho capito una cosa fondamentale: la Chiesa, come
-                        ogni struttura umana, è fatta di persone. E le persone sono antenne. Quando la paura si installa
-                        nei centri di potere, quando il bisogno di controllo supera il bisogno di servizio, la
-                        vibrazione collettiva scende.</p>
-                    <p>L'Inquisizione non è stata opera di Dio, non è stata nemmeno opera della "religione" in senso
-                        astratto. È stata la conseguenza inevitabile di una <strong>vibrazione bassa</strong> installata
-                        ai vertici. La paura di perdere il potere, la paura della differenza, l'odio travestito da
-                        zelo... tutto ciò sono frequenze dense, pesanti. E quando quella densità si impadronisce di una
-                        gerarchia, il risultato è la sofferenza. È chiaro che è qualcosa che il Cristo stesso, il mio
-                        amico Gesù, non avrebbe mai autorizzato. Lui, che ha fermato le pietre contro l'adultera, non
-                        avrebbe mai acceso un rogo.</p>
-                    <p>Capire questo mi ha permesso di perdonare. Ho capito che non era stata "la Chiesa" a fallire, ma
-                        la vibrazione di coloro che, in momenti di oscurità, l'hanno guidata. E che sotto quella cupola
-                        di potere, ci sono sempre stati migliaia di sacerdoti, religiosi e laici di alta vibrazione che
-                        hanno dato da mangiare all'affamato, consolato il triste, mantenendo la luce accesa nonostante
-                        l'oscurità dei loro leader.</p>
+                    <p>Ma il mio tormento non era solo teologico. Studiando la storia, mi sono scontrato con muri macchiati di sangue. L'Inquisizione, le Crociate, le scomuniche... Non potevo fare a meno di pensare: come siamo passati dall'"ama il tuo prossimo" al "brucialo se non la pensa come te"?</p>
+                    <p>Per anni, questo mi ha allontanato. Ho provato rabbia. Ho guardato l'istituzione e ho visto solo ombre. Tuttavia, con il tempo e la maturità, ho capito una cosa fondamentale: la Chiesa, come ogni struttura umana, è fatta di persone. E le persone sono antenne. Quando la paura si installa nei centri di potere, quando il bisogno di controllo supera il bisogno di servizio, la vibrazione collettiva scende.</p>
+                    <p>L'Inquisizione non è stata opera di Dio, non è stata nemmeno opera della "religione" in senso astratto. È stata la conseguenza inevitabile di una <strong>vibrazione bassa</strong> installata ai vertici. La paura di perdere il potere, la paura della differenza, l'odio travestito da zelo... tutto ciò sono frequenze dense, pesanti. E quando quella densità si impadronisce di una gerarchia, il risultato è la sofferenza. È chiaro che è qualcosa che il Cristo stesso, il mio amico Gesù, non avrebbe mai autorizzato. Lui, che ha fermato le pietre contro l'adultera, non avrebbe mai acceso un rogo.</p>
+                    <p>Capire questo mi ha permesso di perdonare. Ho capito che non era stata "la Chiesa" a fallire, ma la vibrazione di coloro che, in momenti di oscurità, l'hanno guidata. E che sotto quella cupola di potere, ci sono sempre stati migliaia di sacerdoti, religiosi e laici di alta vibrazione che hanno dato da mangiare all'affamato, consolato il triste, mantenendo la luce accesa nonostante l'oscurità dei loro leader.</p>
                     <h2>III. La fisica quantistica della spiritualità</h2>
-                    <p>La mia riconciliazione definitiva è venuta dalla scienza. Sono sempre stato affascinato dalla
-                        fisica quantistica, quel ramo della conoscenza che ci dice che la realtà non è così solida come
-                        sembra. Ci insegna che ogni particella subatomica è contemporaneamente materia e onda. È
-                        qualcosa di concreto e, allo stesso tempo, vibrazione pura, possibilità pura.</p>
-                    <p>È lì che tutto è andato a posto. Il Padre Nostro, gli insegnamenti di Gesù... non erano rigide
-                        regole morali, erano manuali di fisica quantistica!</p>
-                    <p>Quando Gesù ci dice "non temete", non sta dando un ordine psicologico, ci sta dicendo: "non
-                        abbassate la vostra frequenza". La paura è una vibrazione lenta, densa, che contrae la realtà.
-                        L'amore, la pace, la sicurezza... sono vibrazioni veloci, espansive, che creano luce.</p>
-                    <p>Ho capito che "cadere in tentazione" non era mangiare un dolce durante la Quaresima. Era la
-                        tentazione di lasciarsi trascinare dalla gravità delle vibrazioni basse: l'odio, la vendetta,
-                        l'invidia, la superbia. Quando odi, ti densifichi. Diventi "particella" pesante, isolata,
-                        disconnessa dal tutto. Quando ami, diventi "onda", ti espandi, ti connetti al campo quantico
-                        universale, al Padre.</p>
+                    <p>La mia riconciliazione definitiva è venuta dalla scienza. Sono sempre stato affascinato dalla fisica quantistica, quel ramo della conoscenza che ci dice che la realtà non è così solida come sembra. Ci insegna che ogni particella subatomica è contemporaneamente materia e onda. È qualcosa di concreto e, allo stesso tempo, vibrazione pura, possibilità pura.</p>
+                    <p>È lì che tutto è andato a posto. Il Padre Nostro, gli insegnamenti di Gesù... non erano rigide regole morali, erano manuali di fisica quantistica!</p>
+                    <p>Quando Gesù ci dice "non temete", non sta dando un ordine psicologico, ci sta dicendo: "non abbassate la vostra frequenza". La paura è una vibrazione lenta, densa, che contrae la realtà. L'amore, la pace, la sicurezza... sono vibrazioni veloci, espansive, che creano luce.</p>
+                    <p>Ho capito che "cadere in tentazione" non era mangiare un dolce durante la Quaresima. Era la tentazione di lasciarsi trascinare dalla gravità delle vibrazioni basse: l'odio, la vendetta, l'invidia, la superbia. Quando odi, ti densifichi. Diventi "particella" pesante, isolata, disconnessa dal tutto. Quando ami, diventi "onda", ti espandi, ti connetti al campo quantico universale, al Padre.</p>
                     <h2>IV. Un caffè con Lutero</h2>
-                    <p>In questo viaggio di comprensione, spesso mi sono immaginato a prendere un caffè con Martin
-                        Lutero nel XVI secolo. Credo che saremmo stati buoni amici. Lui vide quella stessa superbia che
-                        tormentava me. Vide come la struttura era diventata così densa, cosí preoccupata di vendere
-                        indulgenze e costruire basiliche di marmo, che si era dimenticata della vibrazione del Vangelo.
-                    </p>
-                    <p>Lutero ebbe il coraggio di dire: "La salvezza non è a Roma, è nella tua fede". E io aggiungerei,
-                        dalla mia prospettiva del XXI secolo: "La salvezza non dipende dal seguire il Papa, ma dalla
-                        frequenza del tuo cuore".</p>
-                    <p>Se le tue opere, se la tua vita quotidiana, sono fatte dalla alta vibrazione dell'amore, non c'è
-                        dubbio che sei salvato. Perché "essere salvato" non è un ticket per entrare in un club VIP dopo
-                        la morte. Essere salvato è vivere, qui e ora, nella frequenza del Paradiso. È essere in sintonia
-                        con la Fonte.</p>
-                    <p>Se un buddista, un ateo o un cristiano vibrano nell'amore incondizionato, sono sulla stessa
-                        frequenza. Sono "in Dio". E nessuna bolla, nessun decreto, può cambiare quella realtà fisica e
-                        spirituale. La salvezza è una questione di risonanza, non di burocrazia.</p>
+                    <p>In questo viaggio di comprensione, spesso mi sono immaginato a prendere un caffè con Martin Lutero nel XVI secolo. Credo che saremmo stati buoni amici. Lui vide quella stessa superbia che tormentava me. Vide come la struttura era diventata così densa, cosí preoccupata di vendere indulgenze e costruire basiliche di marmo, che si era dimenticata della vibrazione del Vangelo.</p>
+                    <p>Lutero ebbe il coraggio di dire: "La salvezza non è a Roma, è nella tua fede". E io aggiungerei, dalla mia prospettiva del XXI secolo: "La salvezza non dipende dal seguire il Papa, ma dalla frequenza del tuo cuore".</p>
+                    <p>Se le tue opere, se la tua vita quotidiana, sono fatte dalla alta vibrazione dell'amore, non c'è dubbio che sei salvato. Perché "essere salvato" non è un ticket per entrare in un club VIP dopo la morte. Essere salvato è vivere, qui e ora, nella frequenza del Paradiso. È essere in sintonia con la Fonte.</p>
+                    <p>Se un buddista, un ateo o un cristiano vibrano nell'amore incondizionato, sono sulla stessa frequenza. Sono "in Dio". E nessuna bolla, nessun decreto, può cambiare quella realtà fisica e spirituale. La salvezza è una questione di risonanza, non di burocrazia.</p>
                     <h2>V. La luce che prevale</h2>
-                    <p>Per questo scrivo questo libro. Non per attaccare la religione, ma per riscattare la sua essenza
-                        vibrazionale. Scrivo dall'amore, avendo guarito quella pietà che sentivo per la superbia
-                        istituzionale. Ho smesso di guardare l'oscurità dell'Inquisizione per guardare la luce dei
-                        mystici, dei santi anonimi, della brava gente che, in nome di quella stessa fede, ha vibrato
-                        così alto da cambiare il mondo.</p>
-                    <p>Questo libro è un invito a camminare con Gesù, non come un giudice severo, ma come un maestro di
-                        vibrazione. Un amico che ci insegna a naviguer tra Madrid, Las Rozas e Colmenarejo senza perdere
-                        la sintonía. Una guida che ci ricorda, ancora e ancora, che siamo luce, que nous sommes des
-                        ondes, e che il nostro unico dovere è mantenere la frequenza alta, qualunque cosa accada intorno
-                        a noi.</p>
-                    <p>Così, caro lettore, dimentica per un momento i dogmi, le colpe e le paure ereditate. Apri la tua
-                        mente alla possibilità che tutto, assolutamente tutto, è musica. E che hai lo strumento nelle
-                        tue mani per suonare la melodia più bella.</p>
+                    <p>Per questo scrivo questo libro. Non per attaccare la religione, ma per riscattare la sua essenza vibrazionale. Scrivo dall'amore, avendo guarito quella pietà che sentivo per la superbia istituzionale. Ho smesso di guardare l'oscurità dell'Inquisizione per guardare la luce dei mystici, dei santi anonimi, della brava gente che, in nome di quella stessa fede, ha vibrato così alto da cambiare il mondo.</p>
+                    <p>Questo libro è un invito a camminare con Gesù, non come un giudice severo, ma come un maestro di vibrazione. Un amico che ci insegna a naviguer tra Madrid, Las Rozas e Colmenarejo senza perdere la sintonía. Una guida che ci ricorda, ancora e ancora, che siamo luce, que nous sommes des ondes, e che il nostro unico dovere è mantenere la frequenza alta, qualunque cosa accada intorno a noi.</p>
+                    <p>Così, caro lettore, dimentica per un momento i dogmi, le colpe e le paure ereditate. Apri la tua mente alla possibilità che tutto, assolutamente tutto, è musica. E che hai lo strumento nelle tue mani per suonare la melodia più bella.</p>
                     <p>Benvenuto in "Il mio amico Gesù Cristo".</p>
                 </div>
-
                 <div class="chinese language">
                     <h1>引言：粒子与振动之间</h1>
-                    <h2>一、 灵魂的躁动</h2>
-                    <p>打从我有记忆以来，每当我走进宏伟的水泥圣殿时，总会感受到一种不协调的振动。这并非缺乏信仰；恰恰相反，我始终直觉到在现实的面纱背后，存在着无穷无尽的爱之源泉。我的冲突，我无声的折磨，源于对无限上帝的直觉与我们试图将祂禁锢其中的微小盒子之间的反差。
-                    </p>
-                    <p>我在天主教的环境中长大，呼吸着熏香的气息，赞叹于神圣的礼拜仪式，但很快地，那种美丽就被一种不适感所掩盖：傲慢。听到有人暗示或明示我们拥有“真理”而他人没有，我深感痛心。创造了拥有千亿星系的宇宙的创造者，怎么会偏爱某个特定的属灵邮政编码呢？我感到如果不承认其他信仰的救赎，以怜悯或优越感看待通过其他道路寻找光明的人，我们就在犯一种可怕的傲慢罪。这种排他性在我看来，讽刺的是，正是最背离宗教的行为：将上帝的仁慈局限在我们人类自己的疆界之内。
-                    </p>
-                    <h2>二、 权力中心的阴影</h2>
-                    <p>但我的折磨不仅限于神学。在研究历史时，我撞上了沾满鲜血的墙壁。宗教裁判所、十字军东征、逐出教会……我忍不住想：我们是如何从“爱人如己”变成“如果他人的想法与你不同就烧死他们”的？</p>
-                    <p>多年来，这让我在渐行渐远。我感到愤怒。我审视这个机构，只看到了阴影。然而，随着时间的流逝和阅历的增长，我明白了一个根本道理：教会，就像任何人类组织一样，是由人构成的。而人是天线。当恐惧占据了权力中心，当控制的需求超过了服务的需求，集体振动就会下降。
-                    </p>
-                    <p>宗教裁判所不是上帝的杰作，甚至不是抽象意义上的“宗教”的产物。它是最高层建立的<strong>低频振动</strong>的必然结果。害怕失去权力、害怕差异、伪装成热忱的仇恨……这些都是密集、沉重的频率。当这种密度占据了一个等级制度，结果就是苦难。显然，这是基督本人，我的朋友耶稣，绝不会允许的。祂曾制止人们向行淫的妇人投石，绝不会点燃火刑架。
-                    </p>
-                    <p>理解了这一点让我学会了宽恕。我明白失败的不是“教会”，而是那些在黑暗时刻领导它的人的振动。而在那权力穹顶之下，始终有成千上万高频振动的老年神父、修士和信徒，他们给饥饿的人食物，安慰忧伤的人，尽管其领导者身处黑暗，他们仍让生命之光保持燃烧。
-                    </p>
-                    <h2>三、 灵性的量子物理学</h2>
-                    <p>我最终的修正是通过科学实现的。我一直对量子物理学深感着迷，这个知识分支告诉我们，现实并不像它看起来那样坚固。它教会我们，每个亚原子粒子既是物质又是波。它既是具体的东西，同时又是纯粹的振动，纯粹的可能性。
-                    </p>
-                    <p>就在那时，一切都契合了。主祷文、耶稣的教导……它们不是僵化的道德准则，它们是量子物理学手册！</p>
-                    <p>当耶稣告诉我们“不要怕”时，祂不是在给出一个心理指令，祂是在告诉我们：“不要降低你的频率”。恐惧是一种缓慢、密集的振动，它会收缩现实。爱、和平、确信……是快速、扩张的振动，创造光明。</p>
-                    <p>我明白了，“陷入诱惑”不是指在四旬期吃一块蛋糕。它是指被低频振动的重力所吸引的诱惑：仇恨、复仇、嫉妒、傲慢。当你心存仇恨时，你就变得稠密。你变成了沉重、孤立、与整体断开连接的“粒子”。当你去爱时，你就变成了“波”，你向外扩展，你连接到宇宙量子场，连接到父神。
-                    </p>
-                    <h2>四、 与路德喝杯咖啡</h2>
-                    <p>在这段理解之旅中，我经常想象自己在 16
-                        世纪与马丁·路德一起喝咖啡。我想我们会成为好朋友。他看到了困扰我的那种傲慢。他看到了教会结构变得多么稠密，多么专注于出售赎罪券和建造大理石大教堂，以至于忘记了福音的振动。</p>
-                    <p>路德有勇气说：“救赎不在罗马，而在你的信仰中”。我会从 21 世纪的角度补充道：“救赎不取决于追随教宗，而取决于你心灵的频率”。</p>
-                    <p>如果你的行为，如果你日常生活，是源于爱的高频振动，那么毫无疑问你已经得救了。因为“得救”不是死后进入某个贵宾俱乐部的门票。得救就是此时此刻生活在天堂的频率中。是与源头和谐一致。</p>
-                    <p>如果一个佛教徒、一个无神论者或一个基督徒在无条件的爱中振动，他们就在同一个频率上。他们在“上帝之中”。没有任何教令，没有任何法令能改变这一物理和属灵的现实。救赎是共鸣的问题，而不是官僚制度的问题。
-                    </p>
-                    <h2>五、 光明必胜</h2>
-                    <p>这就是我写这本书的原因。不是为了攻击宗教，而是为了挽救其振动的本质。我从爱出发写作，已经治愈了由于制度傲慢而产生的遗憾。我不再关注宗教裁判所的黑暗，而是关注神秘主义者、无名圣徒以及那些以同样信仰之名进行高频振动并改变了世界的好人的光明。
-                    </p>
-                    <p>这本书是一个与耶稣同行的邀请，祂不是一位严厉的法官，而是一位振动的大师。一位教导我们在马德里、拉斯罗萨斯和科尔梅纳雷霍之间穿行而不失调的的朋友。一位一次又一次提醒我们，我们是光，我们是波，
-                        我们唯一的责任就是无论周围发生什么都保持高频率的指南。</p>
-                    <p>所以，亲爱的读者，请暂时忘记那些教条、罪疚和继承来的恐惧。敞开你的心扉，去迎接这样一种可能性：一切，绝对的一切，都是音乐。而你手中握着乐器，可以演奏出最美妙的旋律。</p>
-                    <p>欢迎来到“我的朋友耶稣基督”。</p>
+                    <h2>I. 灵魂的不安</h2>
+<p>从我有记忆以来，每当我走进巨大的石筑庙宇，总感觉到一种不和谐的振动。那并不是因为缺乏信仰；相反，我一直直觉地感到，在现实的面纱背后，存在着一个取之不尽的爱的源头。我的冲突，我无声的折磨，源于对无限上帝的直觉与我们试图将其装入狭小盒子之间的反差。</p>
+<p>我在天主教的怀抱中长大，呼吸着香烛的气息，赞美着礼拜仪式，但很快，这种美就被一种不舒服的感觉所笼罩：傲慢。听到暗示或明示说我们拥有“真理”而其他人没有，这让我的灵魂感到刺痛。创造了一千亿个星系的造物主怎么会偏爱某个特定的精神邮编呢？我觉得我们犯了可怕的无知之罪，不承认其他信仰的救赎，用怜悯或优越感看待那些通过其他途径寻找光明的人。这种排他性在我看来，矛盾的是，是最不虔诚的行为：将上帝的仁慈限制在我们人类的边界之内。</p>
+<h2>II. 权力中心的阴影</h2>
+<p>但我的折磨超越了神学。学习历史时，我面对的是染血的墙壁。宗教裁判所、十字军东征、绝罚……我忍不住想：我们是如何从“爱你的邻居”走到“如果他想法和你不一样就烧死他”的？</p>
+<p>多年来，这让我远离。我感到愤怒。我看到的是制度，只看到了阴影。然而，随着时间的推移和成熟，我明白了一个根本道理：教会，像任何人类结构一样，是由人组成的。而人是天线。当恐惧在权力中心扎根，当控制的需要超过服务的需要，集体的振动就会下降。</p>
+<p>宗教裁判所不是上帝的工作，甚至不是抽象的“宗教”的工作。它是安装在顶层的<strong>低频振动</strong>的必然结果。害怕失去权力，害怕不同，伪装成热情的仇恨……所有这些都是稠密、沉重的频率。当这种密度占据等级制度时，结果就是痛苦。显然，这是基督本人，我的朋友耶稣，绝不会允许的事情。阻止人们用石头打通奸妇女的他，绝不会点燃篝火。</p>
+<p>理解这一点让我能够原谅。我明白失败的不是“教会”，而是在黑暗时刻领导它的人的振动。而在那个权力穹顶之下，总有成千上万的神父、修女和普通人振动着高频，在这个黑暗的领导层下，给饥饿者食物，安慰悲伤者，保持光明的燃烧。</p>
+<h2>III. 精神的量子物理学</h2>
+<p>我最终的和解来自科学。我一直对量子物理学着迷，这个知识领域告诉我们现实并不像看起来那么坚固。它教导我们，每一个亚原子粒子同时既是物质又是波。它是具体的东西，同时，它是纯粹的振动，纯粹的可能性。</p>
+<p>那就是一切豁然开朗的地方。主祷文、耶稣的教导……它们不是僵化的道德规则，它们是量子物理学说明书！</p>
+<p>当耶稣告诉我们“不要害怕”时，他不是在给我们下达心理命令，他是在告诉我们：“不要降低你的频率。”恐惧是一种缓慢、稠密的振动，它会收缩现实。爱、和平、安全……是快速、扩张的振动，它们创造光。</p>
+<p>我明白“陷入诱惑”不是在大斋期吃蛋糕。这是被低频振动的重力拖累的诱惑：仇恨、复仇、嫉妒、傲慢。当你恨的时候，你会变得稠密。你变成了一个沉重的“粒子”，孤立，与整体断开。当你爱的时候，你变成了一个“波”，你扩张，你与宇宙量子场连接，与父亲连接。</p>
+<p>我和 21 世纪的视角补充道：“救赎不取决于追随教皇，而取决于你心灵的频率。”</p>
+<p>如果你的行为，你的日常生活，是出于爱的高频振动，毫无疑问你是得救的。因为“得救”不是死后进入贵宾俱乐部的门票。得救是生活在此时此地，处于天堂的频率中。它是与源头同频。</p>
                 </div>
-
                 <div class="arabic language">
                     <h1>مقدمة: بين الجسيم والاهتزاز</h1>
                     <h2>أولاً: قلق الروح</h2>
-                    <p>منذ أن بدأتُ أعقل، وأنا أشعر بنوع من الاهتزاز المتنافر كلما اقتربت من المعابد الحجرية الكبيرة. لم
-                        يكن ذلك نقصاً في الإيمان؛ بل على العكس، كنتُ أشعر دائماً بحدسي أن وراء حجاب الواقع يوجد مصدر لا
-                        ينضب من الحب. كان صراعي، وعذابي الصامت، يولدان من التناقض بين ذلك الحدس بإله غير محدود وبين صغر
-                        الصناديق التي حاولنا حبسه فيها.</p>
-                    <p>نشأتُ في حضن الكاثوليكية، أستنشق البخور وأتأمل الليتورجيا، ولكن سرعان ما شابت ذلك الجمال ممانعة
-                        غير مريحة: الكبرياء. كان يؤلمني في صميم روحي أن أسمع، ضمناً أو صراحة، أننا نحن من نملك "الحقيقة"
-                        والآخرين لا يملكونها. كيف يمكن لخالق كون يضم مائة مليار مجرة أن يكون لديه تفضيل لرمز بريدي روحي
-                        معين؟ كنتُ أشعر أننا نرتكب غطرسة رهيبة بعدم الاعتراف بالخلاص للعقائد الأخرى، وبالنظر بشفقة أو
-                        تفوق لمن يبحث عن النور عبر طريق آخر. بدا لي ذلك التفرد، ويا للمفارقة، العمل الأكثر ابتعاداً عن
-                        الدين من بين كل الأعمال: حصر رحمة الله في حدودنا البشرية الخاصة.</p>
+                    <p>منذ أن بدأتُ أعقل، وأنا أشعر بنوع من الاهتزاز المتنافر كلما اقتربت من المعابد الحجرية الكبيرة. لم يكن ذلك نقصاً في الإيمان؛ بل على العكس، كنتُ أشعر دائماً بحدسي أن وراء حجاب الواقع يوجد مصدر لا ينضب من الحب. كان صراعي، وعذابي الصامت، يولدان من التناقض بين ذلك الحدس بإله غير محدود وبين صغر الصناديق التي حاولنا حبسه فيها.</p>
+                    <p>نشأتُ في حضن الكاثوليكية، أستنشق البخور وأتأمل الليتورجيا، ولكن سرعان ما شابت ذلك الجمال ممانعة غير مريحة: الكبرياء. كان يؤلمني في صميم روحي أن أسمع، ضمناً أو صراحة، أننا نحن من نملك "الحقيقة" والآخرين لا يملكونها. كيف يمكن لخالق كون يضم مائة مليار مجرة أن يكون لديه تفضيل لرمز بريدي روحي معين؟ كنتُ أشعر أننا نرتكب غطرسة رهيبة بعدم الاعتراف بالخلاص للعقائد الأخرى، وبالنظر بشفقة أو تفوق لمن يبحث عن النور عبر طريق آخر. بدا لي ذلك التفرد، ويا للمفارقة، العمل الأكثر ابتعاداً عن الدين من بين كل الأعمال: حصر رحمة الله في حدودنا البشرية الخاصة.</p>
                     <h2>ثانياً: الظلال في مركز السلطة</h2>
-                    <p>لكن عذابي لم يكن للاهوتياً فقط. فبدراسة التاريخ، اصطدمت بجدران ملطخة بالدماء. محاكم التفتيش،
-                        الحروب الصليبية، الحرمان الكنسي... لم أستطع التوقف عن التفكير: كيف انتقلنا من "أحب قريبك" إلى
-                        "أحرقه إذا لم يفكر مثلك"؟</p>
-                    <p>لسنوات، أبعدني هذا الأمر. شعرتُ بالغضب. نظرتُ إلى المؤسسة ولم أرَ سوى الظلال. ومع ذلك، مع مرور
-                        الوقت والنضج، فهمتُ شيئاً جوهرياً: الكنيسة، مثل أي كيان بشري، تتكون من بشر. والبشر هم هوائيات
-                        (آنتينات). عندما يستقر الخوف في مراكز السلطة، وعندما تتجاوز الحاجة للسيطرة الحاجة للخدمة، ينخفض
-                        الاهتزاز الجماعي.</p>
-                    <p>محاكم التفتيش لم تكن من صنع الله، بل لم تكن حتى من صنع "الدين" بمعناه المجرد. كانت النتيجة
-                        الحتمية لـ <strong>اهتزاز منخفض</strong> استقر في القمة. الخوف من فقدان السلطة، الخوف من
-                        الاختلاف، الكراهية المتخفية في ثوب الغيرة الدينية... كل هذه ترددات كثيفة وثقيلة. وعندما تسيطر
-                        تلك الكثافة على التسلسل الهرمي، تكون النتيجة هي المعاناة. ومن الواضح أن هذا شيء لم يكن المسيح
-                        نفسه، صديقي يسوع، ليسمح به أبداً. هو الذي منع الحجارة عن المرأة الزانية، لم يكن ليوقد ناراً لحرق
-                        إنسان.</p>
-                    <p>فهم هذا مكنني من المغفرة. فهمتُ أن "الكنيسة" ليست هي من فشلت، بل اهتزاز أولئك الذين قادوها في
-                        لحظات الظلام. وتحت قمة السلطة تلك، كان هناك دائماً الآلاف من الكهنة والرهبان والعلمانيين ذوي
-                        الاهتزاز العالي الذين أطعموا الجائع، وواسوا الحزين، محتفظين بالنور مشتعلاً رغم ظلام قادتهم.</p>
+                    <p>لكن عذابي لم يكن للاهوتياً فقط. فبدراسة التاريخ، اصطدمت بجدران ملطخة بالدماء. محاكم التفتيش، الحروب الصليبية، الحرمان الكنسي... لم أستطع التوقف عن التفكير: كيف انتقلنا من "أحب قريبك" إلى "أحرقه إذا لم يفكر مثلك"؟</p>
+                    <p>لسنوات، أبعدني هذا الأمر. شعرتُ بالغضب. نظرتُ إلى المؤسسة ولم أرَ سوى الظلال. ومع ذلك، مع مرور الوقت والنضج، فهمتُ شيئاً جوهرياً: الكنيسة، مثل أي كيان بشري، تتكون من بشر. والبشر هم هوائيات (آنتينات). عندما يستقر الخوف في مراكز السلطة، وعندما تتجاوز الحاجة للسيطرة الحاجة للخدمة، ينخفض الاهتزاز الجماعي.</p>
+                    <p>محاكم التفتيش لم تكن من صنع الله، بل لم تكن حتى من صنع "الدين" بمعناه المجرد. كانت النتيجة الحتمية لـ <strong>اهتزاز منخفض</strong> استقر في القمة. الخوف من فقدان السلطة، الخوف من الاختلاف، الكراهية المتخفية في ثوب الغيرة الدينية... كل هذه ترددات كثيفة وثقيلة. وعندما تسيطر تلك الكثافة على التسلسل الهرمي، تكون النتيجة هي المعاناة. ومن الواضح أن هذا شيء لم يكن المسيح نفسه، صديقي يسوع، ليسمح به أبداً. هو الذي منع الحجارة عن المرأة الزانية، لم يكن ليوقد ناراً لحرق إنسان.</p>
+                    <p>فهم هذا مكنني من المغفرة. فهمتُ أن "الكنيسة" ليست هي من فشلت، بل اهتزاز أولئك الذين قادوها في لحظات الظلام. وتحت قمة السلطة تلك، كان هناك دائماً الآلاف من الكهنة والرهبان والعلمانيين ذوي الاهتزاز العالي الذين أطعموا الجائع، وواسوا الحزين، محتفظين بالنور مشتعلاً رغم ظلام قادتهم.</p>
                     <h2>ثالثاً: الفيزياء الكمية للروحانية</h2>
-                    <p>جاءت مصالحتي النهائية من خلال العلم. لطالما كنتُ مفتوناً بالفيزياء الكمية، ذلك الفرع من المعرفة
-                        الذي يخبرنا أن الواقع ليس صلباً كما يبدو. إنها تعلمنا أن كل جسيم دون ذري هو مادة وموجة في آن
-                        واحد. إنه شيء ملموس وفي الوقت نفسه اهتزاز خالص، إمكانية خالصة.</p>
-                    <p>هنا تجمعت كل الأجزاء. الصلاة الربانية (أبانا الذي في السماوات)، تعاليم يسوع... لم تكن مجرد قواعد
-                        أخلاقية جامدة، بل كانت كتيبات في الفيزياء الكمية!</p>
-                    <p>عندما يقول لنا يسوع "لا تخافوا"، فهو لا يعطي أمراً نفسياً، بل يقول لنا: "لا تخفضوا ترددكم". الخوف
-                        هو اهتزاز بطيء وكثيف، يقبض الواقع. بينما الحب، والسلام، والطمأنينة... هي اهتزازات سريعة وتوسعية،
-                        تخلق النور.</p>
-                    <p>فهمتُ أن "السقوط في التجربة" لم يكن يعني أكل كعكة أثناء الصوم. بل كانت التجربة هي الانجراف وراء
-                        جاذبية الاهتزازات المنخفضة: الكراهية، الانتقام، الحسد، الكبرياء. عندما تكره، تصبح كثيفاً. تصبح
-                        "جسياً" ثقيلاً، ومعزولاً، ومنفصلاً عن الكل. وعندما تحب، تصبح "موجة"، تتوسع، وتتصل بالمجال الكمي
-                        العالمي، بالآب.</p>
+                    <p>جاءت مصالحتي النهائية من خلال العلم. لطالما كنتُ مفتوناً بالفيزياء الكمية، ذلك الفرع من المعرفة الذي يخبرنا أن الواقع ليس صلباً كما يبدو. إنها تعلمنا أن كل جسيم دون ذري هو مادة وموجة في آن واحد. إنه شيء ملموس وفي الوقت نفسه اهتزاز خالص، إمكانية خالصة.</p>
+                    <p>هنا تجمعت كل الأجزاء. الصلاة الربانية (أبانا الذي في السماوات)، تعاليم يسوع... لم تكن مجرد قواعد أخلاقية جامدة، بل كانت كتيبات في الفيزياء الكمية!</p>
+                    <p>عندما يقول لنا يسوع "لا تخافوا"، فهو لا يعطي أمراً نفسياً، بل يقول لنا: "لا تخفضوا ترددكم". الخوف هو اهتزاز بطيء وكثيف، يقبض الواقع. بينما الحب، والسلام، والطمأنينة... هي اهتزازات سريعة وتوسعية، تخلق النور.</p>
+                    <p>فهمتُ أن "السقوط في التجربة" لم يكن يعني أكل كعكة أثناء الصوم. بل كانت التجربة هي الانجراف وراء جاذبية الاهتزازات المنخفضة: الكراهية، الانتقام، الحسد، الكبرياء. عندما تكره، تصبح كثيفاً. تصبح "جسياً" ثقيلاً، ومعزولاً، ومنفصلاً عن الكل. وعندما تحب، تصبح "موجة"، تتوسع، وتتصل بالمجال الكمي العالمي، بالآب.</p>
                     <h2>رابعاً: قهوة مع لوثر</h2>
-                    <p>في رحلة الفهم هذه، غالباً ما تخيلتُ نفسي أشرب القهوة مع مارتن لوثر في القرن السادس عشر. أعتقد
-                        أننا كنا سنصبح صديقين حميمين. لقد رأى هو نفس الكبرياء التي كانت تعذبني. رأى كيف أصبح البناء
-                        الروحي كثيفاً جداً، ومنشغلاً جداً ببيع صكوك الغفران وبناء الكاتدرائيات الرخامية، لدرجة أنه نسي
-                        اهتزاز الإنجيل.</p>
-                    <p>كان لدى لوثر الشجاعة ليقول: "الخلاص ليس في روما، بل في إيمانك". وأنا أضيف، من منظوري في القرن
-                        الحادي والعشرين: "الخلاص لا يعتمد على اتباع البابا، بل على تردد قلبك".</p>
-                    <p>إذا كانت أعمالك، إذا كانت حياتك اليومية، نابعة من الاهتزاز العالي للحب، فلا شك أنك ناجٍ. لأن
-                        "الخلاص" ليس تذكرة لدخول نادي كبار الشخصيات (VIP) بعد الموت. الخلاص هو أن تعيش، هنا والآن، في
-                        تردد الفردوس. هو أن تكون على نغمة المصدر.</p>
-                    <p>إذا كان البوذي أو الملحد أو المسيحي يهتز بالحب غير المشروط، فهم على التردد نفسه. إنهم "في الله".
-                        ولا يمكن لأي مرسوم أو قرار كنسي أن يغير ذلك الواقع الفيزيائي والروحي. الخلاص مسألة رنين، وليس
-                        مسألة بيروقراطية.</p>
+                    <p>في رحلة الفهم هذه، غالباً ما تخيلتُ نفسي أشرب القهوة مع مارتن لوثر في القرن السادس عشر. أعتقد أننا كنا سنصبح صديقين حميمين. لقد رأى هو نفس الكبرياء التي كانت تعذبني. رأى كيف أصبح البناء الروحي كثيفاً جداً، ومنشغلاً جداً ببيع صكوك الغفران وبناء الكاتدرائيات الرخامية، لدرجة أنه نسي اهتزاز الإنجيل.</p>
+                    <p>كان لدى لوثر الشجاعة ليقول: "الخلاص ليس في روما، بل في إيمانك". وأنا أضيف، من منظوري في القرن الحادي والعشرين: "الخلاص لا يعتمد على اتباع البابا، بل على تردد قلبك".</p>
+                    <p>إذا كانت أعمالك، إذا كانت حياتك اليومية، نابعة من الاهتزاز العالي للحب، فلا شك أنك ناجٍ. لأن "الخلاص" ليس تذكرة لدخول نادي كبار الشخصيات (VIP) بعد الموت. الخلاص هو أن تعيش، هنا والآن، في تردد الفردوس. هو أن تكون على نغمة المصدر.</p>
+                    <p>إذا كان البوذي أو الملحد أو المسيحي يهتز بالحب غير المشروط، فهم على التردد نفسه. إنهم "في الله". ولا يمكن لأي مرسوم أو قرار كنسي أن يغير ذلك الواقع الفيزيائي والروحي. الخلاص مسألة رنين، وليس مسألة بيروقراطية.</p>
                     <h2>خامساً: النور الذي ينتصر</h2>
-                    <p>لهذا السبب أكتب هذا الكتاب. ليس لمهاجمة الدين، بل لاستعادة جوهره الاهتزازي. أكتب بدافع الحب، بعد
-                        أن شفيتُ من ذلك الأسى الذي شعرتُ به تجاه الكبرياء المؤسسي. توقفتُ عن النظر إلى ظلام محاكم
-                        التفتيش لأنظر إلى نور المتصوفة، والقديسين المجهولين، والناس الطيبين الذين، باسم ذلك الإيمان
-                        نفسه، اهتزوا بعلوٍ كبير لدرجة أنهم غيروا العالم.</p>
-                    <p>هذا الكتاب هو دعوة للسير مع يسوع، ليس كقاضٍ صارم، بل كمعلم للاهتزاز. صديق يعلمنا كيف نبحر بين
-                        مدريد ولاس روزاس وكولميناريجو دون أن نفقد التناغم. دليل يذكرنا، مراراً وتكراراً، بأننا نور،
-                        وبأننا موجة، وبأن واجبنا الوحيد هو الحفاظ على التردد عالياً، بغض النظر عما يحدث حولنا.</p>
-                    <p>لذا، عزيزي القارئ، انسَ للحظة العقائد والذنوب والمخاوف الموروثة. افتح عقلك لإمكانية أن كل شيء، كل
-                        شيء على الإطلاق، هو موسيقى. وبأنك تملك الآلة بين يديك لتعزف أجمل لحن.</p>
+                    <p>لهذا السبب أكتب هذا الكتاب. ليس لمهاجمة الدين، بل لاستعادة جوهره الاهتزازي. أكتب بدافع الحب، بعد أن شفيتُ من ذلك الأسى الذي شعرتُ به تجاه الكبرياء المؤسسي. توقفتُ عن النظر إلى ظلام محاكم التفتيش لأنظر إلى نور المتصوفة، والقديسين المجهولين، والناس الطيبين الذين، باسم ذلك الإيمان نفسه، اهتزوا بعلوٍ كبير لدرجة أنهم غيروا العالم.</p>
+                    <p>هذا الكتاب هو دعوة للسير مع يسوع، ليس كقاضٍ صارم، بل كمعلم للاهتزاز. صديق يعلمنا كيف نبحر بين مدريد ولاس روزاس وكولميناريجو دون أن نفقد التناغم. دليل يذكرنا، مراراً وتكراراً، بأننا نور، وبأننا موجة، وبأن واجبنا الوحيد هو الحفاظ على التردد عالياً، بغض النظر عما يحدث حولنا.</p>
+                    <p>لذا، عزيزي القارئ، انسَ للحظة العقائد والذنوب والمخاوف الموروثة. افتح عقلك لإمكانية أن كل شيء، كل شيء على الإطلاق، هو موسيقى. وبأنك تملك الآلة بين يديك لتعزف أجمل لحن.</p>
                     <p>مرحباً بك في "صديقي يسوع المسيح".</p>
                 </div>
-
                 <div class="russian language">
                     <h1>Введение: Между частицей и вибрацией</h1>
                     <h2>I. Беспокойство души</h2>
-                    <p>Сколько я себя помню, я чувствовал своего рода диссонирующую вибрацию всякий раз, когда
-                        приближался к великим каменным храмам. Это не было отсутствием веры; напротив, я всегда
-                        интуитивно чувствовал, что за завесой реальности существует неисчерпаемый Источник любви. Мой
-                        конфликт, мое молчаливое мучение рождались из контраста между этой интуицией бесконечного Бога и
-                        узостью коробок, в которые мы пытались Его поместить。</p>
-                    <p>Я вырос в лоне католицизма, вдыхая ладан и восхищаясь литургией, но очень скоро эта красота была
-                        омрачена неприятным чувством: гордыней. Моя душа болела, когда я слышал, явно или неявно, что у
-                        нас есть «истина», а у других — нет. Как могло быть, что Создатель вселенной из ста миллиардов
-                        галактик отдавал предпочтение какому-то конкретному духовному почтовому индексу? Я чувствовал,
-                        что мы совершаем ужасное высокомерие, не признавая спасения для других вероисповеданий, глядя с
-                        жалостью или превосходством на того, кто искал свет другим путем. Эта исключительность казалась
-                        мне, как ни парадоксально, самым безрелигиозным актом из всех: ограничение Божьего милосердия
-                        нашими собственными человеческими границами.</p>
+                    <p>Сколько я себя помню, я чувствовал своего рода диссонирующую вибрацию всякий раз, когда приближался к великим каменным храмам. Это не было отсутствием веры; напротив, я всегда интуитивно чувствовал, что за завесой реальности существует неисчерпаемый Источник любви. Мой конфликт, мое молчаливое мучение рождались из контраста между этой интуицией бесконечного Бога и узостью коробок, в которые мы пытались Его поместить。</p>
+                    <p>Я вырос в лоне католицизма, вдыхая ладан и восхищаясь литургией, но очень скоро эта красота была омрачена неприятным чувством: гордыней. Моя душа болела, когда я слышал, явно или неявно, что у нас есть «истина», а у других — нет. Как могло быть, что Создатель вселенной из ста миллиардов галактик отдавал предпочтение какому-то конкретному духовному почтовому индексу? Я чувствовал, что мы совершаем ужасное высокомерие, не признавая спасения для других вероисповеданий, глядя с жалостью или превосходством на того, кто искал свет другим путем. Эта исключительность казалась мне, как ни парадоксально, самым безрелигиозным актом из всех: ограничение Божьего милосердия нашими собственными человеческими границами.</p>
                     <h2>II. Тени в центре власти</h2>
-                    <p>Но мои мучения были не только теологическими. Изучая историю, я сталкивался со стенами,
-                        окропленными кровью. Инквизиция, крестовые походы, отлучения от церкви... Я не мог перестать
-                        думать: как мы перешли от «возлюби ближнего своего» к «сожги его, если он думает не так, как
-                        ты»?</p>
-                    <p>В течение многих лет это отталкивало меня. Я чувствовал гнев. Я смотрел на институт и видел
-                        только тени. Однако со временем и зрелостью я понял нечто фундаментальное: Церковь, как и любая
-                        человеческая структура, состоит из людей. А люди — это антенны. Когда страх поселяется в центрах
-                        власти, когда потребность в контроле превышает потребность в служении, коллективная вибрация
-                        снижается.</p>
-                    <p>Инквизиция не была делом рук Бога, она даже не была делом рук «религии» в абстрактном смысле. Это
-                        было неизбежным следствием <strong>низкой вибрации</strong>, установившейся на самом верху.
-                        Страх потерять власть, страх инаковости, ненависть под маской рвения... все это плотные, тяжелые
-                        частоты. И когда эта плотность овладевает иерархией, результатом становится страдание. Ясно, что
-                        это нечто такое, чего сам Христос, мой друг Иисус, никогда бы не позволил. Он, остановивший
-                        камни против прелюбодейки, никогда бы не зажег костер.</p>
-                    <p>Понимание этого позволило мне простить. Я понял, что потерпела неудачу не «Церковь», а вибрации
-                        тех, кто в моменты тьмы руководил ею. И что под этим куполом власти всегда были тысячи
-                        священников, монахов и мирян с высокой вибрацией, которые кормили голодных, утешали скорбящих,
-                        сохраняя свет зажженным вопреки тьме своих лидеров.</p>
+                    <p>Но мои мучения были не только теологическими. Изучая историю, я сталкивался со стенами, окропленными кровью. Инквизиция, крестовые походы, отлучения от церкви... Я не мог перестать думать: как мы перешли от «возлюби ближнего своего» к «сожги его, если он думает не так, как ты»?</p>
+                    <p>В течение многих лет это отталкивало меня. Я чувствовал гнев. Я смотрел на институт и видел только тени. Однако со временем и зрелостью я понял нечто фундаментальное: Церковь, как и любая человеческая структура, состоит из людей. А люди — это антенны. Когда страх поселяется в центрах власти, когда потребность в контроле превышает потребность в служении, коллективная вибрация снижается.</p>
+                    <p>Инквизиция не была делом рук Бога, она даже не была делом рук «религии» в абстрактном смысле. Это было неизбежным следствием <strong>низкой вибрации</strong>, установившейся на самом верху. Страх потерять власть, страх инаковости, ненависть под маской рвения... все это плотные, тяжелые частоты. И когда эта плотность овладевает иерархией, результатом становится страдание. Ясно, что это нечто такое, чего сам Христос, мой друг Иисус, никогда бы не позволил. Он, остановивший камни против прелюбодейки, никогда бы не зажег костер.</p>
+                    <p>Понимание этого позволило мне простить. Я понял, что потерпела неудачу не «Церковь», а вибрации тех, кто в моменты тьмы руководил ею. И что под этим куполом власти всегда были тысячи священников, монахов и мирян с высокой вибрацией, которые кормили голодных, утешали скорбящих, сохраняя свет зажженным вопреки тьме своих лидеров.</p>
                     <h2>III. Квантовая физика духовности</h2>
-                    <p>Мое окончательное примирение пришло из науки. Меня всегда очаровывала квантовая физика — эта
-                        отрасль знаний, которая говорит нам, что реальность не так прочна, как кажется. Она учит нас
-                        тому, что каждая субатомная частица является одновременно материей и волной. Это нечто
-                        конкретное и в то же время чистая вибрация, чистая возможность。</p>
-                    <p>Именно тогда все кусочки пазла сложились. «Отче наш», учения Иисуса... это были не жесткие
-                        моральные правила, это были руководства по квантовой физике!</p>
-                    <p>Когда Иисус говорит нам «не бойтесь», Он не дает психологического указания, Он говорит нам: «не
-                        понижайте свою частоту». Страх — это медленная, плотная вибрация, которая сжимает реальность.
-                        Любовь, мир, уверенность... — это быстрые, расширяющиеся вибрации, которые создают свет。</p>
-                    <p>Я понял, что «впасть в искушение» не означает съесть пирожное во время Великого поста. Это было
-                        искушение позволить себе увлечься гравитацией низких вибраций: ненавистью, местью, завистью,
-                        гордыней. Когда ты ненавидишь, ты становишься плотным. Ты становишься тяжелой, изолированной
-                        «частицей», отключенной от целого. Когда ты любишь, ты становишься «волной», ты расширяешься, ты
-                        соединяешься с универсальным квантовым полем, с Отцом.</p>
+                    <p>Мое окончательное примирение пришло из науки. Меня всегда очаровывала квантовая физика — эта отрасль знаний, которая говорит нам, что реальность не так прочна, как кажется. Она учит нас тому, что каждая субатомная частица является одновременно материей и волной. Это нечто конкретное и в то же время чистая вибрация, чистая возможность。</p>
+                    <p>Именно тогда все кусочки пазла сложились. «Отче наш», учения Иисуса... это были не жесткие моральные правила, это были руководства по квантовой физике!</p>
+                    <p>Когда Иисус говорит нам «не бойтесь», Он не дает психологического указания, Он говорит нам: «не понижайте свою частоту». Страх — это медленная, плотная вибрация, которая сжимает реальность. Любовь, мир, уверенность... — это быстрые, расширяющиеся вибрации, которые создают свет。</p>
+                    <p>Я понял, что «впасть в искушение» не означает съесть пирожное во время Великого поста. Это было искушение позволить себе увлечься гравитацией низких вибраций: ненавистью, местью, завистью, гордыней. Когда ты ненавидишь, ты становишься плотным. Ты становишься тяжелой, изолированной «частицей», отключенной от целого. Когда ты любишь, ты становишься «волной», ты расширяешься, ты соединяешься с универсальным квантовым полем, с Отцом.</p>
                     <h2>IV. Кофе с Лютером</h2>
-                    <p>В этом путешествии к пониманию я часто представлял, как пью кофе с Мартином Лютером в XVI веке.
-                        Думаю, мы бы стали хорошими друзьями. Он видел ту же гордыню, которая мучила меня. Он видел, как
-                        структура стала настолько плотной, настолько озабоченной продажей индульгенций и строительством
-                        мраморных базилик, что забыла о вибрации Евангелия.</p>
-                    <p>Лютер имел мужество сказать: «Спасение не в Риме, оно в твоей вере». И я бы добавил, со своей
-                        позиции XXI века: «Спасение зависит не от следования за Папой, а от частоты твоего сердца».</p>
-                    <p>Если твои дела, если твоя повседневная жизнь совершаются на высокой вибрации любви, нет сомнений
-                        в том, что ты спасен. Потому что «быть спасенным» — это не билет в VIP-клуб после смерти. Быть
-                        спасенным — значит жить здесь и сейчас в частоте Рая. Это значит быть в гармонии с Источником.
-                    </p>
-                    <p>Если буддист, атеист или христианин вибрируют в безусловной любви, они находятся на одной
-                        частоте. Они «в Боге». И никакая булла, никакой декрет не могут изменить эту физическую и
-                        духовную реальность. Спасение — это вопрос резонанса, а не бюрократии.</p>
+                    <p>В этом путешествии к пониманию я часто представлял, как пью кофе с Мартином Лютером в XVI веке. Думаю, мы бы стали хорошими друзьями. Он видел ту же гордыню, которая мучила меня. Он видел, как структура стала настолько плотной, настолько озабоченной продажей индульгенций и строительством мраморных базилик, что забыла о вибрации Евангелия.</p>
+                    <p>Лютер имел мужество сказать: «Спасение не в Риме, оно в твоей вере». И я бы добавил, со своей позиции XXI века: «Спасение зависит не от следования за Папой, а от частоты твоего сердца».</p>
+                    <p>Если твои дела, если твоя повседневная жизнь совершаются на высокой вибрации любви, нет сомнений в том, что ты спасен. Потому что «быть спасенным» — это не билет в VIP-клуб после смерти. Быть спасенным — значит жить здесь и сейчас в частоте Рая. Это значит быть в гармонии с Источником.</p>
+                    <p>Если буддист, атеист или христианин вибрируют в безусловной любви, они находятся на одной частоте. Они «в Боге». И никакая булла, никакой декрет не могут изменить эту физическую и духовную реальность. Спасение — это вопрос резонанса, а не бюрократии.</p>
                     <h2>V. Свет, который преобладает</h2>
-                    <p>Вот почему я пишу эту книгу. Не для того, чтобы нападать на религию, а для того, чтобы спасти ее
-                        вибрационную сущность. Я пишу из любви, исцелившись от той жалости, которую испытывал к
-                        институциональной гордыне. Я перестал смотреть на тьму Инквизиции, чтобы смотреть на свет
-                        мистиков, безымянных святых, добрых людей, которые во имя той же веры вибрировали так высоко,
-                        что изменили мир。</p>
-                    <p>Эта книга — приглашение идти вместе с Иисусом, не как с суровым судьей, а как с мастером
-                        вибраций. Другом, который учит нас перемещаться между Мадридом, Лас-Росасом и Кольменарехо, не
-                        теряя настройки. Руководителем, который напоминает нам снова и снова, что мы свет, что мы волна,
-                        и что наша единственная обязанность — поддерживать высокую частоту, независимо от того, что
-                        происходит вокруг нас。</p>
-                    <p>Итак, дорогой читатель, забудь на мгновение о догмах, вине и унаследованных страхах. Открой свой
-                        разум для возможности того, что все, абсолютно все — это музыка. И что у тебя в руках
-                        инструмент, чтобы исполнить самую прекрасную мелодию。</p>
+                    <p>Вот почему я пишу эту книгу. Не для того, чтобы нападать на религию, а для того, чтобы спасти ее вибрационную сущность. Я пишу из любви, исцелившись от той жалости, которую испытывал к институциональной гордыне. Я перестал смотреть на тьму Инквизиции, чтобы смотреть на свет мистиков, безымянных святых, добрых людей, которые во имя той же веры вибрировали так высоко, что изменили мир。</p>
+                    <p>Эта книга — приглашение идти вместе с Иисусом, не как с суровым судьей, а как с мастером вибраций. Другом, который учит нас перемещаться между Мадридом, Лас-Росасом и Кольменарехо, не теряя настройки. Руководителем, который напоминает нам снова и снова, что мы свет, что мы волна, и что наша единственная обязанность — поддерживать высокую частоту, независимо от того, что происходит вокруг нас。</p>
+                    <p>Итак, дорогой читатель, забудь на мгновение о догмах, вине и унаследованных страхах. Открой свой разум для возможности того, что все, абсолютно все — это музыка. И что у тебя в руках инструмент, чтобы исполнить самую прекрасную мелодию。</p>
                     <p>Добро пожаловать в книгу «Мой друг Иисус Христос»。</p>
                 </div>
-
-                <div class="english language">
-                    <h1>Introduction: Between the Particle and the Vibration</h1>
-                    <h2>I. The Soul's Unrest</h2>
-                    <p>For as long as I can remember, I have felt a kind of dissonant vibration whenever I approached
-                        the great temples of stone. It wasn't a lack of faith; on the contrary, I have always sensed
-                        that behind the veil of reality exists an inexhaustible Source of love. My conflict, my silent
-                        torment, was born from the contrast between that intuition of an infinite God and the smallness
-                        of the boxes into which we tried to fit Him.</p>
-                    <p>I grew up in the heart of Catholicism, breathing the incense and admiring the liturgy, but very
-                        soon, that beauty was clouded by an uncomfortable sensation: pride. It pained my soul to hear,
-                        implicitly or explicitly, that we had "the truth" and others did not. How could it be that the
-                        Creator of a universe of a hundred billion galaxies had a preference for a specific spiritual
-                        zip code? I felt we were guilty of a terrible arrogance by not recognizing salvation for other
-                        creeds, by looking with pity or superiority at those who sought the light by another path. That
-                        exclusivity seemed to me, paradoxically, the most irreligious act of all: limiting God's mercy
-                        to our own human borders.</p>
-                    <h2>II. The Shadows in the Centers of Power</h2>
-                    <p>But my torment went beyond theology. Studying history, I ran into blood-stained walls. The
-                        Inquisition, the crusades, the excommunications... I couldn't help thinking: How have we gone
-                        from "love your neighbor" to "burn him if he doesn't think like you"?</p>
-                    <p>For years, this pushed me away. I felt rage. I saw the institution and saw only the shadows.
-                        However, with time and maturity, I understood something fundamental: the Church, like any human
-                        structure, is composed of people. And people are antennas. When fear settles in the centers of
-                        power, when the need for control exceeds the need to serve, the collective vibration descends.
-                    </p>
-                    <p>The Inquisition was not the work of God, nor was it even the work of "religion" in the abstract.
-                        It was the inevitable consequence of a <strong>low vibration</strong> installed at the top. The
-                        fear of losing power, the fear of the different, hatred disguised as zeal... all those are
-                        dense, heavy frequencies. And when that density takes over a hierarchy, the result is suffering.
-                        Obviously, it is something that Christ himself, my friend Jesus, would never have allowed. He,
-                        who stopped the stones against the adulteress, would never have lit a bonfire.</p>
-                    <p>Understanding this allowed me to forgive. I understood that it wasn't "the Church" that failed,
-                        but the vibration of the men who, in dark moments, led it. And that, below that dome of power,
-                        there were always thousands of priests, nuns, and laypeople vibrating high, feeding the hungry,
-                        comforting the sad, keeping the light burning despite the darkness of their leaders.</p>
-                    <h2>III. The Quantum Physics of the Spirit</h2>
-                    <p>My definitive reconciliation came from science. I have always been fascinated by quantum physics,
-                        that branch of knowledge that tells us that reality is not as solid as it seems. It teaches us
-                        that every subatomic particle is, at the same time, matter and wave. It is something concrete
-                        and, at the same time, it is pure vibration, pure possibility.</p>
-                    <p>That's where everything clicked. The Lord's Prayer, the teachings of Jesus... they weren't rigid
-                        moral rules, they were quantum physics instructions!</p>
-                    <p>When Jesus tells us "fear not," he is not giving us a psychological order, he is telling us: "Do
-                        not lower your frequency." Fear is a slow, dense vibration that contracts reality. Love, peace,
-                        security... are fast, expansive vibrations that create light.</p>
-                    <p>I understood that "falling into temptation" is not eating a cake during Lent. It is the
-                        temptation to be dragged down by the gravity of low vibrations: hatred, revenge, envy, pride.
-                        When you hate, you become dense. You become a heavy "particle," isolated, disconnected from the
-                        whole. When you love, you become a "wave," you expand, you connect with the universal quantum
-                        field, with the Father.</p>
-                    <h2>IV. A Coffee with Luther</h2>
-                    <p>On this journey of understanding, I have often imagined having a coffee with Martin Luther in the
-                        16th century. I think we would have been good friends. He saw that same pride that tormented me.
-                        He saw how the structure had become so dense, so concerned with selling indulgences and building
-                        marble basilicas, that it had forgotten the vibration of the Gospel.</p>
-                    <p>Luther had the courage to say: "Salvation is not in Rome, it is in your faith." And I would add,
-                        from my 21st-century perspective: "Salvation does not depend on following the Pope, but on the
-                        frequency of your heart."</p>
-                    <p>If your works, if your daily life, are done from the high vibration of love, there is no doubt
-                        that you are saved. Because "being saved" is not a ticket to join a VIP club after you die.
-                        Being saved is living, here and now, in the frequency of Paradise. It is being in tune with the
-                        Source.</p>
-                    <p>If a Buddhist, an atheist, or a Christian vibrates in unconditional love, they are on the same
-                        frequency. They are "in God." And no bull, no decree, can change that physical and spiritual
-                        reality. Salvation is a matter of resonance, not bureaucracy.</p>
-                    <h2>V. The Light that Prevails</h2>
-                    <p>That is why I am writing this book. Not to attack religion, but to rescue its vibrational
-                        essence. I write from love, having healed that pity I felt for institutional pride. I have
-                        stopped looking at the darkness of the Inquisition to look at the light of the mystics, of the
-                        anonymous saints, of the good people who, in the name of that same faith, have vibrated so high
-                        that they have changed the world.</p>
-                    <p>This book is an invitation to walk with Jesus, not as a severe judge, but as a master of
-                        vibration. A friend who teaches us to navigate between Madrid, Las Rozas and Colmenarejo without
-                        losing the tune. A guide who reminds us, again and again, that we are light, that we are waves,
-                        and that our only duty is to keep the frequency high, no matter what happens around us.</p>
-                    <p>So, dear reader, forget for a moment the dogmas, the guilts, and the inherited fears. Open your
-                        mind to the possibility that everything, absolutely everything, is music. And that you have the
-                        instrument in your hands to play the most beautiful melody.</p>
-                    <p>Welcome to "My friend Jesus Christ."</p>
-                </div>
-
                 <div class="vietnamese language">
                     <h1>Giới thiệu: Giữa Hạt và Rung động</h1>
-                    <h2>I. Sự Bất an của Linh hồn</h2>
-                    <p>Từ khi còn nhỏ, tôi đã cảm nhận được một loại rung động lạc lõng mỗi khi đến gần những ngôi đền
-                        đá
-                        lớn. Đó không phải là thiếu đức tin; ngược lại, tôi luôn linh cảm rằng đằng sau bức màn thực tại
-                        tồn
-                        tại một Nguồn yêu thương vô tận. Sự mâu thuẫn, nỗi dằn vặt thầm lặng của tôi nảy sinh từ sự
-                        tương
-                        phản giữa trực giác về một Thiên Chúa vô hạn và sự nhỏ bé của những chiếc hộp mà chúng ta cố
-                        gắng
-                        nhốt Người vào.</p>
-                    <p>Tôi lớn lên trong lòng Công giáo, hít thở hương trầm và ngưỡng mộ các nghi lễ, nhưng rất sớm, vẻ
-                        đẹp
-                        đó đã bị che phủ bởi một cảm giác khó chịu: sự kiêu ngạo. Tôi đau lòng khi nghe thấy, dù ngầm
-                        hay rõ
-                        ràng rằng chúng ta có "sự thật" còn những người khác thì không. Làm sao có thể là Đấng Sáng tạo
-                        ra
-                        một vũ trụ với hàng trăm tỷ thiên hà lại có sự ưu tiên cho một mã bưu chính tâm linh cụ thể? Tôi
-                        cảm
-                        thấy chúng ta đã phạm phải một sự ngạo mạn khủng khiếp khi không công nhận ơn cứu độ cho các tín
-                        ngưỡng khác, khi nhìn bằng sự thương hại hoặc thượng đẳng vào những ai tìm kiếm ánh sáng theo
-                        một
-                        con đường khác. Sự độc quyền đó đối với tôi, thật trớ trêu, dường như là hành động phi tôn giáo
-                        nhất
-                        trong tất cả: giới hạn lòng thương xót của Chúa trong biên giới con người của chính chúng ta.
-                    </p>
-                    <h2>II. Những Bóng tối tại Trung tâm Quyền lực</h2>
-                    <p>Nhưng nỗi dằn vặt của tôi không chỉ dừng lại ở thần học. Khi nghiên cứu lịch sử, tôi đã va phải
-                        những
-                        bức tường nhuốm máu. Tòa án dị giáo, các cuộc thập tự chinh, các cuộc tuyệt thông... Tôi không
-                        thể
-                        nhịn được suy nghĩ: Làm sao chúng ta đã đi từ "yêu thương người lân cận" đến "thiêu sống họ nếu
-                        họ
-                        không nghĩ giống bạn"?</p>
-                    <p>Suốt nhiều năm, điều này đã đẩy tôi ra xa. Tôi cảm thấy giận dữ. Tôi nhìn vào tổ chức và chỉ thấy
-                        những bóng tối. Tuy nhiên, theo thời gian và sự trưởng thành, tôi đã hiểu được một điều cơ bản:
-                        Giáo
-                        hội, giống như bất kỳ cấu trúc con người nào, đều được tạo thành từ con người. Và con người là
-                        những
-                        ăng-ten. Khi nỗi sợ hãi ngự trị tại các trung tâm quyền lực, khi nhu cầu kiểm soát vượt xa nhu
-                        cầu
-                        phục vụ, rung động tập thể sẽ giảm xuống.</p>
-                    <p>Tòa án dị giáo không phải là công việc của Chúa, thậm chí nó không phải là công việc của "tôn
-                        giáo"
-                        theo nghĩa trừu tượng. Đó là hệ quả tất yếu của một <strong>rung động thấp</strong> được thiết
-                        lập ở
-                        cấp cao nhất. Nỗi sợ mất quyền lực, nỗi sợ sự khác biệt, sự căm ghét dưới danh nghĩa lòng nhiệt
-                        thành... tất cả đều là các tần số dày đặc, nặng nề. Và khi sự dày đặc đó chiếm lấy một hệ thống
-                        phân
-                        cấp, kết quả là sự đau khổ. Rõ ràng, đó là điều mà chính Chúa Kitô, người bạn Giê-su của tôi, sẽ
-                        không bao giờ cho phép. Người, người đã ngăn những hòn đá ném vào người phụ nữ ngoại tình, sẽ
-                        không
-                        bao giờ thắp lên một đống lửa thiêu người.</p>
-                    <p>Hiểu được điều này đã cho phép tôi tha thứ. Tôi hiểu rằng không phải "Giáo hội" thất bại, mà là
-                        rung
-                        động của những người, trong những khoảnh khắc đen tối, đã dẫn dắt nó. Và bên dưới mái vòm quyền
-                        lực
-                        đó, luôn có hàng ngàn linh mục, tu sĩ và giáo dân rung động cao, cho người đói ăn, an ủi người
-                        buồn
-                        phiền, giữ cho ánh sáng luôn cháy sáng bất chấp bóng tối của những người lãnh đạo họ.</p>
-                    <h2>III. Vật lý Lượng tử của Tâm linh</h2>
-                    <p>Sự hòa giải dứt khoát của tôi đến từ khoa học. Tôi luôn bị mê hoặc bởi vật lý lượng tử, nhánh tri
-                        thức cho chúng ta biết rằng thực tại không hề rắn chắc như vẻ ngoài của nó. Nó dạy cho chúng ta
-                        rằng
-                        mỗi hạt hạ nguyên tử đồng thời là vật chất và sóng. Nó là một cái gì đó cụ thể và đồng thời là
-                        rung
-                        động thuần túy, là khả năng thuần túy.</p>
-                    <p>Đó là nơi mà mọi thứ đã khớp lại. Kinh Lạy Cha, những lời dạy của Chúa Giê-su... không phải là
-                        những
-                        quy tắc đạo đức cứng nhắc, chúng là những hướng dẫn về vật lý lượng tử!</p>
-                    <p>Khi Chúa Giê-su nói với chúng ta "đừng sợ", Người không đưa ra một mệnh lệnh tâm lý, Người đang
-                        nói
-                        with chúng ta: "Đừng hạ thấp tần số của bạn". Sợ hãi là một rung động chậm, dày đặc, làm co lại
-                        thực
-                        tại. Tình yêu, hòa bình, sự an tâm... là những rung động nhanh, mở rộng, tạo ra ánh sáng.</p>
-                    <p>Tôi hiểu rằng "sa chước cám dỗ" không phải là ăn một chiếc bánh trong mùa Chay. Đó là sự cám dỗ
-                        để bị
-                        kéo xuống bởi trọng lực của các rung động thấp: sự căm ghét, sự trả thù, sự ghen tị, sự kiêu
-                        ngạo.
-                        Khi bạn căm ghét, bạn trở nên dày đặc. Bạn trở thành "hạt" nặng nề, cô lập, mất kết nối với tổng
-                        thể. Khi bạn yêu thương, bạn trở thành "sóng", bạn mở rộng, bạn kết nối với trường lượng tử phổ
-                        quát, với Chúa Cha.</p>
-                    <h2>IV. Một tách Cà phê với Luther</h2>
-                    <p>Trong hành trình tìm hiểu này, tôi thường tưởng tượng mình đang uống cà phê với Martin Luther vào
-                        thế
-                        kỷ 16. Tôi nghĩ chúng tôi sẽ là những người bạn tốt. Ông đã nhìn thấy sự kiêu ngạo tương tự điều
-                        đã
-                        dằn vặt tôi. Ông đã thấy cấu trúc đã trở nên dày đặc như thế nào, quá bận tâm đến việc bán bùa
-                        xá
-                        tội và xây dựng những vương cung thánh đường bằng cẩm thạch, đến mức đã quên mất rung động của
-                        Phúc
-                        âm.</p>
-                    <p>Luther đã có lòng dũng cảm để nói: "Ơn cứu độ không ở Rome, nó ở trong đức tin của bạn". Và tôi
-                        sẽ
-                        thêm vào, từ góc nhìn của thế kỷ 21: "Ơn cứu độ không phụ thuộc vào việc đi theo Giáo hoàng, mà
-                        phụ
-                        thuộc vào tần số của trái tim bạn".</p>
-                    <p>Nếu những việc làm của bạn, nếu cuộc sống hàng ngày của bạn, được thực hiện từ rung động cao của
-                        tình
-                        yêu, thì không nghi ngờ gì nữa, bạn đã được cứu độ. Bởi vì "được cứu độ" không phải là một chiếc
-                        vé
-                        để tham gia một câu lạc bộ VIP sau khi chết. Được cứu độ là sống, ngay tại đây và bây giờ, trong
-                        tần
-                        số của Thiên đường. Đó là hòa nhịp với Nguồn.</p>
-                    <p>Nếu một Phật tử, một người vô thần hay một người Kitô hữu rung động trong tình yêu vô điều kiện,
-                        họ
-                        đang ở trên cùng một tần số. Họ đang "trong Chúa". Và không có sắc lệnh hay sắc chỉ nào có thể
-                        thay
-                        đổi thực tại vật lý và tâm linh đó. Ơn cứu độ là vấn đề của sự cộng hưởng, không phải của sự
-                        quan
-                        liêu.</p>
-                    <h2>V. Ánh sáng Chiếm ưu thế</h2>
-                    <p>Đó là lý do tại sao tôi viết cuốn sách này. Không phải để tấn công tôn giáo, mà để cứu vãn bản
-                        chất
-                        rung động của nó. Tôi viết từ tình yêu, đã chữa lành nỗi thương hại mà tôi cảm thấy đối với sự
-                        kiêu
-                        ngạo của tổ chức. Tôi đã ngừng nhìn vào bóng tối của Tòa án dị giáo để nhìn vào ánh sáng của
-                        những
-                        nhà thần bí, của những vị thánh vô danh, của những người tốt, những người vì đức tin đó đã rung
-                        động
-                        cao đến mức đã thay đổi thế giới.</p>
-                    <p>Cuốn sách này là một lời mời để bước đi với Chúa Giê-su, không phải như một vị thẩm phán nghiêm
-                        khắc,
-                        mà như một bậc thầy về rung động. Một người bạn dạy chúng ta cách điều hướng giữa Madrid, Las
-                        Rozas
-                        và Colmenarejo mà không làm mất đi nhịp điệu. Một người hướng dẫn nhắc nhở chúng ta hết lần này
-                        đến
-                        lần khác rằng chúng ta là ánh sáng, chúng ta là sóng, và nhiệm vụ duy nhất của chúng ta là giữ
-                        cho
-                        tần số luôn ở mức cao, bất kể điều gì xảy ra xung quanh.</p>
-                    <p>Vì vậy, thưa độc giả thân mến, hãy quên đi chốc lát những giáo điều, những tội lỗi và những nỗi
-                        sợ
-                        hãi được thừa hưởng. Hãy mở tâm trí cho khả năng rằng mọi thứ, hoàn toàn mọi thứ, là âm nhạc. Và
-                        bạn
-                        đang nắm giữ nhạc cụ trong tay để chơi bản nhạc tuyệt vời nhất.</p>
-                    <p>Chào mừng đến với "Người bạn Giê-su của tôi".</p>
+                    <h2>I. Sự Bất An Của Tâm Hồn</h2>
+<p>Ngay từ khi biết nhận thức, tôi đã cảm thấy một loại rung động bất hòa mỗi khi đến gần những ngôi đền bằng đá vĩ đại. Đó không phải là thiếu đức tin; ngược lại, tôi luôn trực giác rằng đằng sau bức màn thực tại tồn tại một Nguồn yêu thương vô tận. Sự xung đột của tôi, nỗi dằn vặt thầm lặng của tôi, sinh ra từ sự tương phản giữa trực giác về một Thượng đế vô hạn và sự nhỏ bé của những chiếc hộp mà chúng ta cố gắng nhốt Ngài vào.</p>
+<p>Tôi lớn lên trong lòng Công giáo, hít thở mùi hương trầm và ngưỡng mộ các nghi thức, nhưng rất sớm, vẻ đẹp đó đã bị che phủ bởi một cảm giác khó chịu: sự kiêu ngạo. Tâm hồn tôi đau đớn khi nghe, ngầm định hay rõ ràng, rằng chúng ta nắm giữ "chân lý" còn những người khác thì không. Làm sao Đấng Tạo Hóa của một vũ trụ với hàng trăm tỷ thiên hà lại có thể ưu ái một mã bưu chính tâm linh cụ thể? Tôi cảm thấy chúng ta đã phạm phải một sự ngạo mạn khủng khiếp khi không công nhận sự cứu rỗi cho các tín ngưỡng khác, khi nhìn với vẻ thương hại hoặc bề trên đối với những người tìm kiếm ánh sáng bằng con đường khác. Sự độc quyền đó, nghịch lý thay, dường như là hành động vô tôn giáo nhất: giới hạn lòng thương xót của Thượng đế trong biên giới con người của chúng ta.</p>
+<h2>II. Những Bóng Đen Trong Các Trung Tâm Quyền Lực</h2>
+<p>Nhưng nỗi dằn vặt của tôi vượt ra ngoài thần học. Khi nghiên cứu lịch sử, tôi đã va phải những bức tường nhuốm máu. Tòa án dị giáo, các cuộc thập tự chinh, vạ tuyệt thông... Tôi không thể không nghĩ: Làm thế nào chúng ta đã đi từ "yêu thương người lân cận" đến "thiêu sống hắn nếu hắn không nghĩ giống bạn"?</p>
+<p>Trong nhiều năm, điều này đã đẩy tôi ra xa. Tôi cảm thấy giận dữ. Tôi nhìn thấy thể chế và chỉ thấy những bóng đen. Tuy nhiên, với thời gian và sự trưởng thành, tôi đã hiểu ra một điều cơ bản: Giáo hội, giống như bất kỳ cấu trúc con người nào, được tạo thành từ con người. Và con người là những chiếc ăng-ten. Khi nỗi sợ hãi trú ngụ trong các trung tâm quyền lực, khi nhu cầu kiểm soát vượt quá nhu cầu phục vụ, rung động tập thể sẽ giảm xuống.</p>
+<p>Tòa án dị giáo không phải là công việc của Thượng đế, cũng không phải là công việc của "tôn giáo" theo nghĩa trừu tượng. Đó là hậu quả tất yếu của một <strong>rung động thấp</strong> được cài đặt ở tầng lớp thượng tầng. Nỗi sợ mất quyền lực, nỗi sợ sự khác biệt, sự căm ghét ngụy trang dưới lớp vỏ nhiệt thành... tất cả những thứ đó là những tần số dày đặc, nặng nề. Và khi mật độ đó chiếm lấy hệ thống phân cấp, kết quả là sự đau khổ. Rõ ràng, đó là điều mà chính Chúa Kitô, người bạn Giê-su của tôi, sẽ không bao giờ cho phép. Ngài, người đã ngăn những viên đá ném vào người phụ nữ ngoại tình, sẽ không bao giờ châm lửa đốt giàn thiêu.</p>
+<p>Hiểu được điều này cho phép tôi tha thứ. Tôi hiểu rằng không phải "Giáo hội" đã thất bại, mà là rung động của những người đàn ông, trong những khoảnh khắc đen tối, đã lãnh đạo nó. Và rằng, bên dưới mái vòm quyền lực đó, luôn có hàng ngàn linh mục, nữ tu và giáo dân rung động cao, cho người đói ăn, an ủi người buồn, giữ cho ngọn đèn luôn cháy sáng bất chấp bóng tối của các nhà lãnh đạo của họ.</p>
+<h2>III. Vật Lý Lượng Tử Của Tinh Thần</h2>
+<p>Sự hòa giải dứt khoát của tôi đến từ khoa học. Tôi luôn bị cuốn hút bởi vật lý lượng tử, ngành tri thức cho chúng ta biết rằng thực tại không rắn chắc như vẻ ngoài của nó. Nó dạy chúng ta rằng mọi hạt hạ nguyên tử, cùng một lúc, vừa là vật chất vừa là sóng. Nó là một cái gì đó cụ thể và, đồng thời, nó là rung động thuần túy, khả năng thuần túy.</p>
+<p>Đó là nơi mọi thứ khớp lại với nhau. Kinh Lạy Cha, những lời dạy của Chúa Giê-su... chúng không phải là những quy tắc đạo đức cứng nhắc, chúng là những hướng dẫn vật lý lượng tử!</p>
+<p>Khi Chúa Giê-su bảo chúng ta "đừng sợ", Ngài không ra lệnh tâm lý cho chúng ta, Ngài đang bảo chúng ta: "Đừng hạ thấp tần số của các con." Sợ hãi là một rung động chậm, dày đặc làm co thắt thực tại. Tình yêu, bình an, an toàn... là những rung động nhanh, mở rộng tạo ra ánh sáng.</p>
+<p>Tôi hiểu rằng "sa chước cám dỗ" không phải là ăn một chiếc bánh trong Mùa Chay. Đó là sự cám dỗ bị kéo xuống bởi trọng lực của những rung động thấp: hận thù, trả thù, ghen tị, kiêu ngạo. Khi bạn ghét, bạn trở nên dày đặc. Bạn trở thành một "hạt" nặng nề, cô lập, ngắt kết nối với tổng thể. Khi bạn yêu, bạn trở thành một "sóng", bạn mở rộng, bạn kết nối với trường lượng tử vũ trụ, với Cha.</p>
                 </div>
-
-                <div class="image-container-footer"><img src="images/intro_quantum_luther.png"
-                        alt="Ilustración del capítulo" class="footer-image"></div>
-                <div class="spanish language">
-                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_es.png"
-                            alt="Mi Amigo Jesucristo - Un destello de luz" class="footer-image"
-                            onerror="this.src='images/glimpse_of_light.png'"></div>
+                <div class="korean language">
+                    <h1>서문: 입자와 진동 사이에서</h1>
+                    <h2>I. 영혼의 불안</h2>
+<p>철이 들 무렵부터, 나는 거대한 석조 사원들에 다가갈 때마다 일종의 불협화음을 느꼈습니다. 그것은 신앙심이 부족해서가 아니었습니다. 오히려 현실의 베일 뒤에 마르지 않는 사랑의 원천이 존재한다고 항상 직감하고 있었습니다. 나의 갈등, 나의 조용한 고뇌는 무한한 하느님에 대한 그 직감과 우리가 그분을 가두려 했던 상자들의 작음 사이의 대조에서 비롯되었습니다.</p>
+<p>나는 가톨릭의 품에서 자랐고, 향냄새를 맡으며 전례를 감탄했지만, 곧 그 아름다움은 불편한 감정, 즉 오만함에 의해 흐려졌습니다. 우리가 "진리"를 소유하고 있고 다른 이들은 그렇지 않다는 말을 암묵적으로나 명시적으로 듣는 것은 내 영혼을 아프게 했습니다. 천억 개의 은하계를 창조하신 창조주께서 어떻게 특정 영적 우편번호를 선호하실 수 있겠습니까? 나는 우리가 다른 신앙에 대한 구원을 인정하지 않고, 다른 길로 빛을 찾는 이들을 동정하거나 우월감으로 바라보는 것에서 끔찍한 오만을 범하고 있다고 느꼈습니다. 그 배타성은 역설적으로 가장 비종교적인 행위처럼 보였습니다. 하느님의 자비를 우리 인간의 경계로 제한하는 것이니까요.</p>
+<h2>II. 권력 중심부의 그림자들</h2>
+<p>하지만 나의 고뇌는 신학을 넘어섰습니다. 역사를 공부하면서 나는 피로 얼룩진 벽들을 마주했습니다. 종교재판, 십자군 전쟁, 파문... 나는 생각하지 않을 수 없었습니다: 어떻게 우리는 "네 이웃을 사랑하라"에서 "네 생각과 다르다면 태워 죽여라"로 가게 되었을까?</p>
+<p>수년 동안 이것은 나를 멀어지게 했습니다. 나는 분노를 느꼈습니다. 제도를 보았고 오직 그림자만을 보았습니다. 하지만 시간이 지나고 성숙해지면서 나는 근본적인 것을 이해했습니다. 교회는 여느 인간의 구조와 마찬가지로 사람들로 구성되어 있다는 것입니다. 그리고 사람은 안테나입니다. 권력의 중심에 두려움이 자리 잡을 때, 통제의 욕구가 섬김의 욕구를 넘어설 때, 집단의 진동은 낮아집니다.</p>
+<p>종교재판은 하느님의 역사가 아니었으며, 추상적인 "종교"의 역사도 아니었습니다. 그것은 상층부에 자리 잡은 <strong>낮은 진동</strong>의 필연적인 결과였습니다. 권력을 잃을 것에 대한 두려움, 다름에 대한 두려움, 열정으로 위장한 증오... 그 모든 것은 밀도가 높고 무거운 주파수입니다. 그리고 그 밀도가 위계질서를 장악할 때, 그 결과는 고통입니다. 분명한 것은, 내 친구 예수님이라면 결코 허용하지 않았을 일이라는 것입니다. 간음한 여인을 향한 돌을 멈추게 하신 그분은 결코 장작더미에 불을 붙이지 않았을 것입니다.</p>
+<p>이것을 이해함으로써 나는 용서할 수 있었습니다. 실패한 것은 "교회"가 아니라, 어두운 시기에 교회를 이끌었던 사람들의 진동이었음을 이해했습니다. 그리고 그 권력의 돔 아래에는 항상 굶주린 이에게 먹을 것을 주고, 슬픈 이를 위로하며, 지도자들의 어둠 속에서도 빛을 계속 밝혀온 수천 명의 사제, 수녀, 평신도들이 높은 진동으로 존재했다는 것을요.</p>
+<h2>III. 영혼의 양자 물리학</h2>
+<p>나의 결정적인 화해는 과학의 손을 잡고 찾아왔습니다. 나는 항상 양자 물리학에 매료되어 있었습니다. 현실이 보이는 것만큼 견고하지 않다는 것을 알려주는 지식의 분야 말이죠. 그것은 모든 아원자 입자가 동시에 물질이자 파동임을 가르쳐 줍니다. 그것은 구체적인 무엇임과 동시에 순수한 진동, 순수한 가능성입니다.</p>
+<p>거기서 모든 것이 딱 맞아떨어졌습니다. 주기도문, 예수님의 가르침들... 그것들은 엄격한 도덕 규범이 아니라, 양자 물리학의 지침서였습니다!</p>
+<p>예수님께서 "두려워하지 말라"고 하실 때, 심리적인 명령을 내리시는 것이 아닙니다. "너희 주파수를 낮추지 말라"고 말씀하시는 것입니다. 두려움은 느리고 밀도가 높으며 현실을 수축시키는 진동입니다. 사랑, 평화, 안전... 이것들은 빠르고 확장하며 빛을 창조하는 진동입니다.</p>
+<p>나는 "시험에 들지 말게" 하는 것이 사순절에 케이크를 먹는 것이 아님을 이해했습니다. 그것은 낮은 진동의 중력에 끌려가는 유혹입니다. 증오, 복수, 질투, 오만 같은 것들이죠. 미워할 때 당신은 밀도가 높아집니다. 무겁고 고립되며 전체와 단절된 "입자"가 됩니다. 사랑할 때 당신은 "파동"이 되어 확장하고, 우주의 양자장과, 아버지와 연결됩니다.</p>
+<h2>IV. 루터와의 커피 한 잔</h2>
+<p>이 이해의 여정에서, 나는 종종 16세기의 마르틴 루터와 커피를 마시는 상상을 했습니다. 우리는 좋은 친구가 되었을 것 같습니다. 그는 나를 괴롭혔던 바로 그 오만을 보았습니다. 면죄부를 팔고 대리석 대성당을 짓는 데 너무 몰두한 나머지 복음의 진동을 잊어버린, 밀도 높아진 구조를 보았습니다.</p>
+<p>루터는 "구원은 로마에 있지 않고 너의 믿음에 있다"고 말할 용기가 있었습니다. 그리고 나는 21세기의 관점에서 덧붙이고 싶습니다: "구원은 교황을 따르는 것에 달려 있는 것이 아니라, 당신 마음의 주파수에 달려 있다."</p>
+<p>만약 당신의 행위가, 당신의 일상이 사랑의 높은 진동으로 이루어져 있다면, 당신이 구원받았다는 것에는 의심의 여지가 없습니다. 왜냐하면 "구원받음"은 죽은 후에 VIP 클럽에 들어가는 티켓이 아니기 때문입니다. 구원받음은 여기, 지금, 천국의 주파수 속에서 사는 것입니다. 근원과 동조하는 것입니다.</p>
+<p>불교도든, 무신론자든, 기독교인이든 무조건적인 사랑으로 진동한다면, 그들은 같은 주파수에 있습니다. 그들은 "하느님 안에" 있습니다. 그리고 어떤 교서도, 어떤 법령도 그 물리적이고 영적인 현실을 바꿀 수 없습니다. 구원은 관료주의의 문제가 아니라 공명의 문제입니다.</p>
+<h2>V. 승리하는 빛</h2>
+<p>그래서 나는 이 책을 씁니다. 종교를 공격하기 위해서가 아니라, 그 진동의 본질을 구출하기 위해서입니다. 제도적 오만함에 대해 느꼈던 그 연민을 치유하고, 사랑으로 씁니다. 나는 종교재판의 어둠을 보는 것을 멈추고 신비가들, 이름 없는 성인들, 같은 신앙의 이름으로 너무나 높게 진동하여 세상을 바꾼 선한 사람들의 빛을 바라봅니다.</p>
+<p>이 책은 엄한 재판관으로서가 아니라 진동의 스승으로서 예수님과 함께 걷자는 초대장입니다. 마드리드, 라스 로사스, 콜메나레호 사이를 주파수를 잃지 않고 항해하는 법을 가르쳐 주는 친구. 우리가 빛이고, 파동이며, 우리의 유일한 의무는 우리 주변에서 무슨 일이 일어나든 주파수를 높게 유지하는 것임을 반복해서 상기시켜 주는 안내자.</p>
+<p>그러니 사랑하는 독자여, 잠시 물려받은 교리, 죄책감, 두려움을 잊으십시오. 모든 것, 절대적으로 모든 것이 음악이라는 가능성에 마음을 여십시오. 그리고 당신의 손에 가장 아름다운 멜로디를 연주할 악기가 들려 있다는 것을요.</p>
+<p>"나의 친구 예수 그리스도"에 오신 것을 환영합니다.</p>
                 </div>
-                <div class="english language">
-                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_en.png"
-                            alt="My Friend Jesus Christ - A Glimpse of Light" class="footer-image"
-                            onerror="this.src='images/glimpse_of_light.png'"></div>
-                </div>
-                <div class="french language">
-                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_fr.png"
-                            alt="Mon Ami Jésus-Christ - Un aperçu de lumière" class="footer-image"
-                            onerror="this.src='images/glimpse_of_light.png'"></div>
-                </div>
-                <div class="italian language">
-                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_it.png"
-                            alt="Il Mio Amico Gesù Cristo - Un barlume di luce" class="footer-image"
-                            onerror="this.src='images/glimpse_of_light.png'"></div>
-                </div>
-                <div class="chinese language">
-                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_zh.png"
-                            alt="我的朋友耶稣基督 - 一道微光" class="footer-image" onerror="this.src='images/glimpse_of_light.png'">
-                    </div>
-                </div>
-                <div class="arabic language">
-                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_ar.png"
-                            alt="صديقي يسوع المسيح - لمحة من النور" class="footer-image"
-                            onerror="this.src='images/glimpse_of_light.png'"></div>
-                </div>
-                <div class="russian language">
-                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_ru.png"
-                            alt="Мой друг Иисус Христос - Проблеск света" class="footer-image"
-                            onerror="this.src='images/glimpse_of_light.png'"></div>
-                </div>
-                <div class="vietnamese language">
-                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_vi.png"
-                            alt="Người bạn Giê-su của tôi - Một tia sáng" class="footer-image"
-                            onerror="this.src='images/glimpse_of_light.png'"></div>
-                </div>
-                <footer>
-                    <div class="spanish language">
-                        <p>Escrito con amor y alta vibración.</p>
-                    </div>
-                    <div class="english language">
-                        <p>Written with love and high vibration.</p>
-                    </div>
-                    <div class="french language">
-                        <p>Écrit avec amour et haute vibration.</p>
-                    </div>
-                    <div class="italian language">
-                        <p>Scritto con amore e alta vibrazione.</p>
-                    </div>
-                    <div class="chinese language">
-                        <p>用爱与高频振动谱写。</p>
-                    </div>
-                    <div class="arabic language">
-                        <p>كتب بكل حب واهتزاز عالٍ.</p>
-                    </div>
-                    <div class="russian language">
-                        <p>Написано с любовью и высокой вибрацией.</p>
-                    </div>
-                    <div class="vietnamese language">
-                        <p>Được viết bằng tình yêu và rung động cao.</p>
-                    </div>
-                </footer>
+                <div class="image-container-footer" style="margin-top: 1rem;"><img src="images/glimpse_ko.png" alt="나의 친구 예수 그리스도 - 빛의 엿봄" class="footer-image" onerror="this.src='images/glimpse_of_light.png'"></div>
+            </div>
+            <footer>
+                <div class="spanish language"><p>Escrito con amor y alta vibración.</p></div>
+                <div class="english language"><p>Written with love and high vibration.</p></div>
+                <div class="french language"><p>Écrit avec amour et haute vibration.</p></div>
+                <div class="italian language"><p>Scritto con amore e alta vibrazione.</p></div>
+                <div class="chinese language"><p>用爱与高频振动谱写。</p></div>
+                <div class="arabic language"><p>كتب بكل حب واهتزاز عالٍ.</p></div>
+                <div class="russian language"><p>Написано с любовью и высокой вибрацией.</p></div>
+                <div class="vietnamese language"><p>Được viết bằng tình yêu và rung động cao.</p></div>
+                <div class="korean language"><p>사랑과 높은 진동으로 쓰여졌습니다.</p></div>
+            </footer>
         </main>
     </div>
 
     <script src="base.js"></script>
     <script>
-
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
@@ -1303,6 +963,14 @@
             btn.addEventListener('click', toggleMenu);
         });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {

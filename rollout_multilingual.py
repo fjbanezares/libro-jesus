@@ -160,6 +160,25 @@ def rollout():
                 ("12_epilogo.html", "Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt"),
                 ("13_apendice_poema.html", "Phụ lục: Bài thơ Giáng sinh")
             ]
+        },
+        "ko": {
+            "title": "나의 친구 예수 그리스도",
+            "items": [
+                ("00_introduccion.html", "서문: 입자와 진동 사이에서"),
+                ("index.html", "제1장: 마드리드에서의 만남"),
+                ("02_capitulo.html", "제2장: 라스 로사스 산책"),
+                ("03_capitulo.html", "제3장: 진동과 침묵"),
+                ("04_capitulo.html", "제4장: 콜메나레호와 자연"),
+                ("05_capitulo.html", "제5장: 주기도문 (제1부: 아버지)"),
+                ("06_capitulo.html", "제6장: 주기도문 (제2부: 하늘)"),
+                ("07_capitulo.html", "제7장: 우리에게 일용할 양식"),
+                ("08_capitulo.html", "제8장: 용서와 빚"),
+                ("09_capitulo.html", "제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)"),
+                ("10_capitulo.html", "제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)"),
+                ("11_capitulo.html", "제11장: 나라와 권능과 영광"),
+                ("12_epilogo.html", "에필로그: 마지막 모험과 작별"),
+                ("13_apendice_poema.html", "부록: 크리스마스 시")
+            ]
         }
     }
 
@@ -167,7 +186,7 @@ def rollout():
         sidebar_html = '<aside id="sidebar">\n'
         for lang, data in sidebar_langs.items():
             lang_class = "spanish" if lang == "es" else {
-                "en": "english", "fr": "french", "it": "italian", "zh": "chinese", "ar": "arabic", "ru": "russian", "vi": "vietnamese"
+                "en": "english", "fr": "french", "it": "italian", "zh": "chinese", "ar": "arabic", "ru": "russian", "vi": "vietnamese", "ko": "korean"
             }[lang]
             sidebar_html += f'    <div class="{lang_class} language">\n'
             sidebar_html += f'        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">\n'
@@ -186,7 +205,7 @@ def rollout():
         header_html = '<header id="mobile-header">\n'
         for lang, text in trans["h1"].items():
             lang_class = "spanish" if lang == "es" else {
-                "en": "english", "fr": "french", "it": "italian", "zh": "chinese", "ar": "arabic", "ru": "russian", "vi": "vietnamese"
+                "en": "english", "fr": "french", "it": "italian", "zh": "chinese", "ar": "arabic", "ru": "russian", "vi": "vietnamese", "ko": "korean"
             }[lang]
             header_html += f'    <div class="{lang_class} language">\n        <h1>{text}</h1>\n    </div>\n'
         header_html += '    <button class="menu-toggle" id="menu-open">☰</button>\n'
@@ -203,6 +222,7 @@ def rollout():
         <div class="lang-option" onclick="setLanguage('zh')"><span class="flag-icon">🇨🇳</span> 中文</div>
         <div class="lang-option" onclick="setLanguage('ar')"><span class="flag-icon">🇸🇦</span> العربية</div>
         <div class="lang-option" onclick="setLanguage('ru')"><span class="flag-icon">🇷🇺</span> Русский</div>
+        <div class="lang-option" onclick="setLanguage('ko')"><span class="flag-icon">🇰🇷</span> 한국어</div>
     </div>
     """
 
@@ -241,9 +261,9 @@ def rollout():
                 original_body = re.sub(r'<h1>.*?</h1>', '', original_body, flags=re.DOTALL).strip()
                 
                 new_body_content = ""
-                for lang in ["es", "en", "vi", "fr", "it", "zh", "ar", "ru"]:
+                for lang in ["es", "en", "vi", "fr", "it", "zh", "ar", "ru", "ko"]:
                     lang_class = "spanish" if lang == "es" else {
-                        "en": "english", "fr": "french", "it": "italian", "zh": "chinese", "ar": "arabic", "ru": "russian", "vi": "vietnamese"
+                        "en": "english", "fr": "french", "it": "italian", "zh": "chinese", "ar": "arabic", "ru": "russian", "vi": "vietnamese", "ko": "korean"
                     }[lang]
                     h1_text = trans["h1"].get(lang, trans["h1"]["es"])
                     body_text = trans["body"].get(lang, original_body if lang == "es" else "")

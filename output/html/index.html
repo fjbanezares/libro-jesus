@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 1: El Encuentro en Madrid | Mi amigo Jesucristo</title>
     <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -260,25 +261,55 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .image-container-footer {
-            margin-top: 3rem;
-            text-align: center;
+        /* Language display logic */
+        .language {
+            display: none;
         }
-
-        .footer-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
         .arabic {
             direction: rtl;
             text-align: right;
         }
+
+        /* Spotify Button Styles */
+        .spotify-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1DB954; /* Spotify Green */
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 20px auto;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .spotify-button:hover {
+            background-color: #1ed760;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+            color: white; /* Ensure text remains white */
+        }
+
+        .spotify-button svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        /* RTL specific adjustments for button icon */
+        .arabic .spotify-button svg {
+            margin-right: 0;
+            margin-left: 10px;
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -292,6 +323,7 @@
             <option value="arabic">العربية 🇸🇦</option>
             <option value="russian">Русский 🇷🇺</option>
             <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+            <option value="korean">한국어 🇰🇷</option>
         </select>
     </div>
 
@@ -303,10 +335,10 @@
             <h1>Chapter 1: The Encounter in Madrid</h1>
         </div>
         <div class="french language">
-            <h1>Chapitre 1 : La Rencontre à Madrid</h1>
+            <h1>Chapitre 1 : La rencontre à Madrid</h1>
         </div>
         <div class="italian language">
-            <h1>Capitolo 1: L'Incontro a Madrid</h1>
+            <h1>Capitolo 1: L'incontro a Madrid</h1>
         </div>
         <div class="chinese language">
             <h1>第 1 章：马德里相遇</h1>
@@ -320,6 +352,9 @@
         <div class="vietnamese language">
             <h1>Chương 1: Cuộc gặp gỡ tại Madrid</h1>
         </div>
+        <div class="korean language">
+            <h1>제1장: 마드리드에서의 만남</h1>
+        </div>
         <button class="menu-toggle" id="menu-open">☰</button>
     </header>
 
@@ -331,25 +366,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a></li>
-                    <li><a href="index.html" class="active">Capítulo 1: El Encuentro en Madrid</a></li>
-                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a></li>
-                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a></li>
-                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a></li>
-                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a></li>
-                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a></li>
-                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a></li>
-                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a></li>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html" class="active">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
                     <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
                     </li>
-                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a></li>
-                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a></li>
-                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a></li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="english language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>My friend Jesus Christ</h2>
@@ -357,25 +404,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a></li>
-                    <li><a href="index.html" class="active">Chapter 1: The Encounter in Madrid</a></li>
-                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a></li>
-                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a></li>
-                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a></li>
-                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a></li>
-                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a></li>
-                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a></li>
-                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a></li>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html" class="active">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
                     <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
                     </li>
-                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a></li>
-                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a></li>
-                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a></li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="french language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>Mon ami Jésus-Christ</h2>
@@ -383,26 +442,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a></li>
-                    <li><a href="index.html" class="active">Chapitre 1 : La rencontre à Madrid</a></li>
-                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a></li>
-                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a></li>
-                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a></li>
-                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a></li>
-                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a></li>
-                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a></li>
-                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer
-                            haut)</a></li>
-                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations
-                            basses)</a></li>
-                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a></li>
-                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a></li>
-                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a></li>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html" class="active">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="italian language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>Il mio amico Gesù Cristo</h2>
@@ -410,25 +480,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a></li>
-                    <li><a href="index.html" class="active">Capitolo 1: L'incontro a Madrid</a></li>
-                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a></li>
-                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a></li>
-                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a></li>
-                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a></li>
-                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a></li>
-                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a></li>
-                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a></li>
-                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni
-                            basse)</a></li>
-                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a></li>
-                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a></li>
-                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a></li>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html" class="active">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="chinese language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>我的朋友耶稣基督</h2>
@@ -436,24 +518,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a></li>
-                    <li><a href="index.html" class="active">第 1 章：马德里相遇</a></li>
-                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a></li>
-                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a></li>
-                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a></li>
-                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a></li>
-                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天堂）</a></li>
-                    <li><a href="07_capitulo.html">第 7 章：日用的饮食</a></li>
-                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a></li>
-                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a></li>
-                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（防止低频振动）</a></li>
-                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a></li>
-                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a></li>
-                    <li><a href="13_apendice_poema.html">附录：圣诞诗</a></li>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html" class="active">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天上）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：我们日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱离凶恶（远离低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗歌</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="arabic language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>صديقي يسوع المسيح</h2>
@@ -461,25 +556,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a></li>
-                    <li><a href="index.html" class="active">الفصل الأول: اللقاء في مدريد</a></li>
-                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a></li>
-                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a></li>
-                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a></li>
-                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a></li>
-                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a></li>
-                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a></li>
-                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a></li>
-                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a></li>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html" class="active">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الثامن: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
                     <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
                     </li>
-                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a></li>
-                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a></li>
-                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a></li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="russian language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>Мой друг Иисус Христос</h2>
@@ -487,24 +594,37 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a></li>
-                    <li><a href="index.html" class="active">Глава 1: Встреча в Мадриде</a></li>
-                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a></li>
-                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a></li>
-                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a></li>
-                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a></li>
-                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a></li>
-                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a></li>
-                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a></li>
-                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a></li>
-                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a></li>
-                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a></li>
-                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a></li>
-                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a></li>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html" class="active">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
                 </ul>
             </nav>
         </div>
-
         <div class="vietnamese language">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <h2>Người bạn Giê-su của tôi</h2>
@@ -512,21 +632,72 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a></li>
-                    <li><a href="index.html" class="active">Chương 1: Cuộc gặp gỡ tại Madrid</a></li>
-                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a></li>
-                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a></li>
-                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a></li>
-                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a></li>
-                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a></li>
-                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a></li>
-                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a></li>
-                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a></li>
-                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động
-                            thấp)</a></li>
-                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a></li>
-                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a></li>
-                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a></li>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html" class="active">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="korean language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>나의 친구 예수 그리스도</h2>
+                <button class="menu-toggle" id="menu-close-ko" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">서문: 입자와 진동 사이에서</a>
+                    </li>
+                    <li><a href="index.html" class="active">제1장: 마드리드에서의 만남</a>
+                    </li>
+                    <li><a href="02_capitulo.html">제2장: 라스 로사스 산책</a>
+                    </li>
+                    <li><a href="03_capitulo.html">제3장: 진동과 침묵</a>
+                    </li>
+                    <li><a href="04_capitulo.html">제4장: 콜메나레호와 자연</a>
+                    </li>
+                    <li><a href="05_capitulo.html">제5장: 주기도문 (제1부: 아버지)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">제6장: 주기도문 (제2부: 하늘)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">제7장: 우리에게 일용할 양식</a>
+                    </li>
+                    <li><a href="08_capitulo.html">제8장: 용서와 빚</a>
+                    </li>
+                    <li><a href="09_capitulo.html">제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">제11장: 나라와 권능과 영광</a>
+                    </li>
+                    <li><a href="12_epilogo.html">에필로그: 마지막 모험과 작별</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">부록: 크리스마스 시</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -568,242 +739,143 @@
                         No con milagros de convertir agua en vino, sino con el milagro de transformar mi ruido interno
                         en música.</p>
                 </div>
-
                 <div class="english language">
                     <h1>Chapter 1: The Encounter in Madrid</h1>
-                    <p>It was a spring afternoon in Madrid. The sun filtered through the buildings of Gran Vía, creating
-                        plays of light and shadow that seemed to dance on the asphalt. I was walking with the usual
-                        haste of someone living in the city, my mind full of noise: emails to answer, bills, worries...
-                        vibrating low, very low.</p>
-                    <p>Suddenly, in Plaza de Callao, I saw him. He wasn't wearing a robe, or sandals, nor did he have a
-                        glowing halo over his head. He was wearing worn-out jeans, a white t-shirt, and comfortable
-                        sneakers. He was sitting on a bench, watching people pass by with a calm smile, a smile that
-                        seemed to stop time.</p>
-                    <p>—Hello, Francisco —he said as I passed near.</p>
-                    <p>I stopped in my tracks. Nobody called me by my full name on the street, let alone a stranger. But
-                        looking into his eyes, I knew he wasn't a stranger. There was an ancestral familiarity in his
-                        gaze, a peace that disarmed any defense.</p>
-                    <p>—Jesus? —I asked, feeling a bit ridiculous.</p>
-                    <p>—The same —he replied, patting the empty space on the bench beside him—. Sit down for a while.
-                        You're vibrating at a frequency that's giving me a headache, and I can take a lot.</p>
-                    <p>I sat down, still stunned.
-                        —Vibrating? —I repeated.</p>
-                    <p>—Yes, vibrating. Everything is vibration, my friend. Fear, haste, anger... they are dense, heavy
-                        vibrations. They anchor you to the ground and don't let you see the sky, even though you have it
-                        right above you.</p>
-                    <p>I looked up. The Madrid sky was an intense, beautiful blue. I hadn't noticed until that moment.
-                    </p>
-                    <p>—I've come to spend a few days with you —he continued—. Let's go for a walk. You need to remember
-                        how to tune the radio of your soul. You're listening to pure static.</p>
-                    <p>And so, in the middle of the hustle and bustle of Madrid, the strangest and most wonderful
-                        adventure of my life began. Not with miracles of turning water into wine, but with the miracle
-                        of transforming my internal noise into music.</p>
+                    <p>It was a spring afternoon in Madrid. The sun filtered through the buildings of the Gran Vía, creating games of light and shadow that seemed to dance on the asphalt. I was walking with the usual haste of someone living in the city, with a mind full of noise: emails to answer, bills, worries... vibrating low, very low.</p>
+<p>Suddenly, in Callao square, I saw him. He wasn't wearing a tunic, nor sandals, nor did he have a shining halo over his head. He was wearing worn-out jeans, a white t-shirt, and comfortable sneakers. He was sitting on a bench, watching people pass by with a calm smile, a smile that seemed to stop time.</p>
+<p>—Hello, Francisco —he said when I passed close by.</p>
+<p>I stopped dead in my tracks. No one called me by my full name in the street, and certainly not a stranger. But looking into his eyes, I knew he wasn't a stranger. There was an ancestral familiarity in his gaze, a peace that disarmed any defense.</p>
+<p>—Jesus? —I asked, feeling a bit ridiculous.</p>
+<p>—The same —he replied, patting the empty space on the bench beside him—. Sit down for a while. You are vibrating at a frequency that is giving me a headache, and I can endure a lot.</p>
+<p>I sat down, still stunned.
+—Vibrating? —I repeated.</p>
+<p>—Yes, vibrating. Everything is vibration, my friend. Fear, haste, anger... are dense, heavy vibrations. They anchor you to the ground and don't let you see the sky, even if you have it right above you.</p>
+<p>I looked up. The sky in Madrid was an intense, beautiful blue. I hadn't noticed it until that moment.</p>
+<p>—I've come to spend a few days with you —he continued—. Let's go for a walk. You need to remember how to tune the radio of your soul. You are listening to pure static.</p>
+<p>And so, in the middle of the bustle of Madrid, began the strangest and most wonderful adventure of my life. Not with miracles of turning water into wine, but with the miracle of transforming my internal noise into music.</p>
                 </div>
-
                 <div class="french language">
-                    <h1>Chapitre 1 : La Rencontre à Madrid</h1>
-                    <p>C'était une après-midi de printemps à Madrid. Le soleil filtrait entre les immeubles de la Gran
-                        Vía, créant des jeux de lumière et d'ombre qui semblaient danser sur l'asphalte. Je marchais
-                        avec la hâte habituelle de celui qui vit en ville, l'esprit plein de bruit : courriels à
-                        répondre, factures, soucis... vibrant bas, très bas.</p>
-                    <p>Soudain, sur la place de Callao, je l'ai vu. Il ne portait ni tunique, ni sandales, et n'avait
-                        pas d'auréole brillante sur la tête. Il portait des jeans usés, un t-shirt blanc et des baskets
-                        confortables. Il était assis sur un banc, regardant les gens passer avec un sourire tranquille,
-                        un sourire qui semblait arrêter le temps.</p>
-                    <p>— Bonjour, Francisco — dit-il quand je passai près de lui.</p>
-                    <p>Je m'arrêtai net. Personne ne m'appelait par mon nom complet dans la rue, et encore moins un
-                        inconnu. Mais en le regardant dans les yeux, je sus qu'il n'était pas un inconnu. Il y avait une
-                        familiarité ancestrale dans son regard, une paix qui désarmait toute défense.</p>
-                    <p>— Jésus ? — demandai-je, me sentant un peu ridicule.</p>
-                    <p>— Lui-même — répondit-il, pianotant sur l'espace vide du banc à côté de lui —. Assieds-toi un
-                        moment. Tu vibres à une fréquence qui me donne mal à la tête, et pourtant j'en supporte
-                        beaucoup.</p>
-                    <p>Je m'assis, encore étourdi.
-                        — Vibrer ? — répétai-je.</p>
-                    <p>— Oui, vibrer. Tout est vibration, mon ami. La peur, la hâte, la colère... ce sont des vibrations
-                        denses, lourdes. Elles t'ancrent au sol et ne te laissent pas voir le ciel, même si tu l'as
-                        au-dessus de toi.</p>
-                    <p>Je regardai vers le haut. Le ciel de Madrid était d'un bleu intense, magnifique. Je n'avais pas
-                        remarqué jusqu'à ce moment.</p>
-                    <p>— Je suis venu passer quelques jours avec toi — continua-t-il —. Allons faire un tour. Tu as
-                        besoin de te rappeler comment accorder la radio de ton âme. Tu écoutes de la pure friture.</p>
-                    <p>Et c'est ainsi qu'au milieu du tumulte de Madrid, commença l'aventure la plus étrange et la plus
-                        merveilleuse de ma vie. Non pas avec des miracles de changer l'eau en vin, mais avec le miracle
-                        de transformer mon bruit interne en musique.</p>
+                    <h1>Chapitre 1 : La rencontre à Madrid</h1>
+                    <p>C'était un après-midi de printemps à Madrid. Le soleil filtrait entre les bâtiments de la Gran Vía, créant des jeux de lumière et d'ombre qui semblaient danser sur l'asphalte. Je marchais avec la hâte habituelle de ceux qui vivent en ville, l'esprit plein de bruit : courriels à répondre, factures, soucis... vibrant bas, très bas.</p>
+<p>Soudain, sur la place de Callao, je l'ai vu. Il ne portait ni tunique, ni sandales, et n'avait pas d'auréole brillante sur la tête. Il portait un jean usé, un t-shirt blanc et des baskets confortables. Il était assis sur un banc, regardant les gens passer avec un sourire tranquille, un sourire qui semblait arrêter le temps.</p>
+<p>—Bonjour, Francisco —dit-il quand je passai tout près.</p>
+<p>Je me suis arrêté net. Personne ne m'appelait par mon nom complet dans la rue, et encore moins un inconnu. Mais en le regardant dans les yeux, je sus qu'il n'était pas un inconnu. Il y avait une familiarité ancestrale dans son regard, une paix qui désarmait toute défense.</p>
+<p>—Jésus ? —demandai-je, me sentant un peu ridicule.</p>
+<p>—Lui-même —répondit-il en tapotant l'espace vide sur le banc à côté de lui—. Assieds-toi un moment. Tu vibres à une fréquence qui me donne mal à la tête, et pourtant j'en supporte beaucoup.</p>
+<p>Je m'assis, encore abasourdi.
+—Vibrer ? —répétai-je.</p>
+<p>—Oui, vibrer. Tout est vibration, mon ami. La peur, la hâte, la colère... sont des vibrations denses, lourdes. Elles t'ancrent au sol et ne te laissent pas voir le ciel, même si tu l'as juste au-dessus.</p>
+<p>Je regardai vers le haut. Le ciel de Madrid était d'un bleu intense, magnifique. Je ne l'avais pas remarqué jusqu'à ce moment.</p>
+<p>—Je suis venu passer quelques jours avec toi —poursuivit-il—. Allons faire un tour. Tu as besoin de te rappeler comment accorder la radio de ton âme. Tu écoutes de la pure friture.</p>
+<p>Et ainsi, au milieu de l'agitation de Madrid, commença l'aventure la plus étrange et merveilleuse de ma vie. Pas avec des miracles changeant l'eau en vin, mais avec le miracle de transformer mon bruit intérieur en musique.</p>
                 </div>
-
                 <div class="italian language">
-                    <h1>Capitolo 1: L'Incontro a Madrid</h1>
-                    <p>Era un pomeriggio di primavera a Madrid. Il sole filtrava tra gli edifici della Gran Vía, creando
-                        giochi di luci e ombre che sembravano danzare sull'asfalto. Camminavo con la solita fretta di
-                        chi vive in città, con la mente piena di rumore: email a cui rispondere, fatture,
-                        preoccupazioni... vibrando basso, molto basso.</p>
-                    <p>All'improvviso, in piazza Callao, lo vidi. Non indossava una tunica, né sandali, né aveva un
-                        alone luminoso sulla testa. Indossava dei jeans logori, una maglietta bianca e delle scarpe da
-                        ginnastica comode. Era seduto su una panchina, guardando la gente passare con un sorriso
-                        tranquillo, un sorriso che sembrava fermare il tempo.</p>
-                    <p>— Ciao, Francisco — disse quando gli passai vicino.</p>
-                    <p>Mi fermai di colpo. Nessuno mi chiamava con il mio nome completo per strada, meno che mai uno
-                        sconosciuto. Ma guardandolo negli occhi, seppi che non era uno sconosciuto. C'era una
-                        familiarità ancestrale nel suo sguardo, una pace che disarmava ogni difesa.</p>
-                    <p>— Gesù? — chiesi, sentendomi un po' ridicolo.</p>
-                    <p>— Proprio lui — rispose, dandomi una pacca sullo spazio vuoto della panchina accanto a lui —.
-                        Siediti un po'. Stai vibrando a una frequenza che mi sta facendo venire il mal di testa, e io ne
-                        sopporto molto.</p>
-                    <p>Mi sedetti, ancora stordito.
-                        — Vibrando? — ripetei.</p>
-                    <p>— Sì, vibrando. Tutto è vibrazione, amico mio. La paura, la fretta, la rabbia... sono vibrazioni
-                        dense, pesanti. Ti ancorano al suolo e non ti lasciano vedere il cielo, anche se ce l'hai sopra
-                        di te.</p>
-                    <p>Guardai verso l'alto. Il cielo di Madrid era di un blu intenso, bellissimo. Non ci avevo fatto
-                        caso fino a quel momento.</p>
-                    <p>— Sono venuto a passare qualche giorno con te — continuò —. Facciamo un giro. Hai bisogno di
-                        ricordare come sintonizzare la radio della tua anima. Stai ascoltando pura interferenza.</p>
-                    <p>E così, in mezzo al trambusto di Madrid, iniziò l'avventura più strana e meravigliosa della mia
-                        vita. Non con miracoli di trasformare l'acqua in vino, ma con il miracolo di trasformare il mio
-                        rumore interno in musica.</p>
+                    <h1>Capitolo 1: L'incontro a Madrid</h1>
+                    <p>Era un pomeriggio di primavera a Madrid. Il sole filtrava tra gli edifici della Gran Vía, creando giochi di luce e ombra che sembravano danzare sull'asfalto. Camminavo con la fretta abituale di chi vive in città, con la mente piena di rumore: email a cui rispondere, bollette, preoccupazioni... vibrando basso, molto basso.</p>
+<p>Improvvisamente, in piazza Callao, lo vidi. Non indossava tunica, né sandali, né aveva un'aureola brillante sulla testa. Indossava jeans consumati, una maglietta bianca e scarpe da ginnastica comode. Era seduto su una panchina, guardando la gente passare con un sorriso tranquillo, un sorriso che sembrava fermare il tempo.</p>
+<p>—Ciao, Francisco —disse quando passai vicino.</p>
+<p>Mi fermai di colpo. Nessuno mi chiamava col mio nome completo per strada, e men che meno uno sconosciuto. Ma guardandolo negli occhi, seppi che non era uno sconosciuto. C'era una familiarità ancestrale nel suo sguardo, una pace che disarmava ogni difesa.</p>
+<p>—Gesù? —chiesi, sentendomi un po' ridicolo.</p>
+<p>—Lo stesso —rispose lui, dando una pacca sullo spazio vuoto della panchina accanto a lui—. Siediti un attimo. Stai vibrando a una frequenza che mi sta facendo venire mal di testa, e dire che io sopporto molto.</p>
+<p>Mi sedetti, ancora stordito.
+—Vibrando? —ripetei.</p>
+<p>—Sì, vibrando. Tutto è vibrazione, amico mio. La paura, la fretta, la rabbia... sono vibrazioni dense, pesanti. Ti ancorano al suolo e non ti lasciano vedere il cielo, anche se ce l'hai proprio sopra.</p>
+<p>Guardai in alto. Il cielo di Madrid era di un azzurro intenso, bellissimo. Non ci avevo fatto caso fino a quel momento.</p>
+<p>—Sono venuto a passare qualche giorno con te —continuò—. Facciamo un giro. Hai bisogno di ricordare come sintonizzare la radio della tua anima. Stai ascoltando pura statica.</p>
+<p>E così, in mezzo al trambusto di Madrid, cominciò l'avventura più strana e meravigliosa della mia vita. Non con miracoli di trasformare l'acqua in vino, ma con il miracolo di trasformare il mio rumore interno in musica.</p>
                 </div>
-
                 <div class="chinese language">
                     <h1>第 1 章：马德里相遇</h1>
-                    <p>那是马德里的一个春日下午。阳光透过程式大楼，在柏油路上投射出如舞蹈般变幻的光影。我像往常一样步履匆匆，脑子里充满了杂音：需要回复的邮件、账单、烦恼……振动频率非常低。</p>
-                    <p>突然，在卡亚俄广场（Plaza de
-                        Callao），我见到了他。他没有穿长袍，没穿凉鞋，头上也没有发光的光环。他穿着一条旧牛仔裤、一件白T恤和一双舒适的运动鞋。他坐在长椅上，带着宁静的微笑看着人来人往，那微笑似乎让时间都停止了。
-                    </p>
-                    <p>“你好，弗朗西斯科，”我经过时，他开口道。</p>
-                    <p>我猛地停下脚步。街上没人叫我的全名，更不用说是个陌生人了。但对上他的眼睛时，我知道他不是陌生人。他的眼神中有一种古老的熟悉感，一种解除所有防备的平和。</p>
-                    <p>“耶稣？”我问道，觉得自己有点滑稽。</p>
-                    <p>“正是我，”他拍了拍身旁长椅上的空位回答道，“坐一会儿吧。你现在的振动频率让我头疼，而我的耐受力其实很强。”</p>
-                    <p>我坐了下来，仍然有些不知所措。“振动？”我重复道。</p>
-                    <p>“是的，振动。朋友，万物皆振动。恐惧、匆忙、愤怒……都是浓重且低沉的振动。它们把你锚定在地面上，让你看不见天空，尽管天空就在你头顶。”</p>
-                    <p>我抬头看了看。马德里的天空湛蓝深邃，美极了。在这之前，我竟然没有注意到。</p>
-                    <p>“我来和你共度几天，”他继续说道，“我们去走走。你需要想起如何调准你灵魂的收音机。你现在听到的全是杂音。”</p>
-                    <p>就这样，在马德里的繁华喧嚣中，我生命中最奇特也最奇妙的冒险开始了。没有什么将水变成酒的神迹，而是一个将我内心的杂音转化为音乐的神迹。</p>
+                    <p>那是马德里的一个春日午后。阳光透过格兰大道的建筑物洒下，在柏油路上创造出仿佛在跳舞的光影游戏。我带着城市生活者惯有的匆忙行走，脑子里充满了噪音：要回复的邮件、账单、担忧……振动得很低，非常低。</p>
+<p>突然，在卡亚俄广场，我看见了他。他没有穿长袍，没穿凉鞋，头上也没有发光的光环。他穿着磨损的牛仔裤，白色 T 恤和舒适的运动鞋。他坐在长椅上，带着平静的微笑看着人们经过，那微笑仿佛能让时间静止。</p>
+<p>“你好，弗朗西斯科，”当我经过时他说。</p>
+<p>我突然停了下来。没人会在街上叫我的全名，更不用说是一个陌生人了。但看着他的眼睛，我知道他不是陌生人。他的目光中有一种古老的熟悉感，一种解除任何防御的平静。</p>
+<p>“耶稣？”我问，感觉有点荒谬。</p>
+<p>“正是，”他回答，拍了拍他旁边长椅上的空位，“坐一会儿。你的振动频率让我头疼，虽然我忍耐力很强。”</p>
+<p>我坐下，仍然目瞪口呆。
+“振动？”我重复道。</p>
+<p>“是的，振动。一切都是振动，我的朋友。恐惧、匆忙、愤怒……都是稠密、沉重的振动。它们把你锚定在地面上，不让你看到天空，即使它就在你头顶上方。”</p>
+<p>我向上看。马德里的天空是强烈而美丽的蓝色。直到那一刻我才注意到。</p>
+<p>“我来和你待几天，”他继续说，“我们去走走。你需要记住如何调整你灵魂的收音机。你现在听到的全是静电噪音。”</p>
+<p>就这样，在马德里的喧嚣中，我生命中最奇怪、最奇妙的冒险开始了。不是把水变成酒的奇迹，而是把我内心的噪音变成音乐的奇迹。</p>
                 </div>
-
                 <div class="arabic language">
                     <h1>الفصل الأول: اللقاء في مدريد</h1>
-                    <p>كانت أمسية ربيعية في مدريد. تخللت أشعة الشمس المباني في شارع "غران فيا"، صانعةً ألعاباً من
-                        الأضواء والظلال بدت وكأنها تراقص الإسفلت. كنت أسير بالسرعة المعتادة لمن يعيش في المدينة، وعقلي
-                        ممتلئ بالضجيج: رسائل بريد إلكتروني بحاجة للرد، فواتير، هموم... كنت أهتز بتردد منخفض، منخفض جداً.
-                    </p>
-                    <p>فجأة، في ساحة "كايو"، رأيته. لم يكن يرتدي توباً، ولا صنادل، ولم يكن هناك هالة مضيئة فوق رأسه. كان
-                        يرتدي سروال جينز باهتاً، وقميصاً أبيض، وحذاءً رياضياً مريحاً. كان جالساً على مقعد، يراقب الناس
-                        وهم يمرون بابتسامة هادئة، ابتسامة بدت وكأنها توقف الزمن.</p>
-                    <p>— مرحباً فرانشيسكو — قال عندما مررت بالقرب منه.</p>
-                    <p>توقفت فجأة. لم يكن أحد يناديني باسمي الكامل في الشارع، فما بالك بشخص غريب. ولكن عندما نظرت في
-                        عينيه، عرفت أنه لم يكن غريباً. كان في نظرته ألفة قديمة، سلامٌ ينزع سلاح أي دفاع.</p>
-                    <p>— يسوع؟ — سألت، شاعراً بشيء من السخافة.</p>
-                    <p>— هو بعينه — أجاب، وهو يربت على المساحة الفارغة في المقعد بجانبه —. اجلس قليلاً. أنت تهتز بتردد
-                        يسبب لي صداعاً، رغم أنني أتحمل الكثير.</p>
-                    <p>جلست ولا أزال مذهولاً.
-                        — أهتز؟ — كررت.</p>
-                    <p>— نعم، اهتزاز. كل شيء هو اهتزاز يا صديقي. الخوف، العجلة، الغضب... هي اهتزازات كثيفة وثقيلة. تربطك
-                        بالأرض ولا تدعك ترى السماء، رغم أنها فوقك مباشرة.</p>
-                    <p>نظرت للأعلى. كانت سماء مدريد زرقاء كثيفة وجميلة. لم أكن قد لاحظت ذلك حتى تلك اللحظة.</p>
-                    <p>— لقد أتيت لأقضي بضعة أيام معك — تابع —. لنذهب في جولة. أنت بحاجة لتذكر كيفية ضبط راديو روحك. أنت
-                        تستمع لمجرد تشويش.</p>
-                    <p>وهكذا، وسط صخب مدريد، بدأت المغامرة الأكثر غرابة وروعة في حياتي. ليس بمعجزات تحويل الماء إلى خمر،
-                        بل بمعجزة تحويل ضجيجي الداخلي إلى موسيقى.</p>
+                    <p>كانت ظهيرة ربيعية في مدريد. كانت الشمس تتسلل بين مباني غران فيا، وتخلق ألعابًا من الضوء والظل بدت وكأنها ترقص على الأسفلت. كنت أمشي بالعجلة المعتادة لمن يعيش في المدينة، وعقلي مليء بالضجيج: رسائل بريد إلكتروني للرد عليها، فواتير، هموم... اهتزاز منخفض، منخفض جداً.</p>
+<p>فجأة، في ساحة كالاو، رأيته. لم يكن يرتدي سترة، ولا صندلاً، ولم تكن لديه هالة لامعة فوق رأسه. كان يرتدي الجينز البالي، وقميصاً أبيض، وحذاء رياضياً مريحاً. كان يجلس على مقعد، يراقب الناس يمرون بابتسامة هادئة، ابتسامة بدت وكأنها توقف الزمن.</p>
+<p>— مرحباً فرانسيسكو — قال عندما مررت بالقرب منه.</p>
+<p>توقفت في مساري. لم ينادني أحد باسمي الكامل في الشارع، وبالتأكيد ليس شخصاً غريباً. لكن عند النظر في عينيه، عرفت أنه لم يكن غريباً. كانت هناك ألفة قديمة في نظرته، سلام يجرد أي دفاع من سلاحه.</p>
+<p>— يسوع؟ — سألت، شاعراً ببعض السخافة.</p>
+<p>— هو نفسه — أجاب، وهو يربت على المكان الفارغ في المقعد بجانبه —. اجلس قليلاً. أنت تهتز بتردد يسبب لي الصداع، مع أنني أتحمل الكثير.</p>
+<p>جلست، وما زلت مذهولاً.
+— أهتز؟ — رددت.</p>
+<p>— نعم، تهتز. كل شيء هو اهتزاز يا صديقي. الخوف، العجلة، الغضب... هي اهتزازات كثيفة وثقيلة. تثبتك في الأرض ولا تدعك ترى السماء، حتى لو كانت فوقك مباشرة.</p>
+<p>نظرت إلى الأعلى. كانت سماء مدريد زرقاء كثيفة وجميلة. لم ألحظ ذلك حتى تلك اللحظة.</p>
+<p>— جئت لأقضي بضعة أيام معك — تابع —. لنذهب في نزهة. تحتاج أن تتذكر كيف تضبط راديو روحك. أنت تستمع إلى تشويش خالص.</p>
+<p>وهكذا، في وسط صخب مدريد، بدأت أغرب وأروع مغامرة في حياتي. ليس بمعجزات تحويل الماء إلى نبيذ، بل بمعجزة تحويل ضجيجي الداخلي إلى موسيقى.</p>
                 </div>
-
                 <div class="russian language">
                     <h1>Глава 1: Встреча в Мадриде</h1>
-                    <p>Это был весенний вечер в Мадриде. Солнце просачивалось сквозь здания Гран-Виа, создавая игру
-                        света и тени, которая, казалось, танцевала на асфальте. Я шел с обычной для городского жителя
-                        поспешностью, с головой, полной шума: письма, на которые нужно ответить, счета, заботы...
-                        вибрируя низко, очень низко.</p>
-                    <p>Внезапно на площади Кальяо я увидел его. На нем не было ни туники, ни сандалий, а над головой не
-                        сиял нимб. Он был в потертых джинсах, белой футболке и удобных кроссовках. Он сидел на скамейке,
-                        наблюдая за прохожими со спокойной улыбкой — улыбкой, которая, казалось, останавливала время.
-                    </p>
-                    <p>— Привет, Франсиско, — сказал он, когда я проходил мимо.</p>
-                    <p>Я резко остановился. Никто не называл меня по полному имени на улице, тем более незнакомец. Но
-                        взглянув ему в глаза, я понял, что он не незнакомец. В его взгляде была какая-то древняя
-                        близость, покой, обезоруживающий любую защиту.</p>
-                    <p>— Иисус? — спросил я, чувствуя себя немного нелепо.</p>
-                    <p>— Тот самый, — ответил он, похлопав по свободному месту на скамейке рядом с собой. — Присядь на
-                        минутку. Ты вибрируешь на частоте, от которой у меня начинает болеть голова, а ведь я очень
-                        терпелив.</p>
-                    <p>Я сел, все еще ошеломленный.
-                        — Вибрирую? — повторил я.</p>
-                    <p>— Да, вибрирую. Все есть вибрация, друг мой. Страх, спешка, гнев... это плотные, тяжелые
-                        вибрации. Они приковывают тебя к земле и не дают увидеть небо, хотя оно прямо над тобой.</p>
-                    <p>Я посмотрел вверх. Мадридское небо было насыщенно-синим, прекрасным. До этого момента я его даже
-                        не замечал.</p>
-                    <p>— Я пришел провести с тобой несколько дней, — продолжил он. — Давай прогуляемся. Тебе нужно
-                        вспомнить, как настроить радио своей души. Ты слушаешь одни только помехи.</p>
-                    <p>И так, посреди мадридской суеты, началось самое странное и чудесное приключение в моей жизни. Не
-                        с чудес превращения воды в вино, а с чуда превращения моего внутреннего шума в музыку.</p>
+                    <p>Это был весенний день в Мадриде. Солнце просачивалось между зданиями Гран-Виа, создавая игру света и тени, которая словно танцевала на асфальте. Я шел с обычной спешкой городского жителя, с умом, полным шума: письма, на которые нужно ответить, счета, заботы... вибрируя низко, очень низко.</p>
+<p>Вдруг на площади Кальяо я увидел его. На нем не было ни туники, ни сандалий, ни сияющего нимба над головой. Он был в потертых джинсах, белой футболке и удобных кроссовках. Он сидел на скамейке, наблюдая за прохожими со спокойной улыбкой, улыбкой, которая, казалось, останавливала время.</p>
+<p>— Привет, Франсиско, — сказал он, когда я проходил мимо.</p>
+<p>Я замер. Никто не называл меня полным именем на улице, тем более незнакомец. Но, заглянув ему в глаза, я понял, что он не был незнакомцем. В его взгляде была какая-то древняя близость, мир, который обезоруживал любую защиту.</p>
+<p>— Иисус? — спросил я, чувствуя себя немного нелепо.</p>
+<p>— Он самый, — ответил он, похлопав по свободному месту на скамейке рядом с собой. — Присядь ненадолго. Ты вибрируешь на частоте, от которой у меня болит голова, а я ведь многое могу вытерпеть.</p>
+<p>Я сел, все еще ошеломленный.
+— Вибрирую? — переспросил я.</p>
+<p>— Да, вибрируешь. Всё есть вибрация, друг мой. Страх, спешка, гнев... это плотные, тяжелые вибрации. Они приковывают тебя к земле и не дают увидеть небо, даже если оно прямо над тобой.</p>
+<p>Я посмотрел наверх. Небо Мадрида было насыщенно-синим, прекрасным. Я не замечал этого до того момента.</p>
+<p>— Я пришел провести с тобой несколько дней, — продолжил он. — Давай прогуляемся. Тебе нужно вспомнить, как настраивать радио своей души. Ты слушаешь сплошные помехи.</p>
+<p>И так, посреди суеты Мадрида, началось самое странное и чудесное приключение в моей жизни. Не с чудес превращения воды в вино, а с чуда превращения моего внутреннего шума в музыку.</p>
                 </div>
-
                 <div class="vietnamese language">
                     <h1>Chương 1: Cuộc gặp gỡ tại Madrid</h1>
-                    <p>Đó là một buổi chiều xuân tại Madrid. Ánh nắng len lỏi qua các tòa nhà trên đại lộ Gran Vía, tạo
-                        nên những vệt sáng tối nhảy múa trên mặt đường nhựa. Tôi bước đi với sự vội vã thường thấy của
-                        một cư dân thành phố, tâm trí tràn đầy tiếng ồn: những email cần trả lời, các hóa đơn, những nỗi
-                        lo toan... rung động ở tần số thấp, rất thấp.</p>
-                    <p>Bất ngờ, tại quảng trường Callao, tôi nhìn thấy anh ấy. Anh ấy không mặc áo choàng, không đi
-                        xăng-đan, cũng không có hào quang tỏa sáng trên đầu. Anh ấy mặc chiếc quần jean sờn, áo phông
-                        trắng và đôi giày thể thao thoải mái. Anh ấy đang ngồi trên ghế băng, nhìn dòng người qua lại
-                        với một nụ cười tĩnh lặng, nụ cười dường như làm thời gian ngưng đọng.</p>
-                    <p>— Chào Francisco — anh ấy nói khi tôi bước ngang qua.</p>
-                    <p>Tôi sững người lại. Không ai gọi đầy đủ tên tôi trên phố, huống chi là một người lạ. Nhưng khi
-                        nhìn vào mắt anh ấy, tôi biết đó không phải là một người lạ. Có một sự quen thuộc xa xưa trong
-                        ánh mắt ấy, một sự bình yên làm tan biến mọi sự phòng thủ.</p>
-                    <p>— Chúa Giê-su? — tôi hỏi, cảm thấy hơi nực cười.</p>
-                    <p>— Chính là tôi đây — anh ấy trả lời, vỗ nhẹ vào chỗ trống trên ghế bên cạnh —. Ngồi xuống một lát
-                        đi. Bạn đang rung động ở một tần số làm tôi đau đầu đấy, mặc dù tôi vốn rất kiên nhẫn.</p>
-                    <p>Tôi ngồi xuống, vẫn chưa hết bàng hoàng.
-                        — Rung động? — tôi lặp lại.</p>
-                    <p>— Đúng vậy, rung động. Mọi thứ đều là rung động, bạn của tôi. Nỗi sợ hãi, sự vội vã, cơn giận
-                        dữ... chúng là những rung động dày đặc, nặng nề. Chúng níu bạn xuống đất và không cho bạn nhìn
-                        thấy bầu trời, mặc dù nó đang ở ngay trên đầu bạn.</p>
-                    <p>Tôi ngước nhìn lên. Bầu trời Madrid một màu xanh thẫm, tuyệt đẹp. Tôi đã không để ý cho đến tận
-                        khoảnh khắc đó.</p>
-                    <p>— Tôi đến để dành vài ngày với bạn — anh ấy tiếp tục —. Chúng ta hãy đi dạo một chút. Bạn cần nhớ
-                        lại cách dò đài phát thanh của linh hồn mình. Bạn đang nghe toàn là tiếng nhiễu sóng thôi.</p>
-                    <p>Và thế là, giữa lòng Madrid náo nhiệt, chuyến phiêu lưu kỳ lạ và tuyệt vời nhất đời tôi đã bắt
-                        đầu. Không phải bằng những phép lạ biến nước thành rượu, mà bằng phép lạ biến những tiếng ồn nội
-                        tâm của tôi thành âm nhạc.</p>
+                    <p>Đó là một buổi chiều mùa xuân ở Madrid. Mặt trời len lỏi giữa những tòa nhà trên Gran Vía, tạo nên những trò chơi của ánh sáng và bóng tối dường như đang nhảy múa trên mặt đường nhựa. Tôi bước đi với sự vội vã thường thấy của một người sống ở thành phố, với tâm trí đầy tiếng ồn: những email phải trả lời, hóa đơn, những lo toan... rung động thấp, rất thấp.</p>
+<p>Đột nhiên, tại quảng trường Callao, tôi nhìn thấy Ngài. Ngài không mặc áo choàng, không đi dép, cũng không có vầng hào quang sáng chói trên đầu. Ngài mặc quần jean sờn cũ, áo phông trắng và giày thể thao thoải mái. Ngài đang ngồi trên ghế dài, nhìn mọi người qua lại với nụ cười bình thản, nụ cười dường như làm thời gian ngừng lại.</p>
+<p>—Chào Francisco —Ngài nói khi tôi đi ngang qua.</p>
+<p>Tôi đứng khựng lại. Không ai gọi tôi bằng tên đầy đủ trên đường phố, và chắc chắn không phải là một người lạ. Nhưng nhìn vào mắt Ngài, tôi biết Ngài không phải là người lạ. Có một sự thân thuộc từ ngàn xưa trong ánh nhìn của Ngài, một sự bình an giải trừ mọi sự phòng vệ.</p>
+<p>—Chúa Giê-su? —tôi hỏi, cảm thấy hơi buồn cười.</p>
+<p>—Chính Ta —Ngài trả lời, vỗ vỗ vào chỗ trống trên ghế bên cạnh—. Ngồi xuống một lát đi. Con đang rung động ở một tần số khiến Ta đau đầu, mà Ta thì chịu đựng giỏi lắm đấy.</p>
+<p>Tôi ngồi xuống, vẫn còn sững sờ.
+—Rung động ư? —tôi lặp lại.</p>
+<p>—Đúng, rung động. Mọi thứ đều là rung động, bạn của Ta. Sợ hãi, vội vã, tức giận... là những rung động dày đặc, nặng nề. Chúng neo con xuống đất và không để con nhìn thấy bầu trời, ngay cả khi con có nó ngay trên đầu.</p>
+<p>Tôi nhìn lên. Bầu trời Madrid một màu xanh thẫm, tuyệt đẹp. Tôi đã không để ý đến nó cho đến khoảnh khắc đó.</p>
+<p>—Ta đến để dành vài ngày với con —Ngài tiếp tục—. Hãy đi dạo nào. Con cần nhớ lại cách điều chỉnh chiếc đài của tâm hồn mình. Con đang nghe toàn tiếng nhiễu.</p>
+<p>Và như thế, giữa sự hối hả của Madrid, cuộc phiêu lưu kỳ lạ và tuyệt vời nhất cuộc đời tôi đã bắt đầu. Không phải với những phép lạ biến nước thành rượu, mà với phép lạ biến tiếng ồn bên trong tôi thành âm nhạc.</p>
                 </div>
-
-                <div class="image-container-footer"><img src="images/madrid.png" alt="Ilustración del capítulo"
-                        class="footer-image"></div>
+                <div class="korean language">
+                    <h1>제1장: 마드리드에서의 만남</h1>
+                    <p>마드리드의 어느 봄날 오후였습니다. 태양은 그란 비아의 건물들 사이로 스며들어, 아스팔트 위에서 춤추는 듯한 빛과 그림자의 유희를 만들어내고 있었습니다. 나는 도시에 사는 사람 특유의 서두름으로 걷고 있었고, 머릿속은 소음으로 가득 차 있었습니다. 답장해야 할 이메일, 청구서, 걱정거리들... 낮게, 아주 낮게 진동하고 있었죠.</p>
+<p>갑자기 카야오 광장에서 그를 보았습니다. 그는 튜닉을 입지도, 샌들을 신지도 않았으며, 머리 위에 빛나는 후광도 없었습니다. 낡은 청바지에 흰 티셔츠, 편안한 운동화를 신고 있었습니다. 그는 벤치에 앉아 시간을 멈추게 하는 듯한 평온한 미소로 지나가는 사람들을 바라보고 있었습니다.</p>
+<p>— 안녕, 프란시스코 — 내가 가까이 지나가자 그가 말했습니다.</p>
+<p>나는 제자리에 멈춰 섰습니다. 거리에서 내 전체 이름을 부르는 사람은 없었고, 낯선 사람은 더더욱 아니었습니다. 하지만 그의 눈을 바라보았을 때, 나는 그가 낯선 사람이 아님을 알았습니다. 그의 눈빛에는 태고적부터의 친숙함이 있었고, 어떤 방어기제도 무장 해제시키는 평화가 있었습니다.</p>
+<p>— 예수님? — 나는 조금 우스꽝스럽게 느끼며 물었습니다.</p>
+<p>— 바로 나야. — 그가 대답하며 옆 벤치의 빈자리를 툭툭 쳤습니다. — 잠시 앉아. 너는 나조차 두통이 올 정도의 주파수로 진동하고 있어. 내가 꽤 잘 참는데도 말이야.</p>
+<p>나는 여전히 어안이 벙벙한 채 자리에 앉았습니다.
+— 진동이요? — 내가 되물었습니다.</p>
+<p>— 그래, 진동. 모든 것은 진동이야, 내 친구여. 두려움, 서두름, 분노... 이것들은 밀도가 높고 무거운 진동들이야. 그것들은 너를 땅에 묶어두고 하늘을 보지 못하게 해. 바로 머리 위에 있는데도 말이지.</p>
+<p>나는 위를 올려다보았습니다. 마드리드의 하늘은 강렬하고 아름다운 푸른색이었습니다. 그때까지 전혀 눈치채지 못했었습니다.</p>
+<p>— 너와 며칠 보내려고 왔어. — 그가 계속해서 말했습니다. — 한 바퀴 돌자. 너는 영혼의 라디오를 튜닝하는 법을 기억해야 해. 지금은 순전히 잡음만 듣고 있잖아.</p>
+<p>그렇게 마드리드의 소음 한가운데서, 내 인생의 가장 기이하고 경이로운 모험이 시작되었습니다. 물을 포도주로 바꾸는 기적이 아니라, 내 내면의 소음을 음악으로 바꾸는 기적과 함께 말이죠.</p>
+                </div>
             </div>
-
             <footer>
-                <div class="spanish language">
-                    <p>Escrito con amor y alta vibración.</p>
-                </div>
-                <div class="english language">
-                    <p>Written with love and high vibration.</p>
-                </div>
-                <div class="french language">
-                    <p>Écrit avec amour et haute vibration.</p>
-                </div>
-                <div class="italian language">
-                    <p>Scritto con amore e alta vibrazione.</p>
-                </div>
-                <div class="chinese language">
-                    <p>用爱与高频振动谱写。</p>
-                </div>
-                <div class="arabic language">
-                    <p>كتب بكل حب واهتزاز عالٍ.</p>
-                </div>
-                <div class="russian language">
-                    <p>Написано с любовью и высокой вибрацией.</p>
-                </div>
-                <div class="vietnamese language">
-                    <p>Được viết bằng tình yêu và rung động cao.</p>
-                </div>
+                <div class="spanish language"><p>Escrito con amor y alta vibración.</p></div>
+                <div class="english language"><p>Written with love and high vibration.</p></div>
+                <div class="french language"><p>Écrit avec amour et haute vibration.</p></div>
+                <div class="italian language"><p>Scritto con amore e alta vibrazione.</p></div>
+                <div class="chinese language"><p>用爱与高频振动谱写。</p></div>
+                <div class="arabic language"><p>كتب بكل حب واهتزاز عالٍ.</p></div>
+                <div class="russian language"><p>Написано с любовью и высокой вибрацией.</p></div>
+                <div class="vietnamese language"><p>Được viết bằng tình yêu và rung động cao.</p></div>
+                <div class="korean language"><p>사랑과 높은 진동으로 쓰여졌습니다.</p></div>
             </footer>
         </main>
     </div>
 
     <script src="base.js"></script>
     <script>
-
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const btnOpen = document.getElementById('menu-open');
@@ -824,6 +896,14 @@
             btn.addEventListener('click', toggleMenu);
         });
         overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
 
         // Resize handler for button visibility
         window.addEventListener('resize', () => {

@@ -16,7 +16,8 @@ LANG_MAP = {
     'zh': 'chinese',
     'ar': 'arabic',
     'ru': 'russian',
-    'vi': 'vietnamese'
+    'vi': 'vietnamese',
+    'ko': 'korean'
 }
 
 LANGUAGES = {
@@ -27,7 +28,8 @@ LANGUAGES = {
     'zh': '中文',
     'ar': 'العربية',
     'ru': 'Русский',
-    'vi': 'Tiếng Việt'
+    'vi': 'Tiếng Việt',
+    'ko': '한국어'
 }
 
 FLAGS = {
@@ -38,7 +40,8 @@ FLAGS = {
     'zh': '🇨🇳',
     'ar': '🇸🇦',
     'ru': '🇷🇺',
-    'vi': '🇻🇳'
+    'vi': '🇻🇳',
+    'ko': '🇰🇷'
 }
 
 CHAPTERS = [
@@ -389,6 +392,7 @@ def generate_multilingual_html(filename, translations, spanish_content):
             <option value="arabic">العربية 🇸🇦</option>
             <option value="russian">Русский 🇷🇺</option>
             <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+            <option value="korean">한국어 🇰🇷</option>
         </select>
     </div>
 
@@ -413,7 +417,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
         'zh': "我的朋友耶稣基督",
         'ar': "صديقي يسوع المسيح",
         'ru': "Мой друг Иисус Христос",
-        'vi': "Người bạn Giê-su của tôi"
+        'vi': "Người bạn Giê-su của tôi",
+        'ko': "나의 친구 예수 그리스도"
     }
 
     chapter_translations = {
@@ -425,7 +430,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "引言：粒子与振动之间",
             "ar": "مقدمة: بين الجسيم والاهتزاز",
             "ru": "Введение: Между частицей и вибрацией",
-            "vi": "Giới thiệu: Giữa Hạt và Rung động"
+            "vi": "Giới thiệu: Giữa Hạt và Rung động",
+            "ko": "서문: 입자와 진동 사이에서"
         },
         "index.html": {
             "es": "Capítulo 1: El Encuentro en Madrid",
@@ -435,7 +441,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "第 1 章：马德里相遇",
             "ar": "الفصل الأول: اللقاء في مدريد",
             "ru": "Глава 1: Встреча в Мадриде",
-            "vi": "Chương 1: Cuộc gặp gỡ tại Madrid"
+            "vi": "Chương 1: Cuộc gặp gỡ tại Madrid",
+            "ko": "제1장: 마드리드에서의 만남"
         },
         "02_capitulo.html": {
             "es": "Capítulo 2: Paseo por Las Rozas",
@@ -445,7 +452,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "第 2 章：拉斯罗萨斯散步",
             "ar": "الفصل الثاني: نزهة في لاس روزاس",
             "ru": "Глава 2: Прогулка по Лас-Росас",
-            "vi": "Chương 2: Đi dạo qua Las Rozas"
+            "vi": "Chương 2: Đi dạo qua Las Rozas",
+            "ko": "제2장: 라스 로사스 산책"
         },
         "03_capitulo.html": {
             "es": "Capítulo 3: La Vibración y el Silencio",
@@ -455,7 +463,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "第 3 章：振动与静默",
             "ar": "الفصل الثالث: الاهتزاز والصمت",
             "ru": "Глава 3: Вибрация и тишина",
-            "vi": "Chương 3: Rung động và Im lặng"
+            "vi": "Chương 3: Rung động và Im lặng",
+            "ko": "제3장: 진동과 침묵"
         },
         "04_capitulo.html": {
             "es": "Capítulo 4: Colmenarejo y la Naturaleza",
@@ -465,7 +474,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "第 4 章：科尔梅纳雷霍与自然",
             "ar": "الفصل الرابع: كولميناريجو والطبيعة",
             "ru": "Глава 4: Кольменарехо и природа",
-            "vi": "Chương 4: Colmenarejo và Thiên nhiên"
+            "vi": "Chương 4: Colmenarejo và Thiên nhiên",
+            "ko": "제4장: 콜메나레호와 자연"
         },
         "05_capitulo.html": {
             "es": "Capítulo 5: El Padre Nuestro (Parte 1: Padre)",
@@ -475,27 +485,30 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "第 5 章：主祷文（第一部分：父亲）",
             "ar": "الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)",
             "ru": "Глава 5: Отче наш (Часть 1: Отче)",
-            "vi": "Chương 5: Kinh Lạy Cha (Phần 1: Cha)"
+            "vi": "Chương 5: Kinh Lạy Cha (Phần 1: Cha)",
+            "ko": "제5장: 주기도문 (제1부: 아버지)"
         },
         "06_capitulo.html": {
             "es": "Capítulo 6: El Padre Nuestro (Parte 2: Cielo)",
             "en": "Chapter 6: The Lord's Prayer (Part 2: Heaven)",
             "fr": "Chapitre 6 : Le Notre Père (Partie 2 : Ciel)",
             "it": "Capitolo 6: Il Padre Nostro (Parte 2: Cielo)",
-            "zh": "第 6 章：主祷文（第二部分：天空）",
+            "zh": "第 6 章：主祷文（第二部分：天上）",
             "ar": "الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)",
             "ru": "Глава 6: Отче наш (Часть 2: Небо)",
-            "vi": "Chương 6: Kinh Lạy Cha (Phần 2: Trời)"
+            "vi": "Chương 6: Kinh Lạy Cha (Phần 2: Trời)",
+            "ko": "제6장: 주기도문 (제2부: 하늘)"
         },
         "07_capitulo.html": {
             "es": "Capítulo 7: El Pan de Cada Día",
             "en": "Chapter 7: Our Daily Bread",
             "fr": "Chapitre 7 : Le pain de chaque jour",
             "it": "Capitolo 7: Il pane quotidiano",
-            "zh": "第 7 章：日用的饮食",
+            "zh": "第 7 章：我们日用的饮食",
             "ar": "الفصل السابع: خبزنا كفافنا",
             "ru": "Глава 7: Хлеб наш насущный",
-            "vi": "Chương 7: Lương thực hằng ngày"
+            "vi": "Chương 7: Lương thực hằng ngày",
+            "ko": "제7장: 우리에게 일용할 양식"
         },
         "08_capitulo.html": {
             "es": "Capítulo 8: Perdón y Deudas",
@@ -505,7 +518,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "第 8 章：宽恕与债务",
             "ar": "الفصل الثامن: المغفرة والديون",
             "ru": "Глава 8: Прощение и долги",
-            "vi": "Chương 8: Tha thứ và Nợ nần"
+            "vi": "Chương 8: Tha thứ và Nợ nần",
+            "ko": "제8장: 용서와 빚"
         },
         "09_capitulo.html": {
             "es": "Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)",
@@ -515,17 +529,19 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "第 9 章：不叫我们遇见试探（高频振动）",
             "ar": "الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)",
             "ru": "Глава 9: Не введи нас в искушение (Вибрировать высоко)",
-            "vi": "Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)"
+            "vi": "Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)",
+            "ko": "제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)"
         },
         "10_capitulo.html": {
             "es": "Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)",
             "en": "Chapter 10: Deliver us from evil (Protection from Low Vibrations)",
             "fr": "Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)",
             "it": "Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)",
-            "zh": "第 10 章：救我们脱离凶恶（防止低频振动）",
+            "zh": "第 10 章：救我们脱离凶恶（远离低频振动）",
             "ar": "الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)",
             "ru": "Глава 10: Избавь нас от лукавого (Защита от низких вибраций)",
-            "vi": "Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)"
+            "vi": "Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)",
+            "ko": "제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)"
         },
         "11_capitulo.html": {
             "es": "Capítulo 11: El Reino, el Poder y la Gloria",
@@ -535,7 +551,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "第 11 章：国度、权柄、荣耀",
             "ar": "الفصل الحادي عشر: الملك والقدرة والمجد",
             "ru": "Глава 11: Царство, Сила и Слава",
-            "vi": "Chương 11: Vương quốc, Quyền năng và Vinh quang"
+            "vi": "Chương 11: Vương quốc, Quyền năng và Vinh quang",
+            "ko": "제11장: 나라와 권능과 영광"
         },
         "12_epilogo.html": {
             "es": "Epílogo: Aventuras Finales y Despedida",
@@ -545,17 +562,19 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "zh": "结语：最后的冒险与告别",
             "ar": "الخاتمة: المغامرات الأخيرة والوداع",
             "ru": "Эпилог: Последние приключения и прощание",
-            "vi": "Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt"
+            "vi": "Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt",
+            "ko": "에필로그: 마지막 모험과 작별"
         },
         "13_apendice_poema.html": {
             "es": "Apéndice: Poema de Navidad",
             "en": "Appendix: Christmas Poem",
             "fr": "Appendice : Poème de Noël",
             "it": "Appendice: Poema di Natale",
-            "zh": "附录：圣诞诗",
+            "zh": "附录：圣诞诗歌",
             "ar": "ملحق: قصيدة عيد الميلاد",
             "ru": "Приложение: Рождественское стихотворение",
-            "vi": "Phụ lục: Bài thơ Giáng sinh"
+            "vi": "Phụ lục: Bài thơ Giáng sinh",
+            "ko": "부록: 크리스마스 시"
         }
     }
 
@@ -607,8 +626,11 @@ def generate_multilingual_html(filename, translations, spanish_content):
         chapter_img = footer_img
     
     if not chapter_img:
-        chapter_img = "images/default.png"
-    
+        if filename == "index.html":
+            chapter_img = "images/madrid.png"
+        else:
+            chapter_img = "images/default.png"
+        
 
     # Clean body_es to remove any direct image tags or containers that might cause duplication
     body_es_clean = re.sub(r'<div class="image-container-footer">.*?</div>', '', body_es, flags=re.DOTALL)
@@ -644,9 +666,10 @@ def generate_multilingual_html(filename, translations, spanish_content):
                 'fr': "avec María Paz Arés Osset, l'Artiste",
                 'it': "con María Paz Arés Osset, l'Artista",
                 'zh': "与艺术家 María Paz Arés Osset 合作",
-                'ar': "مع ماريا باز أريس أوسيت، الفنانة",
+                'ar': "مع مارia Paz Arés Osset، الفنانة",
                 'ru': "с Марией Пас Арес Оссет, художницей",
-                'vi': "với María Paz Arés Osset, Nghệ sĩ"
+                'vi': "với María Paz Arés Osset, Nghệ sĩ",
+                'ko': "아티스트 María Paz Arés Osset와 함께"
             }
             credit_text = poem_credits.get(lang_code, poem_credits['es'])
             html += f'                    <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">{credit_text}</p>\n'
@@ -660,7 +683,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
                 'zh': "在 Spotify 上收听",
                 'ar': "استمع على Spotify",
                 'ru': "Слушать в Spotify",
-                'vi': "Nghe trên Spotify"
+                'vi': "Nghe trên Spotify",
+                'ko': "Spotify에서 듣기"
             }
             btn_text = spotify_texts.get(lang_code, "Listen on Spotify")
             fallback_link = "https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA"
@@ -692,7 +716,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             'zh': "我的朋友耶稣基督 - 一道微光",
             'ar': "صديقي يسوع المسيح - لمحة từ n-nūr",
             'ru': "Мой друг Иисус Христос - Проблеск света",
-            'vi': "Người bạn Giê-su của tôi - Một tia sáng"
+            'vi': "Người bạn Giê-su của tôi - Một tia sáng",
+            'ko': "나의 친구 예수 그리스도 - 빛의 엿봄"
         }
         alt_val = alt_texts.get(lang_code, "Mi Amigo Jesucristo - A Glimpse of Light")
         # Use localized image with fallback to the original Spanish version via onerror
@@ -708,6 +733,7 @@ def generate_multilingual_html(filename, translations, spanish_content):
                 <div class="arabic language"><p>كتب بكل حب واهتزاز عالٍ.</p></div>
                 <div class="russian language"><p>Написано с любовью и высокой вибрацией.</p></div>
                 <div class="vietnamese language"><p>Được viết bằng tình yêu và rung động cao.</p></div>
+                <div class="korean language"><p>사랑과 높은 진동으로 쓰여졌습니다.</p></div>
             </footer>
         </main>
     </div>
