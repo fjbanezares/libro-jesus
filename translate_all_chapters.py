@@ -17,7 +17,9 @@ LANG_MAP = {
     'ar': 'arabic',
     'ru': 'russian',
     'vi': 'vietnamese',
-    'ko': 'korean'
+    'ko': 'korean',
+    'pt': 'portuguese',
+    'ja': 'japanese'
 }
 
 LANGUAGES = {
@@ -29,7 +31,9 @@ LANGUAGES = {
     'ar': 'العربية',
     'ru': 'Русский',
     'vi': 'Tiếng Việt',
-    'ko': '한국어'
+    'ko': '한국어',
+    'pt': 'Português',
+    'ja': '日本語'
 }
 
 FLAGS = {
@@ -41,7 +45,9 @@ FLAGS = {
     'ar': '🇸🇦',
     'ru': '🇷🇺',
     'vi': '🇻🇳',
-    'ko': '🇰🇷'
+    'ko': '🇰🇷',
+    'pt': '🇵🇹',
+    'ja': '🇯🇵'
 }
 
 CHAPTERS = [
@@ -393,6 +399,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             <option value="russian">Русский 🇷🇺</option>
             <option value="vietnamese">Tiếng Việt 🇻🇳</option>
             <option value="korean">한국어 🇰🇷</option>
+            <option value="portuguese">Português 🇵🇹</option>
+            <option value="japanese">日本語 🇯🇵</option>
         </select>
     </div>
 
@@ -418,7 +426,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
         'ar': "صديقي يسوع المسيح",
         'ru': "Мой друг Иисус Христос",
         'vi': "Người bạn Giê-su của tôi",
-        'ko': "나의 친구 예수 그리스도"
+        'ko': "나의 친구 예수 그리스도",
+        'pt': "O meu amigo Jesus Cristo",
+        'ja': "私の友人イエス・キリスト"
     }
 
     chapter_translations = {
@@ -431,7 +441,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "مقدمة: بين الجسيم والاهتزاز",
             "ru": "Введение: Между частицей и вибрацией",
             "vi": "Giới thiệu: Giữa Hạt và Rung động",
-            "ko": "서문: 입자와 진동 사이에서"
+            "ko": "서문: 입자와 진동 사이에서",
+            "pt": "Introdução: Entre a Partícula e a Vibração",
+            "ja": "はじめに：粒子と振動の間で"
         },
         "index.html": {
             "es": "Capítulo 1: El Encuentro en Madrid",
@@ -442,7 +454,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل الأول: اللقاء في مدريد",
             "ru": "Глава 1: Встреча в Мадриде",
             "vi": "Chương 1: Cuộc gặp gỡ tại Madrid",
-            "ko": "제1장: 마드리드에서의 만남"
+            "ko": "제1장: 마드리드에서의 만남",
+            "pt": "Capítulo 1: O Encontro em Madrid",
+            "ja": "第1章：マドリードでの出会い"
         },
         "02_capitulo.html": {
             "es": "Capítulo 2: Paseo por Las Rozas",
@@ -453,7 +467,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل الثاني: نزهة في لاس روزاس",
             "ru": "Глава 2: Прогулка по Лас-Росас",
             "vi": "Chương 2: Đi dạo qua Las Rozas",
-            "ko": "제2장: 라스 로사스 산책"
+            "ko": "제2장: 라스 로사스 산책",
+            "pt": "Capítulo 2: Passeio por Las Rozas",
+            "ja": "第2章：ラス・ロサスの散歩"
         },
         "03_capitulo.html": {
             "es": "Capítulo 3: La Vibración y el Silencio",
@@ -464,7 +480,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل الثالث: الاهتزاز والصمت",
             "ru": "Глава 3: Вибрация и тишина",
             "vi": "Chương 3: Rung động và Im lặng",
-            "ko": "제3장: 진동과 침묵"
+            "ko": "제3장: 진동과 침묵",
+            "pt": "Capítulo 3: A Vibração e o Silêncio",
+            "ja": "第3章：振動と静寂"
         },
         "04_capitulo.html": {
             "es": "Capítulo 4: Colmenarejo y la Naturaleza",
@@ -475,7 +493,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل الرابع: كولميناريجو والطبيعة",
             "ru": "Глава 4: Кольменарехо и природа",
             "vi": "Chương 4: Colmenarejo và Thiên nhiên",
-            "ko": "제4장: 콜메나레호와 자연"
+            "ko": "제4장: 콜메나레호와 자연",
+            "pt": "Capítulo 4: Colmenarejo e a Natureza",
+            "ja": "第4章：コルメナレホと自然"
         },
         "05_capitulo.html": {
             "es": "Capítulo 5: El Padre Nuestro (Parte 1: Padre)",
@@ -486,7 +506,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)",
             "ru": "Глава 5: Отче наш (Часть 1: Отче)",
             "vi": "Chương 5: Kinh Lạy Cha (Phần 1: Cha)",
-            "ko": "제5장: 주기도문 (제1부: 아버지)"
+            "ko": "제5장: 주기도문 (제1부: 아버지)",
+            "pt": "Capítulo 5: O Pai Nosso (Parte 1: Pai)",
+            "ja": "第5章：主の祈り（パート1：父）"
         },
         "06_capitulo.html": {
             "es": "Capítulo 6: El Padre Nuestro (Parte 2: Cielo)",
@@ -497,7 +519,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)",
             "ru": "Глава 6: Отче наш (Часть 2: Небо)",
             "vi": "Chương 6: Kinh Lạy Cha (Phần 2: Trời)",
-            "ko": "제6장: 주기도문 (제2부: 하늘)"
+            "ko": "제6장: 주기도문 (제2부: 하늘)",
+            "pt": "Capítulo 6: O Pai Nosso (Parte 2: Céu)",
+            "ja": "第6章：主の祈り（パート2：天）"
         },
         "07_capitulo.html": {
             "es": "Capítulo 7: El Pan de Cada Día",
@@ -508,7 +532,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل السابع: خبزنا كفافنا",
             "ru": "Глава 7: Хлеб наш насущный",
             "vi": "Chương 7: Lương thực hằng ngày",
-            "ko": "제7장: 우리에게 일용할 양식"
+            "ko": "제7장: 우리에게 일용할 양식",
+            "pt": "Capítulo 7: O Pão de Cada Dia",
+            "ja": "第7章：日々の糧"
         },
         "08_capitulo.html": {
             "es": "Capítulo 8: Perdón y Deudas",
@@ -516,10 +542,12 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "fr": "Chapitre 8 : Pardon et dettes",
             "it": "Capitolo 8: Perdono e debiti",
             "zh": "第 8 章：宽恕与债务",
-            "ar": "الفصل الثامن: المغفرة والديون",
+            "ar": "الفصل الث第八: المغفرة والديون",
             "ru": "Глава 8: Прощение и долги",
             "vi": "Chương 8: Tha thứ và Nợ nần",
-            "ko": "제8장: 용서와 빚"
+            "ko": "제8章: 용서와 빚",
+            "pt": "Capítulo 8: Perdão e Dívidas",
+            "ja": "第8章：許しと負い目"
         },
         "09_capitulo.html": {
             "es": "Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)",
@@ -530,18 +558,22 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)",
             "ru": "Глава 9: Не введи нас в искушение (Вибрировать высоко)",
             "vi": "Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)",
-            "ko": "제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)"
+            "ko": "제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)",
+            "pt": "Capítulo 9: Não nos deixeis cair em tentação (Vibrar Alto)",
+            "ja": "第9章：誘惑に陥らせないで（高い振動）"
         },
         "10_capitulo.html": {
             "es": "Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)",
             "en": "Chapter 10: Deliver us from evil (Protection from Low Vibrations)",
             "fr": "Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)",
             "it": "Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)",
-            "zh": "第 10 章：救我们脱离凶恶（远离低频振动）",
+            "zh": "第 10 章：救我们脱離凶惡（远离低频振动）",
             "ar": "الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)",
             "ru": "Глава 10: Избавь нас от лукавого (Защита от низких вибраций)",
             "vi": "Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)",
-            "ko": "제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)"
+            "ko": "제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)",
+            "pt": "Capítulo 10: Livrai-nos do mal (Proteção de Baixas Vibrações)",
+            "ja": "第10章：悪から救い出して（低い振動からの保護）"
         },
         "11_capitulo.html": {
             "es": "Capítulo 11: El Reino, el Poder y la Gloria",
@@ -552,7 +584,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الفصل الحادي عشر: الملك والقدرة والمجد",
             "ru": "Глава 11: Царство, Сила и Слава",
             "vi": "Chương 11: Vương quốc, Quyền năng và Vinh quang",
-            "ko": "제11장: 나라와 권능과 영광"
+            "ko": "제11장: 나라와 권능과 영광",
+            "pt": "Capítulo 11: O Reino, o Poder e a Glória",
+            "ja": "第11章：御国、力、栄光"
         },
         "12_epilogo.html": {
             "es": "Epílogo: Aventuras Finales y Despedida",
@@ -563,7 +597,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "الخاتمة: المغامرات الأخيرة والوداع",
             "ru": "Эпилог: Последние приключения и прощание",
             "vi": "Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt",
-            "ko": "에필로그: 마지막 모험과 작별"
+            "ko": "에필로그: 마지막 모험과 작별",
+            "pt": "Epílogo: Aventuras Finais e Despedida",
+            "ja": "エピローグ：最後の冒険と別れ"
         },
         "13_apendice_poema.html": {
             "es": "Apéndice: Poema de Navidad",
@@ -574,7 +610,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ar": "ملحق: قصيدة عيد الميلاد",
             "ru": "Приложение: Рождественское стихотворение",
             "vi": "Phụ lục: Bài thơ Giáng sinh",
-            "ko": "부록: 크리스마스 시"
+            "ko": "부록: 크리스마스 시",
+            "pt": "Apéndice: Poema de Natal",
+            "ja": "付録：クリスマスの詩"
         }
     }
 
@@ -625,11 +663,18 @@ def generate_multilingual_html(filename, translations, spanish_content):
     elif footer_img and not chapter_img:
         chapter_img = footer_img
     
+    # Explicit fallbacks for specific chapters avoiding 'default.png'
+    if filename == "index.html":
+        if not chapter_img: chapter_img = "images/madrid.png"
+        if not footer_img: footer_img = "images/madrid.png"
+    elif filename == "00_introduccion.html":
+        # Use the specific Quantum/Luther image for the intro header (The "Rose" image)
+        if not chapter_img: chapter_img = "images/intro_quantum_luther.png"
+        # We will handle the footer (Glimpse) specifically inside the loop for localization
+        footer_img = None
+    
     if not chapter_img:
-        if filename == "index.html":
-            chapter_img = "images/madrid.png"
-        else:
-            chapter_img = "images/default.png"
+        chapter_img = "images/default.png"
         
 
     # Clean body_es to remove any direct image tags or containers that might cause duplication
@@ -669,7 +714,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
                 'ar': "مع مارia Paz Arés Osset، الفنانة",
                 'ru': "с Марией Пас Арес Оссет, художницей",
                 'vi': "với María Paz Arés Osset, Nghệ sĩ",
-                'ko': "아티스트 María Paz Arés Osset와 함께"
+                'ko': "아티스트 María Paz Arés Osset와 함께",
+                'pt': "com María Paz Arés Osset, a Artista",
+                'ja': "アーティスト María Paz Arés Osset と共に"
             }
             credit_text = poem_credits.get(lang_code, poem_credits['es'])
             html += f'                    <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">{credit_text}</p>\n'
@@ -684,7 +731,9 @@ def generate_multilingual_html(filename, translations, spanish_content):
                 'ar': "استمع على Spotify",
                 'ru': "Слушать в Spotify",
                 'vi': "Nghe trên Spotify",
-                'ko': "Spotify에서 듣기"
+                'ko': "Spotify에서 듣기",
+                'pt': "Ouvir no Spotify",
+                'ja': "Spotifyで聴く"
             }
             btn_text = spotify_texts.get(lang_code, "Listen on Spotify")
             fallback_link = "https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA"
@@ -699,29 +748,34 @@ def generate_multilingual_html(filename, translations, spanish_content):
             html += f'                    </div>\n'
             
         html += f'                    {body_text}\n'
+        
+        # Special addition for Introduction: Glimpse image at the footer (localized)
+        if filename == "00_introduccion.html":
+            # Add the Quantum/Rose image fully displayed before the cover image as requested
+            html += f'                    <div class="image-container-footer" style="margin-top: 2rem; margin-bottom: 1rem;"><img src="images/intro_quantum_luther.png" alt="Quantum Spiritual Journey" class="footer-image"></div>\n'
+            
+            glimpse_img = f"images/glimpse_{lang_code}.png"
+            alt_texts = {
+                'es': "Mi Amigo Jesucristo - Un destello de luz",
+                'en': "My Friend Jesus Christ - A Glimpse of Light",
+                'fr': "Mon Ami Jésus-Christ - Un aperçu de lumière",
+                'it': "Il Mio Amico Gesù Cristo - Un barlume di luce",
+                'zh': "我的朋友耶稣基督 - 一道微光",
+                'ar': "صديقي يسوع المسيح - لمحة من النور",
+                'ru': "Мой друг Иисус Христос - Проблеск света",
+                'vi': "Người bạn Giê-su của tôi - Một tia sáng",
+                'ko': "나의 친구 예수 그리스도 - 빛의 엿봄",
+                'pt': "O meu amigo Jesus Cristo - Um vislumbre de luz",
+                'ja': "私の友人イエス・キリスト - 一筋の光"
+            }
+            alt_val = alt_texts.get(lang_code, "Mi Amigo Jesucristo - A Glimpse of Light")
+            html += f'                    <div class="image-container-footer" style="margin-top: 1rem;"><img src="{glimpse_img}" alt="{alt_val}" class="footer-image" onerror="this.src=\'images/glimpse_of_light.png\'"></div>\n'
+
         html += '                </div>\n'
 
     if footer_img:
         html += f'                <div class="image-container-footer"><img src="{footer_img}" alt="Ilustración del capítulo" class="footer-image"></div>\n'
     
-    # Special addition for Introduction as requested by user
-    if filename == "00_introduccion.html":
-        # Map to specific localized image files
-        glimpse_img = f"images/glimpse_{lang_code}.png"
-        alt_texts = {
-            'es': "Mi Amigo Jesucristo - Un destello de luz",
-            'en': "My Friend Jesus Christ - A Glimpse of Light",
-            'fr': "Mon Ami Jésus-Christ - Un aperçu de lumière",
-            'it': "Il Mio Amico Gesù Cristo - Un barlume di luce",
-            'zh': "我的朋友耶稣基督 - 一道微光",
-            'ar': "صديقي يسوع المسيح - لمحة từ n-nūr",
-            'ru': "Мой друг Иисус Христос - Проблеск света",
-            'vi': "Người bạn Giê-su của tôi - Một tia sáng",
-            'ko': "나의 친구 예수 그리스도 - 빛의 엿봄"
-        }
-        alt_val = alt_texts.get(lang_code, "Mi Amigo Jesucristo - A Glimpse of Light")
-        # Use localized image with fallback to the original Spanish version via onerror
-        html += f'                <div class="image-container-footer" style="margin-top: 1rem;"><img src="{glimpse_img}" alt="{alt_val}" class="footer-image" onerror="this.src=\'images/glimpse_of_light.png\'"></div>\n'
     
     html += """            </div>
             <footer>
@@ -734,6 +788,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
                 <div class="russian language"><p>Написано с любовью и высокой вибрацией.</p></div>
                 <div class="vietnamese language"><p>Được viết bằng tình yêu và rung động cao.</p></div>
                 <div class="korean language"><p>사랑과 높은 진동으로 쓰여졌습니다.</p></div>
+                <div class="portuguese language"><p>Escrito com amor e alta vibração.</p></div>
+                <div class="japanese language"><p>愛と高い波動で書かれました。</p></div>
             </footer>
         </main>
     </div>
