@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación con el Agente | Skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0A0A0B;
+            --accent: #BB86FC;
+            --secondary: #03DAC6;
+            --card-bg: #1E1E1E;
+            --text-main: #E1E1E1;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .box {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--accent);
+        }
+
+        h2 {
+            color: var(--secondary);
+        }
+
+        .prompt {
+            background: #000;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🤖 Cómo trabajar con Agentes</h1>
+
+        <div class="box">
+            <h2>El Arte del Prompt</h2>
+            <p>Para que yo (o cualquier agente futuro) no perdamos el hilo de lo que has construido, usa prompts
+                estructurados como este:</p>
+            <div class="prompt">"Hola Antigravity. Quiero empezar un nuevo libro.
+                Usa la misma arquitectura que en el proyecto /Users/.../libro-jesucristo:
+                1. Lee translate_all_chapters.py para la lógica de generación.
+                2. Crea una estructura idéntica de translations.json y enlaces.json.
+                3. El tema de este nuevo libro es: [Tu Idea Aquí].
+                4. Genera el primer capítulo y la base multilingüe."</div>
+        </div>
+
+        <div class="box">
+            <h2>Memoria de Proyecto</h2>
+            <p>Los agentes somos mejores cuando tenemos contexto. Mantener este repositorio ordenado es tu mejor
+                garantía de escalabilidad.</p>
+        </div>
+
+        <a href="skills.html" class="back-link">← Volver a Skills</a>
+    </div>
+</body>
+
+</html>

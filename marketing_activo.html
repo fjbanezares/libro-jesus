@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Marketing Activo | Mi amigo Jesucristo</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --dark: #1A1A1A;
+            --light: #F7FFF7;
+            --accent: #FFE66D;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: radial-gradient(circle at top right, #2a2a2a, #1a1a1a);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 5rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: var(--secondary);
+        }
+
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .card h2 span {
+            margin-right: 15px;
+            font-size: 2.5rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: var(--primary);
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            margin-top: 5rem;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">Estrategia 2026</div>
+            <h1>Marketing de Alta Vibración</h1>
+            <p class="subtitle">Desplegando el universo de "Mi amigo Jesucristo"</p>
+        </header>
+
+        <div class="grid">
+            <!-- Eje 1: Amazon KDP & LaTeX -->
+            <div class="card">
+                <h2><span>📖</span>Amazon KDP Elite</h2>
+                <p>El libro físico es el pilar de autoridad. Usaremos LaTeX para una maquetación impecable.</p>
+                <ul>
+                    <li><span class="highlight">Diseño de Cubierta:</span> Colores vivos, acabado mate.</li>
+                    <li><span class="highlight">A+ Content:</span> Crear una "página de autor" en Amazon con las
+                        ilustraciones y poemas.</li>
+                    <li><span class="highlight">Preventa Estratégica:</span> 15 días de preventa para acumular ranking.
+                    </li>
+                </ul>
+                <a href="mkt_amazon.html"
+                    style="background: var(--secondary); color: var(--dark); padding: 5px 12px; border-radius: 10px; text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block;">Ver
+                    detalles KDP</a>
+            </div>
+
+            <!-- Eje 2: Multimedia & Spotify -->
+            <div class="card">
+                <h2><span>🎵</span>Sinfonía Transmedia</h2>
+                <p>Las canciones no son extras, son parte del alma del libro.</p>
+                <ul>
+                    <li><span class="highlight">Spotify For Artists:</span> Optimizar perfiles con las visuales del
+                        libro.</li>
+                    <li><span class="highlight">QR dinámicos:</span> En el libro físico para saltar directamente a la
+                        canción de cada capítulo.</li>
+                    <li><span class="highlight">Playlists:</span> Crear listas de "Vibración Elevada" incluyendo tus
+                        temas.</li>
+                </ul>
+            </div>
+
+            <!-- Eje 3: Redes Sociales (Visual & Viral) -->
+            <div class="card">
+                <h2><span>📱</span>Social High Vibe</h2>
+                <p>Transformar fragmentos del libro en contenido altamente compartible.</p>
+                <ul>
+                    <li><span class="highlight">Instagram Reels:</span> El poema recitado con música de fondo y las
+                        ilustraciones animadas.</li>
+                    <li><span class="highlight">TikTok:</span> "Detrás de la creación" - enseñando cómo la IA y la fe se
+                        unen en este proyecto.</li>
+                    <li><span class="highlight">Linktree:</span> Maximizar el clic hacia Ko-fi y Amazon.</li>
+                </ul>
+                <a href="mkt_social.html"
+                    style="background: var(--primary); color: white; padding: 5px 12px; border-radius: 10px; text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block;">Plan
+                    Social Media</a>
+            </div>
+
+            <!-- Eje 4: Directos & Comunidad -->
+            <div class="card">
+                <h2><span>🎥</span>Conexión en Vivo</h2>
+                <p>Crear una tribu alrededor de la interpretación vibracional.</p>
+                <ul>
+                    <li><span class="highlight">Directos de YouTube:</span> Lecturas analíticas de capítulos
+                        específicos: "La física de la fe".</li>
+                    <li><span class="highlight">Colaboraciones:</span> Entrevistas en canales de espiritualidad y física
+                        cuántica.</li>
+                    <li><span class="highlight">Webinars:</span> "El Padre Nuestro como código de vibración".</li>
+                </ul>
+                <a href="mkt_comunidad.html"
+                    style="background: var(--accent); color: var(--dark); padding: 5px 12px; border-radius: 10px; text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block;">Estrategia
+                    Comunidad</a>
+            </div>
+
+            <!-- Eje 5: El Universo Futuro -->
+            <div class="card" style="grid-column: span 1;">
+                <h2><span>🚀</span>Expansión del Universo</h2>
+                <p>Este es solo el primer nodo de una red de conocimiento.</p>
+                <ul>
+                    <li><span class="highlight">Siguientes libros:</span> Mantener la misma línea estética y técnica
+                        para crear una "Colección".</li>
+                    <li><span class="highlight">Newsletter:</span> Captar correos en la web para avisar de nuevos
+                        lanzamientos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            PROYECTO: MI AMIGO JESUCRISTO &copy; 2026 | PLAN PRIVADO DEL AUTOR
+        </footer>
+    </div>
+</body>
+
+</html>

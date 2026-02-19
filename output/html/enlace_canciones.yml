@@ -1,0 +1,12 @@
+spanish: 
+  - embed_album_in_spanish: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - link_to_album_in_spanish: https://open.spotify.com/intl-es/album/6FkbQuY2d7F09zmG2hqnFK?si=tG3wRRYFTVSmtCxsTFqkfg
+  - link_to_main_song_in_spanish: https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d
+  - main_song_in_spanish_embed: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5zOZkbbRmup3UjCfzOV7MK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+english: 
+  - link_to_album_in_english: https://open.spotify.com/album/1zaprhynStjBja2bhvXVGY?si=mPCYt5U2T06z0VTPd-6dNg
+  - embed_album_in_english: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1zaprhynStjBja2bhvXVGY?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - link_to_main_song_in_english: https://open.spotify.com/intl-es/track/5NP6oFjrdg2dGNxLMImoWJ?si=72c3d45305e24e3d
+  - main_song_in_english_embed: <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5NP6oFjrdg2dGNxLMImoWJ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+

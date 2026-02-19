@@ -1,0 +1,88 @@
+{
+    "spotify": {
+        "es": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "en": {
+            "track_id": "5NP6oFjrdg2dGNxLMImoWJ",
+            "album_id": "1zaprhynStjBja2bhvXVGY",
+            "track_url": "https://open.spotify.com/intl-es/track/5NP6oFjrdg2dGNxLMImoWJ?si=72c3d45305e24e3d"
+        },
+        "fr": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "it": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "zh": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "ar": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "ru": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "vi": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "ko": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "pt": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        },
+        "ja": {
+            "track_id": "5zOZkbbRmup3UjCfzOV7MK",
+            "album_id": "6FkbQuY2d7F09zmG2hqnFK",
+            "track_url": "https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d"
+        }
+    },
+    "donation": {
+        "url": "https://ko-fi.com/pazaresosset",
+        "text": {
+            "es": "¿Deseas colaborar con la causa del autor?",
+            "en": "Would you like to support the author's cause?",
+            "fr": "Souhaitez-vous soutenir la cause de l'auteur ?",
+            "it": "Vuoi sostenere la causa dell'autore?",
+            "zh": "您想支持作者的事业吗？",
+            "ar": "هل ترغب في دعم قضية المؤلف؟",
+            "ru": "Хотите поддержать дело автора?",
+            "vi": "Bạn có muốn hỗ trợ sự nghiệp của tác giả không?",
+            "ko": "저자의 활동을 지원하시겠습니까?",
+            "pt": "Deseja apoiar a causa do autor?",
+            "ja": "著者の活動 को支援しますか？"
+        },
+        "button": {
+            "es": "Ko-fi / Donación",
+            "en": "Ko-fi / Donation",
+            "fr": "Ko-fi / Faire un don",
+            "it": "Ko-fi / Donazione",
+            "zh": "Ko-fi / 捐赠",
+            "ar": "Ko-fi / تبرع",
+            "ru": "Ko-fi / Пожертвовать",
+            "vi": "Ko-fi / Quyên góp",
+            "ko": "Ko-fi / 후원하기",
+            "pt": "Ko-fi / Doação",
+            "ja": "Ko-fi / 支援する"
+        }
+    }
+}

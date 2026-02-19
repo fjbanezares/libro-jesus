@@ -1,45 +1,83 @@
-\documentclass[11pt,a5paper]{book}
+\documentclass[12pt,twoside,openany]{book}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[{{LANG}}]{babel}
+
+% Paper size A5 (148 x 210 mm)
+\usepackage[a5paper, top=20mm, bottom=20mm, inner=20mm, outer=15mm, footskip=10mm]{geometry}
+
 \usepackage{titlesec}
 \usepackage{fancyhdr}
-\usepackage{parskip}
+\usepackage{setspace} % For line spacing
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 \usepackage{needspace}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{ebgaramond} % Professional Garamond font
+\usepackage[parfill]{parskip} % Spacing between paragraphs
+\usepackage{xcolor}
+\usepackage{qrcode} % For generating QR codes directly in PDF
+\usepackage[export]{adjustbox} % For image borders
+\usepackage[framemethod=TikZ]{mdframed} % For elegant frames around text
 
-% Serif font for book feel (choose one that is standard in latex distributions or stick to default serif if packages differ, but mathpazo is reliable)
-\usepackage{mathpazo} 
+% Line spacing - more airy for 14pt
+\setstretch{1.4}
 
-% KDP Geometry (Binding Offset)
-\geometry{
-    paper=a5paper,
-    top=2cm,
-    bottom=2cm,
-    inner=2.5cm, % Gutter for binding
-    outer=1.5cm
-}
+% Special styling for the font size - 14pt for maximum comfort and premium feel
+\renewcommand{\normalsize}{\fontsize{14pt}{18pt}\selectfont}
+\normalsize
 
-% Styling
+% Section styling - elegant Garamond headers
 \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries\itshape}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+  {\normalfont\Huge\bfseries\itshape}{\chaptertitlename\ \thechapter}{10pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{20pt}{40pt}
 
-% Header/Footer
+% Header/Footer - fixing long title issue
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{\thepage}
-\fancyhead[RE]{\textit{Mi amigo Jesucristo}}
-\fancyhead[LO]{\textit{\leftmark}}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[RE]{\small\itshape\nouppercase{{{BOOK_TITLE}}}}
+\fancyhead[LO]{\small\itshape\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
 
-\title{Mi amigo Jesucristo}
-\author{A Glimpse of Light}
-\date{\today}
+% Fix for long titles in headers: truncate if needed
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+% Page transitions
+\newcommand{\chapterbreak}{\clearpage}
 
 \begin{document}
 
-\maketitle
+\frontmatter
+
+% Portada
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge \textbf{{{BOOK_TITLE}}} \par}
+    \vspace{1cm}
+    {\Large {{SUBTITLE}} \par}
+    \vfill
+    {\Large \textit{{{AUTHOR}}} \par}
+    \vspace*{3cm}
+\end{titlepage}
+
+% Copyright Page
+\newpage
+\thispagestyle{empty}
+\vspace*{12cm}
+\begin{center}
+    \small
+    {{BOOK_TITLE}} \\
+    © 2024 {{AUTHOR}} \\
+    Todos los derechos reservados. \\
+    Publicado en Amazon KDP \\
+\end{center}
+
 \tableofcontents
+
+\mainmatter
 
 {{CONTENT}}
 

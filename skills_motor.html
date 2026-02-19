@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Motor de Generación | Skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0A0A0B;
+            --accent: #BB86FC;
+            --secondary: #03DAC6;
+            --card-bg: #1E1E1E;
+            --text-main: #E1E1E1;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .box {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            color: var(--accent);
+        }
+
+        h2 {
+            color: var(--secondary);
+        }
+
+        code {
+            color: var(--accent);
+            background: #2D2D2D;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>⚙️ El Motor: Automatizando el Universo</h1>
+
+        <div class="box">
+            <h2>Estructura Inteligente</h2>
+            <p>Hemos diseñado este libro como una aplicación. Esto permite que el contenido sea independiente del
+                formato.</p>
+            <ul>
+                <li><code>translations.json</code>: El cerebro. Contiene todo el texto en 11 idiomas.</li>
+                <li><code>enlaces.json</code>: El sistema circulatorio. Controla dónde va el usuario (Spotify, Ko-fi).
+                </li>
+                <li><code>translate_all_chapters.py</code>: El obrero. Toma el cerebro y los datos y construye las
+                    páginas.</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>¿Por qué esto no es "empezar de cero"?</h2>
+            <p>Si quieres hacer un libro sobre "Los Ángeles", solo tienes que rellenar el <code>translations.json</code>
+                con ese nuevo contenido y cambiar los enlaces. El script hará el resto en segundos.</p>
+        </div>
+
+        <a href="skills.html" class="back-link">← Volver a Skills</a>
+    </div>
+</body>
+
+</html>

@@ -67,3 +67,43 @@ Elige categorías como:
 *   Ficción > Religiosa o Espiritual
 *   Cuerpo, mente y espíritu > Espiritualidad > General
 *   Religión > Espiritualidad
+
+---
+
+# Data for English Publication on Amazon KDP (Draft)
+
+## 1. Book Details
+
+*   **Language**: English
+*   **Book Title**: My Friend Jesus Christ
+*   **Subtitle**: *A Quantum Guide for the Modern Soul*
+
+## 3. Book Description (HTML Format)
+
+```html
+<b>What if Jesus didn't ask for worship, but for you to "vibrate high"?</b><br><br>
+
+Imagine walking through the streets of Madrid and meeting a man in jeans and sneakers. He doesn't judge you. He doesn't lecture you. He simply invites you to sit on a bench and explains that the <b>Kingdom of Heaven</b> is not a faraway place you go to when you die, but a wave frequency you can tune into right here and now.<br><br>
+
+In <i>My Friend Jesus Christ</i>, spirituality meets <b>quantum physics</b>. Through endearing and revealing dialogues that take place between the bustle of Madrid, the calm of Las Rozas, and the nature of Colmenarejo, you will discover a revolutionary interpretation of Christ's message:<br><br>
+
+<ul>
+<li><b>The Lord's Prayer</b> not as a repetitive prayer, but as an instruction manual to raise your vibrational frequency.</li>
+<li><b>Temptation</b> explained as the gravitational pull of dense emotions (fear, anger, sadness).</li>
+<li><b>Forgiveness</b> as the only physical tool to break the quantum bonds that tie us to suffering.</li>
+<li><b>Faith</b> understood as the certainty that the observer creates reality.</li>
+</ul>
+
+This is not a traditional religious book. It is an inner journey for the modern seeker who senses that science and faith are two different languages to explain the same Light. Written under the pseudonym <b>A Glimpse of Light</b>, this work is an urgent invitation to stop searching outside and start tuning in within.<br><br>
+
+<b>Dare to rediscover the Master. Dare to light your own light.</b>
+```
+
+## 4. Keywords
+1. Quantum spirituality
+2. Modern Jesus
+3. Personal growth and faith
+4. Christian metaphysics
+5. Quantum physics and God
+6. Spiritual novel
+7. Biblical law of attraction

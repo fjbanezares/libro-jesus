@@ -308,6 +308,107 @@
             margin-right: 0;
             margin-left: 10px;
         }
+
+        /* Linktree Button Styles */
+        .language-switcher-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .linktree-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #333;
+            padding: 3px 12px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.6rem;
+            margin-top: 5px;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .linktree-button:hover {
+            background: rgba(255, 255, 255, 1);
+            color: #000;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 1024px) {
+            .linktree-button {
+                font-size: 0.55rem;
+                padding: 2px 10px;
+            }
+        }
+
+        /* Poem Frame Styles */
+        .poem-frame {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin: 30px auto;
+            position: relative;
+            line-height: 2;
+            display: table;
+            text-align: left;
+            max-width: 90%;
+        }
+        
+        .poem-frame::before {
+            content: "❧";
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+
+        /* Donation Section Styles */
+        .donation-section {
+            margin: 40px auto 30px;
+            padding: 15px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .donation-text {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .donation-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #29abe0; /* Ko-fi Blue */
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .donation-button:hover {
+            background-color: #1a8dbb;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            color: white;
+        }
     </style>
 
 </head>
@@ -327,6 +428,7 @@
             <option value="portuguese">Português 🇵🇹</option>
             <option value="japanese">日本語 🇯🇵</option>
         </select>
+        <a href="https://www.pazaresosset.es/linktree.html" target="_blank" class="linktree-button">Linktree</a>
     </div>
 
     <header id="mobile-header">

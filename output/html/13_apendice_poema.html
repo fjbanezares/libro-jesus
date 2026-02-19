@@ -308,6 +308,107 @@
             margin-right: 0;
             margin-left: 10px;
         }
+
+        /* Linktree Button Styles */
+        .language-switcher-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .linktree-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #333;
+            padding: 3px 12px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.6rem;
+            margin-top: 5px;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .linktree-button:hover {
+            background: rgba(255, 255, 255, 1);
+            color: #000;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 1024px) {
+            .linktree-button {
+                font-size: 0.55rem;
+                padding: 2px 10px;
+            }
+        }
+
+        /* Poem Frame Styles */
+        .poem-frame {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin: 30px auto;
+            position: relative;
+            line-height: 2;
+            display: table;
+            text-align: left;
+            max-width: 90%;
+        }
+        
+        .poem-frame::before {
+            content: "❧";
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+
+        /* Donation Section Styles */
+        .donation-section {
+            margin: 40px auto 30px;
+            padding: 15px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .donation-text {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .donation-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #29abe0; /* Ko-fi Blue */
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .donation-button:hover {
+            background-color: #1a8dbb;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            color: white;
+        }
     </style>
 
 </head>
@@ -327,6 +428,7 @@
             <option value="portuguese">Português 🇵🇹</option>
             <option value="japanese">日本語 🇯🇵</option>
         </select>
+        <a href="https://www.pazaresosset.es/linktree.html" target="_blank" class="linktree-button">Linktree</a>
     </div>
 
     <header id="mobile-header">
@@ -797,11 +899,19 @@
                     <h1>Apéndice: Poema de Navidad</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">con María Paz Arés Osset, la Artist</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Escuchar en Spotify
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>Navidad de Alta Frecuencia</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">¿Deseas colaborar con la causa del autor?</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / Donación</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>Navidad de Alta Frecuencia</strong></p>
 <p>No busques al Niño en la paja fría de un tiempo remoto,<br />
 ni en el eco de un villancico que el viento ha roto.<br />
 No lo busques en la Gran Vía, bajo luces de neón,<br />
@@ -837,16 +947,25 @@ que tu luz sea el faro en la gran tormenta.  </p>
 <p>Esta es la Navidad: no un cuento pasado,<br />
 sino el milagro eterno de haber despertado.  </p>
 
+                    </div>
                 </div>
                 <div class="english language">
                     <h1>Appendix: Christmas Poem</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">with María Paz Arés Osset, the Artist</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5NP6oFjrdg2dGNxLMImoWJ?si=72c3d45305e24e3d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Listen on Spotify
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1zaprhynStjBja2bhvXVGY?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>High Frequency Christmas</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">Would you like to support the author's cause?</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / Donation</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>High Frequency Christmas</strong></p>
 <p>Do not look for the Child in the cold straw of a remote time,<br />
 nor in the echo of a carol that the wind has broken.<br />
 Do not look for him on Gran Vía, under neon lights,<br />
@@ -881,16 +1000,25 @@ Vibrate high, very high, let the world feel it,<br />
 let your light be the lighthouse in the great storm.  </p>
 <p>This is Christmas: not a past tale,<br />
 but the eternal miracle of having awakened.  </p>
+                    </div>
                 </div>
                 <div class="french language">
                     <h1>Appendice : Poème de Noël</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">avec María Paz Arés Osset, l'Artiste</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Écouter sur Spotify
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>Noël de haute fréquence</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">Souhaitez-vous soutenir la cause de l'auteur ?</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / Faire un don</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>Noël de haute fréquence</strong></p>
 <p>Ne cherche pas l'Enfant dans la paille froide d'un temps lointain,<br />
 ni dans l'écho d'un chant de Noël que le vent a brisé.<br />
 Ne le cherche pas sur la Gran Vía, sous les néons,<br />
@@ -925,16 +1053,25 @@ Vibre haut, très haut, que le monde le ressente,<br />
 que ta lumière soit le phare dans la tourmente.  </p>
 <p>C'est cela Noël : non pas un conte passé,<br />
 mais le miracle éternel d'être éveillé.  </p>
+                    </div>
                 </div>
                 <div class="italian language">
                     <h1>Appendice: Poesia di Natale</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">con María Paz Arés Osset, l'Artista</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Ascolta su Spotify
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>Natale ad Alta Frequenza</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">Vuoi sostenere la causa dell'autore?</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / Donazione</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>Natale ad Alta Frequenza</strong></p>
 <p>Non cercare il Bambino nella paglia fredda di un tempo remoto,<br />
 né nell'eco di un canto natalizio che il vento ha spezzato.<br />
 Non cercarlo sulla Gran Vía, sotto luci al neon,<br />
@@ -969,16 +1106,25 @@ Vibra alto, molto alto, che il mondo lo senta,<br />
 che la tua luce sia il faro nella grande tempesta.  </p>
 <p>Questo è il Natale: non un racconto passato,<br />
 ma il miracolo eterno di essersi risvegliato.  </p>
+                    </div>
                 </div>
                 <div class="chinese language">
                     <h1>附录：圣诞诗歌</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">与艺术家 María Paz Arés Osset 合作</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> 在 Spotify 上收听
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>高频次圣诞</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">您想支持作者的事业吗？</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / 捐赠</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>高频次圣诞</strong></p>
 <p>不要在遥远时代的冰冷稻草中寻找圣婴，<br />
 也不要在被风吹散的颂歌回声中寻找。<br />
 不要在格兰大道的霓虹灯下寻找他，<br />
@@ -1013,16 +1159,25 @@ ma il miracolo eterno di essersi risvegliato.  </p>
 让你的光成为大风暴中的灯塔。</p>
 <p>这就是圣诞节：不是一个过去的故事，<br />
 而是觉醒后永恒的奇迹。</p>
+                    </div>
                 </div>
                 <div class="arabic language">
                     <h1>ملحق: قصيدة عيد الميلاد</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">مع مارia Paz Arés Osset، الفنانة</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> استمع على Spotify
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>عيد ميلاد التردد العالي</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">هل ترغب في دعم قضية المؤلف؟</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / تبرع</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>عيد ميلاد التردد العالي</strong></p>
 <p>لا تبحث عن الطفل في القش البارد لزمن بعيد،<br />
 ولا في صدى ترنيمة حطمته الرياح.<br />
 لا تبحث عنه في شارع غران فيا، تحت أضواء النيون،<br />
@@ -1057,16 +1212,25 @@ ma il miracolo eterno di essersi risvegliato.  </p>
 وليكن نورك هو المنارة في العاصفة العظيمة.  </p>
 <p>هذا هو عيد الميلاد: ليس قصة من الماضي،<br />
 بل هي المعجزة الأبدية للاستيقاظ.  </p>
+                    </div>
                 </div>
                 <div class="russian language">
                     <h1>Приложение: Рождественское стихотворение</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">с Марией Пас Арес Оссет, художницей</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Слушать в Spotify
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>Высокочастотное Рождество</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">Хотите поддержать дело автора?</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / Пожертвовать</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>Высокочастотное Рождество</strong></p>
 <p>Не ищи Младенца в холодной соломе далеких времен,<br />
 ни в эхе рождественского гимна, что ветром разбит.<br />
 Не ищи его на Гран-Виа под неоновым светом,<br />
@@ -1101,16 +1265,25 @@ ma il miracolo eterno di essersi risvegliato.  </p>
 пусть твой свет станет маяком в великой буре.  </p>
 <p>Это и есть Рождество: не сказка из прошлого,<br />
 а вечное чудо твоего пробуждения.  </p>
+                    </div>
                 </div>
                 <div class="vietnamese language">
                     <h1>Phụ lục: Bài thơ Giáng sinh</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">với María Paz Arés Osset, Nghệ sĩ</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Nghe trên Spotify
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>Giáng sinh Tần số cao</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">Bạn có muốn hỗ trợ sự nghiệp của tác giả không?</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / Quyên góp</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>Giáng sinh Tần số cao</strong></p>
 <p>Đừng tìm Hài Nhi trong máng cỏ lạnh lẽo của một thời xa xôi,<br />
 cũng đừng tìm trong những khúc nhạc Giáng sinh đã tan biến theo làn gió.<br />
 Đừng tìm Ngài trên đường Gran Vía, dưới những ánh đèn neon,<br />
@@ -1145,16 +1318,25 @@ Hãy rung động thật cao, thật cao, để cả thế giới cùng cảm nh
 để ánh sáng của con là ngọn hải đăng giữa cơn bão tố cuộc đời.  </p>
 <p>Đây mới chính là Giáng sinh: không phải một câu chuyện cổ tích đã qua,<br />
 mà là một phép màu vĩnh cửu của việc được thức tỉnh.  </p>
+                    </div>
                 </div>
                 <div class="korean language">
                     <h1>부록: 크리스마스 시</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">아티스트 María Paz Arés Osset와 함께</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Spotify에서 듣기
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>높은 주파수의 크리스마스</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">저자의 활동을 지원하시겠습니까?</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / 후원하기</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>높은 주파수의 크리스마스</strong></p>
 <p>먼 옛날 차가운 지푸라기에서 아기를 찾지 마라,<br />
 바람이 흩어버린 캐럴의 메아리 속에서도 찾지 마라.<br />
 그란 비아의 네온사인 아래서도 찾지 마라,<br />
@@ -1189,16 +1371,25 @@ mà là một phép màu vĩnh cửu của việc được thức tỉnh.  </p>
 너의 빛이 거대한 폭풍 속의 등대가 되게 하라.  </p>
 <p>이것이 크리스마스다: 지나간 옛이야기가 아니라,<br />
 깨어났다는 영원한 기적이다.  </p>
+                    </div>
                 </div>
                 <div class="portuguese language">
                     <h1>Apêndice: Poema de Natal</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">com María Paz Arés Osset, a Artista</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Ouvir no Spotify
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>Natal de Alta Frequência</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">Deseja apoiar a causa do autor?</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / Doação</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>Natal de Alta Frequência</strong></p>
 <p>Não procures o Menino na palha fria de um tempo remoto,<br />
 nem no eco de uma canção de natal que o vento quebrou.<br />
 Não o procures na Gran Vía, sob luzes de néon,<br />
@@ -1233,16 +1424,25 @@ Vibra alto, muito alto, que o mundo o sinta,<br />
 que a tua luz seja o farol na grande tempestade. </p>
 <p>Este é o Natal: não um conto passado,<br />
 mas o milagre eterno de ter despertado. </p>
+                    </div>
                 </div>
                 <div class="japanese language">
                     <h1>付録：クリスマスの詩</h1>
                     <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">アーティスト María Paz Arés Osset と共に</p>
                     <div style="text-align: center; margin-bottom: 30px;">
-                        <a href="https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA" target="_blank" class="spotify-button" aria-label="Spotify">
+                        <a href="https://open.spotify.com/intl-es/track/5zOZkbbRmup3UjCfzOV7MK?si=161f7ace1afd493d" target="_blank" class="spotify-button" aria-label="Spotify">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> Spotifyで聴く
                         </a>
+                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6FkbQuY2d7F09zmG2hqnFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
                     </div>
-                    <p><strong>高周波のクリスマス</strong></p>
+                    <div class="donation-section">
+                        <p class="donation-text">著者の活動 को支援しますか？</p>
+                        <a href="https://ko-fi.com/pazaresosset" target="_blank" class="donation-button">☕ Ko-fi / 支援する</a>
+                    </div>
+                    <div class="poem-frame">
+                        <p><strong>高周波のクリスマス</strong></p>
 <p>遠い昔の冷たいわらの中に、幼子を探してはいけない。<br />
 風にかき消されたクリスマスキャロルの残響の中に探してはいけない。<br />
 ネオンの下のグラン・ビアの中で探してはいけない。<br />
@@ -1277,6 +1477,7 @@ mas o milagre eterno de ter despertado. </p>
 大嵐の中で、君の光が灯台となるように。  </p>
 <p>これがクリスマス。過去の物語ではなく、<br />
 目覚めたという、永遠の奇跡。  </p>
+                    </div>
                 </div>
                 <div class="image-container-footer"><img src="images/christmas_star_modern.png" alt="Ilustración del capítulo" class="footer-image"></div>
             </div>

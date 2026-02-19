@@ -5,7 +5,12 @@ import re
 # Source files
 TRANSLATIONS_FILE = '/Users/fjbanezares/libro sobre mi amigo Jesucristo/translations.json'
 SPANISH_CONTENT_FILE = '/Users/fjbanezares/libro sobre mi amigo Jesucristo/spanish_content.json'
+ENLACES_FILE = '/Users/fjbanezares/libro sobre mi amigo Jesucristo/enlaces.json'
 OUTPUT_DIR = '/Users/fjbanezares/libro sobre mi amigo Jesucristo/output/html/'
+
+# Load external links
+with open(ENLACES_FILE, 'r', encoding='utf-8') as f:
+    LINKS = json.load(f)
 
 # Language mapping for class names
 LANG_MAP = {
@@ -368,6 +373,107 @@ CSS_STYLES = """
             margin-right: 0;
             margin-left: 10px;
         }
+
+        /* Linktree Button Styles */
+        .language-switcher-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .linktree-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #333;
+            padding: 3px 12px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.6rem;
+            margin-top: 5px;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .linktree-button:hover {
+            background: rgba(255, 255, 255, 1);
+            color: #000;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 1024px) {
+            .linktree-button {
+                font-size: 0.55rem;
+                padding: 2px 10px;
+            }
+        }
+
+        /* Poem Frame Styles */
+        .poem-frame {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin: 30px auto;
+            position: relative;
+            line-height: 2;
+            display: table;
+            text-align: left;
+            max-width: 90%;
+        }
+        
+        .poem-frame::before {
+            content: "❧";
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+
+        /* Donation Section Styles */
+        .donation-section {
+            margin: 40px auto 30px;
+            padding: 15px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .donation-text {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .donation-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #29abe0; /* Ko-fi Blue */
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .donation-button:hover {
+            background-color: #1a8dbb;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            color: white;
+        }
     </style>
 """
 
@@ -402,6 +508,7 @@ def generate_multilingual_html(filename, translations, spanish_content):
             <option value="portuguese">Português 🇵🇹</option>
             <option value="japanese">日本語 🇯🇵</option>
         </select>
+        <a href="https://www.pazaresosset.es/linktree.html" target="_blank" class="linktree-button">Linktree</a>
     </div>
 
     <header id="mobile-header">
@@ -736,18 +843,43 @@ def generate_multilingual_html(filename, translations, spanish_content):
                 'ja': "Spotifyで聴く"
             }
             btn_text = spotify_texts.get(lang_code, "Listen on Spotify")
-            fallback_link = "https://open.spotify.com/track/5zOZkbbRmup3UjCfzOV7MK?si=SLglYJXZS8GbOohUiVmwhA"
+            # Get Spotify links for this language
+            spotify_config = LINKS.get('spotify', {}).get(lang_code, LINKS['spotify']['es'])
+            track_url = spotify_config.get('track_url')
+            album_id = spotify_config.get('album_id')
             
             # SVG Icon for Spotify
             spotify_icon = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
 
+            # Album Embed
+            album_embed_src = f"https://open.spotify.com/embed/album/{album_id}?utm_source=generator"
+            album_embed = f'<iframe data-testid="embed-iframe" style="border-radius:12px" src="{album_embed_src}" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
+
             html += f'                    <div style="text-align: center; margin-bottom: 30px;">\n'
-            html += f'                        <a href="{fallback_link}" target="_blank" class="spotify-button" aria-label="Spotify">\n'
+            html += f'                        <a href="{track_url}" target="_blank" class="spotify-button" aria-label="Spotify">\n'
             html += f'                            {spotify_icon} {btn_text}\n'
             html += f'                        </a>\n'
+            html += f'                        <div style="margin-top: 20px; max-width: 600px; margin-left: auto; margin-right: auto;">\n'
+            html += f'                            {album_embed}\n'
+            html += f'                        </div>\n'
+            html += f'                    </div>\n'
+
+            # Donation Section (moved after music)
+            donation_url = LINKS.get('donation', {}).get('url')
+            donation_text = LINKS.get('donation', {}).get('text', {}).get(lang_code, LINKS['donation']['text']['es'])
+            donation_btn = LINKS.get('donation', {}).get('button', {}).get(lang_code, LINKS['donation']['button']['es'])
+            
+            html += f'                    <div class="donation-section">\n'
+            html += f'                        <p class="donation-text">{donation_text}</p>\n'
+            html += f'                        <a href="{donation_url}" target="_blank" class="donation-button">☕ {donation_btn}</a>\n'
             html += f'                    </div>\n'
             
-        html += f'                    {body_text}\n'
+        if filename == "13_apendice_poema.html":
+            html += f'                    <div class="poem-frame">\n'
+            html += f'                        {body_text}\n'
+            html += f'                    </div>\n'
+        else:
+            html += f'                    {body_text}\n'
         
         # Special addition for Introduction: Glimpse image at the footer (localized)
         if filename == "00_introduccion.html":
