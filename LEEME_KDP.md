@@ -1,35 +1,57 @@
-# Datos para Publicación en Amazon KDP
+# Guía Maestra de Publicación en Amazon KDP
 
-Aquí tienes la información preparada para copiar y pegar en los campos de KDP.
+Todos los paquetes de publicación para **"Mi Amigo Jesucristo"** están generados y listos en sus carpetas correspondientes.
 
-## 1. Detalles del Libro
+---
 
-*   **Idioma**: Español
-*   **Título del libro**: Mi Amigo Jesucristo
-*   **Subtítulo**: (Opcional - puedes dejarlo en blanco o poner algo como: *Una guía cuántica para el alma moderna*)
-*   **Serie**: (Dejar en blanco si es el primero)
-*   **Número de edición**: (Dejar en blanco si es la primera vez que publicas)
+## 📁 Archivos Listos para Subir a KDP
 
-## 2. Autor y Colaboradores
+### 1. Formato Kindle (eBook)
+* **Archivo de Interior**: [`output/epub/mi_amigo_jesucristo_es.epub`](file:///Users/fjbanezares/libro%20sobre%20mi%20amigo%20Jesucristo/output/epub/mi_amigo_jesucristo_es.epub)
+* **Portada para Kindle**: [`content/images/cover_kdp.png`](file:///Users/fjbanezares/libro%20sobre%20mi%20amigo%20Jesucristo/content/images/cover_kdp.png) (o `cover_kdp_backup_mararel.png`)
+* *Nota*: El archivo EPUB 3 ya incluye la portada y metadatos integrados, pero KDP te solicitará subir también la imagen de portada en formato JPG/PNG durante el paso de contenido.
 
-KDP separa el nombre en dos campos ("Nombre" y "Apellidos"). Para tu seudónimo "**A Glimpse of Light**", tienes dos opciones estéticas:
+### 2. Formato Tapa Blanda (Paperback)
+* **Archivo de Interior PDF**: [`output/latex/libro_kdp_es.pdf`](file:///Users/fjbanezares/libro%20sobre%20mi%20amigo%20Jesucristo/output/latex/libro_kdp_es.pdf)
+* **Tamaño de corte (Trim Size)**: A5 (14,8 x 21,0 cm) o estándar 6" x 9"
+* **Número de páginas**: 53 páginas (supera el mínimo de 24 págs).
+* **Opciones de impresión**: Tinta negra o estándar a color en papel blanco/crema. Sin sangría (No bleed).
 
-*   **Opción A (Recomendada)**:
-    *   **Nombre**: A Glimpse of
-    *   **Apellidos**: Light
-*   **Opción B**:
-    *   **Nombre**: A Glimpse of Light
-    *   **Apellidos**: . (un punto, si KDP obliga a rellenarlo)
+### 3. Formato Tapa Dura (Hardcover)
+* **Archivo de Interior PDF**: [`output/latex/libro_kdp_tapa_dura_es.pdf`](file:///Users/fjbanezares/libro%20sobre%20mi%20amigo%20Jesucristo/output/latex/libro_kdp_tapa_dura_es.pdf)
+* **Tamaño de corte (Trim Size)**: 5.5" x 8.5" (13,97 x 21,59 cm)
+* **Número de páginas**: 75 páginas (cumple estrictamente el **mínimo exigido de 75 páginas** para Tapa Dura en Amazon KDP).
+* **Opciones de impresión**: Tapa dura con brillo o mate. Sin sangría (No bleed).
 
-**Colaboradores**:
-*   Si **Maria Paz Arés Osset** es quien ha escrito contigo o ilustrado, añádela aquí.
-    *   **Nombre**: Maria Paz
-    *   **Apellidos**: Arés Osset
-    *   **Función**: Selecciona "Autor" o "Ilustrador" según corresponda.
+---
 
-## 3. Descripción del Libro (Formato HTML)
+## 📝 Datos para Copiar y Pegar en Amazon KDP
 
-Copia y pega este texto exacto en el cuadro de "Descripción". Incluye etiquetas HTML básicas (`<b>`, `<br>`) que Amazon permite para que se vea bonito (con negritas y listas).
+### Paso 1: Detalles del Libro
+
+* **Idioma**: Español
+* **Título del libro**: Mi Amigo Jesucristo
+* **Subtítulo**: *Una guía cuántica para el alma moderna*
+* **Serie**: *(Dejar en blanco)*
+* **Número de edición**: *(Dejar en blanco)*
+
+---
+
+### Paso 2: Autor y Colaboradores
+
+* **Autor Principal**:
+  * **Nombre**: A Glimpse of
+  * **Apellidos**: Light
+* **Colaborador / Ilustrador**:
+  * **Nombre**: Maria Paz
+  * **Apellidos**: Arés Osset
+  * **Función**: Ilustrador / Coautor
+
+---
+
+### Paso 3: Descripción del Libro (Formato HTML para Amazon)
+
+Copia y pega este texto exacto en el cuadro de "Descripción":
 
 ```html
 <b>¿Y si Jesús no te pidiera adoración, sino que "vibraras alto"?</b><br><br>
@@ -45,14 +67,15 @@ En <i>Mi Amigo Jesucristo</i>, la espiritualidad se encuentra con la <b>física 
 <li><b>La Fe</b> entendida como la certeza de que el observador crea la realidad.</li>
 </ul>
 
-Este no es un libro religioso tradicional. Es un viaje interior para el buscador moderno que intuye que la ciencia y la fe son dos lenguajes distintos para explicar la misma Luz. Escrito bajo el seudónimo <b>A Glimpse of Light</b>, esta obra es una invitación urgente a dejar de buscar fuera y empezar a sintonizar dentro.<br><br>
+Este no es un libro religioso tradicional. Es un viaje interior para el buscador moderno que intuye que la ciencia y la fe son dos lenguajes distintos para explicar la misma Luz. Escrito bajo el seudónimo <b>A Glimpse of Light</b> con arte y música original de <b>Maria Paz Arés Osset</b>, esta obra es una invitación urgente a dejar de buscar fuera y empezar a sintonizar dentro.<br><br>
 
 <b>Atrévete a redescubrir al Maestro. Atrévete a encender tu propia luz.</b>
 ```
 
-## 4. Palabras Clave (Keywords)
+---
 
-Amazon te pedirá hasta 7 palabras clave. Úsalas para que te encuentren:
+### Paso 4: Palabras Clave (Keywords - 7 campos)
+
 1. Espiritualidad cuántica
 2. Jesús moderno
 3. Crecimiento personal y fe
@@ -61,49 +84,36 @@ Amazon te pedirá hasta 7 palabras clave. Úsalas para que te encuentren:
 6. Novela espiritual
 7. Ley de la atracción bíblica
 
-## 5. Categorías
+---
 
-Elige categorías como:
-*   Ficción > Religiosa o Espiritual
-*   Cuerpo, mente y espíritu > Espiritualidad > General
-*   Religión > Espiritualidad
+### Paso 5: Categorías Recomendadas
+
+* **Categoría 1**: No Ficción / Ficción > Religiosa o Espiritual > Crecimiento Espiritual
+* **Categoría 2**: Cuerpo, Mente y Espíritu > Espiritualidad > General
+* **Categoría 3**: Religión y Filosofía > Cristianismo > Meditación y Oración
 
 ---
 
-# Data for English Publication on Amazon KDP (Draft)
+### Paso 6: Derechos y Precios (Paso 3 de KDP)
 
-## 1. Book Details
+* **Derechos**: "Poseo los derechos de publicación necesarios".
+* **ISBN**: Selecciona "Asignar un ISBN de KDP gratuito" para Tapa Blanda y Tapa Dura (o usa tu propio ISBN si dispones de él).
+* **Territorios**: Todos los territorios (derechos mundiales).
+* **Precio sugerido**:
+  * **Kindle eBook**: 2,99 € - 4,99 € (Regalías 70%)
+  * **Tapa Blanda (Paperback)**: 9,90 € - 12,90 €
+  * **Tapa Dura (Hardcover)**: 16,90 € - 19,90 €
 
-*   **Language**: English
-*   **Book Title**: My Friend Jesus Christ
-*   **Subtitle**: *A Quantum Guide for the Modern Soul*
+---
 
-## 3. Book Description (HTML Format)
+## 🛠️ Cómo Regenerar los Paquetes en el Futuro
 
-```html
-<b>What if Jesus didn't ask for worship, but for you to "vibrate high"?</b><br><br>
+Si modificas el texto o añades nuevos capítulos:
+```bash
+# 1. Regenerar PDFs de LaTeX (Tapa Blanda y Tapa Dura)
+python3 generate_kdp_bundle.py && cd output/latex && pdflatex -interaction=nonstopmode libro_kdp_es.tex && pdflatex -interaction=nonstopmode libro_kdp_tapa_dura_es.tex
 
-Imagine walking through the streets of Madrid and meeting a man in jeans and sneakers. He doesn't judge you. He doesn't lecture you. He simply invites you to sit on a bench and explains that the <b>Kingdom of Heaven</b> is not a faraway place you go to when you die, but a wave frequency you can tune into right here and now.<br><br>
-
-In <i>My Friend Jesus Christ</i>, spirituality meets <b>quantum physics</b>. Through endearing and revealing dialogues that take place between the bustle of Madrid, the calm of Las Rozas, and the nature of Colmenarejo, you will discover a revolutionary interpretation of Christ's message:<br><br>
-
-<ul>
-<li><b>The Lord's Prayer</b> not as a repetitive prayer, but as an instruction manual to raise your vibrational frequency.</li>
-<li><b>Temptation</b> explained as the gravitational pull of dense emotions (fear, anger, sadness).</li>
-<li><b>Forgiveness</b> as the only physical tool to break the quantum bonds that tie us to suffering.</li>
-<li><b>Faith</b> understood as the certainty that the observer creates reality.</li>
-</ul>
-
-This is not a traditional religious book. It is an inner journey for the modern seeker who senses that science and faith are two different languages to explain the same Light. Written under the pseudonym <b>A Glimpse of Light</b>, this work is an urgent invitation to stop searching outside and start tuning in within.<br><br>
-
-<b>Dare to rediscover the Master. Dare to light your own light.</b>
+# 2. Regenerar eBooks EPUB para Kindle
+python3 scripts/build_epub.py
 ```
 
-## 4. Keywords
-1. Quantum spirituality
-2. Modern Jesus
-3. Personal growth and faith
-4. Christian metaphysics
-5. Quantum physics and God
-6. Spiritual novel
-7. Biblical law of attraction

@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Reflexión y Meditación | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            /* Vibrant Coral */
+            --secondary: #4ECDC4;
+            /* Vibrant Teal */
+            --bg: #F7FFF7;
+            /* Off-white */
+            --text: #292F36;
+            /* Dark Slate */
+            --accent: #FFE66D;
+            /* Vibrant Yellow */
+            --sidebar-width: 250px;
+            --header-height: 60px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Mobile Header */
+        #mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: white;
+            padding: 0 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #mobile-header h1 {
+            display: none;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Sidebar Navigation */
+        #sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        #sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        #sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            padding-bottom: 5rem;
+            /* Extra space for the last items */
+        }
+
+        #sidebar nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        #sidebar nav a {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+        }
+
+        #sidebar nav a:hover,
+        #sidebar nav a.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        #content-wrapper {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+            padding: 2.5rem;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chapter-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-body {
+            padding: 3rem;
+            flex-grow: 1;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        h2,
+        h3 {
+            color: var(--secondary);
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+        }
+
+        .vibrar-alto {
+            background-color: var(--accent);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: auto;
+        }
+
+        /* Overlay for mobile */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            #mobile-header {
+                display: flex;
+            }
+
+            #sidebar {
+                transform: translateX(-100%);
+            }
+
+            #sidebar.open {
+                transform: translateX(0);
+            }
+
+            #sidebar.open+#overlay {
+                display: block;
+            }
+
+            #content-wrapper {
+                margin-left: 0;
+                width: 100%;
+                padding: 1rem;
+                padding-top: calc(var(--header-height) + 1rem);
+            }
+
+            .content-body {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chapter-image {
+                height: 250px;
+            }
+
+            .content-body {
+                padding: 1.5rem;
+            }
+        }
+
+        .image-container-footer {
+            margin-top: 3rem;
+            padding: 0 3rem 3rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container-footer {
+                padding: 0 1.5rem 2rem;
+            }
+        }
+
+        .footer-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Language display logic */
+        .language {
+            display: none;
+        }
+        .arabic {
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* Spotify Button Styles */
+        .spotify-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1DB954; /* Spotify Green */
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 20px auto;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .spotify-button:hover {
+            background-color: #1ed760;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+            color: white; /* Ensure text remains white */
+        }
+
+        .spotify-button svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        /* RTL specific adjustments for button icon */
+        .arabic .spotify-button svg {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+
+        /* Linktree Button Styles */
+        .language-switcher-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .linktree-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #333;
+            padding: 3px 12px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.6rem;
+            margin-top: 5px;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .linktree-button:hover {
+            background: rgba(255, 255, 255, 1);
+            color: #000;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 1024px) {
+            .linktree-button {
+                font-size: 0.55rem;
+                padding: 2px 10px;
+            }
+        }
+
+        /* Poem Frame Styles */
+        .poem-frame {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin: 30px auto;
+            position: relative;
+            line-height: 2;
+            display: table;
+            text-align: left;
+            max-width: 90%;
+        }
+        
+        .poem-frame::before {
+            content: "❧";
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+
+        /* Donation Section Styles */
+        .donation-section {
+            margin: 40px auto 30px;
+            padding: 15px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .donation-text {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .donation-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #29abe0; /* Ko-fi Blue */
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .donation-button:hover {
+            background-color: #1a8dbb;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+            <option value="korean">한국어 🇰🇷</option>
+            <option value="portuguese">Português 🇵🇹</option>
+            <option value="japanese">日本語 🇯🇵</option>
+        </select>
+        <a href="https://www.pazaresosset.es/linktree.html" target="_blank" class="linktree-button">Linktree</a>
+    </div>
+
+    <header id="mobile-header">
+        <div class="spanish language">
+            <h1>Guía de Reflexión y Meditación</h1>
+        </div>
+        <div class="english language">
+            <h1>Reflection and Meditation Guide</h1>
+        </div>
+        <div class="french language">
+            <h1>Guide de Réflexion et Méditation</h1>
+        </div>
+        <div class="italian language">
+            <h1>Guida di Riflessione e Meditazione</h1>
+        </div>
+        <div class="chinese language">
+            <h1>反思与冥想指南</h1>
+        </div>
+        <div class="arabic language">
+            <h1>دليل التأمل والتفكر</h1>
+        </div>
+        <div class="russian language">
+            <h1>Руководство по размышлению и медитации</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Hướng dẫn Suy ngẫm và Thiền định</h1>
+        </div>
+        <div class="korean language">
+            <h1>성찰과 명상 가이드</h1>
+        </div>
+        <div class="portuguese language">
+            <h1>Guia de Reflexão e Meditação</h1>
+        </div>
+        <div class="japanese language">
+            <h1>内省と瞑想のガイド</h1>
+        </div>
+        <button class="menu-toggle" id="menu-open">☰</button>
+    </header>
+
+    <aside id="sidebar">
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glosario Cuántico y Espiritual</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Música y las Frecuencias</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sobre el Autor y el Proyecto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">Guía de Reflexión y Meditación</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Quantum and Spiritual Glossary</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Music and Frequencies</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">About the Author and the Project</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">Reflection and Meditation Guide</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossaire Quantique et Spirituel</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Musique et les Fréquences</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">À propos de l'Auteur et du Projet</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">Guide de Réflexion et Méditation</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossario Quantistico e Spirituale</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Musica e le Frequenze</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sull'Autore e sul Progetto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">Guida di Riflessione e Meditazione</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天上）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：我们日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱離凶惡（远离低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗歌</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">量子与灵性词汇表</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">音乐与频率</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">关于作者与项目</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">反思与冥想指南</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الث第八: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">معجم الكم والروحانية</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">الموسيقى والترددات</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">عن المؤلف والمشروع</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">دليل التأمل والتفكر</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Квантовый и духовный глоссарий</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Музыка и частоты</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Об авторе и проекте</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">Руководство по размышлению и медитации</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Thuật ngữ Lượng tử và Tâm linh</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Âm nhạc và Tần số</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Về Tác giả và Dự án</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">Hướng dẫn Suy ngẫm và Thiền định</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="korean language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>나의 친구 예수 그리스도</h2>
+                <button class="menu-toggle" id="menu-close-ko" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">서문: 입자와 진동 사이에서</a>
+                    </li>
+                    <li><a href="index.html">제1장: 마드리드에서의 만남</a>
+                    </li>
+                    <li><a href="02_capitulo.html">제2장: 라스 로사스 산책</a>
+                    </li>
+                    <li><a href="03_capitulo.html">제3장: 진동과 침묵</a>
+                    </li>
+                    <li><a href="04_capitulo.html">제4장: 콜메나레호와 자연</a>
+                    </li>
+                    <li><a href="05_capitulo.html">제5장: 주기도문 (제1부: 아버지)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">제6장: 주기도문 (제2부: 하늘)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">제7장: 우리에게 일용할 양식</a>
+                    </li>
+                    <li><a href="08_capitulo.html">제8章: 용서와 빚</a>
+                    </li>
+                    <li><a href="09_capitulo.html">제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">제11장: 나라와 권능과 영광</a>
+                    </li>
+                    <li><a href="12_epilogo.html">에필로그: 마지막 모험과 작별</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">부록: 크리스마스 시</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">양자 및 영적 용어집</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">음악과 주파수</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">저자와 프로젝트 소개</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">성찰과 명상 가이드</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="portuguese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>O meu amigo Jesus Cristo</h2>
+                <button class="menu-toggle" id="menu-close-pt" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introdução: Entre a Partícula e a Vibração</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: O Encontro em Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Passeio por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: A Vibração e o Silêncio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo e a Natureza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: O Pai Nosso (Parte 1: Pai)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: O Pai Nosso (Parte 2: Céu)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: O Pão de Cada Dia</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdão e Dívidas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: Não nos deixeis cair em tentação (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Livrai-nos do mal (Proteção de Baixas Vibrações)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: O Reino, o Poder e a Glória</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finais e Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Natal</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossário Quântico e Espiritual</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">A Música e as Frequências</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sobre o Autor e o Projeto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">Guia de Reflexão e Meditação</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="japanese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>私の友人イエス・キリスト</h2>
+                <button class="menu-toggle" id="menu-close-ja" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">はじめに：粒子と振動の間で</a>
+                    </li>
+                    <li><a href="index.html">第1章：マドリードでの出会い</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第2章：ラス・ロサスの散歩</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第3章：振動と静寂</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第4章：コルメナレホと自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第5章：主の祈り（パート1：父）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第6章：主の祈り（パート2：天）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第7章：日々の糧</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第8章：許しと負い目</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第9章：誘惑に陥らせないで（高い振動）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第10章：悪から救い出して（低い振動からの保護）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第11章：御国、力、栄光</a>
+                    </li>
+                    <li><a href="12_epilogo.html">エピローグ：最後の冒険と別れ</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">付録：クリスマスの詩</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">量子とスピリチュアル用語集</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">音楽と周波数</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">著者とプロジェクトについて</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html" class="active">内省と瞑想のガイド</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div id="overlay"></div>
+
+    <div id="content-wrapper">
+        <main>
+            <img src="images/heaven_state.png" alt="Ilustración del capítulo" class="chapter-image">
+            <div class="content-body">
+                <div class="spanish language">
+                    <h1>Guía de Reflexión y Meditación</h1>
+                    <p>Para transformar los conceptos del libro en una experiencia viva en tu día a día, te sugerimos esta pequeña práctica de alineación cuántica en tres pasos:</p>
+<hr />
+<h3>1. La Pausa del Observador (Silencio Consciente)</h3>
+<ul>
+<li>Encuentra un momento de tranquilidad al comenzar o finalizar el día.</li>
+<li>Cierra los ojos y realiza tres respiraciones lentas y profundas, inhalando calma y exhalando cualquier preocupación.</li>
+<li>Conviértete en el «observador» imparcial de tus pensamientos sin juzgarlos. Recuerda que tú no eres el ruido mental; eres el espacio consciente en el que el ruido ocurre.</li>
+</ul>
+<hr />
+<h3>2. El Reajuste de Frecuencia (El Aliento de Abwoon)</h3>
+<ul>
+<li>Lleva tu atención al centro del pecho (la coherencia cardíaca).</li>
+<li>Evoca un recuerdo o sentimiento genuino de gratitud, aprecio o amor sincero.</li>
+<li>Siente cómo esa emoción eleva instantáneamente tu estado vibracional y disuelve las cargas de miedo o pesadez.</li>
+</ul>
+<hr />
+<h3>3. Preguntas para tu Cuaderno Interior</h3>
+<p>Dedica unos minutos a reflexionar o escribir sobre estas preguntas:</p>
+<ol>
+<li><em>¿En qué situaciones cotidianas siento que mi frecuencia vibratoria disminuye y cómo puedo elegir responder con amor?</em></li>
+<li><em>¿Existe algún lazo del pasado que esté listo para disolver mediante el perdón consciente hoy?</em></li>
+<li><em>¿Cómo puedo ser un reflejo vivo de la Luz y la Presencia para las personas que me rodean?</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>«La paz no es la ausencia de movimiento en el mundo exterior, sino la presencia inquebrantable de la Luz en tu interior.»</em></p>
+</blockquote>
+                </div>
+                <div class="english language">
+                    <h1>Reflection and Meditation Guide</h1>
+                    <p>To ground the teachings of the book into a living experience in your daily life, here is a simple three-step practice for quantum alignment:</p>
+<hr />
+<h3>1. The Observer's Pause (Conscious Silence)</h3>
+<ul>
+<li>Find a quiet moment at the beginning or end of your day.</li>
+<li>Close your eyes and take three slow, deep breaths, breathing in tranquility and releasing any worry.</li>
+<li>Become the neutral «observer» of your thoughts without judgment. Remember: you are not the mental noise; you are the conscious space in which the noise arises.</li>
+</ul>
+<hr />
+<h3>2. Frequency Realignment (The Breath of Abwoon)</h3>
+<ul>
+<li>Gently bring your focus to the center of your chest (heart coherence).</li>
+<li>Recall a genuine feeling of gratitude, appreciation, or sincere love.</li>
+<li>Feel how this emotion instantly elevates your vibrational state and dissolves heaviness and fear.</li>
+</ul>
+<hr />
+<h3>3. Inquiries for Your Inner Journal</h3>
+<p>Take a few minutes to reflect or write in your notebook:</p>
+<ol>
+<li><em>In what everyday situations do I feel my vibration dropping, and how can I choose to respond with love?</em></li>
+<li><em>Is there a bond from the past that I am ready to dissolve through conscious forgiveness today?</em></li>
+<li><em>How can I be a living reflection of Light and Presence for those around me?</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>«Peace is not the absence of movement in the outer world, but the unshakable presence of Light within you.»</em></p>
+</blockquote>
+                </div>
+                <div class="french language">
+                    <h1>Guide de Réflexion et Méditation</h1>
+                    <p>Pour ancrer les enseignements du livre dans votre quotidien, voici une pratique simple d'alignement quantique en trois étapes :</p>
+<hr />
+<h3>1. La Pause de l'Observateur (Silence Conscient)</h3>
+<ul>
+<li>Trouvez un moment de calme au début ou à la fin de votre journée.</li>
+<li>Fermez les yeux et prenez trois respirations lentes et profondes, en inspirant la paix et en expirant toute inquiétude.</li>
+<li>Devenez l'« observateur » neutre de vos pensées sans les juger. Souvenez-vous : vous n'êtes pas le bruit mental, vous êtes l'espace conscient dans lequel le bruit apparaît.</li>
+</ul>
+<hr />
+<h3>2. Le Réalignement de Fréquence (Le Souffle d'Abwoon)</h3>
+<ul>
+<li>Portez doucement votre attention au centre de votre poitrine (cohérence cardiaque).</li>
+<li>Évoquez un sentiment authentique de gratitude, d'appréciation ou d'amour sincère.</li>
+<li>Ressentez comment cette émotion élève instantanément votre état vibratoire et dissout la lourdeur et la peur.</li>
+</ul>
+<hr />
+<h3>3. Questions pour votre Journal Intérieur</h3>
+<p>Prenez quelques minutes pour méditer ou écrire :</p>
+<ol>
+<li><em>Dans quelles situations quotidiennes ma fréquence a-t-elle tendance à baisser, et comment puis-je choisir de répondre avec amour ?</em></li>
+<li><em>Y a-t-il un lien du passé que je suis prêt à dissoudre par le pardon conscient aujourd'hui ?</em></li>
+<li><em>Comment puis-je être un reflet vivant de Lumière et de Présence pour ceux qui m'entourent ?</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>« La paix n'est pas l'absence de mouvement dans le monde extérieur, mais la présence inébranlable de la Lumière en vous. »</em></p>
+</blockquote>
+                </div>
+                <div class="italian language">
+                    <h1>Guida di Riflessione e Meditazione</h1>
+                    <p>Per radicare gli insegnamenti del libro nella vita di tutti i giorni, ecco una semplice pratica di allineamento quantistico in tre passi:</p>
+<hr />
+<h3>1. La Pausa dell'Osservatore (Silenzio Consapevole)</h3>
+<ul>
+<li>Trova un momento di quiete all'inizio o alla fine della giornata.</li>
+<li>Chiudi gli occhi e fai tre respiri lenti e profondi, inspirando calma ed espirando ogni preoccupazione.</li>
+<li>Diventa l'«osservatore» neutrale dei tuoi pensieri senza giudicarli. Ricorda: tu non sei il rumore mentale, sei lo spazio cosciente in cui il rumore accade.</li>
+</ul>
+<hr />
+<h3>2. Il Riallineamento di Frequenza (Il Respiro di Abwoon)</h3>
+<ul>
+<li>Porta dolcemente l'attenzione al centro del petto (coerenza cardiaca).</li>
+<li>Evoca un ricordo o un sentimento genuino di gratitudine, apprezzamento o amore sincero.</li>
+<li>Senti come questa emozione innalza all'istante il tuo stato vibrazionale e dissolve ogni pesantezza o timore.</li>
+</ul>
+<hr />
+<h3>3. Domande per il tuo Quaderno Interiore</h3>
+<p>Dedica qualche minuto a riflettere o a scrivere:</p>
+<ol>
+<li><em>In quali situazioni quotidiane sento calare la mia frequenza, e come posso scegliere di rispondere con amore?</em></li>
+<li><em>C'è un legame del passato che sono pronto a sciogliere oggi attraverso il perdono consapevole?</em></li>
+<li><em>Come posso essere un riflesso vivente di Luce e Presenza per chi mi circonda?</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>«La pace non è l'assenza di movimento nel mondo esterno, ma l'incrollabile presenza della Luce dentro di te.»</em></p>
+</blockquote>
+                </div>
+                <div class="chinese language">
+                    <h1>反思与冥想指南</h1>
+                    <p>为了将书中的教导转化为日常生活中的鲜活体验，建议您进行以下三步量子对齐练习：</p>
+<hr />
+<h3>1. 观察者之静（觉知静默）</h3>
+<ul>
+<li>在清晨或夜晚寻找一段静谧时光。</li>
+<li>闭上双眼，做三次深长缓慢的呼吸，吸入宁静，呼出所有担忧。</li>
+<li>成为不加评判的“观察者”。请记住：您不是大脑的杂念，您是杂念升起并消逝的觉知空间。</li>
+</ul>
+<hr />
+<h3>2. 频率重新校准（Abwoon 的气息）</h3>
+<ul>
+<li>将注意力轻轻移至胸部中央（心脑共振区）。</li>
+<li>唤起一份真诚的感激、赞赏或由衷的爱。</li>
+<li>感受这种情感如何瞬间提升您的振动状态，消融所有的沉重与恐惧。</li>
+</ul>
+<hr />
+<h3>3. 内省日志反思问题</h3>
+<p>花几分钟静心思考或在笔记本上写下：</p>
+<ol>
+<li><em>在日常生活的哪些情境中我的振动频率容易下降，我又该如何选择以爱回应？</em></li>
+<li><em>今天我是否准备好通过有意识的宽恕，切断来自过去的沉重纽带？</em></li>
+<li><em>我该如何成为身边人眼中鲜活的光与临在的映照？</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>“和平并非外在世界的止步不前，而是你内在光芒的坚不可摧。”</em></p>
+</blockquote>
+                </div>
+                <div class="arabic language">
+                    <h1>دليل التأمل والتفكر</h1>
+                    <p>لترسيخ تعاليم الكتاب وتحويلها إلى تجربة حية في يومك، نقترح عليك هذا التمرين البسيط للمحاذاة الكمية في ثلاث خطوات:</p>
+<hr />
+<h3>1. وقفة المراقب (الصمت الواعي)</h3>
+<ul>
+<li>ابحث عن لحظة هدوء في بداية اليوم أو نهايته.</li>
+<li>أغمض عينيك وخذ ثلاثة أنفاس عميقة وبطيئة، مستنشقاً السكينة وطارداً أي قلق.</li>
+<li>كن «المراقب» المحايد لأفكارك دون إطلاق أحكام. تذكر أنك لست الضجيج العقلي؛ بل أنت الفضاء الواعي الذي يحدث فيه هذا الضجيج.</li>
+</ul>
+<hr />
+<h3>2. إعادة ضبط التردد (نَفَس أبون)</h3>
+<ul>
+<li>وجّه انتباهك برفق إلى مركز صدرك (تماسك القلب).</li>
+<li>استحضر شعوراً حقيقياً بالامتنان أو التقدير أو الحب الصادق.</li>
+<li>اشعر كيف يرفع هذا الشعور حالتك الاهتزازية على الفور ويبدد مشاعر الثقل والخوف.</li>
+</ul>
+<hr />
+<h3>3. أسئلة لدفتر تأملاتك الداخلي</h3>
+<p>خصص بضع دقائق للتفكير أو الكتابة:</p>
+<ol>
+<li><em>في أي مواقف يومية أشعر بانخفاض ترددي الاهتزازي، وكيف يمكنني أن أختار الاستجابة بمحبة؟</em></li>
+<li><em>هل هناك أي رابط من الماضي أنا مستعد لتحريره اليوم من خلال المغفرة الواعية؟</em></li>
+<li><em>كيف يمكنني أن أكون انعكاساً حياً للنور والحضور لمن حولي؟</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>«السلام ليس غياب الحركة في العالم الخارجي، بل هو الحضور الراسخ للنور في داخلك.»</em></p>
+</blockquote>
+                </div>
+                <div class="russian language">
+                    <h1>Руководство по размышлению и медитации</h1>
+                    <p>Чтобы воплотить учения книги в живой повседневный опыт, предлагаем простую трехшаговую практику квантовой сонастройки:</p>
+<hr />
+<h3>1. Пауза наблюдателя (Осознанное безмолвие)</h3>
+<ul>
+<li>Найдите несколько минут тишины в начале или в конце дня.</li>
+<li>Закройте глаза и сделайте три медленных глубоких вдоха, впуская покой и отпуская тревоги.</li>
+<li>Станьте нейтральным «наблюдателем» своих мыслей без осуждения. Помните: вы не ментальный шум, вы — пространство сознания, в котором этот шум возникает.</li>
+</ul>
+<hr />
+<h3>2. Перенастройка частоты (Дыхание Абвуна)</h3>
+<ul>
+<li>Мягко направьте внимание в центр груди (сердечная когерентность).</li>
+<li>Вызовите искреннее чувство благодарности, признательности или любви.</li>
+<li>Почувствуйте, как это чувство мгновенно повышает вашу вибрацию и растворяет страх и тяжесть.</li>
+</ul>
+<hr />
+<h3>3. Вопросы для внутреннего дневника</h3>
+<p>Уделите несколько минут размышлению или записи:</p>
+<ol>
+<li><em>В каких повседневных ситуациях моя частота падает, и как я могу ответить любовью?</em></li>
+<li><em>Есть ли связь из прошлого, которую я готов отпустить сегодня через осознанное прощение?</em></li>
+<li><em>Как я могу быть живым отражением Света и Присутствия для окружающих?</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>«Мир — это не отсутствие движения во внешнем мире, а непоколебимое присутствие Света внутри вас.»</em></p>
+</blockquote>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Hướng dẫn Suy ngẫm và Thiền định</h1>
+                    <p>Để biến những lời dạy thành trải nghiệm sống động trong cuộc sống hàng ngày, chúng tôi gợi ý bài thực hành lượng tử ba bước đơn giản này:</p>
+<hr />
+<h3>1. Khoảng lặng của Người quan sát (Tĩnh lặng Tỉnh thức)</h3>
+<ul>
+<li>Tìm một khoảnh khắc yên tĩnh vào đầu hoặc cuối ngày.</li>
+<li>Nhắm mắt lại và hít thở sâu, chậm rãi ba lần, hít vào sự bình an và thở ra mọi lo âu.</li>
+<li>Trở thành «người quan sát» vô tư đối với suy nghĩ mà không phán xét. Bạn không phải là dòng suy nghĩ ồn ào; bạn là không gian nhận biết nơi những suy nghĩ đó diễn ra.</li>
+</ul>
+<hr />
+<h3>2. Điều chỉnh lại Tần số (Hơi thở Abwoon)</h3>
+<ul>
+<li>Nhẹ nhàng đưa sự chú ý vào giữa lồng ngực (sự đồng điệu của trái tim).</li>
+<li>Gợi lại cảm giác chân thành về lòng biết ơn, trân trọng hoặc tình yêu thương.</li>
+<li>Cảm nhận cảm xúc này nâng cao trạng thái rung động của bạn ngay lập tức, xua tan mọi nặng nề và sợ hãi.</li>
+</ul>
+<hr />
+<h3>3. Câu hỏi cho Nhật ký Nội tâm</h3>
+<p>Dành vài phút suy ngẫm hoặc viết vào sổ:</p>
+<ol>
+<li><em>Trong những tình huống nào tần số của tôi bị giảm sút, và tôi có thể chọn đáp lại bằng tình yêu như thế nào?</em></li>
+<li><em>Có mối ràng buộc quá khứ nào tôi đã sẵn sàng buông bỏ bằng sự tha thứ tỉnh thức hôm nay không?</em></li>
+<li><em>Làm thế nào để tôi trở thành hiện thân sống động của Ánh Sáng và Sự Hiện Diện cho những người xung quanh?</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>«Bình an không phải là sự thiếu vắng chuyển động ở thế giới bên ngoài, mà là sự hiện diện bất biến của Ánh Sáng bên trong bạn.»</em></p>
+</blockquote>
+                </div>
+                <div class="korean language">
+                    <h1>성찰과 명상 가이드</h1>
+                    <p>책의 가르침을 일상에서 살아 숨 쉬는 생생한 체험으로 만들기 위해, 3단계 양자 정렬 명상법을 권합니다:</p>
+<hr />
+<h3>1. 관찰자의 멈춤 (의식적 침묵)</h3>
+<ul>
+<li>하루의 시작이나 끝에 고요한 시간을 마련합니다.</li>
+<li>눈을 감고 세 번의 깊고 느린 호흡을 하며, 평온을 들이마시고 모든 근심을 내보냅니다.</li>
+<li>판단 없이 생각의 중립적인 «관찰자»가 됩니다. 기억하세요: 당신은 생각의 소음이 아니라, 그 소음이 일어나는 고요한 의식의 공간입니다.</li>
+</ul>
+<hr />
+<h3>2. 주파수 재조율 (아브운의 숨결)</h3>
+<ul>
+<li>가슴 정중앙으로 부드럽게 의식을 집중합니다(심장 코히어런스).</li>
+<li>진심 어린 감사, 존중, 또는 순수한 사랑의 감정을 떠올립니다.</li>
+<li>이 감정이 어떻게 순식간에 진동 상태를 끌어올리고 무거운 두려움을 녹여내는지 느껴보세요.</li>
+</ul>
+<hr />
+<h3>3. 내면 일기를 위한 성찰 질문</h3>
+<p>잠시 시간을 내어 다음 질문을 성찰하거나 기록해 봅니다:</p>
+<ol>
+<li><em>나의 진동 주파수가 낮아지는 일상의 순간은 언제이며, 어떻게 사랑으로 반응할 수 있을까요?</em></li>
+<li><em>오늘 의식적인 용서를 통해 끊어낼 준비가 된 과거의 얽힘이 있나요?</em></li>
+<li><em>내 주변 사람들에게 어떻게 빛과 현존의 살아있는 통로가 될 수 있을까요?</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>«평화란 외부 세계의 움직임이 멈추는 것이 아니라, 당신 내면에 빛이 흔들림 없이 현존하는 것입니다.»</em></p>
+</blockquote>
+                </div>
+                <div class="portuguese language">
+                    <h1>Guia de Reflexão e Meditação</h1>
+                    <p>Para ancorar os ensinamentos do livro numa experiência viva no seu dia a dia, sugerimos esta prática simples de alinhamento quântico em três passos:</p>
+<hr />
+<h3>1. A Pausa do Observador (Silêncio Consciente)</h3>
+<ul>
+<li>Encontre um momento de tranquilidade no início ou no fim do dia.</li>
+<li>Feche os olhos e respire fundo e devagar três vezes, inspirando serenidade e libertando qualquer preocupação.</li>
+<li>Torne-se o «observador» neutro dos seus pensamentos, sem julgamentos. Lembre-se: você não é o ruído mental; é o espaço consciente no qual o ruído acontece.</li>
+</ul>
+<hr />
+<h3>2. O Realinhamento de Frequência (O Sopro de Abwoon)</h3>
+<ul>
+<li>Leve suavemente a sua atenção para o centro do peito (coerência cardíaca).</li>
+<li>Evoque um sentimento genuíno de gratidão, apreço ou amor sincero.</li>
+<li>Sinta como essa emoção eleva instantaneamente o seu estado vibracional e dissolve o medo e a sensação de peso.</li>
+</ul>
+<hr />
+<h3>3. Perguntas para o seu Caderno Interior</h3>
+<p>Dedique alguns minutos para refletir ou escrever no seu diário:</p>
+<ol>
+<li><em>Em que situações do dia a dia sinto que a minha frequência baixa, e como posso escolher responder com amor?</em></li>
+<li><em>Existe algum laço do passado que eu esteja pronto para dissolver através do perdão consciente hoje?</em></li>
+<li><em>Como posso ser um reflexo vivo de Luz e Presença para as pessoas ao meu redor?</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>«A paz não é a ausência de movimento no mundo exterior, mas a presença inabalável da Luz no seu interior.»</em></p>
+</blockquote>
+                </div>
+                <div class="japanese language">
+                    <h1>内省と瞑想のガイド</h1>
+                    <p>本書の教えを日々の生活の中で生き生きと実践するために、3つのステップで行う量子アライメント（調和）のワークをおすすめします：</p>
+<hr />
+<h3>1. 観察者の静止（自覚的な静寂）</h3>
+<ul>
+<li>一日の始まりや終わりに、静かな時間を見つけます。</li>
+<li>目を閉じ、ゆっくりと深呼吸を3回行い、平穏を吸い込み、すべての不安を吐き出します。</li>
+<li>判断を下さずに、自らの思考のニュートラルな「観察者」になります。思い出してください：あなたは頭の中の雑音ではなく、その雑音が現れては消える静寂の空間そのものです。</li>
+</ul>
+<hr />
+<h3>2. 周波数の再調整（アブウーンの息吹）</h3>
+<ul>
+<li>意識を優しく胸の中央（心臓のコヒーレンス領域）に向けます。</li>
+<li>心からの感謝、慈しみ、あるいは純粋な愛の感情を思い起こします。</li>
+<li>その感情が一瞬であなたの波動を高め、重苦しさや恐れを溶かしていくのを感じてください。</li>
+</ul>
+<hr />
+<h3>3. 内なるジャーナルのための問いかけ</h3>
+<p>数分間静かに内省し、ノートに書き留めてみましょう：</p>
+<ol>
+<li><em>日常のどんな場面で自分の波動が下がりがちでしょうか。どのように愛を持って応答することを選べるでしょうか？</em></li>
+<li><em>今日、意識的な許しを通じて解き放つ準備ができている過去の執着はありますか？</em></li>
+<li><em>周囲の人々にとって、どのようにして光と至高の存在（プレゼンス）の生きた鏡になれるでしょうか？</em></li>
+</ol>
+<hr />
+<blockquote>
+<p><em>「平和とは外の世界の動きが止むことではなく、あなたの内側に光が揺るぎなく存在することである。」</em></p>
+</blockquote>
+                </div>
+                <div class="image-container-footer"><img src="images/sunset_road.png" alt="Ilustración del capítulo" class="footer-image"></div>
+            </div>
+            <footer>
+                <div class="spanish language"><p>Escrito con amor y alta vibración.</p></div>
+                <div class="english language"><p>Written with love and high vibration.</p></div>
+                <div class="french language"><p>Écrit avec amour et haute vibration.</p></div>
+                <div class="italian language"><p>Scritto con amore e alta vibrazione.</p></div>
+                <div class="chinese language"><p>用爱与高频振动谱写。</p></div>
+                <div class="arabic language"><p>كتب بكل حب واهتزاز عالٍ.</p></div>
+                <div class="russian language"><p>Написано с любовью и высокой вибрацией.</p></div>
+                <div class="vietnamese language"><p>Được viết bằng tình yêu và rung động cao.</p></div>
+                <div class="korean language"><p>사랑과 높은 진동으로 쓰여졌습니다.</p></div>
+                <div class="portuguese language"><p>Escrito com amor e alta vibração.</p></div>
+                <div class="japanese language"><p>愛と高い波動で書かれました。</p></div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="base.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const btnOpen = document.getElementById('menu-open');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('open');
+            const isOpen = sidebar.classList.contains('open');
+            if (window.innerWidth <= 1024) {
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
+            }
+        }
+
+        btnOpen.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
+        overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
+
+        // Resize handler for button visibility
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+
+</html>

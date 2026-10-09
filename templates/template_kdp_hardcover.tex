@@ -1,0 +1,160 @@
+\documentclass[12pt,twoside,openright]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[{{LANG}}]{babel}
+
+% Standard Amazon KDP Hardcover size: 5.5 x 8.5 inches (139.7 x 215.9 mm)
+\usepackage[paperwidth=5.5in, paperheight=8.5in, top=24mm, bottom=24mm, inner=24mm, outer=20mm, footskip=12mm]{geometry}
+
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace} % For line spacing
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{needspace}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage[scaled=1.11]{ebgaramond} % Professional Garamond font
+\usepackage[parfill]{parskip} % Spacing between paragraphs
+\usepackage{xcolor}
+\usepackage{qrcode} % For generating QR codes directly in PDF
+\usepackage[export]{adjustbox} % For image borders
+\usepackage[framemethod=TikZ]{mdframed} % For elegant frames around text
+\usepackage{emptypage} % Clears headers and footers on empty right-hand separator pages
+
+% Line spacing - airy and comfortable for Hardcover
+\setstretch{1.45}
+
+\usepackage{caption}
+\captionsetup[figure]{font={small,it}, labelformat=empty, skip=6pt, justification=centering}
+
+% Section styling - elegant Garamond headers
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries\itshape\centering}{\chaptertitlename\ \thechapter}{6pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{15pt}{30pt}
+
+\setlength{\headheight}{16pt}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[RE]{\small\itshape\nouppercase{{{BOOK_TITLE}}}}
+\fancyhead[LO]{\small\itshape\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Fix for long titles in headers
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\begin{document}
+
+\frontmatter
+
+% Portadilla (Half-Title)
+\thispagestyle{empty}
+\vspace*{5cm}
+\begin{center}
+    {\LARGE \textbf{{{BOOK_TITLE}}}}
+\end{center}
+\cleardoublepage
+
+% Portada Principal (Full Title Page)
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge \textbf{{{BOOK_TITLE}}} \par}
+    \vspace{0.8cm}
+    {\Large \textit{{{SUBTITLE}}} \par}
+    \vfill
+    {\large \textbf{{{AUTHOR}}} \par}
+    \vspace{0.5cm}
+    {\small Con arte y música de Maria Paz Arés Osset \par}
+    \vspace*{2cm}
+\end{titlepage}
+\cleardoublepage
+
+% Copyright Page
+\thispagestyle{empty}
+\vspace*{11cm}
+\begin{center}
+    \small
+    \textbf{{{BOOK_TITLE}}} \\
+    \textit{{{SUBTITLE}}} \\
+    \vspace{0.5cm}
+    © 2024 {{AUTHOR}} \\
+    Todos los derechos reservados. \\
+    Publicado en Amazon KDP (Edición Tapa Dura) \\
+    \vspace{0.3cm}
+    \textit{www.pazaresosset.es}
+\end{center}
+\cleardoublepage
+
+% Epigraph / Cita inspiradora
+\thispagestyle{empty}
+\vspace*{6cm}
+\begin{center}
+    \itshape
+    «El Reino de los Cielos no es un lugar al que se llega,\\
+    es una frecuencia que se sintoniza.»\\
+    \vspace{1cm}
+    \normalfont --- \textbf{Mi Amigo Jesucristo}
+\end{center}
+\cleardoublepage
+
+\tableofcontents
+\cleardoublepage
+
+\mainmatter
+
+{{CONTENT}}
+
+\backmatter
+
+% Notas y Reflexiones del Lector
+\cleardoublepage
+\thispagestyle{plain}
+\chapter*{Notas y Reflexiones}
+\addcontentsline{toc}{chapter}{Notas y Reflexiones}
+\markboth{Notas y Reflexiones}{Notas y Reflexiones}
+
+\vspace{1cm}
+\textit{Dedica este espacio para anotar tus intuiciones, sincronías y reflexiones tras la lectura...}
+
+\vspace{1.5cm}
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}
+
+\newpage
+\thispagestyle{plain}
+\vspace*{1cm}
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}
+
+\newpage
+\thispagestyle{plain}
+\vspace*{1cm}
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}
+
+\cleardoublepage
+\thispagestyle{empty}
+\vspace*{6cm}
+\begin{center}
+    \large\textit{Que la Luz te acompañe siempre en tu camino.}
+\end{center}
+
+\end{document}

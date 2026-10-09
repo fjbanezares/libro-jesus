@@ -10,6 +10,10 @@
 \contentsline {chapter}{\numberline {8}Forgiveness and Debts}{28}{chapter.8}%
 \contentsline {chapter}{\numberline {9}Lead us not into temptation (Vibrate High)}{31}{chapter.9}%
 \contentsline {chapter}{\numberline {10}Deliver us from evil (Protection from Low Vibrations)}{34}{chapter.10}%
-\contentsline {chapter}{\numberline {11}The Kingdom, the Power, and the Glory}{37}{chapter.11}%
+\contentsline {chapter}{\numberline {11}The Kingdom, the Power, and the Glory}{38}{chapter.11}%
 \contentsline {chapter}{\numberline {12}Epilogue: Final Adventures and Farewell}{40}{chapter.12}%
-\contentsline {chapter}{Appendix: Christmas Poem}{43}{chapter*.3}%
+\contentsline {chapter}{Appendix: Christmas Poem}{42}{chapter*.3}%
+\contentsline {chapter}{Quantum and Spiritual Glossary}{45}{chapter*.4}%
+\contentsline {chapter}{Music and Frequencies}{49}{chapter*.5}%
+\contentsline {chapter}{About the Author and the Project}{53}{chapter*.6}%
+\contentsline {chapter}{Reflection and Meditation Guide}{77}{chapter*.7}%

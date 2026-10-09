@@ -1,6 +1,7 @@
 # Apéndice: Poema de Navidad
 
-**Navidad de Alta Frecuencia**
+**Navidad de Alta Frecuencia**  
+*Por Maria Paz Arés Osset*
 
 No busques al Niño en la paja fría de un tiempo remoto,  
 ni en el eco de un villancico que el viento ha roto.  

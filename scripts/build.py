@@ -73,7 +73,13 @@ def get_image_for_chapter(filename, title):
         return 'images/cosmic_father.png'
     elif 'reino' in lower_title or 'poder' in lower_title or 'gloria' in lower_title:
         return 'images/kingdom_power.png'
-    elif 'epílogo' in lower_title or 'epilogo' in lower_title:
+    elif 'glosario' in lower_title or 'glosario' in lower_filename:
+        return 'images/cosmic_father.png'
+    elif 'música' in lower_title or 'musica' in lower_title or 'frecuencias' in lower_title:
+        return 'images/silence_vibration.png'
+    elif 'autor' in lower_title:
+        return 'images/intro_quantum_luther.png'
+    elif 'meditación' in lower_title or 'meditacion' in lower_title or 'reflexión' in lower_title or 'reflexion' in lower_title:
         return 'images/sunset_road.png'
     else:
         # Default rotation or generic
@@ -148,6 +154,10 @@ def md_to_latex(md_content, title, image_path):
     latex_body = re.sub(r'\*\*(.*?)\*\*', r'\\textbf{\1}', latex_body)
     latex_body = re.sub(r'\*(.*?)\*', r'\\textit{\1}', latex_body)
     
+    # Handle Quotes
+    latex_body = latex_body.replace('“', '"').replace('”', '"')
+    latex_body = re.sub(r'"([^"]+?)"', r'«\1»', latex_body)
+    
     # 4. Handle Line Breaks (Markdown "  \n" to LaTeX "\\")
     # We look for two spaces followed by a newline. 
     # IMPORTANT: We must ensure we don't break paragraph separation (double newline).
@@ -216,17 +226,6 @@ def build():
         
         # Determine Image
         image_path = get_image_for_chapter(filename, title)
-        
-        # HTML
-        if filename == '01_capitulo.md':
-            target_html = 'index.html'
-        else:
-            target_html = filename.replace('.md', '.html')
-            
-        current_menu = menu_html.replace(f'href="{target_html}"', f'href="{target_html}" class="active"')
-        html_content = md_to_html(content, title, current_menu, image_path)
-        write_file(os.path.join(OUTPUT_HTML_DIR, target_html), html_content)
-        print(f"Generated HTML: {target_html}")
         
         # LaTeX
         full_latex_content += md_to_latex(content, title, image_path) + "\n\\newpage\n"

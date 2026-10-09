@@ -1,0 +1,216 @@
+\documentclass[12pt,twoside,openright]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noquoting]{babel}
+
+% Standard Amazon KDP Hardcover size: 5.5 x 8.5 inches (139.7 x 215.9 mm)
+\usepackage[paperwidth=5.5in, paperheight=8.5in, top=24mm, bottom=24mm, inner=24mm, outer=20mm, footskip=12mm]{geometry}
+
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{setspace} % For line spacing
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{needspace}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage[scaled=1.11]{ebgaramond} % Professional Garamond font
+\usepackage[parfill]{parskip} % Spacing between paragraphs
+\usepackage{xcolor}
+\usepackage{qrcode} % For generating QR codes directly in PDF
+\usepackage[export]{adjustbox} % For image borders
+\usepackage[framemethod=TikZ]{mdframed} % For elegant frames around text
+\usepackage{emptypage} % Clears headers and footers on empty right-hand separator pages
+
+% Line spacing - airy and comfortable for Hardcover
+\setstretch{1.45}
+
+\usepackage{caption}
+\captionsetup[figure]{font={small,it}, labelformat=empty, skip=6pt, justification=centering}
+
+% Section styling - elegant Garamond headers
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries\itshape\centering}{\chaptertitlename\ \thechapter}{6pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{15pt}{30pt}
+
+\setlength{\headheight}{16pt}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[RE]{\small\itshape\nouppercase{Mi amigo Jesucristo}}
+\fancyhead[LO]{\small\itshape\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Fix for long titles in headers
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\usepackage{url}
+\usepackage{hyperref}
+\begin{document}
+
+\frontmatter
+
+% Portadilla (Half-Title)
+\thispagestyle{empty}
+\vspace*{5cm}
+\begin{center}
+    {\LARGE \textbf{Mi amigo Jesucristo}}
+\end{center}
+\cleardoublepage
+
+% Portada Principal (Full Title Page)
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge \textbf{Mi amigo Jesucristo} \par}
+    \vspace{0.8cm}
+    {\Large \textit{Una guía cuántica para el alma moderna} \par}
+    \vfill
+    {\large \textbf{A Glimpse of Light} \par}
+    \vspace{0.5cm}
+    {\small Con arte y música de Maria Paz Arés Osset \par}
+    \vspace*{2cm}
+\end{titlepage}
+\cleardoublepage
+
+% Copyright Page
+\thispagestyle{empty}
+\vspace*{11cm}
+\begin{center}
+    \small
+    \textbf{Mi amigo Jesucristo} \\
+    \textit{Una guía cuántica para el alma moderna} \\
+    \vspace{0.5cm}
+    © 2024 A Glimpse of Light \\
+    Todos los derechos reservados. \\
+    Publicado en Amazon KDP (Edición Tapa Dura) \\
+    \vspace{0.3cm}
+    \textit{www.pazaresosset.es}
+\end{center}
+\cleardoublepage
+
+% Epigraph / Cita inspiradora
+\thispagestyle{empty}
+\vspace*{6cm}
+\begin{center}
+    \itshape
+    «El Reino de los Cielos no es un lugar al que se llega,\\
+    es una frecuencia que se sintoniza.»\\
+    \vspace{1cm}
+    \normalfont --- \textbf{Mi Amigo Jesucristo}
+\end{center}
+\cleardoublepage
+
+\tableofcontents
+\cleardoublepage
+
+\mainmatter
+
+\input{capitulos_es/cap_00.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_01.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_02.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_03.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_04.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_05.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_06.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_07.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_08.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_09.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_10.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_11.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_12.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_13.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_14.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_15.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_16.tex}
+\cleardoublepage
+
+\input{capitulos_es/cap_17.tex}
+\cleardoublepage
+
+
+
+\backmatter
+
+% Notas y Reflexiones del Lector
+\cleardoublepage
+\thispagestyle{plain}
+\chapter*{Notas y Reflexiones}
+\addcontentsline{toc}{chapter}{Notas y Reflexiones}
+\markboth{Notas y Reflexiones}{Notas y Reflexiones}
+
+\vspace{1cm}
+\textit{Dedica este espacio para anotar tus intuiciones, sincronías y reflexiones tras la lectura...}
+
+\vspace{1.5cm}
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}
+
+\newpage
+\thispagestyle{plain}
+\vspace*{1cm}
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}
+
+\newpage
+\thispagestyle{plain}
+\vspace*{1cm}
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}\\[1.5cm]
+\noindent\rule{\textwidth}{0.4pt}
+
+\cleardoublepage
+\thispagestyle{empty}
+\vspace*{6cm}
+\begin{center}
+    \large\textit{Que la Luz te acompañe siempre en tu camino.}
+\end{center}
+
+\end{document}

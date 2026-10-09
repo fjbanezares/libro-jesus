@@ -14,24 +14,25 @@
 \usepackage{needspace}
 \usepackage{microtype}
 \usepackage{csquotes}
-\usepackage{ebgaramond} % Professional Garamond font
+\usepackage[scaled=1.11]{ebgaramond} % Professional Garamond font
 \usepackage[parfill]{parskip} % Spacing between paragraphs
 \usepackage{xcolor}
 \usepackage{qrcode} % For generating QR codes directly in PDF
 \usepackage[export]{adjustbox} % For image borders
 \usepackage[framemethod=TikZ]{mdframed} % For elegant frames around text
 
-% Line spacing - more airy for 14pt
-\setstretch{1.4}
+% Line spacing - airy and comfortable for Garamond A5
+\setstretch{1.35}
 
-% Special styling for the font size - 14pt for maximum comfort and premium feel
-\renewcommand{\normalsize}{\fontsize{14pt}{18pt}\selectfont}
-\normalsize
+\usepackage{caption}
+\captionsetup[figure]{font={small,it}, labelformat=empty, skip=6pt, justification=centering}
 
 % Section styling - elegant Garamond headers
 \titleformat{\chapter}[display]
-  {\normalfont\Huge\bfseries\itshape}{\chaptertitlename\ \thechapter}{10pt}{\Huge}
-\titlespacing*{\chapter}{0pt}{20pt}{40pt}
+  {\normalfont\Huge\bfseries\itshape\centering}{\chaptertitlename\ \thechapter}{5pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{10pt}{25pt}
+
+\setlength{\headheight}{16pt}
 
 % Header/Footer - fixing long title issue
 \pagestyle{fancy}

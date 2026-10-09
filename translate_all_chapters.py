@@ -69,7 +69,11 @@ CHAPTERS = [
     ("10_capitulo.html", "Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)"),
     ("11_capitulo.html", "Capítulo 11: El Reino, el Poder y la Gloria"),
     ("12_epilogo.html", "Epílogo: Aventuras Finales y Despedida"),
-    ("13_apendice_poema.html", "Apéndice: Poema de Navidad")
+    ("13_apendice_poema.html", "Apéndice: Poema de Navidad"),
+    ("14_glosario_cuantico.html", "Glosario Cuántico y Espiritual"),
+    ("15_musica_frecuencias.html", "La Música y las Frecuencias"),
+    ("16_sobre_el_autor.html", "Sobre el Autor y el Proyecto"),
+    ("17_guia_meditacion.html", "Guía de Reflexión y Meditación")
 ]
 
 CSS_STYLES = """
@@ -720,6 +724,58 @@ def generate_multilingual_html(filename, translations, spanish_content):
             "ko": "부록: 크리스마스 시",
             "pt": "Apéndice: Poema de Natal",
             "ja": "付録：クリスマスの詩"
+        },
+        "14_glosario_cuantico.html": {
+            "es": "Glosario Cuántico y Espiritual",
+            "en": "Quantum and Spiritual Glossary",
+            "fr": "Glossaire Quantique et Spirituel",
+            "it": "Glossario Quantistico e Spirituale",
+            "zh": "量子与灵性词汇表",
+            "ar": "معجم الكم والروحانية",
+            "ru": "Квантовый и духовный глоссарий",
+            "vi": "Thuật ngữ Lượng tử và Tâm linh",
+            "ko": "양자 및 영적 용어집",
+            "pt": "Glossário Quântico e Espiritual",
+            "ja": "量子とスピリチュアル用語集"
+        },
+        "15_musica_frecuencias.html": {
+            "es": "La Música y las Frecuencias",
+            "en": "Music and Frequencies",
+            "fr": "La Musique et les Fréquences",
+            "it": "La Musica e le Frequenze",
+            "zh": "音乐与频率",
+            "ar": "الموسيقى والترددات",
+            "ru": "Музыка и частоты",
+            "vi": "Âm nhạc và Tần số",
+            "ko": "음악과 주파수",
+            "pt": "A Música e as Frequências",
+            "ja": "音楽と周波数"
+        },
+        "16_sobre_el_autor.html": {
+            "es": "Sobre el Autor y el Proyecto",
+            "en": "About the Author and the Project",
+            "fr": "À propos de l'Auteur et du Projet",
+            "it": "Sull'Autore e sul Progetto",
+            "zh": "关于作者与项目",
+            "ar": "عن المؤلف والمشروع",
+            "ru": "Об авторе и проекте",
+            "vi": "Về Tác giả và Dự án",
+            "ko": "저자와 프로젝트 소개",
+            "pt": "Sobre o Autor e o Projeto",
+            "ja": "著者とプロジェクトについて"
+        },
+        "17_guia_meditacion.html": {
+            "es": "Guía de Reflexión y Meditación",
+            "en": "Reflection and Meditation Guide",
+            "fr": "Guide de Réflexion et Méditation",
+            "it": "Guida di Riflessione e Meditazione",
+            "zh": "反思与冥想指南",
+            "ar": "دليل التأمل والتفكر",
+            "ru": "Руководство по размышлению и медитации",
+            "vi": "Hướng dẫn Suy ngẫm và Thiền định",
+            "ko": "성찰과 명상 가이드",
+            "pt": "Guia de Reflexão e Meditação",
+            "ja": "内省と瞑想のガイド"
         }
     }
 
@@ -761,7 +817,6 @@ def generate_multilingual_html(filename, translations, spanish_content):
         return None
 
     chapter_img = find_img_with_class(body_es, "chapter-image")
-    
     footer_img = find_img_with_class(body_es, "footer-image")
 
     # If only one found, use it for both to match reference chapters
@@ -775,15 +830,24 @@ def generate_multilingual_html(filename, translations, spanish_content):
         if not chapter_img: chapter_img = "images/madrid.png"
         if not footer_img: footer_img = "images/madrid.png"
     elif filename == "00_introduccion.html":
-        # Use the specific Quantum/Luther image for the intro header (The "Rose" image)
         if not chapter_img: chapter_img = "images/intro_quantum_luther.png"
-        # We will handle the footer (Glimpse) specifically inside the loop for localization
         footer_img = None
+    elif filename == "14_glosario_cuantico.html":
+        chapter_img = "images/vibration.png"
+        footer_img = "images/cosmic_father.png"
+    elif filename == "15_musica_frecuencias.html":
+        chapter_img = "images/silence_vibration.png"
+        footer_img = None
+    elif filename == "16_sobre_el_autor.html":
+        chapter_img = "images/intro_quantum_luther.png"
+        footer_img = None
+    elif filename == "17_guia_meditacion.html":
+        chapter_img = "images/heaven_state.png"
+        footer_img = "images/sunset_road.png"
     
     if not chapter_img:
         chapter_img = "images/default.png"
         
-
     # Clean body_es to remove any direct image tags or containers that might cause duplication
     body_es_clean = re.sub(r'<div class="image-container-footer">.*?</div>', '', body_es, flags=re.DOTALL)
     body_es_clean = re.sub(r'<div class="image-container-footer".*?>', '', body_es_clean)
@@ -799,12 +863,12 @@ def generate_multilingual_html(filename, translations, spanish_content):
         body_text = translations.get('body', {}).get(lang_code, body_es_clean)
         
         # If body_text comes from translations.json, it might already be clean or have its own structure
-        if body_text:
+        if body_text and filename != "16_sobre_el_autor.html":
             body_text = re.sub(r'<img[^>]*class="chapter-image"[^>]*>', '', body_text)
             body_text = re.sub(r'<div class="image-container-footer">.*?</div>', '', body_text, flags=re.DOTALL)
             body_text = re.sub(r'<div class="image-container-footer".*?>', '', body_text)
             body_text = re.sub(r'<img[^>]*class="footer-image"[^>]*>', '', body_text)
-        else:
+        elif not body_text:
             body_text = body_es_clean
             
         html += f'                <div class="{lang_name} language">\n'
@@ -828,7 +892,8 @@ def generate_multilingual_html(filename, translations, spanish_content):
             credit_text = poem_credits.get(lang_code, poem_credits['es'])
             html += f'                    <p style="text-align: center; font-style: italic; margin-top: -10px; margin-bottom: 30px; color: #777;">{credit_text}</p>\n'
 
-            # Spotify Button Placement
+        # Spotify Button Placement
+        if filename == "13_apendice_poema.html" or filename == "15_musica_frecuencias.html":
             spotify_texts = {
                 'es': "Escuchar en Spotify",
                 'en': "Listen on Spotify",
@@ -843,15 +908,12 @@ def generate_multilingual_html(filename, translations, spanish_content):
                 'ja': "Spotifyで聴く"
             }
             btn_text = spotify_texts.get(lang_code, "Listen on Spotify")
-            # Get Spotify links for this language
             spotify_config = LINKS.get('spotify', {}).get(lang_code, LINKS['spotify']['es'])
             track_url = spotify_config.get('track_url')
             album_id = spotify_config.get('album_id')
             
-            # SVG Icon for Spotify
             spotify_icon = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>'
 
-            # Album Embed
             album_embed_src = f"https://open.spotify.com/embed/album/{album_id}?utm_source=generator"
             album_embed = f'<iframe data-testid="embed-iframe" style="border-radius:12px" src="{album_embed_src}" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>'
 
@@ -864,7 +926,6 @@ def generate_multilingual_html(filename, translations, spanish_content):
             html += f'                        </div>\n'
             html += f'                    </div>\n'
 
-            # Donation Section (moved after music)
             donation_url = LINKS.get('donation', {}).get('url')
             donation_text = LINKS.get('donation', {}).get('text', {}).get(lang_code, LINKS['donation']['text']['es'])
             donation_btn = LINKS.get('donation', {}).get('button', {}).get(lang_code, LINKS['donation']['button']['es'])
@@ -883,7 +944,6 @@ def generate_multilingual_html(filename, translations, spanish_content):
         
         # Special addition for Introduction: Glimpse image at the footer (localized)
         if filename == "00_introduccion.html":
-            # Add the Quantum/Rose image fully displayed before the cover image as requested
             html += f'                    <div class="image-container-footer" style="margin-top: 2rem; margin-bottom: 1rem;"><img src="images/intro_quantum_luther.png" alt="Quantum Spiritual Journey" class="footer-image"></div>\n'
             
             glimpse_img = f"images/glimpse_{lang_code}.png"
@@ -907,7 +967,6 @@ def generate_multilingual_html(filename, translations, spanish_content):
 
     if footer_img:
         html += f'                <div class="image-container-footer"><img src="{footer_img}" alt="Ilustración del capítulo" class="footer-image"></div>\n'
-    
     
     html += """            </div>
             <footer>
@@ -973,6 +1032,291 @@ def generate_multilingual_html(filename, translations, spanish_content):
 """
     return html
 
+def build_sidebar_only(filename):
+    sidebar_translations = {
+        'es': "Mi amigo Jesucristo",
+        'en': "My friend Jesus Christ",
+        'fr': "Mon ami Jésus-Christ",
+        'it': "Il mio amico Gesù Cristo",
+        'zh': "我的朋友耶稣基督",
+        'ar': "صديقي يسوع المسيح",
+        'ru': "Мой друг Иисус Христос",
+        'vi': "Người bạn Giê-su của tôi",
+        'ko': "나의 친구 예수 그리스도",
+        'pt': "O meu amigo Jesus Cristo",
+        'ja': "私の友人イエス・キリスト"
+    }
+
+    chapter_translations = {
+        "00_introduccion.html": {
+            "es": "Introducción: Entre la Partícula y la Vibración",
+            "en": "Introduction: Between Particle and Vibration",
+            "fr": "Introduction : Entre la particule et la vibration",
+            "it": "Introduzione: Tra la particella e la vibrazione",
+            "zh": "引言：粒子与振动之间",
+            "ar": "مقدمة: بين الجسيم والاهتزاز",
+            "ru": "Введение: Между частицей и вибрацией",
+            "vi": "Giới thiệu: Giữa Hạt và Rung động",
+            "ko": "서문: 입자와 진동 사이에서",
+            "pt": "Introdução: Entre a Partícula e a Vibração",
+            "ja": "はじめに：粒子と振動の間で"
+        },
+        "index.html": {
+            "es": "Capítulo 1: El Encuentro en Madrid",
+            "en": "Chapter 1: The Encounter in Madrid",
+            "fr": "Chapitre 1 : La rencontre à Madrid",
+            "it": "Capitolo 1: L'incontro a Madrid",
+            "zh": "第 1 章：马德里相遇",
+            "ar": "الفصل الأول: اللقاء في مدريد",
+            "ru": "Глава 1: Встреча в Мадриде",
+            "vi": "Chương 1: Cuộc gặp gỡ tại Madrid",
+            "ko": "제1장: 마드리드에서의 만남",
+            "pt": "Capítulo 1: O Encontro em Madrid",
+            "ja": "第1章：マドリードでの出会い"
+        },
+        "02_capitulo.html": {
+            "es": "Capítulo 2: Paseo por Las Rozas",
+            "en": "Chapter 2: A Walk through Las Rozas",
+            "fr": "Chapitre 2 : Promenade à Las Rozas",
+            "it": "Capitolo 2: Passeggiata per Las Rozas",
+            "zh": "第 2 章：拉斯罗萨斯散步",
+            "ar": "الفصل الثاني: نزهة في لاس روزاس",
+            "ru": "Глава 2: Прогулка по Лас-Росас",
+            "vi": "Chương 2: Đi dạo qua Las Rozas",
+            "ko": "제2장: 라스 로사스 산책",
+            "pt": "Capítulo 2: Passeio por Las Rozas",
+            "ja": "第2章：ラス・ロサスの散歩"
+        },
+        "03_capitulo.html": {
+            "es": "Capítulo 3: La Vibración y el Silencio",
+            "en": "Chapter 3: Vibration and Silence",
+            "fr": "Chapitre 3 : La vibration et le silence",
+            "it": "Capitolo 3: La vibrazione e il silenzio",
+            "zh": "第 3 章：振动与静默",
+            "ar": "الفصل الثالث: الاهتزاز والصمت",
+            "ru": "Глава 3: Вибрация и тишина",
+            "vi": "Chương 3: Rung động và Im lặng",
+            "ko": "제3장: 진동과 침묵",
+            "pt": "Capítulo 3: A Vibração e o Silêncio",
+            "ja": "第3章：振動と静寂"
+        },
+        "04_capitulo.html": {
+            "es": "Capítulo 4: Colmenarejo y la Naturaleza",
+            "en": "Chapter 4: Colmenarejo and Nature",
+            "fr": "Chapitre 4 : Colmenarejo et la nature",
+            "it": "Capitolo 4: Colmenarejo e la natura",
+            "zh": "第 4 章：科尔梅纳雷霍与自然",
+            "ar": "الفصل الرابع: كولميناريجو والطبيعة",
+            "ru": "Глава 4: Кольменарехо и природа",
+            "vi": "Chương 4: Colmenarejo và Thiên nhiên",
+            "ko": "제4장: 콜메나레호와 자연",
+            "pt": "Capítulo 4: Colmenarejo e a Natureza",
+            "ja": "第4章：コルメナレホと自然"
+        },
+        "05_capitulo.html": {
+            "es": "Capítulo 5: El Padre Nuestro (Parte 1: Padre)",
+            "en": "Chapter 5: The Lord's Prayer (Part 1: Father)",
+            "fr": "Chapitre 5 : Le Notre Père (Partie 1 : Père)",
+            "it": "Capitolo 5: Il Padre Nostro (Parte 1: Padre)",
+            "zh": "第 5 章：主祷文（第一部分：父亲）",
+            "ar": "الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)",
+            "ru": "Глава 5: Отче наш (Часть 1: Отче)",
+            "vi": "Chương 5: Kinh Lạy Cha (Phần 1: Cha)",
+            "ko": "제5장: 주기도문 (제1부: 아버지)",
+            "pt": "Capítulo 5: O Pai Nosso (Parte 1: Pai)",
+            "ja": "第5章：主の祈り（パート1：父）"
+        },
+        "06_capitulo.html": {
+            "es": "Capítulo 6: El Padre Nuestro (Parte 2: Cielo)",
+            "en": "Chapter 6: The Lord's Prayer (Part 2: Heaven)",
+            "fr": "Chapitre 6 : Le Notre Père (Partie 2 : Ciel)",
+            "it": "Capitolo 6: Il Padre Nostro (Parte 2: Cielo)",
+            "zh": "第 6 章：主祷文（第二部分：天上）",
+            "ar": "الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)",
+            "ru": "Глава 6: Отче наш (Часть 2: Небо)",
+            "vi": "Chương 6: Kinh Lạy Cha (Phần 2: Trời)",
+            "ko": "제6장: 주기도문 (제2부: 하늘)",
+            "pt": "Capítulo 6: O Pai Nosso (Parte 2: Céu)",
+            "ja": "第6章：主の祈り（パート2：天）"
+        },
+        "07_capitulo.html": {
+            "es": "Capítulo 7: El Pan de Cada Día",
+            "en": "Chapter 7: Our Daily Bread",
+            "fr": "Chapitre 7 : Le pain de chaque jour",
+            "it": "Capitolo 7: Il pane quotidiano",
+            "zh": "第 7 章：我们日用的饮食",
+            "ar": "الفصل السابع: خبزنا كفافنا",
+            "ru": "Глава 7: Хлеб наш насущный",
+            "vi": "Chương 7: Lương thực hằng ngày",
+            "ko": "제7장: 우리에게 일용할 양식",
+            "pt": "Capítulo 7: O Pão de Cada Dia",
+            "ja": "第7章：日々の糧"
+        },
+        "08_capitulo.html": {
+            "es": "Capítulo 8: Perdón y Deudas",
+            "en": "Chapter 8: Forgiveness and Debts",
+            "fr": "Chapitre 8 : Pardon et dettes",
+            "it": "Capitolo 8: Perdono e debiti",
+            "zh": "第 8 章：宽恕与债务",
+            "ar": "الفصل الث第八: المغفرة والديون",
+            "ru": "Глава 8: Прощение и долги",
+            "vi": "Chương 8: Tha thứ và Nợ nần",
+            "ko": "제8章: 용서와 빚",
+            "pt": "Capítulo 8: Perdão e Dívidas",
+            "ja": "第8章：許しと負い目"
+        },
+        "09_capitulo.html": {
+            "es": "Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)",
+            "en": "Chapter 9: Lead us not into temptation (Vibrate High)",
+            "fr": "Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)",
+            "it": "Capitolo 9: Non ci indurre in tentazione (Vibrare alto)",
+            "zh": "第 9 章：不叫我们遇见试探（高频振动）",
+            "ar": "الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)",
+            "ru": "Глава 9: Не введи нас в искушение (Вибрировать высоко)",
+            "vi": "Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)",
+            "ko": "제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)",
+            "pt": "Capítulo 9: Não nos deixeis cair em tentação (Vibrar Alto)",
+            "ja": "第9章：誘惑に陥らせないで（高い振動）"
+        },
+        "10_capitulo.html": {
+            "es": "Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)",
+            "en": "Chapter 10: Deliver us from evil (Protection from Low Vibrations)",
+            "fr": "Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)",
+            "it": "Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)",
+            "zh": "第 10 章：救我们脱離凶惡（远离低频振动）",
+            "ar": "الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)",
+            "ru": "Глава 10: Избавь нас от лукавого (Защита от низких вибраций)",
+            "vi": "Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)",
+            "ko": "제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)",
+            "pt": "Capítulo 10: Livrai-nos do mal (Proteção de Baixas Vibrações)",
+            "ja": "第10章：悪から救い出して（低い振動からの保護）"
+        },
+        "11_capitulo.html": {
+            "es": "Capítulo 11: El Reino, el Poder y la Gloria",
+            "en": "Chapter 11: The Kingdom, the Power and the Glory",
+            "fr": "Chapitre 11 : Le Règne, la Puissance et la Gloire",
+            "it": "Capitolo 11: Il Regno, il Potere e la Gloria",
+            "zh": "第 11 章：国度、权柄、荣耀",
+            "ar": "الفصل الحادي عشر: الملك والقدرة والمجد",
+            "ru": "Глава 11: Царство, Сила и Слава",
+            "vi": "Chương 11: Vương quốc, Quyền năng và Vinh quang",
+            "ko": "제11장: 나라와 권능과 영광",
+            "pt": "Capítulo 11: O Reino, o Poder e a Glória",
+            "ja": "第11章：御国、力、栄光"
+        },
+        "12_epilogo.html": {
+            "es": "Epílogo: Aventuras Finales y Despedida",
+            "en": "Epilogue: Final Adventures and Farewell",
+            "fr": "Épilogue : Aventures finales et adieu",
+            "it": "Epilogo: Avventure finali e addio",
+            "zh": "结语：最后的冒险与告别",
+            "ar": "الخاتمة: المغامرات الأخيرة والوداع",
+            "ru": "Эпилог: Последние приключения и прощание",
+            "vi": "Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt",
+            "ko": "에필로그: 마지막 모험과 작별",
+            "pt": "Epílogo: Aventuras Finais e Despedida",
+            "ja": "エピローグ：最後の冒険と別れ"
+        },
+        "13_apendice_poema.html": {
+            "es": "Apéndice: Poema de Navidad",
+            "en": "Appendix: Christmas Poem",
+            "fr": "Appendice : Poème de Noël",
+            "it": "Appendice: Poema di Natale",
+            "zh": "附录：圣诞诗歌",
+            "ar": "ملحق: قصيدة عيد الميلاد",
+            "ru": "Приложение: Рождественское стихотворение",
+            "vi": "Phụ lục: Bài thơ Giáng sinh",
+            "ko": "부록: 크리스마스 시",
+            "pt": "Apéndice: Poema de Natal",
+            "ja": "付録：クリスマスの詩"
+        },
+        "14_glosario_cuantico.html": {
+            "es": "Glosario Cuántico y Espiritual",
+            "en": "Quantum and Spiritual Glossary",
+            "fr": "Glossaire Quantique et Spirituel",
+            "it": "Glossario Quantistico e Spirituale",
+            "zh": "量子与灵性词汇表",
+            "ar": "معجم الكم والروحانية",
+            "ru": "Квантовый и духовный глоссарий",
+            "vi": "Thuật ngữ Lượng tử và Tâm linh",
+            "ko": "양자 및 영적 용어집",
+            "pt": "Glossário Quântico e Espiritual",
+            "ja": "量子とスピリチュアル用語集"
+        },
+        "15_musica_frecuencias.html": {
+            "es": "La Música y las Frecuencias",
+            "en": "Music and Frequencies",
+            "fr": "La Musique et les Fréquences",
+            "it": "La Musica e le Frequenze",
+            "zh": "音乐与频率",
+            "ar": "الموسيقى والترددات",
+            "ru": "Музыка и частоты",
+            "vi": "Âm nhạc và Tần số",
+            "ko": "음악과 주파수",
+            "pt": "A Música e as Frequências",
+            "ja": "音楽と周波数"
+        },
+        "16_sobre_el_autor.html": {
+            "es": "Sobre el Autor y el Proyecto",
+            "en": "About the Author and the Project",
+            "fr": "À propos de l'Auteur et du Projet",
+            "it": "Sull'Autore e sul Progetto",
+            "zh": "关于作者与项目",
+            "ar": "عن المؤلف والمشروع",
+            "ru": "Об авторе и проекте",
+            "vi": "Về Tác giả và Dự án",
+            "ko": "저자와 프로젝트 소개",
+            "pt": "Sobre o Autor e o Projeto",
+            "ja": "著者とプロジェクトについて"
+        },
+        "17_guia_meditacion.html": {
+            "es": "Guía de Reflexión y Meditación",
+            "en": "Reflection and Meditation Guide",
+            "fr": "Guide de Réflexion et Méditation",
+            "it": "Guida di Riflessione e Meditazione",
+            "zh": "反思与冥想指南",
+            "ar": "دليل التأمل والتفكر",
+            "ru": "Руководство по размышлению и медитации",
+            "vi": "Hướng dẫn Suy ngẫm và Thiền định",
+            "ko": "성찰과 명상 가이드",
+            "pt": "Guia de Reflexão e Meditação",
+            "ja": "内省と瞑想のガイド"
+        }
+    }
+
+    html = '<aside id="sidebar">\n'
+    for lang_code, lang_name in LANG_MAP.items():
+        sidebar_title = sidebar_translations.get(lang_code, "Mi amigo Jesucristo")
+        close_id = f"menu-close-{lang_code}"
+        
+        html += f'        <div class="{lang_name} language">\n'
+        html += f'            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">\n'
+        html += f'                <h2>{sidebar_title}</h2>\n'
+        html += f'                <button class="menu-toggle" id="{close_id}" style="color: white; display: none;">✕</button>\n'
+        html += f'            </div>\n'
+        html += f'            <nav>\n                <ul>\n'
+        
+        for ch_file, ch_desc in CHAPTERS:
+            active_class = ' class="active"' if ch_file == filename else ''
+            ch_name_translated = chapter_translations.get(ch_file, {}).get(lang_code, ch_desc)
+            html += f'                    <li><a href="{ch_file}"{active_class}>{ch_name_translated}</a>\n                    </li>\n'
+            
+        html += '                </ul>\n            </nav>\n        </div>\n'
+
+    html += '    </aside>'
+    return html
+
+def inject_menu_into_file(filepath, filename):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    new_sidebar = build_sidebar_only(filename)
+    content_updated = re.sub(r'<aside id="sidebar">.*?</aside>', new_sidebar, content, flags=re.DOTALL)
+    
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(content_updated)
+    print(f"Injected updated 18-chapter menu into: {filename}")
+
 def main():
     with open(TRANSLATIONS_FILE, 'r') as f:
         all_translations = json.load(f)
@@ -980,24 +1324,33 @@ def main():
     with open(SPANISH_CONTENT_FILE, 'r') as f:
         all_spanish = json.load(f)
 
-    # Process all chapters including intro and index
-    targets = [
+    # 1. Existing chapters 00 to 13: ONLY update the sidebar menu safely
+    existing_targets = [
         "00_introduccion.html", "index.html",
         "02_capitulo.html", "03_capitulo.html", "04_capitulo.html", "05_capitulo.html",
         "06_capitulo.html", "07_capitulo.html", "08_capitulo.html", "09_capitulo.html",
         "10_capitulo.html", "11_capitulo.html", "12_epilogo.html", "13_apendice_poema.html"
     ]
+    for filename in existing_targets:
+        filepath = os.path.join(OUTPUT_DIR, filename)
+        if os.path.exists(filepath):
+            inject_menu_into_file(filepath, filename)
 
-    for filename in targets:
+    # 2. New chapters 14 to 17: Generate complete multilingual files
+    new_targets = [
+        "14_glosario_cuantico.html", "15_musica_frecuencias.html",
+        "16_sobre_el_autor.html", "17_guia_meditacion.html"
+    ]
+    for filename in new_targets:
         if filename in all_translations and filename in all_spanish:
-            print(f"Generating {filename}...")
+            print(f"Generating full multilingual HTML for {filename}...")
             html = generate_multilingual_html(filename, all_translations[filename], all_spanish[filename])
-            
             output_path = os.path.join(OUTPUT_DIR, filename)
-            with open(output_path, 'w') as f:
+            with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(html)
         else:
             print(f"Skipping {filename} - missing data")
 
 if __name__ == "__main__":
     main()
+
