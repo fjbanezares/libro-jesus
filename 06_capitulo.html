@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 6: El Padre Nuestro (Parte 2: Cielo) | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            /* Vibrant Coral */
+            --secondary: #4ECDC4;
+            /* Vibrant Teal */
+            --bg: #F7FFF7;
+            /* Off-white */
+            --text: #292F36;
+            /* Dark Slate */
+            --accent: #FFE66D;
+            /* Vibrant Yellow */
+            --sidebar-width: 250px;
+            --header-height: 60px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Mobile Header */
+        #mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: white;
+            padding: 0 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #mobile-header h1 {
+            display: none;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Sidebar Navigation */
+        #sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        #sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        #sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            padding-bottom: 5rem;
+            /* Extra space for the last items */
+        }
+
+        #sidebar nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        #sidebar nav a {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+        }
+
+        #sidebar nav a:hover,
+        #sidebar nav a.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        #content-wrapper {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+            padding: 2.5rem;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chapter-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-body {
+            padding: 3rem;
+            flex-grow: 1;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        h2,
+        h3 {
+            color: var(--secondary);
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+        }
+
+        .vibrar-alto {
+            background-color: var(--accent);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: auto;
+        }
+
+        /* Overlay for mobile */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            #mobile-header {
+                display: flex;
+            }
+
+            #sidebar {
+                transform: translateX(-100%);
+            }
+
+            #sidebar.open {
+                transform: translateX(0);
+            }
+
+            #sidebar.open+#overlay {
+                display: block;
+            }
+
+            #content-wrapper {
+                margin-left: 0;
+                width: 100%;
+                padding: 1rem;
+                padding-top: calc(var(--header-height) + 1rem);
+            }
+
+            .content-body {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chapter-image {
+                height: 250px;
+            }
+
+            .content-body {
+                padding: 1.5rem;
+            }
+        }
+
+        .image-container-footer {
+            margin-top: 3rem;
+            padding: 0 3rem 3rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container-footer {
+                padding: 0 1.5rem 2rem;
+            }
+        }
+
+        .footer-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Language display logic */
+        .language {
+            display: none;
+        }
+        .arabic {
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* Spotify Button Styles */
+        .spotify-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1DB954; /* Spotify Green */
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 20px auto;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .spotify-button:hover {
+            background-color: #1ed760;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+            color: white; /* Ensure text remains white */
+        }
+
+        .spotify-button svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        /* RTL specific adjustments for button icon */
+        .arabic .spotify-button svg {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+
+        /* Linktree Button Styles */
+        .language-switcher-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .linktree-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #333;
+            padding: 3px 12px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.6rem;
+            margin-top: 5px;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .linktree-button:hover {
+            background: rgba(255, 255, 255, 1);
+            color: #000;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 1024px) {
+            .linktree-button {
+                font-size: 0.55rem;
+                padding: 2px 10px;
+            }
+        }
+
+        /* Poem Frame Styles */
+        .poem-frame {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin: 30px auto;
+            position: relative;
+            line-height: 2;
+            display: table;
+            text-align: left;
+            max-width: 90%;
+        }
+        
+        .poem-frame::before {
+            content: "❧";
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+
+        /* Donation Section Styles */
+        .donation-section {
+            margin: 40px auto 30px;
+            padding: 15px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .donation-text {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .donation-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #29abe0; /* Ko-fi Blue */
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .donation-button:hover {
+            background-color: #1a8dbb;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+            <option value="korean">한국어 🇰🇷</option>
+            <option value="portuguese">Português 🇵🇹</option>
+            <option value="japanese">日本語 🇯🇵</option>
+        </select>
+        <a href="https://www.pazaresosset.es/linktree.html" target="_blank" class="linktree-button">Linktree</a>
+    </div>
+
+    <header id="mobile-header">
+        <div class="spanish language">
+            <h1>Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 6: The Lord's Prayer (Part 2: Heaven)</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 6 : Le Notre Père (Partie 2 : Le Ciel)</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 6: Il Padre Nostro (Parte 2: Il Cielo)</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 6 章：主祷文（第二部分：天上）</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 6: Отче наш (Часть 2: Небеса)</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 6: Kinh Lạy Cha (Phần 2: Trời)</h1>
+        </div>
+        <div class="korean language">
+            <h1>제6장: 주기도문 (제2부: 하늘)</h1>
+        </div>
+        <div class="portuguese language">
+            <h1>Capítulo 6: O Pai Nosso (Parte 2: Céu)</h1>
+        </div>
+        <div class="japanese language">
+            <h1>第6章：主の祈り（パート2：天）</h1>
+        </div>
+        <button class="menu-toggle" id="menu-open">☰</button>
+    </header>
+
+    <aside id="sidebar">
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glosario Cuántico y Espiritual</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Música y las Frecuencias</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sobre el Autor y el Proyecto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Guía de Reflexión y Meditación</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Quantum and Spiritual Glossary</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Music and Frequencies</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">About the Author and the Project</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Reflection and Meditation Guide</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossaire Quantique et Spirituel</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Musique et les Fréquences</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">À propos de l'Auteur et du Projet</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Guide de Réflexion et Méditation</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossario Quantistico e Spirituale</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Musica e le Frequenze</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sull'Autore e sul Progetto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Guida di Riflessione e Meditazione</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">第 6 章：主祷文（第二部分：天上）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：我们日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱離凶惡（远离低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗歌</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">量子与灵性词汇表</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">音乐与频率</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">关于作者与项目</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">反思与冥想指南</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html">الفصل الث第八: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">معجم الكم والروحانية</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">الموسيقى والترددات</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">عن المؤلف والمشروع</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">دليل التأمل والتفكر</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Квантовый и духовный глоссарий</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Музыка и частоты</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Об авторе и проекте</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Руководство по размышлению и медитации</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Thuật ngữ Lượng tử và Tâm linh</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Âm nhạc và Tần số</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Về Tác giả và Dự án</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Hướng dẫn Suy ngẫm và Thiền định</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="korean language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>나의 친구 예수 그리스도</h2>
+                <button class="menu-toggle" id="menu-close-ko" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">서문: 입자와 진동 사이에서</a>
+                    </li>
+                    <li><a href="index.html">제1장: 마드리드에서의 만남</a>
+                    </li>
+                    <li><a href="02_capitulo.html">제2장: 라스 로사스 산책</a>
+                    </li>
+                    <li><a href="03_capitulo.html">제3장: 진동과 침묵</a>
+                    </li>
+                    <li><a href="04_capitulo.html">제4장: 콜메나레호와 자연</a>
+                    </li>
+                    <li><a href="05_capitulo.html">제5장: 주기도문 (제1부: 아버지)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">제6장: 주기도문 (제2부: 하늘)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">제7장: 우리에게 일용할 양식</a>
+                    </li>
+                    <li><a href="08_capitulo.html">제8章: 용서와 빚</a>
+                    </li>
+                    <li><a href="09_capitulo.html">제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">제11장: 나라와 권능과 영광</a>
+                    </li>
+                    <li><a href="12_epilogo.html">에필로그: 마지막 모험과 작별</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">부록: 크리스마스 시</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">양자 및 영적 용어집</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">음악과 주파수</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">저자와 프로젝트 소개</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">성찰과 명상 가이드</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="portuguese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>O meu amigo Jesus Cristo</h2>
+                <button class="menu-toggle" id="menu-close-pt" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introdução: Entre a Partícula e a Vibração</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: O Encontro em Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Passeio por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: A Vibração e o Silêncio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo e a Natureza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: O Pai Nosso (Parte 1: Pai)</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">Capítulo 6: O Pai Nosso (Parte 2: Céu)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: O Pão de Cada Dia</a>
+                    </li>
+                    <li><a href="08_capitulo.html">Capítulo 8: Perdão e Dívidas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: Não nos deixeis cair em tentação (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Livrai-nos do mal (Proteção de Baixas Vibrações)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: O Reino, o Poder e a Glória</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finais e Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Natal</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossário Quântico e Espiritual</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">A Música e as Frequências</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sobre o Autor e o Projeto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Guia de Reflexão e Meditação</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="japanese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>私の友人イエス・キリスト</h2>
+                <button class="menu-toggle" id="menu-close-ja" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">はじめに：粒子と振動の間で</a>
+                    </li>
+                    <li><a href="index.html">第1章：マドリードでの出会い</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第2章：ラス・ロサスの散歩</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第3章：振動と静寂</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第4章：コルメナレホと自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第5章：主の祈り（パート1：父）</a>
+                    </li>
+                    <li><a href="06_capitulo.html" class="active">第6章：主の祈り（パート2：天）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第7章：日々の糧</a>
+                    </li>
+                    <li><a href="08_capitulo.html">第8章：許しと負い目</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第9章：誘惑に陥らせないで（高い振動）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第10章：悪から救い出して（低い振動からの保護）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第11章：御国、力、栄光</a>
+                    </li>
+                    <li><a href="12_epilogo.html">エピローグ：最後の冒険と別れ</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">付録：クリスマスの詩</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">量子とスピリチュアル用語集</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">音楽と周波数</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">著者とプロジェクトについて</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">内省と瞑想のガイド</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div id="overlay"></div>
+
+    <div id="content-wrapper">
+        <main>
+            <img src="images/heaven_state.png" alt="Ilustración del capítulo" class="chapter-image">
+            <div class="content-body">
+                <div class="spanish language">
+                    <h1>Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</h1>
+                    <p>Caminando por la Gran Vía de nuevo, rodeados de anuncios luminosos y gente con bolsas de compras, Jesús señaló hacia arriba.
+—"Que estás en los cielos". Ya te dije en Colmenarejo que el cielo es un estado de conciencia. Pero quiero que entiendas algo más.</p>
+<p>Se detuvo frente a un escaparate de lujo.
+—La gente busca el cielo aquí —señaló los relojes caros—. Creen que si tienen esto, serán felices. Que si consiguen ese trabajo, o esa pareja, tocarán el cielo. Pero el cielo no es un lugar al que vas, es un lugar desde el que vives.</p>
+<p>—¿Cómo se vive desde el cielo aquí, en medio del tráfico y el estrés?</p>
+<p>—Trayendo el cielo a la tierra. Esa es tu misión. "Venga a nosotros tu reino". No es esperar a morirse para ir a un lugar bonito con nubes. Es hacer que este lugar, aquí y ahora, se parezca a esa vibración de amor y paz.</p>
+<p>—Eso suena difícil.</p>
+<p>—Lo es si intentas cambiar el mundo de fuera sin cambiar el de dentro. Si tú estás en paz, si tú vibras en gratitud, creas una pequeña burbuja de cielo a tu alrededor. Y si muchos hacen eso, las burbujas se unen. Así es como viene el Reino. No con ejércitos, sino con corazones tranquilos.</p>
+<p>Me miró fijamente.
+—Tú eres un canal. Si estás sucio de miedo y rencor, la luz no pasa. Si te limpias, si vibras alto, el cielo pasa a través de ti y llega a la tierra. Eres un puente, Francisco. Todos lo sois.</p>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 6: The Lord's Prayer (Part 2: Heaven)</h1>
+                    <p>Walking down Gran Vía again, surrounded by glowing advertisements and people with shopping bags, Jesus pointed upwards.
+—"Who art in heaven". I already told you in Colmenarejo that heaven is a state of consciousness. But I want you to understand something more.</p>
+<p>He stopped in front of a luxury shop window.
+—People look for heaven here —he pointed to the expensive watches—. They believe that if they have this, they will be happy. That if they get that job, or that partner, they will touch the sky. But heaven is not a place you go to, it is a place you live from.</p>
+<p>—How do you live from heaven here, in the middle of traffic and stress?</p>
+<p>—By bringing heaven to earth. That is your mission. "Thy kingdom come". It's not waiting to die to go to a nice place with clouds. It's making this place, here and now, look like that vibration of love and peace.</p>
+<p>—That sounds difficult.</p>
+<p>—It is if you try to change the world outside without changing the one inside. If you are at peace, if you vibrate in gratitude, you create a small bubble of heaven around you. And if many do that, the bubbles join together. That's how the Kingdom comes. Not with armies, but with calm hearts.</p>
+<p>He looked at me fixedly.
+—You are a channel. If you are dirty with fear and resentment, the light doesn't pass. If you clean yourself, if you vibrate high, heaven passes through you and reaches the earth. You are a bridge, Francisco. You all are.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 6 : Le Notre Père (Partie 2 : Le Ciel)</h1>
+                    <p>En marchant à nouveau sur la Gran Vía, entourés de publicités lumineuses et de gens avec des sacs de courses, Jésus montra le ciel.
+—« Qui es aux cieux ». Je t'ai déjà dit à Colmenarejo que le ciel est un état de conscience. Mais je veux que tu comprennes quelque chose de plus.</p>
+<p>Il s'arrêta devant une vitrine de luxe.
+—Les gens cherchent le ciel ici —il désigna les montres chères—. Ils croient que s'ils ont ça, ils seront heureux. Que s'ils obtiennent ce travail, ou ce partenaire, ils toucheront le ciel. Mais le ciel n'est pas un endroit où l'on va, c'est un endroit d'où l'on vit.</p>
+<p>—Comment vit-on depuis le ciel ici, au milieu du trafic et du stress ?</p>
+<p>—En apportant le ciel sur la terre. C'est ta mission. « Que ton règne vienne ». Ce n'est pas attendre de mourir pour aller dans un bel endroit avec des nuages. C'est faire en sorte que cet endroit, ici et maintenant, ressemble à cette vibration d'amour et de paix.</p>
+<p>—Ça a l'air difficile.</p>
+<p>—Ça l'est si on essaie de changer le monde extérieur sans changer celui de l'intérieur. Si tu es en paix, si tu vibres dans la gratitude, tu crées une petite bulle de ciel autour de toi. Et si beaucoup font cela, les bulles s'unissent. C'est ainsi que vient le Royaume. Pas avec des armées, mais avec des cœurs calmes.</p>
+<p>Il me regarda fixement.
+—Tu es un canal. Si tu es sale de peur et de rancœur, la lumière ne passe pas. Si tu te nettoies, si tu vibres haut, le ciel passe à travers toi et atteint la terre. Tu es un pont, Francisco. Vous l'êtes tous.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 6: Il Padre Nostro (Parte 2: Il Cielo)</h1>
+                    <p>Camminando di nuovo per la Gran Vía, circondati da insegne luminose e gente con borse della spesa, Gesù indicò verso l'alto.
+—"Che sei nei cieli". Ti ho già detto a Colmenarejo che il cielo è uno stato di coscienza. Ma voglio che tu capisca qualcosa di più.</p>
+<p>Si fermò davanti a una vetrina di lusso.
+—La gente cerca il cielo qui —indicò gli orologi costosi—. Credono che se hanno questo, saranno felici. Che se ottengono quel lavoro, o quel partner, toccheranno il cielo. Ma il cielo non è un luogo dove si va, è un luogo da cui si vive.</p>
+<p>—Come si vive dal cielo qui, in mezzo al traffico e allo stress?</p>
+<p>—Portando il cielo sulla terra. Questa è la tua missione. "Venga il tuo regno". Non è aspettare di morire per andare in un bel posto con le nuvole. È fare in modo che questo luogo, qui e ora, assomigli a quella vibrazione di amore e pace.</p>
+<p>—Suona difficile.</p>
+<p>—Lo è se cerchi di cambiare il mondo fuori senza cambiare quello dentro. Se sei in pace, se vibri nella gratitudine, crei una piccola bolla di cielo intorno a te. E se molti fanno così, le bolle si uniscono. È così che viene il Regno. Non con gli eserciti, ma con i cuori tranquilli.</p>
+<p>Mi guardò fisso.
+—Tu sei un canale. Se sei sporco di paura e rancore, la luce non passa. Se ti pulisci, se vibri alto, il cielo passa attraverso di te e arriva alla terra. Sei un ponte, Francisco. Lo siete tutti.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 6 章：主祷文（第二部分：天上）</h1>
+                    <p>再次走在格兰大道上，周围是闪烁的广告和提着购物袋的人群，耶稣指向天空。
+“‘我们在天上的父’。我在科尔梅纳雷霍已经告诉过你，天是一种意识状态。但我希望你明白更多。”</p>
+<p>他停在一个奢侈品橱窗前。
+“人们在这里寻找天堂，”他指着昂贵的手表说，“他们相信如果拥有这个，他们就会幸福。如果得到那份工作或那个伴侣，他们就能触及天堂。但天堂不是一个你去的地方，而是一个你以此为基点生活的地方。”</p>
+<p>“在交通繁忙、压力巨大的环境中，如何从天堂般的境界中生活呢？”</p>
+<p>“通过将天堂带入人间。那是你的使命。‘愿你的国降临’。不是等着死后去一个有云朵的美丽地方。而是让这个地方，此时此刻，看起来像那种爱和平静的振动。”</p>
+<p>“这听起来很难。”</p>
+<p>“如果你试图在不改变内心世界的情况下改变外部世界，那确实很难。如果你内心平静，如果你在感恩中振动，你就在自己周围创造了一个小小的天堂气泡。如果许多人都这样做，气泡就会融合在一起。天国就是这样降临的。不是靠军队，而是靠平静的心灵。”</p>
+<p>他盯着我看。
+“你是一个渠道。如果你被恐惧和怨恨弄脏了，光就无法通过。如果你清理自己，如果你在高频振动，天堂就会通过你到达人间。你是一座桥梁，弗朗西斯科。你们所有人都是。”</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</h1>
+                    <p>بينما كنا نسير في شارع غران فيا مرة أخرى، محاطين بالإعلانات المضيئة وأشخاص يحملون أكياس التسوق، أشار يسوع إلى الأعلى.
+— "الذي في السماوات". لقد أخبرتك بالفعل في كولميناريجو أن السماء هي حالة وعي. لكني أريدك أن تفهم شيئاً أكثر.</p>
+<p>توقف أمام واجهة محل فاخر.
+— الناس يبحثون عن السماء هنا — أشار إلى الساعات باهظة الثمن —. يعتقدون أنهم إذا امتلكوا هذا، فسيكونون سعداء. وأنهم إذا حصلوا على تلك الوظيفة، أو ذلك الشريك، فسيلمسون السماء. لكن السماء ليست مكاناً تذهب إليه، بل هي مكان تعيش منه.</p>
+<p>— كيف نعيش من السماء هنا، وسط الزحام والتوتر؟</p>
+<p>— بجلب السماء إلى الأرض. تلك هي مهمتك. "ليأت ملكوتك". ليس انتظار الموت للذهاب إلى مكان جميل به سحب. بل جعل هذا المكان، هنا والآن، يشبه ذلك الاهتزاز من الحب والسلام.</p>
+<p>— هذا يبدو صعباً.</p>
+<p>— يكون كذلك إذا حاولت تغيير العالم الخارجي دون تغيير العالم الداخلي. إذا كنت في سلام، إذا كنت تهتز بالامتنان، فإنك تخلق فقاعة صغيرة من السماء حولك. وإذا فعل الكثيرون ذلك، تتحد الفقاعات. هكذا يأتي الملكوت. ليس بالجيوش، بل بقلوب مطمئنة.</p>
+<p>نظر إليّ بتمعن.
+— أنت قناة. إذا كنت متسخاً بالخوف والاستياء، فإن النور لا يعبر. إذا طهرت نفسك، إذا اهتززت عالياً، فإن السماء تعبر من خلالك وتصل إلى الأرض. أنت جسر يا فرانسيسكو. أنتم جميعاً كذلك.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 6: Отче наш (Часть 2: Небеса)</h1>
+                    <p>Снова прогуливаясь по Гран-Виа, окруженные светящейся рекламой и людьми с пакетами из магазинов, Иисус указал вверх.
+— «Иже еси на небесех». Я уже говорил тебе в Кольменарехо, что небо — это состояние сознания. Но я хочу, чтобы ты понял кое-что еще.</p>
+<p>Он остановился перед витриной роскошного магазина.
+— Люди ищут небо здесь, — он указал на дорогие часы. — Они верят, что если у них будет это, они станут счастливы. Что если они получат ту работу или того партнера, они коснутся неба. Но небо — это не место, куда ты уходишь, это место, из которого ты живешь.</p>
+<p>— Как же жить «из неба» здесь, среди пробок и стресса?</p>
+<p>— Принося небо на землю. В этом твоя миссия. «Да приидет Царствие Твое». Это не томительное ожидание смерти, чтобы попасть в красивое место с облаками. Это стремление сделать это место, здесь и сейчас, похожим на ту вибрацию любви и покоя.</p>
+<p>— Это звучит непросто.</p>
+<p>— Так и есть, если пытаться изменить внешний мир, не меняя внутренний. Если ты в мире, если ты вибрируешь в благодарности, ты создаешь вокруг себя маленький пузырь неба. И если многие так сделают, пузыри соединятся. Именно так приходит Царство. Не с армиями, а со спокойными сердцами.</p>
+<p>Он пристально посмотрел на меня.
+— Ты — канал. Если ты загрязнен страхом и обидой, свет не проходит. Если ты очищаешь себя, если вибрируешь высоко, небо проходит сквозь тебя и достигает земли. Ты — мост, Франсиско. Вы все — мосты.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 6: Kinh Lạy Cha (Phần 2: Trời)</h1>
+                    <p>Đi bộ dọc theo đường Gran Vía một lần nữa, giữa những biển quảng cáo rực rỡ và dòng người xách túi mua sắm, Chúa Giê-su chỉ tay lên trên.
+—"Ở trên trời". Ta đã nói với con ở Colmenarejo rằng bầu trời là một trạng thái của ý thức. Nhưng Ta muốn con hiểu thêm điều này.</p>
+<p>Ngài dừng lại trước một tủ kính trưng bày đồ xa xỉ.
+—Mọi người tìm kiếm thiên đường ở đây —Ngài chỉ vào những chiếc đồng hồ đắt tiền—. Họ tin rằng nếu có được thứ này, họ sẽ hạnh phúc. Rằng nếu có được công việc đó, hoặc người bạn đời đó, họ sẽ chạm tới bầu trời. Nhưng thiên đường không phải là nơi con đi tới, mà là nơi con xuất phát để sống.</p>
+<p>—Làm sao để sống từ thiên đường ngay tại đây, giữa dòng xe cộ và sự căng thẳng này ạ?</p>
+<p>—Bằng cách mang thiên đường xuống mặt đất. Đó là sứ mệnh của con. "Nước Cha trị đến". Không phải là chờ chết để đi đến một nơi đẹp đẽ có mây trôi. Mà là làm cho nơi này, ngay tại đây và bây giờ, giống như rung động của tình yêu và sự bình an đó.</p>
+<p>—Nghe có vẻ khó khăn quá.</p>
+<p>—Sẽ rất khó nếu con cố gắng thay đổi thế giới bên ngoài mà không thay đổi thế giới bên trong. Nếu con bình an, nếu con rung động trong lòng biết ơn, con sẽ tạo ra một bong bóng thiên đường nhỏ xung quanh mình. Và nếu nhiều người làm như vậy, các bong bóng sẽ kết nối lại. Đó là cách Vương quốc ngự đến. Không phải bằng quân đội, mà bằng những trái tim điềm tĩnh.</p>
+<p>Ngài nhìn thẳng vào tôi.
+—Con là một kênh dẫn. Nếu con bị vấy bẩn bởi nỗi sợ hãi và hận thù, ánh sáng sẽ không thể lọt qua. Nếu con làm sạch chính mình, nếu con rung động cao, thiên đường sẽ đi qua con và chạm đến mặt đất. Con là một cây cầu, Francisco. Tất cả các con đều như vậy.</p>
+                </div>
+                <div class="korean language">
+                    <h1>제6장: 주기도문 (제2부: 하늘)</h1>
+                    <p>다시 그란 비아를 걸으며, 화려한 광고판과 쇼핑백을 든 사람들 사이에서 예수님은 위를 가리켰습니다.
+— "하늘에 계신". 콜메나레호에서 하늘이 의식 상태라고 말했지. 하지만 하나 더 이해했으면 해.</p>
+<p>그는 명품 쇼윈도 앞에 멈춰 섰습니다.
+— 사람들은 여기서 하늘(천국)을 찾아. — 그가 비싼 시계들을 가리켰습니다. — 이걸 가지면 행복해질 거라고 믿지. 그 직업을 얻으면, 그 연인을 만나면 천국에 닿을 거라고. 하지만 천국은 네가 가는 장소가 아니라, 네가 살아가는(발 딛고 있는) 장소야.</p>
+<p>— 교통 체증과 스트레스가 가득한 여기서 어떻게 천국으로부터 살 수 있죠?</p>
+<p>— 천국을 땅으로 가져옴으로써. 그게 너의 임무야. "나라가 임하시오며". 이건 죽어서 구름 있는 좋은 곳에 가기를 기다리는 게 아니야. 지금 여기, 이 장소를 사랑과 평화의 진동과 비슷하게 만드는 거지.</p>
+<p>— 어려워 보이는데요.</p>
+<p>— 내면을 바꾸지 않고 외부 세계를 바꾸려고 하면 어렵지. 네가 평화롭다면, 네가 감사함으로 진동한다면, 너는 네 주변에 작은 천국의 버블을 만드는 거야. 그리고 많은 사람이 그렇게 하면, 버블들이 합쳐져. 그렇게 왕국이 오는 거야. 군대가 아니라, 평온한 마음들로.</p>
+<p>그는 나를 빤히 쳐다보았습니다.
+— 너는 통로야. 두려움과 원망으로 더러워져 있으면 빛이 통과하지 못해. 네가 깨끗해지면, 높게 진동하면, 하늘이 너를 통해 땅에 닿아. 프란시스코, 너는 다리(bridge)야. 너희 모두가 그래.</p>
+                </div>
+                <div class="portuguese language">
+                    <h1>Capítulo 6: O Pai Nosso (Parte 2: Céu)</h1>
+                    <p>Continuámos pelo Retiro, observando os barcos no lago.</p>
+<p>—Já te disse que o Céu é um estado de consciência —prosseguiu Jesus—. 'Santificado seja o Vosso nome'. Em aramaico, santificar significa limpar, esvaziar para criar espaço.</p>
+<p>—Esvaziar o quê?</p>
+<p>—A mente. Para que a alta vibração entre, tens de esvaziar o lixo. Não podes encher um copo que já está cheio de vinagre com vinho. Se a tua mente está cheia de juízos, queixas e medo, onde é que Deus vai entrar? Santificar o Nome é criar um espaço de silêncio e pureza dentro de ti para que a vibração original possa ressoar.</p>
+<p>Uma mulher passou a correr, a olhar para o relógio, visivelmente stressada. Jesus olhou para ela com compaixão.</p>
+<p>—'Venha a nós o Vosso reino' —recitou—. Muita gente pensa que é esperar que o mundo se arranje por magia. Mas o Reino é agora. É decidir, a cada instante, vibrar na paz. Quando tu estás em paz no meio do caos, estás a trazer o Reino à Terra. Tu és a antena.</p>
+<p>—Isso soa a muita responsabilidade.</p>
+<p>—É a única responsabilidade que tens! Não vieste salvar o mundo. Vieste salvar a tua própria vibração. E ao fazê-lo, iluminas o mundo. Uma lâmpada não se preocupa em iluminar a sala inteira. Só se preocupa em estar ligada à corrente. O resto acontece sozinho.</p>
+                </div>
+                <div class="japanese language">
+                    <h1>第6章：主の祈り（パート2：天）</h1>
+                    <p>再びグラン・ビアを歩きながら、ネオンサインや買い物袋を持った人々に囲まれて、イエスは上を指差しました。
+「『天にまします』。コルメナレホでも言ったけれど、天は意識の状態なんだ。でも、もっと理解してほしいことがある」</p>
+<p>彼は高級ショップのショーケースの前で立ち止まりました。
+「人々はここで天を探している」彼は高価な時計を指差しました。「これを持てば幸せになれると信じている。あの仕事に就けば、あるいはあのパートナーがいれば、天に手が届くと。でも、天は君が行く場所ではない。天とは、君がそこから生きる場所なんだ」</p>
+<p>「交通渋滞やストレスの真っただ中で、どうやって天から生きるんですか？」</p>
+<p>「天を地に持ってくることだよ。それが君の任務だ。『御国が来ますように』。それは死んでから雲のある綺麗な場所に行くのを待つことではない。この場所を、今、ここで、あの愛と平和の振動に似せていくことなんだ」</p>
+<p>「それは難しそうです」</p>
+<p>「外の世界を変えようとして、自分の内側を変えようとしなければ難しいね。もし君が平和の中にあり、感謝の気持ちで振動していれば、君の周りに小さな天の泡（バブル）が生まれる。そして多くの人がそうすれば、泡は繋がり合う。そうやって御国は来るんだ。軍隊によってではなく、穏やかな心によってね」</p>
+<p>彼は私をじっと見つめました。
+「君は一つのチャネル（通り道）なんだ。もし君が恐怖や恨みで汚れていれば、光は通らない。もし君が自分を清め、高く振動すれば、天は君を通って地へと届く。フランシスコ、君は架け橋なんだ。君たち全員がそうなんだよ」</p>
+                </div>
+                <div class="image-container-footer"><img src="images/heaven_state.png" alt="Ilustración del capítulo" class="footer-image"></div>
+            </div>
+            <footer>
+                <div class="spanish language"><p>Escrito con amor y alta vibración.</p></div>
+                <div class="english language"><p>Written with love and high vibration.</p></div>
+                <div class="french language"><p>Écrit avec amour et haute vibration.</p></div>
+                <div class="italian language"><p>Scritto con amore e alta vibrazione.</p></div>
+                <div class="chinese language"><p>用爱与高频振动谱写。</p></div>
+                <div class="arabic language"><p>كتب بكل حب واهتزاز عالٍ.</p></div>
+                <div class="russian language"><p>Написано с любовью и высокой вибрацией.</p></div>
+                <div class="vietnamese language"><p>Được viết bằng tình yêu và rung động cao.</p></div>
+                <div class="korean language"><p>사랑과 높은 진동으로 쓰여졌습니다.</p></div>
+                <div class="portuguese language"><p>Escrito com amor e alta vibração.</p></div>
+                <div class="japanese language"><p>愛と高い波動で書かれました。</p></div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="base.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const btnOpen = document.getElementById('menu-open');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('open');
+            const isOpen = sidebar.classList.contains('open');
+            if (window.innerWidth <= 1024) {
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
+            }
+        }
+
+        btnOpen.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
+        overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
+
+        // Resize handler for button visibility
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+
+</html>

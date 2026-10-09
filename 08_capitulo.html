@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 8: Perdón y Deudas | Mi amigo Jesucristo</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            /* Vibrant Coral */
+            --secondary: #4ECDC4;
+            /* Vibrant Teal */
+            --bg: #F7FFF7;
+            /* Off-white */
+            --text: #292F36;
+            /* Dark Slate */
+            --accent: #FFE66D;
+            /* Vibrant Yellow */
+            --sidebar-width: 250px;
+            --header-height: 60px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Mobile Header */
+        #mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: white;
+            padding: 0 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        #mobile-header h1 {
+            display: none;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Sidebar Navigation */
+        #sidebar {
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        #sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        #sidebar nav ul {
+            list-style: none;
+            padding: 0;
+            padding-bottom: 5rem;
+            /* Extra space for the last items */
+        }
+
+        #sidebar nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        #sidebar nav a {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+            font-size: 0.95rem;
+        }
+
+        #sidebar nav a:hover,
+        #sidebar nav a.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        #content-wrapper {
+            margin-left: var(--sidebar-width);
+            width: calc(100% - var(--sidebar-width));
+            padding: 2.5rem;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        main {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chapter-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .content-body {
+            padding: 3rem;
+            flex-grow: 1;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        h2,
+        h3 {
+            color: var(--secondary);
+            margin-top: 2rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+        }
+
+        .vibrar-alto {
+            background-color: var(--accent);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: auto;
+        }
+
+        /* Overlay for mobile */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            #mobile-header {
+                display: flex;
+            }
+
+            #sidebar {
+                transform: translateX(-100%);
+            }
+
+            #sidebar.open {
+                transform: translateX(0);
+            }
+
+            #sidebar.open+#overlay {
+                display: block;
+            }
+
+            #content-wrapper {
+                margin-left: 0;
+                width: 100%;
+                padding: 1rem;
+                padding-top: calc(var(--header-height) + 1rem);
+            }
+
+            .content-body {
+                padding: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chapter-image {
+                height: 250px;
+            }
+
+            .content-body {
+                padding: 1.5rem;
+            }
+        }
+
+        .image-container-footer {
+            margin-top: 3rem;
+            padding: 0 3rem 3rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .image-container-footer {
+                padding: 0 1.5rem 2rem;
+            }
+        }
+
+        .footer-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Language display logic */
+        .language {
+            display: none;
+        }
+        .arabic {
+            direction: rtl;
+            text-align: right;
+        }
+
+        /* Spotify Button Styles */
+        .spotify-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1DB954; /* Spotify Green */
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 20px auto;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .spotify-button:hover {
+            background-color: #1ed760;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+            color: white; /* Ensure text remains white */
+        }
+
+        .spotify-button svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        /* RTL specific adjustments for button icon */
+        .arabic .spotify-button svg {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+
+        /* Linktree Button Styles */
+        .language-switcher-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .linktree-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            color: #333;
+            padding: 3px 12px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.6rem;
+            margin-top: 5px;
+            margin-right: 5px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .linktree-button:hover {
+            background: rgba(255, 255, 255, 1);
+            color: #000;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 1024px) {
+            .linktree-button {
+                font-size: 0.55rem;
+                padding: 2px 10px;
+            }
+        }
+
+        /* Poem Frame Styles */
+        .poem-frame {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin: 30px auto;
+            position: relative;
+            line-height: 2;
+            display: table;
+            text-align: left;
+            max-width: 90%;
+        }
+        
+        .poem-frame::before {
+            content: "❧";
+            position: absolute;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+
+        /* Donation Section Styles */
+        .donation-section {
+            margin: 40px auto 30px;
+            padding: 15px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .donation-text {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .donation-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #29abe0; /* Ko-fi Blue */
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .donation-button:hover {
+            background-color: #1a8dbb;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="language-switcher-container">
+        <select id="language-select">
+            <option value="spanish">Español 🇪🇸</option>
+            <option value="english">English 🇺🇸</option>
+            <option value="french">Français 🇫🇷</option>
+            <option value="italian">Italiano 🇮🇹</option>
+            <option value="chinese">中文 🇨🇳</option>
+            <option value="arabic">العربية 🇸🇦</option>
+            <option value="russian">Русский 🇷🇺</option>
+            <option value="vietnamese">Tiếng Việt 🇻🇳</option>
+            <option value="korean">한국어 🇰🇷</option>
+            <option value="portuguese">Português 🇵🇹</option>
+            <option value="japanese">日本語 🇯🇵</option>
+        </select>
+        <a href="https://www.pazaresosset.es/linktree.html" target="_blank" class="linktree-button">Linktree</a>
+    </div>
+
+    <header id="mobile-header">
+        <div class="spanish language">
+            <h1>Capítulo 8: Perdón y Deudas</h1>
+        </div>
+        <div class="english language">
+            <h1>Chapter 8: Forgiveness and Debts</h1>
+        </div>
+        <div class="french language">
+            <h1>Chapitre 8 : Pardon et dettes</h1>
+        </div>
+        <div class="italian language">
+            <h1>Capitolo 8: Perdono e debiti</h1>
+        </div>
+        <div class="chinese language">
+            <h1>第 8 章：宽恕与债务</h1>
+        </div>
+        <div class="arabic language">
+            <h1>الفصل الثامن: المغفرة والديون</h1>
+        </div>
+        <div class="russian language">
+            <h1>Глава 8: Прощение и долги</h1>
+        </div>
+        <div class="vietnamese language">
+            <h1>Chương 8: Tha thứ và Nợ nần</h1>
+        </div>
+        <div class="korean language">
+            <h1>제8장: 용서와 빚</h1>
+        </div>
+        <div class="portuguese language">
+            <h1>Capítulo 8: Perdão e Dívidas</h1>
+        </div>
+        <div class="japanese language">
+            <h1>第8章：許しと負い目</h1>
+        </div>
+        <button class="menu-toggle" id="menu-open">☰</button>
+    </header>
+
+    <aside id="sidebar">
+        <div class="spanish language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mi amigo Jesucristo</h2>
+                <button class="menu-toggle" id="menu-close-es" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introducción: Entre la Partícula y la Vibración</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: El Encuentro en Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Paseo por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: La Vibración y el Silencio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo y la Naturaleza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: El Padre Nuestro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: El Padre Nuestro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: El Pan de Cada Día</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Capítulo 8: Perdón y Deudas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: No nos dejes caer en tentación (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Líbranos del mal (Protección de Bajas Vibraciones)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: El Reino, el Poder y la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finales y Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Navidad</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glosario Cuántico y Espiritual</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Música y las Frecuencias</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sobre el Autor y el Proyecto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Guía de Reflexión y Meditación</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="english language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>My friend Jesus Christ</h2>
+                <button class="menu-toggle" id="menu-close-en" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction: Between Particle and Vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapter 1: The Encounter in Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapter 2: A Walk through Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapter 3: Vibration and Silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapter 4: Colmenarejo and Nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapter 5: The Lord's Prayer (Part 1: Father)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapter 6: The Lord's Prayer (Part 2: Heaven)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapter 7: Our Daily Bread</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Chapter 8: Forgiveness and Debts</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapter 9: Lead us not into temptation (Vibrate High)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapter 10: Deliver us from evil (Protection from Low Vibrations)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapter 11: The Kingdom, the Power and the Glory</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogue: Final Adventures and Farewell</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendix: Christmas Poem</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Quantum and Spiritual Glossary</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Music and Frequencies</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">About the Author and the Project</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Reflection and Meditation Guide</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="french language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Mon ami Jésus-Christ</h2>
+                <button class="menu-toggle" id="menu-close-fr" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduction : Entre la particule et la vibration</a>
+                    </li>
+                    <li><a href="index.html">Chapitre 1 : La rencontre à Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chapitre 2 : Promenade à Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chapitre 3 : La vibration et le silence</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chapitre 4 : Colmenarejo et la nature</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chapitre 5 : Le Notre Père (Partie 1 : Père)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chapitre 6 : Le Notre Père (Partie 2 : Ciel)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chapitre 7 : Le pain de chaque jour</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Chapitre 8 : Pardon et dettes</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chapitre 9 : Ne nous laisse pas succomber à la tentation (Vibrer haut)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chapitre 10 : Délivre-nous du mal (Protection contre les vibrations basses)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chapitre 11 : Le Règne, la Puissance et la Gloire</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Épilogue : Aventures finales et adieu</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice : Poème de Noël</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossaire Quantique et Spirituel</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Musique et les Fréquences</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">À propos de l'Auteur et du Projet</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Guide de Réflexion et Méditation</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="italian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Il mio amico Gesù Cristo</h2>
+                <button class="menu-toggle" id="menu-close-it" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introduzione: Tra la particella e la vibrazione</a>
+                    </li>
+                    <li><a href="index.html">Capitolo 1: L'incontro a Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capitolo 2: Passeggiata per Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capitolo 3: La vibrazione e il silenzio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capitolo 4: Colmenarejo e la natura</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capitolo 5: Il Padre Nostro (Parte 1: Padre)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capitolo 6: Il Padre Nostro (Parte 2: Cielo)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capitolo 7: Il pane quotidiano</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Capitolo 8: Perdono e debiti</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capitolo 9: Non ci indurre in tentazione (Vibrare alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capitolo 10: Liberaci dal male (Protezione dalle vibrazioni basse)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capitolo 11: Il Regno, il Potere e la Gloria</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epilogo: Avventure finali e addio</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Appendice: Poema di Natale</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossario Quantistico e Spirituale</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">La Musica e le Frequenze</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sull'Autore e sul Progetto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Guida di Riflessione e Meditazione</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="chinese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>我的朋友耶稣基督</h2>
+                <button class="menu-toggle" id="menu-close-zh" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">引言：粒子与振动之间</a>
+                    </li>
+                    <li><a href="index.html">第 1 章：马德里相遇</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第 2 章：拉斯罗萨斯散步</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第 3 章：振动与静默</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第 4 章：科尔梅纳雷霍与自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第 5 章：主祷文（第一部分：父亲）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第 6 章：主祷文（第二部分：天上）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第 7 章：我们日用的饮食</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">第 8 章：宽恕与债务</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第 9 章：不叫我们遇见试探（高频振动）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第 10 章：救我们脱離凶惡（远离低频振动）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第 11 章：国度、权柄、荣耀</a>
+                    </li>
+                    <li><a href="12_epilogo.html">结语：最后的冒险与告别</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">附录：圣诞诗歌</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">量子与灵性词汇表</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">音乐与频率</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">关于作者与项目</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">反思与冥想指南</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="arabic language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>صديقي يسوع المسيح</h2>
+                <button class="menu-toggle" id="menu-close-ar" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">مقدمة: بين الجسيم والاهتزاز</a>
+                    </li>
+                    <li><a href="index.html">الفصل الأول: اللقاء في مدريد</a>
+                    </li>
+                    <li><a href="02_capitulo.html">الفصل الثاني: نزهة في لاس روزاس</a>
+                    </li>
+                    <li><a href="03_capitulo.html">الفصل الثالث: الاهتزاز والصمت</a>
+                    </li>
+                    <li><a href="04_capitulo.html">الفصل الرابع: كولميناريجو والطبيعة</a>
+                    </li>
+                    <li><a href="05_capitulo.html">الفصل الخامس: أبانا الذي في السماوات (الجزء الأول: الآب)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">الفصل السادس: أبانا الذي في السماوات (الجزء الثاني: السماء)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">الفصل السابع: خبزنا كفافنا</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">الفصل الث第八: المغفرة والديون</a>
+                    </li>
+                    <li><a href="09_capitulo.html">الفصل التاسع: لا تدخلنا في تجربة (الاهتزاز العالي)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">الفصل العاشر: نجنا من الشرير (الحماية من الاهتزازات المنخفضة)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">الفصل الحادي عشر: الملك والقدرة والمجد</a>
+                    </li>
+                    <li><a href="12_epilogo.html">الخاتمة: المغامرات الأخيرة والوداع</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">ملحق: قصيدة عيد الميلاد</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">معجم الكم والروحانية</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">الموسيقى والترددات</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">عن المؤلف والمشروع</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">دليل التأمل والتفكر</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="russian language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Мой друг Иисус Христос</h2>
+                <button class="menu-toggle" id="menu-close-ru" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Введение: Между частицей и вибрацией</a>
+                    </li>
+                    <li><a href="index.html">Глава 1: Встреча в Мадриде</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Глава 2: Прогулка по Лас-Росас</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Глава 3: Вибрация и тишина</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Глава 4: Кольменарехо и природа</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Глава 5: Отче наш (Часть 1: Отче)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Глава 6: Отче наш (Часть 2: Небо)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Глава 7: Хлеб наш насущный</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Глава 8: Прощение и долги</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Глава 9: Не введи нас в искушение (Вибрировать высоко)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Глава 10: Избавь нас от лукавого (Защита от низких вибраций)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Глава 11: Царство, Сила и Слава</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Эпилог: Последние приключения и прощание</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Приложение: Рождественское стихотворение</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Квантовый и духовный глоссарий</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Музыка и частоты</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Об авторе и проекте</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Руководство по размышлению и медитации</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="vietnamese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>Người bạn Giê-su của tôi</h2>
+                <button class="menu-toggle" id="menu-close-vi" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Giới thiệu: Giữa Hạt và Rung động</a>
+                    </li>
+                    <li><a href="index.html">Chương 1: Cuộc gặp gỡ tại Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Chương 2: Đi dạo qua Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Chương 3: Rung động và Im lặng</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Chương 4: Colmenarejo và Thiên nhiên</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Chương 5: Kinh Lạy Cha (Phần 1: Cha)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Chương 6: Kinh Lạy Cha (Phần 2: Trời)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Chương 7: Lương thực hằng ngày</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Chương 8: Tha thứ và Nợ nần</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Chương 9: Chớ để chúng con sa chước cám dỗ (Rung động cao)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Chương 10: Cứu chúng con cho khỏi sự dữ (Bảo vệ khỏi rung động thấp)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Chương 11: Vương quốc, Quyền năng và Vinh quang</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Lời kết: Những cuộc phiêu lưu cuối cùng và Lời chào tạm biệt</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Phụ lục: Bài thơ Giáng sinh</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Thuật ngữ Lượng tử và Tâm linh</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">Âm nhạc và Tần số</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Về Tác giả và Dự án</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Hướng dẫn Suy ngẫm và Thiền định</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="korean language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>나의 친구 예수 그리스도</h2>
+                <button class="menu-toggle" id="menu-close-ko" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">서문: 입자와 진동 사이에서</a>
+                    </li>
+                    <li><a href="index.html">제1장: 마드리드에서의 만남</a>
+                    </li>
+                    <li><a href="02_capitulo.html">제2장: 라스 로사스 산책</a>
+                    </li>
+                    <li><a href="03_capitulo.html">제3장: 진동과 침묵</a>
+                    </li>
+                    <li><a href="04_capitulo.html">제4장: 콜메나레호와 자연</a>
+                    </li>
+                    <li><a href="05_capitulo.html">제5장: 주기도문 (제1부: 아버지)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">제6장: 주기도문 (제2부: 하늘)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">제7장: 우리에게 일용할 양식</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">제8章: 용서와 빚</a>
+                    </li>
+                    <li><a href="09_capitulo.html">제9장: 우리를 시험에 들게 하지 마시옵고 (높은 진동)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">제10장: 다만 악에서 구하시옵소서 (낮은 진동으로부터의 보호)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">제11장: 나라와 권능과 영광</a>
+                    </li>
+                    <li><a href="12_epilogo.html">에필로그: 마지막 모험과 작별</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">부록: 크리스마스 시</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">양자 및 영적 용어집</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">음악과 주파수</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">저자와 프로젝트 소개</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">성찰과 명상 가이드</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="portuguese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>O meu amigo Jesus Cristo</h2>
+                <button class="menu-toggle" id="menu-close-pt" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">Introdução: Entre a Partícula e a Vibração</a>
+                    </li>
+                    <li><a href="index.html">Capítulo 1: O Encontro em Madrid</a>
+                    </li>
+                    <li><a href="02_capitulo.html">Capítulo 2: Passeio por Las Rozas</a>
+                    </li>
+                    <li><a href="03_capitulo.html">Capítulo 3: A Vibração e o Silêncio</a>
+                    </li>
+                    <li><a href="04_capitulo.html">Capítulo 4: Colmenarejo e a Natureza</a>
+                    </li>
+                    <li><a href="05_capitulo.html">Capítulo 5: O Pai Nosso (Parte 1: Pai)</a>
+                    </li>
+                    <li><a href="06_capitulo.html">Capítulo 6: O Pai Nosso (Parte 2: Céu)</a>
+                    </li>
+                    <li><a href="07_capitulo.html">Capítulo 7: O Pão de Cada Dia</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">Capítulo 8: Perdão e Dívidas</a>
+                    </li>
+                    <li><a href="09_capitulo.html">Capítulo 9: Não nos deixeis cair em tentação (Vibrar Alto)</a>
+                    </li>
+                    <li><a href="10_capitulo.html">Capítulo 10: Livrai-nos do mal (Proteção de Baixas Vibrações)</a>
+                    </li>
+                    <li><a href="11_capitulo.html">Capítulo 11: O Reino, o Poder e a Glória</a>
+                    </li>
+                    <li><a href="12_epilogo.html">Epílogo: Aventuras Finais e Despedida</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">Apéndice: Poema de Natal</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">Glossário Quântico e Espiritual</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">A Música e as Frequências</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">Sobre o Autor e o Projeto</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">Guia de Reflexão e Meditação</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="japanese language">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h2>私の友人イエス・キリスト</h2>
+                <button class="menu-toggle" id="menu-close-ja" style="color: white; display: none;">✕</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="00_introduccion.html">はじめに：粒子と振動の間で</a>
+                    </li>
+                    <li><a href="index.html">第1章：マドリードでの出会い</a>
+                    </li>
+                    <li><a href="02_capitulo.html">第2章：ラス・ロサスの散歩</a>
+                    </li>
+                    <li><a href="03_capitulo.html">第3章：振動と静寂</a>
+                    </li>
+                    <li><a href="04_capitulo.html">第4章：コルメナレホと自然</a>
+                    </li>
+                    <li><a href="05_capitulo.html">第5章：主の祈り（パート1：父）</a>
+                    </li>
+                    <li><a href="06_capitulo.html">第6章：主の祈り（パート2：天）</a>
+                    </li>
+                    <li><a href="07_capitulo.html">第7章：日々の糧</a>
+                    </li>
+                    <li><a href="08_capitulo.html" class="active">第8章：許しと負い目</a>
+                    </li>
+                    <li><a href="09_capitulo.html">第9章：誘惑に陥らせないで（高い振動）</a>
+                    </li>
+                    <li><a href="10_capitulo.html">第10章：悪から救い出して（低い振動からの保護）</a>
+                    </li>
+                    <li><a href="11_capitulo.html">第11章：御国、力、栄光</a>
+                    </li>
+                    <li><a href="12_epilogo.html">エピローグ：最後の冒険と別れ</a>
+                    </li>
+                    <li><a href="13_apendice_poema.html">付録：クリスマスの詩</a>
+                    </li>
+                    <li><a href="14_glosario_cuantico.html">量子とスピリチュアル用語集</a>
+                    </li>
+                    <li><a href="15_musica_frecuencias.html">音楽と周波数</a>
+                    </li>
+                    <li><a href="16_sobre_el_autor.html">著者とプロジェクトについて</a>
+                    </li>
+                    <li><a href="17_guia_meditacion.html">内省と瞑想のガイド</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <div id="overlay"></div>
+
+    <div id="content-wrapper">
+        <main>
+            <img src="images/forgiveness_chains.png" alt="Ilustración del capítulo" class="chapter-image">
+            <div class="content-body">
+                <div class="spanish language">
+                    <h1>Capítulo 8: Perdón y Deudas</h1>
+                    <p>Volvimos a Las Rozas, a una zona tranquila. Jesús quería hablar de algo pesado.
+—"Perdona nuestras deudas, como también nosotros perdonamos a nuestros deudores".</p>
+<p>—Esa es la parte difícil —admití—. Perdonar a quien te ha hecho daño...</p>
+<p>—Es difícil porque lo ves como un favor que le haces al otro. "Yo, que soy tan bueno, te perdono a ti, que eres tan malo". Eso es ego. Eso no sirve.</p>
+<p>—¿Entonces?</p>
+<p>—El perdón es un acto de higiene personal. Es soltar un carbón ardiendo que tenías agarrado esperando tirárselo a otro. El único que se quema eres tú.</p>
+<p>Se sentó en un banco de piedra.
+—Cuando guardas rencor, vibras muy bajo. Te atas a esa persona y a ese momento doloroso con una cadena invisible. No puedes volar. No puedes avanzar. Perdonar es cortar la cadena. Es decir: "Te libero y me libero. Ya no te debo nada, y no me debes nada".</p>
+<p>—¿Y si lo que hicieron fue muy grave?</p>
+<p>—El dolor es inevitable, el sufrimiento es opcional. Si sigues repasando la ofensa en tu mente, la estás reviviendo una y otra vez. Te estás haciendo daño tú mismo ahora, no el otro. "Líbranos del mal" empieza por librarte del mal que tú mismo generas al no perdonar.</p>
+<p>Me puso la mano en el hombro.
+—Perdonar es vibrar tan alto que la ofensa ya no te alcanza. Es entender que el otro actuó desde su propia inconsciencia, desde su propio dolor. "No saben lo que hacen". Si supieran el daño que se hacen a sí mismos al dañar a otro, no lo harían.</p>
+
+                </div>
+                <div class="english language">
+                    <h1>Chapter 8: Forgiveness and Debts</h1>
+                    <p>We returned to Las Rozas, to a quiet area. Jesus wanted to talk about something heavy.
+—"Forgive us our debts, as we also forgive our debtors".</p>
+<p>—That's the difficult part —I admitted—. Forgiving someone who has hurt you...</p>
+<p>—It's difficult because you see it as a favor you do for the other person. "I, who am so good, forgive you, who are so bad". That is ego. That is useless.</p>
+<p>—Then?</p>
+<p>—Forgiveness is an act of personal hygiene. It is letting go of a burning coal that you were holding, waiting to throw it at someone else. The only one who gets burned is you.</p>
+<p>He sat on a stone bench.
+—When you hold a grudge, you vibrate very low. You tie yourself to that person and to 그 painful moment with an invisible chain. You can't fly. You can't move forward. Forgiving is cutting the chain. It is saying: "I release you and I release myself. I no longer owe you anything, and you owe me nothing".</p>
+<p>—And if what they did was very serious?</p>
+<p>—Pain is inevitable, suffering is optional. If you keep reviewing the offense in your mind, you are reliving it over and over again. You are hurting yourself now, not the other person. "Deliver us from evil" starts by delivering yourself from the evil you yourself generate by not forgiving.</p>
+<p>He put his hand on my shoulder.
+—Forgiving is vibrating so high that the offense no longer reaches you. It is understanding that the other person acted from their own unconsciousness, from their own pain. "They know not what they do". If they knew the damage they do to themselves by damaging another, they would not do it.</p>
+                </div>
+                <div class="french language">
+                    <h1>Chapitre 8 : Pardon et dettes</h1>
+                    <p>Nous sommes retournés à Las Rozas, dans un quartier calme. Jésus voulait parler de quelque chose de pesant.
+—« Pardonne-nous nos offenses, comme nous pardonnons aussi à ceux qui nous ont offensés ».</p>
+<p>—C'est la partie difficile —avouai-je—. Pardonner à quelqu'un qui t'a fait du mal...</p>
+<p>—C'est difficile parce que tu le vois comme une faveur que tu fais à l'autre. « Moi, qui suis si bon, je te pardonne, toi qui es si méchant ». C'est de l'ego. Ça ne sert à rien.</p>
+<p>—Alors ?</p>
+<p>—Le pardon est un acte d'hygiène personnelle. C'est lâcher un charbon ardent que tu tenais à la main en attendant de le jeter sur quelqu'un d'autre. Le seul qui se brûle, c'est toi.</p>
+<p>Il s'assit sur un banc de pierre.
+—Quand tu gardes rancune, tu vibres très bas. Tu t'attaches à cette personne et à ce moment douloureux avec une chaîne invisible. Tu ne peux pas voler. Tu ne peux pas avancer. Pardonner, c'est couper la chaîne. C'est dire : « Je te libère et je me libère. Je ne te dois plus rien, et tu ne me dois rien ».</p>
+<p>—Et si ce qu'ils ont fait était très grave ?</p>
+<p>—La douleur est inévitable, la souffrance est facultative. Si tu continues à ressasser l'offense dans ton esprit, tu la revivras encore et encore. Tu te fais du mal à toi-même maintenant, pas à l'autre. « Délivre-nous du mal » commence par te délivrer du mal que tu génères toi-même en ne pardonnant pas.</p>
+<p>Il posa sa main sur mon épaule.
+—Pardonner, c'est vibrer si haut que l'offense ne t'atteint plus. C'est comprendre que l'autre a agi à partir de sa propre inconscience, de sa propre douleur. « Ils ne savent pas ce qu'ils font ». S'ils savaient le mal qu'ils se font à eux-mêmes en faisant du mal à autrui, ils ne le feraient pas.</p>
+                </div>
+                <div class="italian language">
+                    <h1>Capitolo 8: Perdono e debiti</h1>
+                    <p>Tornammo a Las Rozas, in una zona tranquilla. Gesù voleva parlare di un argomento pesante.
+—"Rimetti a noi i nostri debiti, come anche noi li rimettiamo ai nostri debitori".</p>
+<p>—Questa è la parte difficile —ammisi—. Perdonare chi ti ha fatto del male...</p>
+<p>—È difficile perché lo vedi come un favore che fai all'altro. «Io, che sono tanto buono, perdono te, che sei tanto cattivo». Questo è ego. Non serve a nulla.</p>
+<p>—Quindi?</p>
+<p>—Il perdono è un atto di igiene personale. È mollare un carbone ardente che tenevi in mano aspettando di tirarlo a qualcun altro. L'unico che si scotta sei tu.</p>
+<p>Si sedette su una panchina di pietra.
+—Quando porti rancore, vibri molto basso. Ti leghi a quella persona e a quel momento doloroso con una catena invisibile. Non puoi volare. Non puoi andare avanti. Perdonare è spezzare la catena. È dire: «Ti libero e mi libero. Io non ti devo più nulla e tu non mi devi nulla».</p>
+<p>—E se quello che hanno fatto è stato molto grave?</p>
+<p>—Il dolore è inevitabile, la sofferenza è facoltativa. Se continui a ripassare l'offesa nella tua mente, la stai rivivendo più e più volte. Ti stai facendo del male tu stesso adesso, non l'altro. «Liberaci dal male» comincia dal liberarti dal male che tu stesso generi non perdonando.</p>
+<p>Mi mise la mano sulla spalla.
+—Perdonare è vibrare così alto che l'offesa non ti raggiunge più. È capire che l'altro ha agito partendo dalla propria incoscienza, dal proprio dolore. «Non sanno quello che fanno». Se sapessero il danno che fanno a se stessi danneggiando un altro, non lo farebbero.</p>
+                </div>
+                <div class="chinese language">
+                    <h1>第 8 章：宽恕与债务</h1>
+                    <p>我们回到了拉斯罗萨斯一个安静的地方。耶稣想谈谈一些沉重的话题。
+“‘免我们的债，如同我们免了人的债。’”</p>
+<p>“那是很难的部分，”我承认道，“原谅那个伤害过你的人……”</p>
+<p>“这很难，是因为你把它看作是你给对方的一个恩惠。‘我，这么一个好人，原谅了你这个坏人。’那是自我，那没有用。”</p>
+<p>“那该怎么办呢？”</p>
+<p>“宽恕是一种个人卫生的行为。就像是丢掉你手心里攥着的、正准备扔向别人的火红煤块。唯一被烫伤的人是你自己。”</p>
+<p>他坐在一张石凳上。
+“当你心怀怨恨时，你的振动就会非常低。你用一条无形的链条伸向那个人，并把自己锁在那个痛苦的时刻。你无法飞翔，也无法前进。宽恕就是切断这条链条。它是说：‘我释放你，也释放我自己。我不再欠你任何东西，你也不再欠我任何东西。’”</p>
+<p>“如果他们做的错事非常严重呢？”</p>
+<p>“痛苦是不可避免的，但受苦是可选的。如果你一直在脑海中重温那次冒犯，你就是在一次又一次地经历它。此时此刻伤害你的是你自己，而不是对方。‘救我们脱离凶恶’首先要救自己脱离因不宽恕而产生的恶。”</p>
+<p>他把手放在我的肩膀上。
+“宽恕是保持如此高频的振动，以至于冒犯再也触及不到你。是明白对方是出于他们自己的无意识、出于他们自己的痛苦而行事的。‘他们所做的，他们不晓得。’如果他们知道伤害他人会对自己造成多大的伤害，他们就不会那样做了。”</p>
+                </div>
+                <div class="arabic language">
+                    <h1>الفصل الثامن: المغفرة والديون</h1>
+                    <p>عدنا إلى لاس روزاس، إلى منطقة هادئة. أراد يسوع أن يتحدث عن موضوع ثقيل.
+— "واغفر لنا ذنوبنا كما نغفر نحن أيضاً للمذنبين إلينا".</p>
+<p>— هذا هو الجزء الصعب — اعترفت —. أن تغفر لمن آذاك...</p>
+<p>— الأمر صعب لأنك تراه كفضل تقدمه للآخر. "أنا، الطيب جداً، أغفر لك، أنت الشرير جداً". هذا هو الأنا. هذا لا يجدي نفعاً.</p>
+<p>— إذاً؟</p>
+<p>— الغفران هو فعل من أفعال النظافة الشخصية. إنه التخلي عن جمرة ملتهبة كنت تمسك بها منتظراً إلقاءها على شخص آخر. الوحيد الذي يحترق هو أنت.</p>
+<p>جلس على مقعد حجري.
+— عندما تحمل ضغينة، فإنك تهتز بشكل منخفض جداً. تربط نفسك بذلك الشخص وتلك اللحظة المؤلمة بسلسلة غير مرئية. لا يمكنك الطيران. لا يمكنك المضي قدماً. الغفران هو قطع السلسلة. هو قول: "أحررك وأحرر نفسي. لم أعد مديناً لك بشيء، وأنت لست مديناً لي بشيء".</p>
+<p>— وماذا لو كان ما فعلوه خطيراً جداً؟</p>
+<p>— الألم لا مفر منه، والمعاناة اختيارية. إذا واصلت مراجعة الإساءة في عقلك، فإنك تعيد عيشها مراراً وتكراراً. أنت تؤذي نفسك الآن، وليس الآخر. "نجنا من الشرير" يبدأ بتخليص نفسك من الشر الذي تولده أنت بنفسك بعدم الغفران.</p>
+<p>وضع يده على كتفي.
+— الغفران هو الاهتزاز عالياً جداً لدرجة أن الإساءة لم تعد تصل إليك. إنه فهم أن الآخر تصرف من منطلق عدم وعيه، ومن منطلق ألمه الخاص. "إنهم لا يعلمون ماذا يفعلون". لو علموا الضرر الذي يلحقونه بأنفسهم بإلحاق الضرر بآخر، لما فعلوا ذلك.</p>
+                </div>
+                <div class="russian language">
+                    <h1>Глава 8: Прощение и долги</h1>
+                    <p>Мы вернулись в Лас-Росас, в тихий район. Иисус хотел поговорить о чем-то серьезном.
+— «И остави нам долги наша, яко и мы оставляем должником нашим».</p>
+<p>— Это самая сложная часть, — признался я. — Простить того, кто причинил тебе боль...</p>
+<p>— Это трудно, потому что ты видишь в этом одолжение другому. «Я такой хороший, прощаю тебя, такого плохого». Это эго. Это бесполезно.</p>
+<p>— А как тогда?</p>
+<p>— Прощение — это акт личной гигиены. Это как бросить раскаленный уголь, который ты держал в руках, собираясь кинуть в другого. Обжигаешься-то только ты сам.</p>
+<p>Он сел на каменную скамью.
+— Когда ты таишь обиду, ты вибрируешь очень низко. Ты привязываешь себя к этому человеку и к тому болезненному моменту невидимой цепью. Ты не можешь летать. Не можешь двигаться вперед. Простить — значит разорвать цепь. Это значит сказать: «Я освобождаю тебя и освобождаю себя. Я тебе больше ничего не должен, и ты мне ничего не должен».</p>
+<p>— А если то, что они сделали, было очень серьезным?</p>
+<p>— Боль неизбежна, но страдание — это выбор. Если ты продолжаешь прокручивать обиду в уме, ты проживаешь ее снова и снова. Ты причиняешь боль себе сейчас сам, а не тот человек. «Избавь нас от лукавого» начинается с того, чтобы избавить себя от зла, которое ты сам генерируешь, не прощая.</p>
+<p>Он положил руку мне на плечо.
+— Простить — значит вибрировать так высоко, что обида больше не долетает до тебя. Это понимание того, что другой человек действовал исходя из своего собственного невежества, своей собственной боли. «Не ведают, что творят». Если бы они знали, какой вред они причиняют сами себе, причиняя боль другому, они бы этого не делали.</p>
+                </div>
+                <div class="vietnamese language">
+                    <h1>Chương 8: Tha thứ và Nợ nần</h1>
+                    <p>Chúng tôi quay lại Las Rozas, đến một khu vực yên tĩnh. Chúa Giê-su muốn nói về một chủ đề khá nặng nề.
+—"Xin tha nợ cho chúng con, như chúng con cũng tha kẻ có nợ chúng con".</p>
+<p>—Đó là phần khó nhất —tôi thú nhận—. Tha thứ cho người đã làm tổn thương mình...</p>
+<p>—Nó khó vì con coi đó là một ơn huệ mà con dành cho người khác. 'Ta, người tốt thế này, tha thứ cho ngươi, kẻ xấu xa thế kia'. Đó là cái tôi. Điều đó chẳng ích gì.</p>
+<p>—Vậy thì sao ạ?</p>
+<p>—Sự tha thứ là một hành động vệ sinh cá nhân. Giống như việc con buông bỏ một hòn than nóng mà con đang cầm trên tay để chờ ném vào người khác. Người duy nhất bị bỏng chính là con.</p>
+<p>Ngài ngồi xuống một chiếc ghế đá.
+—Khi con nuôi lòng hận thù, rung động của con xuống rất thấp. Con tự trói mình vào người đó và khoảnh khắc đau đớn đó bằng một sợi xích vô hình. Con không thể bay. Con không thể tiến về phía trước. Tha thứ là chặt đứt sợi xích đó. Đó là nói rằng: 'Tôi giải phóng bạn và tôi giải phóng chính mình. Tôi không còn nợ bạn gì cả, và bạn cũng không nợ tôi gì hết'.</p>
+<p>—Và nếu những gì họ làm là rất nghiêm trọng thì sao ạ?</p>
+<p>—Nỗi đau là không thể tránh khỏi, nhưng đau khổ là một sự lựa chọn. Nếu con cứ tiếp tục lặp lại sự xúc phạm đó trong tâm trí, con đang sống lại nó hết lần này đến lần khác. Con đang tự làm tổn thương mình lúc này, chứ không phải người kia. 'Cứu chúng con cho khỏi sự dữ' bắt đầu bằng việc cứu chính mình khỏi sự dữ mà con tự tạo ra khi không chịu tha thứ.</p>
+<p>Ngài đặt tay lên vai tôi.
+—Tha thứ là rung động cao đến mức sự xúc phạm không còn chạm tới con được nữa. Đó là hiểu rằng người kia đã hành động từ chính sự vô minh, từ chính nỗi đau của họ. 'Họ không biết việc họ làm'. Nếu họ biết được tác hại mà họ tự gây ra cho chính mình khi làm hại người khác, họ sẽ không làm như vậy đâu.</p>
+                </div>
+                <div class="korean language">
+                    <h1>제8장: 용서와 빚</h1>
+                    <p>우리는 다시 라스 로사스의 조용한 곳으로 갔습니다. 예수님은 무거운 주제를 이야기하고 싶어 하셨습니다.
+— "우리가 우리에게 죄 지은 자를 사하여 준 것 같이 우리 죄를 사하여 주시옵고".</p>
+<p>— 그게 어려운 부분이에요. — 내가 인정했습니다. — 상처 준 사람을 용서한다는 게...</p>
+<p>— 어려운 이유는 네가 그것을 상대방에게 베푸는 호의라고 생각하기 때문이야. "착한 내가, 나쁜 너를 용서한다." 그건 에고(Ego)야. 그건 소용없어.</p>
+<p>— 그럼요?</p>
+<p>— 용서는 개인 위생 행위야. 다른 사람에게 던지려고 쥐고 있던 불타는 석탄을 놓는 거야. 화상을 입는 건 너뿐이지.</p>
+<p>그는 돌 벤치에 앉았습니다.
+— 원한을 품으면 진동이 아주 낮아져. 보이지 않는 사슬로 그 사람과 그 고통스러운 순간에 너를 묶어버려. 날 수 없어. 나아갈 수 없어. 용서는 사슬을 끊는 거야. "나는 너를 놓아주고 나를 놓아준다. 이제 너에게 빚진 것도 없고, 네가 빚진 것도 없다"라고 말하는 거야.</p>
+<p>— 만약 그들이 한 짓이 아주 심각하다면요?</p>
+<p>— 아픔은 피할 수 없지만, 고통은 선택이야. 네 마음속에서 그 상처를 계속 되새긴다면, 너는 그것을 계속해서 다시 겪는 거야. 지금 너를 아프게 하는 건 상대가 아니라 너 자신이야. "악에서 구하소서"는 용서하지 않음으로써 네가 스스로 만들어내는 악에서 벗어나는 것부터 시작해.</p>
+<p>그가 내 어깨에 손을 얹었습니다.
+— 용서한다는 건, 그 상처가 더 이상 너에게 닿지 않을 만큼 높게 진동하는 거야. 상대방이 자신의 무의식에서, 자신의 고통에서 행동했음을 이해하는 거야. "그들은 자기가 하는 일을 알지 못하나이다." 남을 해침으로써 자신에게 얼마나 해를 끼치는지 안다면, 그러지 않았을 거야.</p>
+                </div>
+                <div class="portuguese language">
+                    <h1>Capítulo 8: Perdão e Dívidas</h1>
+                    <p>Atravessando a ponte de Segóvia, falámos do tema mais difícil.</p>
+<p>—'Perdoai as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido'. Isto não é uma troca comercial —esclareceu—. Não é 'eu perdoo para que Tu me perdoes'.</p>
+<p>—Então?</p>
+<p>—É uma lei física. Não podes receber o que não dás, porque ao não dar, bloqueias o fluxo. O rancor é um tampão no cano. Se guardas rancor a alguém, estás a fechar a tua própria torneira de amor. Deus quer dar-te tudo, mas se tens o punho fechado para bater em alguém, não podes ter a mão aberta para receber.</p>
+<p>—Às vezes é impossível perdoar certas coisas.</p>
+<p>—Perdoar não é dizer 'o que fizeste foi bom'. Perdoar é dizer 'não vou deixar que o que fizeste baixe a minha vibração'. É cortar a corda elástica que te une ao agressor. Enquanto odeias, estás atado a ele. Quando perdoas, soltas-te. Ficas livre. O perdão é o maior ato de egoísmo inteligente que existe: fá-lo por ti, para seres livre, para voltares a vibrar alto.</p>
+                </div>
+                <div class="japanese language">
+                    <h1>第8章：許しと負い目</h1>
+                    <p>私たちはラス・ロサスの静かな場所に戻りました。イエスは重いテーマについて話したがっていました。
+「『我らに罪を犯す者を我らが許すごとく、我らの罪をも許したまえ』」</p>
+<p>「そこが一番難しい部分です」と私は認めました。「自分を傷つけた人を許すというのは……」</p>
+<p>「君がそれを、相手への恩恵だと考えているから難しいんだ。『こんなに善良な私が、あんなに悪いお前を許してやろう』とね。それはエゴだよ。それでは意味がないんだ」</p>
+<p>「では、どう考えればいいんですか？」</p>
+<p>「許しとは、心の衛生管理なんだよ。それは、誰かに投げつけようとして握りしめていた熱い炭を手放すようなものだ。火傷をするのは自分だけなんだよ」</p>
+<p>彼は石のベンチに座りました。
+「恨みを抱いているとき、君の振動はとても低くなっている。見えない鎖で、その相手とその苦痛の瞬間に縛り付けられているんだ。君は飛ぶことができない。前進することもできない。許すとは、その鎖を断ち切ることなんだ。つまり、『私はあなたを解放し、自分自身をも解放する。私はもうあなたに何も負っていないし、あなたも私に何も負っていない』と言うことなんだよ」</p>
+<p>「でも、されたことがとても重大だったら？」</p>
+<p>「痛みは避けられないけれど、苦しみは選択できるんだ。もし頭の中で何度もその侮辱を反芻し続けるなら、君は何度もそれを追体験していることになる。今、自分を傷つけているのは自分自身であって、相手ではない。『悪から救い出したまえ』とは、許さないことで自分自身が生み出している悪から、自分を救い出すことから始まるんだ」</p>
+<p>彼は私の肩に手を置きました。
+「許すとは、侮辱がもう君に届かないほど高く振動することなんだ。相手が自分自身の無意識から、自分自身の痛みから行動したのだと理解することだよ。『彼らは、自分が何をしているのか知らないのだ』。もし他者を傷つけることで自分自身をどれほど傷つけているかを知っていれば、そんなことはしないだろうからね」</p>
+                </div>
+                <div class="image-container-footer"><img src="images/forgiveness_chains.png" alt="Ilustración del capítulo" class="footer-image"></div>
+            </div>
+            <footer>
+                <div class="spanish language"><p>Escrito con amor y alta vibración.</p></div>
+                <div class="english language"><p>Written with love and high vibration.</p></div>
+                <div class="french language"><p>Écrit avec amour et haute vibration.</p></div>
+                <div class="italian language"><p>Scritto con amore e alta vibrazione.</p></div>
+                <div class="chinese language"><p>用爱与高频振动谱写。</p></div>
+                <div class="arabic language"><p>كتب بكل حب واهتزاز عالٍ.</p></div>
+                <div class="russian language"><p>Написано с любовью и высокой вибрацией.</p></div>
+                <div class="vietnamese language"><p>Được viết bằng tình yêu và rung động cao.</p></div>
+                <div class="korean language"><p>사랑과 높은 진동으로 쓰여졌습니다.</p></div>
+                <div class="portuguese language"><p>Escrito com amor e alta vibração.</p></div>
+                <div class="japanese language"><p>愛と高い波動で書かれました。</p></div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="base.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const btnOpen = document.getElementById('menu-open');
+        const btnsClose = document.querySelectorAll('.menu-toggle[id^="menu-close"]');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('open');
+            const isOpen = sidebar.classList.contains('open');
+            if (window.innerWidth <= 1024) {
+                btnsClose.forEach(btn => {
+                    btn.style.display = isOpen ? 'block' : 'none';
+                });
+            }
+        }
+
+        btnOpen.addEventListener('click', toggleMenu);
+        btnsClose.forEach(btn => {
+            btn.addEventListener('click', toggleMenu);
+        });
+        overlay.addEventListener('click', toggleMenu);
+
+        // Language selector logic to match index.html
+        const langSelect = document.getElementById('language-select');
+        langSelect.addEventListener('change', (e) => {
+            if (window.setLanguage) {
+                window.setLanguage(e.target.value);
+            }
+        });
+
+        // Resize handler for button visibility
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1024) {
+                btnsClose.forEach(btn => {
+                    btn.style.display = 'none';
+                });
+                sidebar.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+
+</html>
